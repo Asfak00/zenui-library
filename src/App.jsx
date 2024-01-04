@@ -1,7 +1,11 @@
-import React from "react";
+// home page
+import { createBrowserRouter } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
 
-const App = () => {
-  return <div>App</div>;
-};
-
-export default App;
+export const App = createBrowserRouter([
+  //! /* ----------------------------- Main routes ----------------------------- */
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+]);
