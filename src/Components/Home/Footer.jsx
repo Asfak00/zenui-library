@@ -10,8 +10,8 @@ import { SiGmail } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="w-full max-w-[1400px] mx-auto px-10 py-8 bg-secondary shadow-primary">
-      <div className="flex justify-between items-start">
+    <footer className="w-full px-10 py-8 bg-secondary shadow-primary">
+      <div className="w-full flex justify-between items-start">
         <div className="w-[33%]">
           <img src="/footerlogo.png" alt="logo" className="w-[200px] my-3" />
 
@@ -39,80 +39,82 @@ const Footer = () => {
           </form>
         </div>
 
-        <div className="flex gap-2 flex-col mt-4">
-          <h3 className="font-[600] text-text text-[20px] capitalize">
-            resources
-          </h3>
-          <ul className="footer font-[400] text-[0.9rem] flex flex-col gap-2">
-            <li>
-              <p>Free templates</p>
-              <span>Free templates</span>
-            </li>
-            <li>
-              <p>Components</p>
-              <span>Components</span>
-            </li>
-            <li>
-              <p>Customization</p>
-              <span>Customization</span>
-            </li>
-            <li>
-              <p>Theming</p>
-              <span>Theming</span>
-            </li>
-          </ul>
-        </div>
+        <div className=" flex gap-32">
+          <div className="flex gap-2 flex-col mt-4">
+            <h3 className="font-[600] text-text text-[20px] capitalize">
+              resources
+            </h3>
+            <ul className="footer font-[400] text-[0.9rem] flex flex-col gap-2">
+              <li>
+                <p>Free templates</p>
+                <span>Free templates</span>
+              </li>
+              <li>
+                <p>Components</p>
+                <span>Components</span>
+              </li>
+              <li>
+                <p>Customization</p>
+                <span>Customization</span>
+              </li>
+              <li>
+                <p>Theming</p>
+                <span>Theming</span>
+              </li>
+            </ul>
+          </div>
 
-        <div className="flex gap-2 flex-col mt-4">
-          <h3 className="font-[600] text-text text-[20px] capitalize">
-            Explore
-          </h3>
-          <ul className="footer font-[400] text-[0.9rem] flex flex-col gap-2">
-            <li>
-              <p>Documentation</p>
-              <span>Documentation</span>
-            </li>
-            <li>
-              <p>Store</p>
-              <span>Store</span>
-            </li>
-            <li>
-              <p>Blog</p>
-              <span>Blog</span>
-            </li>
-            <li>
-              <p>Showcase</p>
-              <span>Showcase</span>
-            </li>
-          </ul>
-        </div>
+          <div className="flex gap-2 flex-col mt-4">
+            <h3 className="font-[600] text-text text-[20px] capitalize">
+              Explore
+            </h3>
+            <ul className="footer font-[400] text-[0.9rem] flex flex-col gap-2">
+              <li>
+                <p>Documentation</p>
+                <span>Documentation</span>
+              </li>
+              <li>
+                <p>Store</p>
+                <span>Store</span>
+              </li>
+              <li>
+                <p>Blog</p>
+                <span>Blog</span>
+              </li>
+              <li>
+                <p>Showcase</p>
+                <span>Showcase</span>
+              </li>
+            </ul>
+          </div>
 
-        <div className="flex gap-2 flex-col mt-4">
-          <h3 className="font-[600] text-text text-[20px] capitalize">
-            Company
-          </h3>
-          <ul className="footer font-[400] text-[0.9rem] flex flex-col gap-2">
-            <li>
-              <p>About</p>
-              <span>About</span>
-            </li>
-            <li>
-              <p>Support</p>
-              <span>Support</span>
-            </li>
-            <li>
-              <p>Privacy</p>
-              <span>Privacy</span>
-            </li>
-            <li>
-              <p>policy</p>
-              <span>policy</span>
-            </li>
-            <li>
-              <p>Contact us</p>
-              <span>Contact us</span>
-            </li>
-          </ul>
+          <div className="flex gap-2 flex-col mt-4">
+            <h3 className="font-[600] text-text text-[20px] capitalize">
+              Company
+            </h3>
+            <ul className="footer font-[400] text-[0.9rem] flex flex-col gap-2">
+              <li>
+                <p>About</p>
+                <span>About</span>
+              </li>
+              <li>
+                <p>Support</p>
+                <span>Support</span>
+              </li>
+              <li>
+                <p>Privacy</p>
+                <span>Privacy</span>
+              </li>
+              <li>
+                <p>policy</p>
+                <span>policy</span>
+              </li>
+              <li>
+                <p>Contact us</p>
+                <span>Contact us</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 

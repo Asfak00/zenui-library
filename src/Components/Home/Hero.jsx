@@ -10,7 +10,7 @@ const Hero = () => {
   const navigate = useNavigate();
   return (
     <main className="w-full h-[85vh] max-w-[1400px] mx-auto px-10 flex flex-col justify-center items-center gap-6 mb-12">
-      <h1 className="font-[900] text-[6rem] text-primary capitalize leading-[2rem]">
+      <h1 className="font-[900] text-[5.150rem] text-primary uppercase leading-[2rem]">
         react-tailwind UI
       </h1>
       <h3 className="text-[1.8rem] capitalize font-[500] text-text">
