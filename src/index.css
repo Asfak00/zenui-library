@@ -102,3 +102,41 @@
   transform: translateY(0px);
   color: #3b9df8;
 }
+
+/* sidebar hover effect */
+aside ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+aside ul li:hover {
+  background-color: #f3f6f9;
+  font-weight: 500;
+  border-left: 1px solid #3b9df8;
+}
+
+/* sidebar component section header  */
+.sectionHeader {
+  color: #5e5e5e;
+  border-left: 1px solid #e5eaf2;
+}
+.sectionHeader:hover {
+  background-color: transparent;
+  font-weight: 400;
+  border-left: 1px solid #e5eaf2;
+}
+.sectionHeader::after {
+  content: "";
+  background-color: #c5c5c5;
+  top: -1%;
+  left: -2.3%;
+  position: absolute;
+  width: 10px;
+  border-radius: 50%;
+  height: 10px;
+  transition: all 0.3s ease-in-out;
+}

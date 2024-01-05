@@ -3,7 +3,11 @@ import React from "react";
 // utils styles
 import utils from "../../Utils";
 
+// react router dom
+import { useNavigate } from "react-router-dom";
+
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <main className="w-full h-[85vh] max-w-[1400px] mx-auto px-10 flex flex-col justify-center items-center gap-6 mb-12">
       <h1 className="font-[900] text-[6rem] text-primary capitalize leading-[2rem]">
@@ -18,7 +22,11 @@ const Hero = () => {
       </p>
 
       <div className="flex items-center gap-6 mt-12">
-        <button className={utils.buttonPrimary}>Get Started</button>
+        <button
+          className={utils.buttonPrimary}
+          onClick={() => navigate("/getting-started")}>
+          Get Started
+        </button>
         <button className={utils.buttonSecondary}>Documentation</button>
       </div>
     </main>

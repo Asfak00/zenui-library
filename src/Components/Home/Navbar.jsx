@@ -5,11 +5,20 @@ import { FaGithub } from "react-icons/fa";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { IoIosSearch } from "react-icons/io";
 
+// react router dom
+import { useNavigate } from "react-router-dom";
+
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
-    <nav className="flex items-center justify-between w-full max-w-[1400px] mx-auto px-10 bg-secondary py-3 shadow-sm">
+    <nav className="flex items-center justify-between w-full px-10 bg-secondary py-3 shadow-sm sticky top-0 left-0 z-50">
       <div className="flex items-center gap-8">
-        <img src="/logo.png" alt="logo" className="w-[50px]" />
+        <img
+          src="/logo.png"
+          alt="logo"
+          className="w-[50px]"
+          onClick={() => navigate("/")}
+        />
         <ul className="navUl flex items-center gap-8 text-text font-[500] capitalize text-[1.2rem]">
           <li>
             <p>docs</p>
@@ -36,8 +45,8 @@ const Navbar = () => {
             placeholder="Search..."
             className="py-2 px-10 border bg-border border-[#c7d0dd] rounded-full focus:outline-none"
           />
-          <span className="bg-secondary px-2 py-1 text-[0.9rem] font-[500] rounded-md absolute right-3 border border-[#c7d0dd] top-[0.350rem]">
-            ctrl + S
+          <span className="bg-secondary px-2 py-1 text-[0.9rem] font-[500] rounded-full absolute right-1.5 border text-text border-[#c7d0dd] top-[0.350rem]">
+            Ctrl + S
           </span>
         </div>
         <FaGithub className="text-[1.8rem] text-primary cursor-pointer" />
