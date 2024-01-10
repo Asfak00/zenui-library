@@ -16,11 +16,6 @@ const index = ({
   const [components, setComponents] = useState(true);
   const navigate = useNavigate();
 
-  const handleOverview = () => {
-    setStartContent(0);
-    navigate("/overview");
-  };
-
   return (
     <aside className="py-6 px-10 border-r border-border flex flex-col gap-4 h-[90vh] overflow-y-scroll fixed top-18 left-0 w-[320px]">
       <div>
@@ -41,7 +36,7 @@ const index = ({
                 startContent === 0 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={handleOverview}>
+              onClick={() => setStartContent(0)}>
               Overview
             </li>
             <li
@@ -87,10 +82,10 @@ const index = ({
           <ul className={`flex flex-col ml-2 mt-3 `}>
             <li
               className={`${
-                componentContent === 0 &&
+                componentContent === 4 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(0)}>
+              onClick={() => setComponentContent(4)}>
               All Components
             </li>
 
@@ -101,26 +96,26 @@ const index = ({
             </li>
             <li
               className={`${
-                componentContent === 1 &&
+                componentContent === 5 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(1)}>
+              onClick={() => setComponentContent(5)}>
               normal button
             </li>
             <li
               className={`${
-                componentContent === 1 &&
+                componentContent === 6 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(1)}>
+              onClick={() => setComponentContent(6)}>
               RGB border
             </li>
             <li
               className={`${
-                componentContent === 2 &&
+                componentContent === 7 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(2)}>
+              onClick={() => setComponentContent(7)}>
               animated button
             </li>
 
@@ -131,34 +126,34 @@ const index = ({
             </li>
             <li
               className={`${
-                componentContent === 1 &&
+                componentContent === 8 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(1)}>
+              onClick={() => setComponentContent(8)}>
               responsive navbar
             </li>
             <li
               className={`${
-                componentContent === 1 &&
+                componentContent === 9 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(1)}>
+              onClick={() => setComponentContent(9)}>
               dropdown menu
             </li>
             <li
               className={`${
-                componentContent === 2 &&
+                componentContent === 10 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(2)}>
+              onClick={() => setComponentContent(10)}>
               sidebar menu
             </li>
             <li
               className={`${
-                componentContent === 2 &&
+                componentContent === 11 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(2)}>
+              onClick={() => setComponentContent(11)}>
               tabs
             </li>
 
@@ -169,26 +164,26 @@ const index = ({
             </li>
             <li
               className={`${
-                componentContent === 1 &&
+                componentContent === 12 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(1)}>
+              onClick={() => setComponentContent(12)}>
               skeleton
             </li>
             <li
               className={`${
-                componentContent === 1 &&
+                componentContent === 13 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(1)}>
+              onClick={() => setComponentContent(13)}>
               alert message
             </li>
             <li
               className={`${
-                componentContent === 2 &&
+                componentContent === 14 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(2)}>
+              onClick={() => setComponentContent(14)}>
               dialog
             </li>
           </ul>
