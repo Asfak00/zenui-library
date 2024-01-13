@@ -1,5 +1,7 @@
+import React from "react";
+
 // react router dom
-import { createBrowserRouter } from "react-router-dom";
+import { Route, Router, Routes } from "react-router-dom";
 
 // home page
 import HomePage from "./Pages/HomePage";
@@ -8,34 +10,25 @@ import HomePage from "./Pages/HomePage";
 import ComponentsPage from "./Pages/ComponentsPage";
 
 // overview page
-import Overview from "./Components/Overview/SidebarContent/Content/Overview";
-import Usage from "./Components/Overview/SidebarContent/Content/Usage";
-import Faq from "./Components/Overview/SidebarContent/Content/Faq";
-import Templete from "./Components/Overview/SidebarContent/Content/Templete";
+import OverviewPage from "./Pages/OverviewPage";
+import UsagesPage from "./Pages/UsagesPage";
+import FaqPage from "./Pages/FaqPage";
+import TempletePage from "./Pages/TempletePage";
 
-export const App = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomePage />,
-  },
-  {
-    path: "/getting-started",
-    element: <ComponentsPage />,
-  },
-  {
-    path: "/overview",
-    element: <Overview />,
-  },
-  {
-    path: "/usage",
-    element: <Usage />,
-  },
-  {
-    path: "/faq",
-    element: <Faq />,
-  },
-  {
-    path: "/templates",
-    element: <Templete />,
-  },
-]);
+const App = () => {
+  return (
+    <>
+      {/* all routes */}
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/getting-started" element={<ComponentsPage />} />
+        <Route path="/getting-started/overview" element={<OverviewPage />} />
+        <Route path="/getting-started/usage" element={<UsagesPage />} />
+        <Route path="/getting-started/faq" element={<FaqPage />} />
+        <Route path="/getting-started/templates" element={<TempletePage />} />
+      </Routes>
+    </>
+  );
+};
+
+export default App;

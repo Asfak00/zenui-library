@@ -104,7 +104,7 @@
 }
 
 /* sidebar hover effect */
-aside ul li {
+aside ul a {
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-weight: 400;
@@ -113,7 +113,7 @@ aside ul li {
   text-transform: capitalize;
 }
 
-aside ul li:hover {
+aside ul a:hover {
   background-color: #f3f6f9;
   font-weight: 500;
   border-left: 1px solid #3b9df8;

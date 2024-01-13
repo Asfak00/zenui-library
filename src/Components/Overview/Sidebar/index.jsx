@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
 
 // react router dom
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const index = ({
   startContent,
@@ -14,7 +14,6 @@ const index = ({
 }) => {
   const [start, setStart] = useState(true);
   const [components, setComponents] = useState(true);
-  const navigate = useNavigate();
 
   return (
     <aside className="py-6 px-10 border-r border-border flex flex-col gap-4 h-[90vh] overflow-y-scroll fixed top-18 left-0 w-[320px]">
@@ -31,38 +30,42 @@ const index = ({
         </h3>
         {start && (
           <ul className={`flex flex-col ml-2 mt-3 `}>
-            <li
+            <Link
+              to="/getting-started/overview"
               className={`${
                 startContent === 0 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(0)}>
               Overview
-            </li>
-            <li
+            </Link>
+            <Link
+              to="/getting-started/usage"
               className={`${
                 startContent === 1 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(1)}>
               usage
-            </li>
-            <li
+            </Link>
+            <Link
+              to="/getting-started/templates"
               className={`${
                 startContent === 2 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(2)}>
               templates
-            </li>
-            <li
+            </Link>
+            <Link
+              to="/getting-started/faq"
               className={`${
                 startContent === 3 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(3)}>
               faq
-            </li>
+            </Link>
           </ul>
         )}
       </div>
@@ -80,112 +83,126 @@ const index = ({
         </h3>
         {components && (
           <ul className={`flex flex-col ml-2 mt-3 `}>
-            <li
+            <Link
+              to={""}
               className={`${
                 componentContent === 4 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setComponentContent(4)}>
               All Components
-            </li>
+            </Link>
 
             {/* buttons */}
-            <li
+            <Link
+              to={""}
               className={`sectionHeader font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}>
               Buttons
-            </li>
-            <li
+            </Link>
+            <Link
+              to={""}
               className={`${
                 componentContent === 5 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setComponentContent(5)}>
               normal button
-            </li>
-            <li
+            </Link>
+            <Link
+              to={""}
               className={`${
                 componentContent === 6 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setComponentContent(6)}>
               RGB border
-            </li>
-            <li
+            </Link>
+            <Link
+              to={""}
               className={`${
                 componentContent === 7 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setComponentContent(7)}>
               animated button
-            </li>
+            </Link>
 
             {/* navigation */}
-            <li
+            <Link
+              to={""}
               className={`sectionHeader font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}>
               navigation
-            </li>
-            <li
+            </Link>
+            <Link
+              to={""}
               className={`${
                 componentContent === 8 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setComponentContent(8)}>
               responsive navbar
-            </li>
-            <li
+            </Link>
+            <Link
+              to={""}
               className={`${
                 componentContent === 9 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setComponentContent(9)}>
               dropdown menu
-            </li>
-            <li
+            </Link>
+            <Link
+              to={""}
               className={`${
                 componentContent === 10 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setComponentContent(10)}>
               sidebar menu
-            </li>
-            <li
+            </Link>
+            <Link
+              to={""}
               className={`${
                 componentContent === 11 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setComponentContent(11)}>
               tabs
-            </li>
+            </Link>
 
             {/* FEEDBACK */}
-            <li
+            <Link
+              to={""}
               className={`sectionHeader font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}>
               feedback
-            </li>
-            <li
+            </Link>
+            <Link
+              to={""}
               className={`${
                 componentContent === 12 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setComponentContent(12)}>
               skeleton
-            </li>
-            <li
+            </Link>
+            <Link
+              to={""}
               className={`${
                 componentContent === 13 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setComponentContent(13)}>
               alert message
-            </li>
-            <li
+            </Link>
+            <Link
+              to={""}
               className={`${
                 componentContent === 14 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setComponentContent(14)}>
               dialog
-            </li>
+            </Link>
           </ul>
         )}
       </div>
