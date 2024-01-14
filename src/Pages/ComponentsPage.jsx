@@ -7,7 +7,6 @@ import SidebarContent from "../Components/Overview/SidebarContent";
 
 const ComponentsPage = () => {
   const [startContent, setStartContent] = useState(0);
-  const [componentContent, setComponentContent] = useState(null);
   return (
     <>
       <Navbar />
@@ -15,9 +14,7 @@ const ComponentsPage = () => {
         <div className="w-[450px]">
           <Sidebar
             startContent={startContent}
-            setComponentContent={setComponentContent}
             setStartContent={setStartContent}
-            componentContent={componentContent}
           />
         </div>
 

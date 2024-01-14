@@ -9,11 +9,14 @@ import HomePage from "./Pages/HomePage";
 // components page
 import ComponentsPage from "./Pages/ComponentsPage";
 
-// overview page
+// documentation page
 import OverviewPage from "./Pages/OverviewPage";
 import UsagesPage from "./Pages/UsagesPage";
 import FaqPage from "./Pages/FaqPage";
 import TempletePage from "./Pages/TempletePage";
+
+// buttons components
+import NormalPage from "./Pages/Components/Buttons/NormalPage";
 
 const App = () => {
   return (
@@ -21,11 +24,17 @@ const App = () => {
       {/* all routes */}
       <Routes>
         <Route path="/" element={<HomePage />} />
+
+        {/* documentation */}
         <Route path="/getting-started" element={<ComponentsPage />} />
         <Route path="/getting-started/overview" element={<OverviewPage />} />
         <Route path="/getting-started/usage" element={<UsagesPage />} />
         <Route path="/getting-started/faq" element={<FaqPage />} />
         <Route path="/getting-started/templates" element={<TempletePage />} />
+
+        {/* components */}
+        {/* buttons */}
+        <Route path="/components/normal-button" element={<NormalPage />} />
       </Routes>
     </>
   );

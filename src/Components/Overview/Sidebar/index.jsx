@@ -6,12 +6,7 @@ import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
 // react router dom
 import { Link, useNavigate } from "react-router-dom";
 
-const index = ({
-  startContent,
-  setStartContent,
-  componentContent,
-  setComponentContent,
-}) => {
+const index = ({ startContent, setStartContent }) => {
   const [start, setStart] = useState(true);
   const [components, setComponents] = useState(true);
 
@@ -84,12 +79,12 @@ const index = ({
         {components && (
           <ul className={`flex flex-col ml-2 mt-3 `}>
             <Link
-              to={""}
+              to={"/components/all-components"}
               className={`${
-                componentContent === 4 &&
+                startContent === 4 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(4)}>
+              onClick={() => setStartContent(4)}>
               All Components
             </Link>
 
@@ -100,30 +95,30 @@ const index = ({
               Buttons
             </Link>
             <Link
-              to={""}
+              to={"/components/normal-button"}
               className={`${
-                componentContent === 5 &&
+                startContent === 5 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(5)}>
+              onClick={() => setStartContent(5)}>
               normal button
             </Link>
             <Link
               to={""}
               className={`${
-                componentContent === 6 &&
+                startContent === 6 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(6)}>
+              onClick={() => setStartContent(6)}>
               RGB border
             </Link>
             <Link
               to={""}
               className={`${
-                componentContent === 7 &&
+                startContent === 7 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(7)}>
+              onClick={() => setStartContent(7)}>
               animated button
             </Link>
 
@@ -136,37 +131,37 @@ const index = ({
             <Link
               to={""}
               className={`${
-                componentContent === 8 &&
+                startContent === 8 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(8)}>
+              onClick={() => setStartContent(8)}>
               responsive navbar
             </Link>
             <Link
               to={""}
               className={`${
-                componentContent === 9 &&
+                startContent === 9 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(9)}>
+              onClick={() => setStartContent(9)}>
               dropdown menu
             </Link>
             <Link
               to={""}
               className={`${
-                componentContent === 10 &&
+                startContent === 10 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(10)}>
+              onClick={() => setStartContent(10)}>
               sidebar menu
             </Link>
             <Link
               to={""}
               className={`${
-                componentContent === 11 &&
+                startContent === 11 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(11)}>
+              onClick={() => setStartContent(11)}>
               tabs
             </Link>
 
@@ -179,28 +174,28 @@ const index = ({
             <Link
               to={""}
               className={`${
-                componentContent === 12 &&
+                startContent === 12 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(12)}>
+              onClick={() => setStartContent(12)}>
               skeleton
             </Link>
             <Link
               to={""}
               className={`${
-                componentContent === 13 &&
+                startContent === 13 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(13)}>
+              onClick={() => setStartContent(13)}>
               alert message
             </Link>
             <Link
               to={""}
               className={`${
-                componentContent === 14 &&
+                startContent === 14 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setComponentContent(14)}>
+              onClick={() => setStartContent(14)}>
               dialog
             </Link>
           </ul>
