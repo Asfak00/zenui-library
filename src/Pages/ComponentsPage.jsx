@@ -19,10 +19,7 @@ const ComponentsPage = () => {
         </div>
 
         <div className="w-full p-12">
-          <SidebarContent
-            startContent={startContent}
-            componentContent={componentContent}
-          />
+          <SidebarContent startContent={startContent} />
         </div>
       </div>
     </>
