@@ -18,7 +18,7 @@
 
 *::-webkit-scrollbar {
   background-color: #3b9df825;
-  width: 1rem;
+  width: 0.7rem;
 }
 
 *::-webkit-scrollbar-track {

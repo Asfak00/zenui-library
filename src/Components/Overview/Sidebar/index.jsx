@@ -104,7 +104,7 @@ const index = ({ startContent, setStartContent }) => {
               normal button
             </Link>
             <Link
-              to={""}
+              to={"/components/rgb-border"}
               className={`${
                 startContent === 6 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"

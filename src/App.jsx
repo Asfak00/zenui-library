@@ -17,6 +17,7 @@ import TempletePage from "./Pages/TempletePage";
 
 // buttons components
 import NormalPage from "./Pages/Components/Buttons/NormalPage";
+import RgbButtonPage from "./Pages/Components/Buttons/RgbButtonPage";
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
         {/* components */}
         {/* buttons */}
         <Route path="/components/normal-button" element={<NormalPage />} />
+        <Route path="/components/rgb-border" element={<RgbButtonPage />} />
       </Routes>
     </>
   );
