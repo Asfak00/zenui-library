@@ -11,6 +11,24 @@
   font-family: "Roboto", sans-serif;
 }
 
+*::selection {
+  background-color: #3b9df8;
+  color: #fff;
+}
+
+*::-webkit-scrollbar {
+  background-color: #3b9df825;
+  width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #3b9df825;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3b9df8;
+}
+
 /* navbar hover effect */
 .navUl li {
   position: relative;

@@ -3,6 +3,7 @@ import Overview from "./Content/Overview";
 import Usage from "./Content/Usage";
 import Templete from "./Content/Templete";
 import Faq from "./Content/Faq";
+import OverviewFooter from "../OverviewFooter";
 
 const index = ({ startContent, componentContent }) => {
   return (
