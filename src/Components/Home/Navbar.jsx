@@ -26,7 +26,7 @@ const Navbar = () => {
           <img
             src="/logo.png"
             alt="logo"
-            className="w-[50px]"
+            className="w-[50px] cursor-pointer"
             onClick={() => navigate("/")}
           />
           <ul className="navUl flex items-center gap-8 text-text font-[500] capitalize text-[1.2rem]">
