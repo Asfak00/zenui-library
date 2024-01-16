@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import OverviewFooter from "../../../../../Shared/OverviewFooter";
 import ShowCode from "../../../../../Shared/ShowCode";
 import ContentHeader from "../../../../../Shared/ContentHeader";
+import { Helmet } from "react-helmet";
 
 const RgbButton = () => {
   // rgb border
@@ -185,6 +186,9 @@ after:-z-40 bg-secondary relative "> Animate 2
       </div>
 
       <OverviewFooter />
+      <Helmet>
+        <title>Buttons - RGB Button</title>
+      </Helmet>
     </aside>
   );
 };

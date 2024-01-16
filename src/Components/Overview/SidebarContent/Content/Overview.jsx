@@ -1,5 +1,6 @@
 import React from "react";
 import ContentHeader from "../../../../Shared/ContentHeader";
+import { Helmet } from "react-helmet";
 
 const Overview = () => {
   return (
@@ -62,6 +63,10 @@ const Overview = () => {
           </li>
         </ul>
       </div>
+
+      <Helmet>
+        <title>Get-Started - Overview</title>
+      </Helmet>
     </aside>
   );
 };

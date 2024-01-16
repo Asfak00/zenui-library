@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Showcode from "../../../../../Shared/ShowCode";
 import OverviewFooter from "../../../../../Shared/OverviewFooter";
 import ContentHeader from "../../../../../Shared/ContentHeader";
+import { Helmet } from "react-helmet";
 
 const Normal = () => {
   // normal button
@@ -170,6 +171,9 @@ before:h-full before:bg-primary before:top-0 before:left-0"> Bottom
 
         <OverviewFooter />
       </aside>
+      <Helmet>
+        <title>Buttons - Normal Button</title>
+      </Helmet>
     </>
   );
 };

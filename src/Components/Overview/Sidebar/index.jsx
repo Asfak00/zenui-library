@@ -156,7 +156,7 @@ const index = ({ startContent, setStartContent }) => {
               sidebar menu
             </Link>
             <Link
-              to={""}
+              to={"/components/tabs"}
               className={`${
                 startContent === 11 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
@@ -172,7 +172,7 @@ const index = ({ startContent, setStartContent }) => {
               feedback
             </Link>
             <Link
-              to={""}
+              to={"/components/skeleton"}
               className={`${
                 startContent === 12 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"

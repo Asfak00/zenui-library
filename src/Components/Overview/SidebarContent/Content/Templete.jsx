@@ -5,6 +5,7 @@ import { FaEye } from "react-icons/fa";
 
 // utils style
 import utils from "../../../../Utils";
+import { Helmet } from "react-helmet";
 
 const Templete = () => {
   return (
@@ -56,6 +57,10 @@ const Templete = () => {
           </div>
         ))}
       </div>
+
+      <Helmet>
+        <title>Get-Started - Templete</title>
+      </Helmet>
     </aside>
   );
 };
