@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // components
 import Showcode from "../../../../../Shared/ShowCode";
 import OverviewFooter from "../../../../../Shared/OverviewFooter";
+import ContentHeader from "../../../../../Shared/ContentHeader";
 
 const Normal = () => {
   // normal button
@@ -35,9 +36,7 @@ const Normal = () => {
   return (
     <>
       <aside>
-        <h1 className="font-[600] text-[#000] capitalize text-[1.5rem]">
-          normal button
-        </h1>
+        <ContentHeader text={"normal button"} />
 
         <p className="w-[80%] text-text text-[1rem]">
           Buttons like this are used a lot on our websites and are very easy to
@@ -89,9 +88,9 @@ hover:text-[#ffffff]  transition duration-300 rounded "> Button
           )}
         </div>
 
-        <h1 className="font-[600] mt-12 text-[#000] capitalize text-[1.5rem]">
-          background animated
-        </h1>
+        <div className="mt-8">
+          <ContentHeader text={"background animated"} />
+        </div>
 
         <p className="w-[80%] text-text text-[1rem]">
           Here we are animating from bottom, right and left over the button's

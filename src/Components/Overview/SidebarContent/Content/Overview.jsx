@@ -1,4 +1,5 @@
 import React from "react";
+import ContentHeader from "../../../../Shared/ContentHeader";
 
 const Overview = () => {
   return (
@@ -12,9 +13,7 @@ const Overview = () => {
       </p>
 
       <div className="mt-8 w-[90%]">
-        <h2 className="font-[600] text-[#000] text-[1.5rem] capitalize">
-          Introduction
-        </h2>
+        <ContentHeader text={"Introduction"} />
         <p className="mt-3">
           Material UI is an open-source React component library that implements
           Google's Material Design.
@@ -31,9 +30,7 @@ const Overview = () => {
       </div>
 
       <div className="mt-8 w-[90%]">
-        <h2 className="font-[600] text-[#000] text-[1.5rem] capitalize">
-          Advantages of react-tailwind UI
-        </h2>
+        <ContentHeader text={"Advantages of react-tailwind UI"} />
         <ul className="flex flex-col gap-3 list-disc pl-4 mt-3">
           <li className="p-0 border-none hover:border-none hover:font-[400] hover:bg-secondary">
             <b>Ship faster:</b> Over 2,500 open-source contributors have poured

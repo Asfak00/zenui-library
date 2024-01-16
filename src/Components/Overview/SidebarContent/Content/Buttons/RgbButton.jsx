@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // components
 import OverviewFooter from "../../../../../Shared/OverviewFooter";
 import ShowCode from "../../../../../Shared/ShowCode";
+import ContentHeader from "../../../../../Shared/ContentHeader";
 
 const RgbButton = () => {
   // rgb border
@@ -48,9 +49,7 @@ const RgbButton = () => {
   };
   return (
     <aside>
-      <h1 className="font-[600] text-[#000] capitalize text-[1.5rem]">
-        RGB border
-      </h1>
+      <ContentHeader text={"RGB border"} />
 
       <p className="w-[80%] text-text text-[1rem]">
         Buttons like this are used a lot on our websites and are very easy to
@@ -121,9 +120,9 @@ const RgbButton = () => {
         )}
       </div>
 
-      <h1 className="font-[600] mt-12 text-[#000] capitalize text-[1.5rem]">
-        border hover animation
-      </h1>
+      <div className="mt-8">
+        <ContentHeader text={"border hover animation"} />
+      </div>
 
       <p className="w-[80%] text-text text-[1rem]">
         Here we are animating from bottom, right and left over the button's
