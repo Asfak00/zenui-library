@@ -181,7 +181,7 @@ const index = ({ startContent, setStartContent }) => {
               skeleton
             </Link>
             <Link
-              to={""}
+              to={"/components/alert-message"}
               className={`${
                 startContent === 13 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"

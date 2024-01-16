@@ -1,25 +1,49 @@
 import React from "react";
 
-const SocialPostSkeleton = () => {
-  return (
-    <div className="w-[450px] bg-secondary p-6 border border-border rounded animate-pulse">
-      <div className="flex items-center">
-        <div className="w-[20%]">
-          <img className="w-[60px] h-[60px] rounded-full bg-border" />
-        </div>
+// icons
+import {
+  IoCheckmarkDoneCircleOutline,
+  IoWarningOutline,
+} from "react-icons/io5";
+import { MdErrorOutline, MdOutlineInfo } from "react-icons/md";
+import { HiOutlineXMark } from "react-icons/hi2";
 
-        <div className="flex flex-col gap-3 w-[80%]">
-          <h1 className="w-[60%] h-[25px] bg-border"></h1>
-          <p className="w-[80%] h-[15px] bg-border"></p>
+const AlertMessageWithAction = () => {
+  return (
+    <div className="w-full h-full flex flex-col gap-4">
+      <div className=" p-3 flex items-center justify-between bg-[#edf7ed] rounded">
+        <div className="flex items-center gap-3">
+          <IoCheckmarkDoneCircleOutline className="text-[#418944] text-[1.5rem]" />
+          <p className="text-[#418944] text-[1rem]">This is a success Alert.</p>
         </div>
+        <HiOutlineXMark className="text-[#418944] text-[1.8rem] p-1 rounded-full hover:bg-[#41894317] cursor-pointer active:scale-[0.9]" />
       </div>
 
-      <div className="mt-10 flex flex-col gap-3">
-        <p className="w-[90%] h-[15px] bg-border"></p>
-        <p className="w-[80%] h-[15px] bg-border"></p>
+      <div className="p-3 flex items-center justify-between bg-[#e5f6fd] rounded">
+        <div className="flex items-center gap-3">
+          <MdOutlineInfo className="text-[#2d9dda] text-[1.5rem]" />
+          <p className="text-[#2d9dda] text-[1rem]">This is a info Alert.</p>
+        </div>
+        <HiOutlineXMark className="text-[#2d9dda] text-[1.8rem] p-1 rounded-full hover:bg-[#2d9dda15] cursor-pointer active:scale-[0.9]" />
+      </div>
+
+      <div className="p-3 flex items-center justify-between bg-[#fdeded] rounded">
+        <div className="flex items-center gap-3">
+          <MdErrorOutline className="text-[#d74242] text-[1.5rem]" />
+          <p className="text-[#d74242] text-[1rem]">This is a error Alert.</p>
+        </div>
+        <HiOutlineXMark className="text-[#d74242] text-[1.8rem] p-1 rounded-full hover:bg-[#d7424215] cursor-pointer active:scale-[0.9]" />
+      </div>
+
+      <div className="p-3  flex items-center justify-between bg-[#fff4e5] rounded">
+        <div className="flex items-center gap-3">
+          <IoWarningOutline className="text-[#f18831] text-[1.5rem]" />
+          <p className="text-[#f18831] text-[1rem]">This is a warning Alert.</p>
+        </div>
+        <HiOutlineXMark className="text-[#f18831] text-[1.8rem] p-1 rounded-full hover:bg-[#f1873118] cursor-pointer active:scale-[0.9]" />
       </div>
     </div>
   );
 };
 
-export default SocialPostSkeleton;
+export default AlertMessageWithAction;

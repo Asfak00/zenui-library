@@ -50,14 +50,29 @@ const Skeleton = () => {
     setSocialPostCode(true);
     setSocialPostPreview(false);
   };
+
+  // product details skeleton
+  const [productDetailsPreview, setProductDetailsPreview] = useState(true);
+  const [productDetailsCode, setProductDetailsCode] = useState(false);
+
+  const handleProductDetailsPreview = () => {
+    setProductDetailsPreview(true);
+    setProductDetailsCode(false);
+  };
+
+  const handleProductDetailsCode = () => {
+    setProductDetailsCode(true);
+    setProductDetailsPreview(false);
+  };
+
   return (
     <>
       <aside>
         <ContentHeader text={"Card Skeleton"} />
 
         <p className="w-[80%] text-text text-[1rem]">
-          Buttons like this are used a lot on our websites and are very easy to
-          create but you can copy the codes from here to save your time.
+          This is the card skeleton. The skeleton provided here basically shows
+          the information of an account.
         </p>
 
         <div className="w-[80%] border border-border rounded mt-8">
@@ -161,8 +176,8 @@ export default CardSkeleton;
         </div>
 
         <p className="w-[80%] text-text text-[1rem]">
-          Here we are animating from bottom, right and left over the button's
-          background color via position.
+          This is the image gallery skeleton. Here the skeleton is created for
+          the image, similar to the grid layout.
         </p>
 
         <div className="w-[80%] border border-border rounded mt-8">
@@ -237,8 +252,8 @@ export default ImageGallery;
         </div>
 
         <p className="w-[80%] text-text text-[1rem]">
-          Here we are animating from bottom, right and left over the button's
-          background color via position.
+          This is the skeleton of a social post, and you can also use it as a
+          card. Here is image, name, bio and post details.
         </p>
 
         <div className="w-[80%] border border-border rounded mt-8">
@@ -309,6 +324,103 @@ const SocialPostSkeleton = () => {
 
 export default SocialPostSkeleton;
         '
+            />
+          )}
+        </div>
+
+        <div className="mt-8">
+          <ContentHeader text={"product details skeleton"} />
+        </div>
+
+        <p className="w-[80%] text-text text-[1rem]">
+          This is the skeleton of the product details page. You can use this
+          skeleton on the product details page of any of your e-commerce
+          websites. Each section is marked with comments within the code.
+        </p>
+
+        <div className="w-[80%] border border-border rounded mt-8">
+          <div className="">
+            <button
+              className={`${
+                productDetailsPreview && "bg-border"
+              } px-6 py-2 border-r border-b roudned border-border`}
+              onClick={handleProductDetailsPreview}>
+              Preview
+            </button>
+            <button
+              className={`${
+                productDetailsCode && "bg-border"
+              } px-6 py-2 border-r border-b rounded border-border`}
+              onClick={handleProductDetailsCode}>
+              Code
+            </button>
+          </div>
+          {productDetailsPreview && (
+            <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+              <div className="flex gap-6 w-full animate-pulse">
+                <div>
+                  <img className="w-[450px] h-[300px] bg-border" />
+                  <div className="flex gap-3 mt-3">
+                    <img className="w-[130px] h-[100px] bg-border" />
+                    <img className="w-[130px] h-[100px] bg-border" />
+                  </div>
+                </div>
+
+                <div className="flex flex-col gap-4 w-full">
+                  <h2 className="w-[100%] h-[35px] bg-border"></h2>
+                  <p className="w-[100%] h-[200px] bg-border"></p>
+                  <span className="w-[30%] h-[30px] bg-border"></span>
+                  <div className="flex items-center justify-between w-full">
+                    <button className="w-[30%] h-[40px] bg-border"></button>
+                    <i className="w-[40px] h-[40px] rounded-full bg-border"></i>
+                  </div>
+
+                  <button className="w-[35%] h-[40px] bg-border"></button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {productDetailsCode && (
+            <Showcode
+              code='
+import React from "react";
+
+const ProductDetailsSkeleton = () => {
+  return (
+    <div className="flex gap-6 w-full animate-pulse">
+      // product image & prodcut sub images
+      <div>
+        <img className="w-[450px] h-[300px] bg-[#e5eaf2]" />
+        <div className="flex gap-3 mt-3">
+          <img className="w-[130px] h-[100px] bg-[#e5eaf2]" />
+          <img className="w-[130px] h-[100px] bg-[#e5eaf2]" />
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-4 w-full">
+        // product name
+        <h2 className="w-[100%] h-[35px] bg-[#e5eaf2]"></h2>
+        // product description
+        <p className="w-[100%] h-[200px] bg-[#e5eaf2]"></p>
+        // product price
+        <span className="w-[30%] h-[30px] bg-[#e5eaf2]"></span>
+        <div className="flex items-center justify-between w-full">
+          // quantity button
+          <button className="w-[30%] h-[40px] bg-[#e5eaf2]"></button>
+          // favorite button
+          <i className="w-[40px] h-[40px] rounded-full bg-[#e5eaf2]"></i>
+        </div>
+        // add to cart button
+        <button className="w-[35%] h-[40px] bg-[#e5eaf2]"></button>
+      </div>
+    </div>
+  );
+};
+
+export default ProductDetailsSkeleton;
+
+              '
             />
           )}
         </div>

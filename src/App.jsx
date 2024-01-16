@@ -21,6 +21,7 @@ import RgbButtonPage from "./Pages/Components/Buttons/RgbButtonPage";
 import AllComponentsPage from "./Pages/Components/AllComponentsPage";
 import TabsPage from "./Pages/Components/Navigation/TabsPage";
 import SkeletonPage from "./Pages/Components/Feedback/SkeletonPage";
+import AlertMessagePage from "./Pages/Components/Feedback/AlertMessagePage";
 
 const App = () => {
   return (
@@ -46,6 +47,10 @@ const App = () => {
         <Route path="/components/rgb-border" element={<RgbButtonPage />} />
         <Route path="/components/tabs" element={<TabsPage />} />
         <Route path="/components/skeleton" element={<SkeletonPage />} />
+        <Route
+          path="/components/alert-message"
+          element={<AlertMessagePage />}
+        />
       </Routes>
     </>
   );
