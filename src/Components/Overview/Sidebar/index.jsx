@@ -91,7 +91,7 @@ const index = ({ startContent, setStartContent }) => {
             {/* buttons */}
             <Link
               to={""}
-              className={`sectionHeader font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}>
+              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}>
               Buttons
             </Link>
             <Link
@@ -122,20 +122,20 @@ const index = ({ startContent, setStartContent }) => {
               animated button
             </Link>
 
-            {/* navigation */}
+            {/* SURFACES */}
             <Link
               to={""}
-              className={`sectionHeader font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}>
-              navigation
+              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}>
+              SURFACES
             </Link>
             <Link
-              to={""}
+              to={"/components/cards"}
               className={`${
                 startContent === 8 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(8)}>
-              responsive navbar
+              Cards
             </Link>
             <Link
               to={""}
@@ -144,7 +144,7 @@ const index = ({ startContent, setStartContent }) => {
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(9)}>
-              dropdown menu
+              According
             </Link>
             <Link
               to={""}
@@ -153,49 +153,83 @@ const index = ({ startContent, setStartContent }) => {
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(10)}>
-              sidebar menu
+              App bar
+            </Link>
+
+            {/* navigation */}
+            <Link
+              to={""}
+              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}>
+              navigation
             </Link>
             <Link
-              to={"/components/tabs"}
+              to={""}
               className={`${
                 startContent === 11 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(11)}>
+              responsive navbar
+            </Link>
+            <Link
+              to={""}
+              className={`${
+                startContent === 12 &&
+                "border-l border-primary bg-[#f3f6f9] font-[500]"
+              } rounded  border-l border-border`}
+              onClick={() => setStartContent(12)}>
+              dropdown menu
+            </Link>
+            <Link
+              to={""}
+              className={`${
+                startContent === 13 &&
+                "border-l border-primary bg-[#f3f6f9] font-[500]"
+              } rounded  border-l border-border`}
+              onClick={() => setStartContent(13)}>
+              sidebar menu
+            </Link>
+            <Link
+              to={"/components/tabs"}
+              className={`${
+                startContent === 14 &&
+                "border-l border-primary bg-[#f3f6f9] font-[500]"
+              } rounded  border-l border-border`}
+              onClick={() => setStartContent(14)}>
               tabs
             </Link>
 
             {/* FEEDBACK */}
             <Link
               to={""}
-              className={`sectionHeader font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}>
+              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}>
               feedback
             </Link>
             <Link
               to={"/components/skeleton"}
               className={`${
-                startContent === 12 &&
+                startContent === 15 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(12)}>
+              onClick={() => setStartContent(15)}>
               skeleton
             </Link>
             <Link
               to={"/components/alert-message"}
               className={`${
-                startContent === 13 &&
+                startContent === 16 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(13)}>
+              onClick={() => setStartContent(16)}>
               alert message
             </Link>
             <Link
-              to={""}
+              to={"/components/dialog-message"}
               className={`${
-                startContent === 14 &&
+                startContent === 17 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(14)}>
+              onClick={() => setStartContent(17)}>
               dialog
             </Link>
           </ul>

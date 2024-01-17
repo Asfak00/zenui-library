@@ -15,13 +15,23 @@ import UsagesPage from "./Pages/UsagesPage";
 import FaqPage from "./Pages/FaqPage";
 import TempletePage from "./Pages/TempletePage";
 
-// buttons components
+// buttons pages
 import NormalPage from "./Pages/Components/Buttons/NormalPage";
 import RgbButtonPage from "./Pages/Components/Buttons/RgbButtonPage";
+
+// all components
 import AllComponentsPage from "./Pages/Components/AllComponentsPage";
+
+// navigation pages
 import TabsPage from "./Pages/Components/Navigation/TabsPage";
+
+// feedback pages
 import SkeletonPage from "./Pages/Components/Feedback/SkeletonPage";
 import AlertMessagePage from "./Pages/Components/Feedback/AlertMessagePage";
+import DialogPage from "./Pages/Components/Feedback/DialogPage";
+
+// surface pages
+import CardPage from "./Pages/Components/Surfaces/CardPage";
 
 const App = () => {
   return (
@@ -38,19 +48,28 @@ const App = () => {
         <Route path="/getting-started/templates" element={<TempletePage />} />
 
         {/* components */}
-        {/* buttons */}
+
         <Route
           path="/components/all-components"
           element={<AllComponentsPage />}
         />
+        {/* buttons */}
         <Route path="/components/normal-button" element={<NormalPage />} />
         <Route path="/components/rgb-border" element={<RgbButtonPage />} />
+
+        {/* navigation */}
         <Route path="/components/tabs" element={<TabsPage />} />
+
+        {/* feedback */}
         <Route path="/components/skeleton" element={<SkeletonPage />} />
         <Route
           path="/components/alert-message"
           element={<AlertMessagePage />}
         />
+        <Route path="/components/dialog-message" element={<DialogPage />} />
+
+        {/* surface */}
+        <Route path="/components/cards" element={<CardPage />} />
       </Routes>
     </>
   );
