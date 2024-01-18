@@ -11,7 +11,7 @@ const index = ({ startContent, setStartContent }) => {
   const [components, setComponents] = useState(true);
 
   return (
-    <aside className="py-6 px-10 border-r border-border flex flex-col gap-4 h-[90vh] overflow-y-scroll fixed top-18 left-0 w-[320px]">
+    <aside className="py-6 px-10 border-r border-border flex flex-col gap-4 h-[90vh] overflow-y-scroll fixed top-18 left-0 w-[320px] bg-secondary z-20">
       <div>
         <h3
           className="flex items-center gap-1 text-[1rem] text-text font-[500] capitalize cursor-pointer"

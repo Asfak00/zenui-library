@@ -1,67 +1,58 @@
 import React from "react";
 
 // icons
-import { RiTeamFill } from "react-icons/ri";
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { MdDone } from "react-icons/md";
+import { RxCross1 } from "react-icons/rx";
 
-const TeamCard = () => {
+const PricingCard = () => {
   return (
-    <div className="w-[50%] rounded shadow-lg p-4">
-      <div className="w-full flex items-center justify-between mb-4">
-        <div className="flex items-center gap-2">
-          <RiTeamFill className="text-[2rem] p-2 rounded-full bg-[#3b9df828] text-[#3B9DF8] cursor-pointer" />
-          <h3>Teams</h3>
+    <div className="w-[60%] border border-border shadow-lg">
+      <div className="w-full flex items-center justify-center flex-col p-6">
+        <h2 className="text-[1.5rem] text-primary font-[600]">Standard</h2>
+        <p className="text-text text-[1rem]">Ideal for growing businesses</p>
+
+        <div className="flex mt-6 gap-1">
+          <h2 className="font-[800] text-[4rem] leading-[4rem]">49.50</h2>
+          <span className="text-[1.2rem] font-[500]">$</span>
         </div>
-        <BsThreeDotsVertical className="text-[2rem] p-2 rounded-full bg-[#3b9df828] text-[#3B9DF8] cursor-pointer" />
-      </div>
+        <p className="text-text text-[0.9rem]">per month</p>
 
-      <img
-        src="https://img.freepik.com/free-psd/3d-interface-website-presentation-mockup-isolated_359791-208.jpg"
-        alt=""
-        className="rounded-lg"
-      />
-
-      <h2 className="font-[600] text-[1.3rem] py-4">Simple Design</h2>
-
-      <div className="w-full flex items-center justify-between relative">
-        <button className="py-1 px-4 bg-[#3b9df828] text-[#2367a7] rounded">
-          Design
+        <button className="px-12 py-2 bg-primary rounded-3xl text-secondary text-[1rem] my-6">
+          Buy Now
         </button>
-        <div className=" w-[50%] h-full">
-          <div className="flex items-center">
-            <img
-              src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
-              alt=""
-              className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute right-[25%] top-0"
-            />
-            <img
-              src="https://img.freepik.com/free-photo/confident-attractive-caucasian-guy-beige-pullon-smiling-broadly-while-standing-against-gray_176420-44508.jpg"
-              alt=""
-              className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute right-[20%] top-0"
-            />
-            <img
-              src="https://img.freepik.com/free-photo/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes_176532-10257.jpg"
-              alt=""
-              className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute right-[15%] top-0"
-            />
-            <img
-              src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg"
-              alt=""
-              className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute right-[10%] top-0"
-            />
-            <img
-              src="https://img.freepik.com/free-photo/portrait-hacker_23-2148165910.jpg"
-              alt=""
-              className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute top-0 right-[5%]"
-            />
-            <div className="w-[30px] h-[30px] object-cover rounded-full border border-secondary bg-[#e5eaf2] text-[#424242] absolute top-0 right-[0%] flex items-center justify-center">
-              <p className="text-[0.7rem] cursor-pointer">18+</p>
-            </div>
-          </div>
-        </div>
       </div>
+
+      <h3 className="text-[1.2rem] font-[600] text-text mt-3 px-6">
+        What you will get?
+      </h3>
+      <div className="flex gap-3 flex-col py-4 px-6">
+        <p className="flex items-center gap-2 text-text text-[1rem]">
+          <MdDone className="text-primary text-[1.5rem]" />5 Users
+        </p>
+        <p className="flex items-center gap-2 text-text text-[1rem]">
+          <MdDone className="text-primary text-[1.5rem]" />
+          50GB Storage
+        </p>
+        <p className="flex items-center gap-2 text-text text-[1rem]">
+          <MdDone className="text-primary text-[1.5rem]" />
+          Priority Email Support
+        </p>
+        <p className="flex items-center gap-3 text-text text-[1rem]">
+          <RxCross1 className="text-[#e73939] text-[1.2rem]" />
+          Unlimited Users
+        </p>
+        <p className="flex items-center gap-3 text-text text-[1rem]">
+          <RxCross1 className="text-[#e73939] text-[1.2rem]" />
+          100GB Storage
+        </p>
+        <p className="flex items-center gap-3 text-text text-[1rem]">
+          <RxCross1 className="text-[#e73939] text-[1.2rem]" />
+          24/7 Live Chat Support
+        </p>
+      </div>
+      <div className="w-full h-[10px] bg-primary"></div>
     </div>
   );
 };
 
-export default TeamCard;
+export default PricingCard;

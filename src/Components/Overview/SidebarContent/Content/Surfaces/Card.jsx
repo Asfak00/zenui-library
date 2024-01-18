@@ -10,10 +10,13 @@ import { Helmet } from "react-helmet";
 
 // icons
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaRegDotCircle } from "react-icons/fa";
 import { HiMiniShare } from "react-icons/hi2";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp, IoIosRocket } from "react-icons/io";
 import { RiTeamFill } from "react-icons/ri";
+import { BiRightArrowAlt } from "react-icons/bi";
+import { MdDone } from "react-icons/md";
+import { RxCross1 } from "react-icons/rx";
 
 const Card = () => {
   // blog card
@@ -56,6 +59,34 @@ const Card = () => {
   const handleTeamCardCode = () => {
     setTeamCardCode(true);
     setTeamCardPreview(false);
+  };
+
+  // Pricing Card
+  const [pricingCardPreview, setPricingCardPreview] = useState(true);
+  const [pricingCardCode, setPricingCardCode] = useState(false);
+
+  const handlePricingCardPreview = () => {
+    setPricingCardPreview(true);
+    setPricingCardCode(false);
+  };
+
+  const handlePricingCardCode = () => {
+    setPricingCardCode(true);
+    setPricingCardPreview(false);
+  };
+
+  // Pricing Card 2
+  const [pricingCard2Preview, setPricingCard2Preview] = useState(true);
+  const [pricingCard2Code, setPricingCard2Code] = useState(false);
+
+  const handlePricingCard2Preview = () => {
+    setPricingCard2Preview(true);
+    setPricingCard2Code(false);
+  };
+
+  const handlePricingCard2Code = () => {
+    setPricingCard2Code(true);
+    setPricingCard2Preview(false);
   };
 
   // dropdown control
@@ -574,6 +605,305 @@ const TeamCard = () => {
 };
 
 export default TeamCard;
+          `}
+            />
+          )}
+        </div>
+
+        <div className="mt-8">
+          <ContentHeader text={"Pricing card 1"} />
+        </div>
+
+        <p className="w-[80%] text-text text-[1rem]">
+          Many times it is seen that only the bottom of the bar does not come
+          from all sides, that is the tab of the bottom bar.
+        </p>
+
+        <div className="w-[80%] border border-border rounded mt-8">
+          <div className="">
+            <button
+              className={`${
+                pricingCardPreview && "bg-border"
+              } px-6 py-2 border-r border-b roudned border-border`}
+              onClick={handlePricingCardPreview}>
+              Preview
+            </button>
+            <button
+              className={`${
+                pricingCardCode && "bg-border"
+              } px-6 py-2 border-r border-b rounded border-border`}
+              onClick={handlePricingCardCode}>
+              Code
+            </button>
+          </div>
+          {pricingCardPreview && (
+            <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+              <div className="w-[50%] border border-border p-2 rounded-2xl">
+                <div className="w-full bg-primary rounded-2xl p-4">
+                  <div className="flex items-center justify-between w-full mb-5">
+                    <IoIosRocket className="text-secondary text-[3.5rem]" />
+                    <button className="px-2 py-1 border border-secondary rounded-md text-[0.8rem] bg-secondary">
+                      ENTERPRISE
+                    </button>
+                  </div>
+                  <h2 className="text-[2.3rem] font-[800] text-secondary">
+                    $79.58{" "}
+                    <span className="text-[1rem] font-[400]">/ month</span>
+                  </h2>
+                  <p className="text-[1rem] text-secondary">
+                    True power of marketing
+                  </p>
+                </div>
+
+                <div className="flex flex-col px-8 text-text mt-6">
+                  <p className="flex items-center gap-2 py-3 border-b border-border text-[1rem]">
+                    <FaRegDotCircle className="text-[1rem] text-[#000]" />
+                    Lorem ipsum dolor sit.
+                  </p>
+                  <p className="flex items-center gap-2 py-3 border-b border-border text-[1rem]">
+                    <FaRegDotCircle className="text-[1rem] text-[#000]" />
+                    Lorem ipsum dolor sit.
+                  </p>
+                  <p className="flex items-center gap-2 py-3 border-b border-border text-[1rem]">
+                    <FaRegDotCircle className="text-[1rem] text-[#000]" />
+                    Lorem ipsum dolor sit.
+                  </p>
+                  <p className="flex items-center gap-2 py-3 border-b border-border text-[1rem]">
+                    <FaRegDotCircle className="text-[1rem] text-[#000]" />
+                    Lorem ipsum dolor sit.
+                  </p>
+                  <p className="flex items-center gap-2 py-3 text-[1rem]">
+                    <FaRegDotCircle className="text-[1rem] text-[#000]" />
+                    Lorem ipsum dolor sit.
+                  </p>
+                </div>
+
+                <div className="px-8 my-5">
+                  <button className="px-4 py-2 border border-primary bg-primary rounded-2xl text-secondary flex items-center gap-1 group">
+                    GET STARTED
+                    <BiRightArrowAlt className="text-[1.4rem] group-hover:ml-3 transition-all duration-300" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {pricingCardCode && (
+            <Showcode
+              code={`
+import React from "react";
+
+// icons
+import { IoIosRocket } from "react-icons/io";
+import { BiRightArrowAlt } from "react-icons/bi";
+import { FaRegDotCircle } from "react-icons/fa";
+
+const PricingCard = () => {
+  return (
+    <div className="w-[50%] border border-[#e5eaf2] p-2 rounded-2xl">
+      <div className="w-full bg-[#3B9DF8] rounded-2xl p-4">
+        <div className="flex items-center justify-between w-full mb-5">
+          <IoIosRocket className="text-[#ffffff] text-[3.5rem]" />
+          <button className="px-2 py-1 border
+           border-[#ffffff] rounded-md text-[0.8rem] bg-[#ffffff]">
+            ENTERPRISE
+          </button>
+        </div>
+        <h2 className="text-[2.3rem] font-[800] text-secondary">
+          $79.58 <span className="text-[1rem] font-[400]">/ month</span>
+        </h2>
+        <p className="text-[1rem] text-[#ffffff]">True power of marketing</p>
+      </div>
+
+      <div className="flex flex-col px-8 text-[#424242] mt-6">
+        <p className="flex items-center gap-2 py-3 border-b 
+        border-[#e5eaf2] text-[1rem]">
+          <FaRegDotCircle className="text-[1rem] text-[#000]" />
+          Lorem ipsum dolor sit.
+        </p>
+        <p className="flex items-center gap-2 py-3 border-b
+         border-[#e5eaf2] text-[1rem]">
+          <FaRegDotCircle className="text-[1rem] text-[#000]" />
+          Lorem ipsum dolor sit.
+        </p>
+        <p className="flex items-center gap-2 py-3 border-b
+         border-[#e5eaf2] text-[1rem]">
+          <FaRegDotCircle className="text-[1rem] text-[#000]" />
+          Lorem ipsum dolor sit.
+        </p>
+        <p className="flex items-center gap-2 py-3 border-b
+         border-[#e5eaf2] text-[1rem]">
+          <FaRegDotCircle className="text-[1rem] text-[#000]" />
+          Lorem ipsum dolor sit.
+        </p>
+        <p className="flex items-center gap-2 py-3 text-[1rem]">
+          <FaRegDotCircle className="text-[1rem] text-[#000]" />
+          Lorem ipsum dolor sit.
+        </p>
+      </div>
+
+      <div className="px-8 my-5">
+        <button className="px-4 py-2 border border-[#3B9DF8]
+         bg-[#3B9DF8] rounded-2xl text-secondary flex items-center gap-1 group">
+          GET STARTED
+          <BiRightArrowAlt className="text-[1.4rem] 
+          group-hover:ml-3 transition-all duration-300" />
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default PricingCard;
+          `}
+            />
+          )}
+        </div>
+
+        <div className="mt-8">
+          <ContentHeader text={"Pricing card 2"} />
+        </div>
+
+        <p className="w-[80%] text-text text-[1rem]">
+          Many times it is seen that only the bottom of the bar does not come
+          from all sides, that is the tab of the bottom bar.
+        </p>
+
+        <div className="w-[80%] border border-border rounded mt-8">
+          <div className="">
+            <button
+              className={`${
+                pricingCard2Preview && "bg-border"
+              } px-6 py-2 border-r border-b roudned border-border`}
+              onClick={handlePricingCard2Preview}>
+              Preview
+            </button>
+            <button
+              className={`${
+                pricingCard2Code && "bg-border"
+              } px-6 py-2 border-r border-b rounded border-border`}
+              onClick={handlePricingCard2Code}>
+              Code
+            </button>
+          </div>
+          {pricingCard2Preview && (
+            <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+              <div className="w-[60%] border border-border shadow-lg">
+                <div className="w-full flex items-center justify-center flex-col p-6">
+                  <h2 className="text-[1.5rem] text-primary font-[600]">
+                    Standard
+                  </h2>
+                  <p className="text-text text-[1rem]">
+                    Ideal for growing businesses
+                  </p>
+
+                  <div className="flex mt-6 gap-1">
+                    <h2 className="font-[800] text-[4rem] leading-[4rem]">
+                      49.50
+                    </h2>
+                    <span className="text-[1.2rem] font-[500]">$</span>
+                  </div>
+                  <p className="text-text text-[0.9rem]">per month</p>
+
+                  <button className="px-12 py-2 bg-primary rounded-3xl text-secondary text-[1rem] my-6">
+                    Buy Now
+                  </button>
+                </div>
+
+                <h3 className="text-[1.2rem] font-[600] text-text mt-3 px-6">
+                  What you will get?
+                </h3>
+                <div className="flex gap-3 flex-col py-4 px-6">
+                  <p className="flex items-center gap-2 text-text text-[1rem]">
+                    <MdDone className="text-primary text-[1.5rem]" />5 Users
+                  </p>
+                  <p className="flex items-center gap-2 text-text text-[1rem]">
+                    <MdDone className="text-primary text-[1.5rem]" />
+                    50GB Storage
+                  </p>
+                  <p className="flex items-center gap-2 text-text text-[1rem]">
+                    <MdDone className="text-primary text-[1.5rem]" />
+                    Priority Email Support
+                  </p>
+                  <p className="flex items-center gap-3 text-text text-[1rem]">
+                    <RxCross1 className="text-[#e73939] text-[1.2rem]" />
+                    Unlimited Users
+                  </p>
+                  <p className="flex items-center gap-3 text-text text-[1rem]">
+                    <RxCross1 className="text-[#e73939] text-[1.2rem]" />
+                    100GB Storage
+                  </p>
+                  <p className="flex items-center gap-3 text-text text-[1rem]">
+                    <RxCross1 className="text-[#e73939] text-[1.2rem]" />
+                    24/7 Live Chat Support
+                  </p>
+                </div>
+                <div className="w-full h-[10px] bg-primary"></div>
+              </div>
+            </div>
+          )}
+
+          {pricingCard2Code && (
+            <Showcode
+              code={`
+import React from "react";
+
+// icons
+import { MdDone } from "react-icons/md";
+import { RxCross1 } from "react-icons/rx";
+
+const PricingCard = () => {
+  return (
+    <div className="w-[60%] border border-[#e5eaf2] shadow-lg">
+      <div className="w-full flex items-center justify-center flex-col p-6">
+        <h2 className="text-[1.5rem] text-[#3B9DF8] font-[600]">Standard</h2>
+        <p className="text-[#424242] text-[1rem]">Ideal for growing businesses</p>
+
+        <div className="flex mt-6 gap-1">
+          <h2 className="font-[800] text-[4rem] leading-[4rem]">49.50</h2>
+          <span className="text-[1.2rem] font-[500]">$</span>
+        </div>
+        <p className="text-[#424242] text-[0.9rem]">per month</p>
+
+        <button className="px-12 py-2 bg-[#3B9DF8] rounded-3xl text-[#ffffff] text-[1rem] my-6">
+          Buy Now
+        </button>
+      </div>
+
+      <h3 className="text-[1.2rem] font-[600] text-[#424242] mt-3 px-6">
+        What you will get?
+      </h3>
+      <div className="flex gap-3 flex-col py-4 px-6">
+        <p className="flex items-center gap-2 text-[#424242] text-[1rem]">
+          <MdDone className="text-[#3B9DF8] text-[1.5rem]" />5 Users
+        </p>
+        <p className="flex items-center gap-2 text-[#424242] text-[1rem]">
+          <MdDone className="text-[#3B9DF8] text-[1.5rem]" />
+          50GB Storage
+        </p>
+        <p className="flex items-center gap-2 text-[#424242] text-[1rem]">
+          <MdDone className="text-[#3B9DF8] text-[1.5rem]" />
+          Priority Email Support
+        </p>
+        <p className="flex items-center gap-3 text-[#424242] text-[1rem]">
+          <RxCross1 className="text-[#e73939] text-[1.2rem]" />
+          Unlimited Users
+        </p>
+        <p className="flex items-center gap-3 text-[#424242] text-[1rem]">
+          <RxCross1 className="text-[#e73939] text-[1.2rem]" />
+          100GB Storage
+        </p>
+        <p className="flex items-center gap-3 text-[#424242] text-[1rem]">
+          <RxCross1 className="text-[#e73939] text-[1.2rem]" />
+          24/7 Live Chat Support
+        </p>
+      </div>
+      <div className="w-full h-[10px] bg-[#3B9DF8]"></div>
+    </div>
+  );
+};
+
+export default PricingCard;
           `}
             />
           )}
