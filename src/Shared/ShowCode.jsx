@@ -31,7 +31,11 @@ const ShowCode = ({ code }) => {
           />
         )}
       </div>
-      <SyntaxHighlighter language="jsx" style={dracula} showLineNumbers>
+      <SyntaxHighlighter
+        language="jsx"
+        style={dracula}
+        showLineNumbers
+        wrapLongLines>
         {code}
       </SyntaxHighlighter>
     </div>

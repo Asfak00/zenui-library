@@ -232,6 +232,40 @@ const index = ({ startContent, setStartContent }) => {
               onClick={() => setStartContent(17)}>
               dialog
             </Link>
+
+            {/* data display */}
+            <Link
+              to={""}
+              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}>
+              data display
+            </Link>
+            <Link
+              to={"/components/skeleton"}
+              className={`${
+                startContent === 18 &&
+                "border-l border-primary bg-[#f3f6f9] font-[500]"
+              } rounded  border-l border-border`}
+              onClick={() => setStartContent(18)}>
+              Avatar
+            </Link>
+            <Link
+              to={"/components/badge"}
+              className={`${
+                startContent === 19 &&
+                "border-l border-primary bg-[#f3f6f9] font-[500]"
+              } rounded  border-l border-border`}
+              onClick={() => setStartContent(19)}>
+              Badge
+            </Link>
+            <Link
+              to={"/components/tooltip"}
+              className={`${
+                startContent === 20 &&
+                "border-l border-primary bg-[#f3f6f9] font-[500]"
+              } rounded  border-l border-border`}
+              onClick={() => setStartContent(20)}>
+              tooltip
+            </Link>
           </ul>
         )}
       </div>

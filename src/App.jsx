@@ -29,6 +29,8 @@ import TabsPage from "./Pages/Components/Navigation/TabsPage";
 import SkeletonPage from "./Pages/Components/Feedback/SkeletonPage";
 import AlertMessagePage from "./Pages/Components/Feedback/AlertMessagePage";
 import DialogPage from "./Pages/Components/Feedback/DialogPage";
+import BadgePage from "./Pages/Components/Data Display/BadgePage";
+import TooltipPage from "./Pages/Components/Data Display/TooltipPage";
 
 // surface pages
 import CardPage from "./Pages/Components/Surfaces/CardPage";
@@ -70,6 +72,10 @@ const App = () => {
 
         {/* surface */}
         <Route path="/components/cards" element={<CardPage />} />
+
+        {/* data display */}
+        <Route path="/components/badge" element={<BadgePage />} />
+        <Route path="/components/tooltip" element={<TooltipPage />} />
       </Routes>
     </>
   );
