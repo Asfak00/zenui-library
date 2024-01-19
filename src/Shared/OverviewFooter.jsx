@@ -83,7 +83,9 @@ const OverviewFooter = () => {
             className="w-full h-[130px] border border-primary outline-none rounded p-4 mt-1"></textarea>
 
           <div className="w-full border border-[#ffa90a] rounded p-3 flex gap-4 items-start my-4 bg-[#ffa90a21]">
-            <FaHand className="text-[3rem] text-[#ffa90a]" />
+            <p>
+              <FaHand className="text-[1.2rem] text-[#ffa90a]" />
+            </p>
             <p className="text-[1rem]">
               If something is broken or if you need a reply to a problem you've
               encountered, please{" "}

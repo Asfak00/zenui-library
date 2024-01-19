@@ -1,25 +1,19 @@
 import React from "react";
 
-// icon
-import { MdOutlineMail } from "react-icons/md";
-
-const MessageBadge = () => {
+const RoundedTooltip = () => {
   return (
-    <>
-      <div className="relative">
-        <MdOutlineMail className="text-[2.7rem]" />
-        <div className=" absolute top-[-10%] right-[-15%]  text-secondary min-w-[20px] min-h-[20px] text-center">
-          <span className="text-[0.8rem] bg-primary py-1 px-1 rounded-full w-full h-full border-[2px] border-secondary">
-            10
-          </span>
-        </div>
-      </div>
+    <div className=" relative group">
+      <button className="px-3 py-2 border border-primary rounded text-primary ">
+        Rounded Tooltip
+      </button>
 
-      <div className="relative before:absolute before:w-[20px] before:h-[20px] before:rounded-full before:top-[-2%] before:right-[-5%] before:border-[2px] before:border-secondary before:bg-primary ">
-        <MdOutlineMail className="text-[2.7rem]" />
+      <div className=" absolute bottom-[-90%] right-[6%] opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300">
+        <span className="text-[0.9rem] bg-[#8d8d8d] text-secondary rounded px-3 py-2 ">
+          Rounded Tooltip
+        </span>
       </div>
-    </>
+    </div>
   );
 };
 
-export default MessageBadge;
+export default RoundedTooltip;
