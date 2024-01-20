@@ -147,7 +147,7 @@ const index = ({ startContent, setStartContent }) => {
               According
             </Link>
             <Link
-              to={""}
+              to={"/components/appbar"}
               className={`${
                 startContent === 10 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
