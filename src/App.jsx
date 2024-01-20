@@ -37,6 +37,7 @@ import TooltipPage from "./Pages/Components/Data Display/TooltipPage";
 // surface pages
 import CardPage from "./Pages/Components/Surfaces/CardPage";
 import ImageGalleryPage from "./Pages/Components/Surfaces/ImageGalleryPage";
+import AccordingPage from "./Pages/Components/Surfaces/AccordingPage";
 
 const App = () => {
   return (
@@ -79,6 +80,7 @@ const App = () => {
           path="/components/image-gallery"
           element={<ImageGalleryPage />}
         />
+        <Route path="/components/according" element={<AccordingPage />} />
 
         {/* data display */}
         <Route path="/components/badge" element={<BadgePage />} />

@@ -174,8 +174,11 @@ const Card = () => {
                   )}
                 </div>
 
-                {isOpen && (
-                  <div className={`p-4 text-[0.9rem] `}>
+                <div
+                  className={`grid overflow-hidden transition-all duration-300 ${
+                    isOpen ? "grid-rows-[1fr] p-4" : "grid-rows-[0fr]"
+                  } text-[0.9rem] `}>
+                  <div className=" overflow-hidden">
                     <b>Method:</b>
                     <p className="mt-3">
                       Heat 1/2 cup of the broth in a pot until simmering, add
@@ -207,7 +210,7 @@ const Card = () => {
                       serve.
                     </p>
                   </div>
-                )}
+                </div>
               </div>
             </div>
           )}

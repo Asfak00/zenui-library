@@ -138,7 +138,7 @@ const index = ({ startContent, setStartContent }) => {
               Cards
             </Link>
             <Link
-              to={""}
+              to={"/components/according"}
               className={`${
                 startContent === 9 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
