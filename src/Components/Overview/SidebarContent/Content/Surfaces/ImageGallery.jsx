@@ -8,6 +8,9 @@ import ContentHeader from "../../../../../Shared/ContentHeader";
 import Showcode from "../../../../../Shared/ShowCode";
 import OverviewFooter from "../../../../../Shared/OverviewFooter";
 
+// icons
+import { IoIosInformationCircle } from "react-icons/io";
+
 const ImageGallery = () => {
   // image gallery 1
   const [imageGallery1Preview, setImageGallery1Preview] = useState(true);
@@ -77,6 +80,21 @@ const ImageGallery = () => {
   const handleImageGallery5Code = () => {
     setImageGallery5Code(true);
     setImageGallery5Preview(false);
+  };
+
+  // image gallery with title bar
+  const [titleImageGalleryPreview, setTitleImageGalleryPreview] =
+    useState(true);
+  const [titleImageGalleryCode, setTitleImageGalleryCode] = useState(false);
+
+  const handleTitleImageGalleryPreview = () => {
+    setTitleImageGalleryPreview(true);
+    setTitleImageGalleryCode(false);
+  };
+
+  const handleTitleImageGalleryCode = () => {
+    setTitleImageGalleryCode(true);
+    setTitleImageGalleryPreview(false);
   };
 
   return (
@@ -641,6 +659,256 @@ const ImageGallery = () => {
 
 export default ImageGallery;  
             '
+            />
+          )}
+        </div>
+
+        <div className="mt-8">
+          <ContentHeader text={"image Gallery with title bar"} />
+        </div>
+
+        <p className="w-[80%] text-text text-[1rem]">
+          This is the card skeleton. The skeleton provided here basically shows
+          the information of an account.
+        </p>
+
+        <div className="w-[80%] border border-border rounded mt-8">
+          <div className="">
+            <button
+              className={`${
+                titleImageGalleryPreview && "bg-border"
+              } px-6 py-2 border-r border-b roudned border-border`}
+              onClick={handleTitleImageGalleryPreview}>
+              Preview
+            </button>
+            <button
+              className={`${
+                titleImageGalleryCode && "bg-border"
+              } px-6 py-2 border-r border-b rounded border-border`}
+              onClick={handleTitleImageGalleryCode}>
+              Code
+            </button>
+          </div>
+          {titleImageGalleryPreview && (
+            <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+              <div className="grid grid-cols-3 gap-2">
+                <div className="relative">
+                  <img
+                    src="https://img.freepik.com/free-photo/waterfall-nature-thailand_335224-989.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.2.71340048.1688965399&semt=sph"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+
+                  <div className="w-full px-4 py-2 backdrop-blur-[2px] absolute bottom-0 left-0 flex justify-between">
+                    <div className="">
+                      <h3 className="text-[1rem] font-[600]">Natural</h3>
+                      <p className="text-[0.9rem]">@prokas</p>
+                    </div>
+                    <p>
+                      <IoIosInformationCircle className="text-[1.4rem] cursor-pointer text-[#00000093]" />
+                    </p>
+                  </div>
+                </div>
+                <div className="relative">
+                  <img
+                    src="https://img.freepik.com/free-photo/morskie-oko-tatry_1204-510.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.2.71340048.1688965399&semt=sph"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+
+                  <div className="w-full px-4 py-2 backdrop-blur-[2px] absolute bottom-0 left-0 flex justify-between">
+                    <div className="">
+                      <h3 className="text-[1rem] font-[600]">Natural</h3>
+                      <p className="text-[0.9rem]">@prokas</p>
+                    </div>
+                    <p>
+                      <IoIosInformationCircle className="text-[1.4rem] cursor-pointer text-[#00000093]" />
+                    </p>
+                  </div>
+                </div>
+                <div className="relative">
+                  <img
+                    src="https://img.freepik.com/free-photo/island-view-from-sea_1127-2244.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.2.71340048.1688965399&semt=sph"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="w-full px-4 py-2 backdrop-blur-[2px] absolute bottom-0 left-0 flex justify-between">
+                    <div className="">
+                      <h3 className="text-[1rem] font-[600]">Natural</h3>
+                      <p className="text-[0.9rem]">@prokas</p>
+                    </div>
+                    <p>
+                      <IoIosInformationCircle className="text-[1.4rem] cursor-pointer text-[#00000093]" />
+                    </p>
+                  </div>
+                </div>
+                <div className="relative">
+                  <img
+                    src="https://img.freepik.com/free-photo/footpath-beautiful-arch-flowers-plants_181624-16890.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.2.71340048.1688965399&semt=sph"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="w-full px-4 py-2 backdrop-blur-[2px] absolute bottom-0 left-0 flex justify-between">
+                    <div className="">
+                      <h3 className="text-[1rem] font-[600]">Natural</h3>
+                      <p className="text-[0.9rem]">@prokas</p>
+                    </div>
+                    <p>
+                      <IoIosInformationCircle className="text-[1.4rem] cursor-pointer text-[#00000093]" />
+                    </p>
+                  </div>
+                </div>
+                <div className="relative">
+                  <img
+                    src="https://img.freepik.com/free-photo/green-park-view_1417-1487.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.1.71340048.1688965399&semt=sph"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="w-full px-4 py-2 backdrop-blur-[2px] absolute bottom-0 left-0 flex justify-between">
+                    <div className="">
+                      <h3 className="text-[1rem] font-[600]">Natural</h3>
+                      <p className="text-[0.9rem]">@prokas</p>
+                    </div>
+                    <p>
+                      <IoIosInformationCircle className="text-[1.4rem] cursor-pointer text-[#00000093]" />
+                    </p>
+                  </div>
+                </div>
+                <div className="relative">
+                  <img
+                    src="https://img.freepik.com/free-photo/green-field-tree-blue-skygreat-as-backgroundweb-banner-generative-ai_1258-152184.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.1.71340048.1688965399&semt=sph"
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="w-full px-4 py-2 backdrop-blur-[2px] absolute bottom-0 left-0 flex justify-between">
+                    <div className="">
+                      <h3 className="text-[1rem] font-[600]">Natural</h3>
+                      <p className="text-[0.9rem]">@prokas</p>
+                    </div>
+                    <p>
+                      <IoIosInformationCircle className="text-[1.4rem] cursor-pointer text-[#00000093]" />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {titleImageGalleryCode && (
+            <Showcode
+              code='
+import React from "react";
+
+// icons
+import { IoIosInformationCircle } from "react-icons/io";
+
+const ImageGalleryWithTitleBar = () => {
+  return (
+    <div className="grid grid-cols-3 gap-2">
+      <div className="relative">
+        <img
+          src="https://img.freepik.com/free-photo/waterfall-nature-thailand_335224-989.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.2.71340048.1688965399&semt=sph"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+
+        <div className="w-full px-4 py-2 backdrop-blur-[2px] absolute bottom-0 left-0 flex justify-between">
+          <div className="">
+            <h3 className="text-[1rem] font-[600]">Natural</h3>
+            <p className="text-[0.9rem]">@prokas</p>
+          </div>
+          <p>
+            <IoIosInformationCircle className="text-[1.4rem] cursor-pointer text-[#00000093]" />
+          </p>
+        </div>
+      </div>
+      <div className="relative">
+        <img
+          src="https://img.freepik.com/free-photo/morskie-oko-tatry_1204-510.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.2.71340048.1688965399&semt=sph"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+
+        <div className="w-full px-4 py-2 backdrop-blur-[2px] absolute bottom-0 left-0 flex justify-between">
+          <div className="">
+            <h3 className="text-[1rem] font-[600]">Natural</h3>
+            <p className="text-[0.9rem]">@prokas</p>
+          </div>
+          <p>
+            <IoIosInformationCircle className="text-[1.4rem] cursor-pointer text-[#00000093]" />
+          </p>
+        </div>
+      </div>
+      <div className="relative">
+        <img
+          src="https://img.freepik.com/free-photo/island-view-from-sea_1127-2244.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.2.71340048.1688965399&semt=sph"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="w-full px-4 py-2 backdrop-blur-[2px] absolute bottom-0 left-0 flex justify-between">
+          <div className="">
+            <h3 className="text-[1rem] font-[600]">Natural</h3>
+            <p className="text-[0.9rem]">@prokas</p>
+          </div>
+          <p>
+            <IoIosInformationCircle className="text-[1.4rem] cursor-pointer text-[#00000093]" />
+          </p>
+        </div>
+      </div>
+      <div className="relative">
+        <img
+          src="https://img.freepik.com/free-photo/footpath-beautiful-arch-flowers-plants_181624-16890.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.2.71340048.1688965399&semt=sph"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="w-full px-4 py-2 backdrop-blur-[2px] absolute bottom-0 left-0 flex justify-between">
+          <div className="">
+            <h3 className="text-[1rem] font-[600]">Natural</h3>
+            <p className="text-[0.9rem]">@prokas</p>
+          </div>
+          <p>
+            <IoIosInformationCircle className="text-[1.4rem] cursor-pointer text-[#00000093]" />
+          </p>
+        </div>
+      </div>
+      <div className="relative">
+        <img
+          src="https://img.freepik.com/free-photo/green-park-view_1417-1487.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.1.71340048.1688965399&semt=sph"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="w-full px-4 py-2 backdrop-blur-[2px] absolute bottom-0 left-0 flex justify-between">
+          <div className="">
+            <h3 className="text-[1rem] font-[600]">Natural</h3>
+            <p className="text-[0.9rem]">@prokas</p>
+          </div>
+          <p>
+            <IoIosInformationCircle className="text-[1.4rem] cursor-pointer text-[#00000093]" />
+          </p>
+        </div>
+      </div>
+      <div className="relative">
+        <img
+          src="https://img.freepik.com/free-photo/green-field-tree-blue-skygreat-as-backgroundweb-banner-generative-ai_1258-152184.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.1.71340048.1688965399&semt=sph"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="w-full px-4 py-2 backdrop-blur-[2px] absolute bottom-0 left-0 flex justify-between">
+          <div className="">
+            <h3 className="text-[1rem] font-[600]">Natural</h3>
+            <p className="text-[0.9rem]">@prokas</p>
+          </div>
+          <p>
+            <IoIosInformationCircle className="text-[1.4rem] cursor-pointer text-[#00000093]" />
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ImageGallery;
+              '
             />
           )}
         </div>

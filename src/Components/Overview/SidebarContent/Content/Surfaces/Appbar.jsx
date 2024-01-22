@@ -12,62 +12,50 @@ import Showcode from "../../../../../Shared/ShowCode";
 import { FiMenu } from "react-icons/fi";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { CiSearch } from "react-icons/ci";
+import { IoIosNotifications } from "react-icons/io";
+import { IoCartOutline } from "react-icons/io5";
 
 const Appbar = () => {
-  // cardSkeletonPreview
-  const [cardSkeletonPreview, setCardSkeletonPreview] = useState(true);
-  const [cardSkeletonCode, setCardSkeletonCode] = useState(false);
+  // basicApp
+  const [basicAppPreview, setBasicAppPreview] = useState(true);
+  const [basicAppCode, setBasicAppCode] = useState(false);
 
-  const handleCardSkeletonPreview = () => {
-    setCardSkeletonPreview(true);
-    setCardSkeletonCode(false);
+  const handleBasicAppPreview = () => {
+    setBasicAppPreview(true);
+    setBasicAppCode(false);
   };
 
-  const handleCardSkeletonCode = () => {
-    setCardSkeletonCode(true);
-    setCardSkeletonPreview(false);
+  const handleBasicAppCode = () => {
+    setBasicAppCode(true);
+    setBasicAppPreview(false);
   };
 
-  // imageGellaryPreview
-  const [imageGellaryPreview, setImageGellaryPreview] = useState(true);
-  const [imageGellaryCode, setImageGellaryCode] = useState(false);
+  // appbarwithsearch
+  const [appBarWithSearchPreview, setAppBarWithSearchPreview] = useState(true);
+  const [appBarWithSearchCode, setAppBarWithSearchCode] = useState(false);
 
-  const handleImageGellaryPreview = () => {
-    setImageGellaryPreview(true);
-    setImageGellaryCode(false);
+  const handleAppbarSearchPreview = () => {
+    setAppBarWithSearchPreview(true);
+    setAppBarWithSearchCode(false);
   };
 
-  const handleImageGellaryCode = () => {
-    setImageGellaryCode(true);
-    setImageGellaryPreview(false);
+  const handleAppbarSearchCode = () => {
+    setAppBarWithSearchCode(true);
+    setAppBarWithSearchPreview(false);
   };
 
-  // socialPostPreview
-  const [socialPostPreview, setSocialPostPreview] = useState(true);
-  const [socialPostCode, setSocialPostCode] = useState(false);
+  // appbarwithicons
+  const [appbarWithIconsPreview, setAppbarWithIconsPreview] = useState(true);
+  const [appbarWithIconsCode, setAppbarWithIconsCode] = useState(false);
 
-  const handleSocialPostPreview = () => {
-    setSocialPostPreview(true);
-    setSocialPostCode(false);
+  const handleAppbarWithIconsPreview = () => {
+    setAppbarWithIconsPreview(true);
+    setAppbarWithIconsCode(false);
   };
 
-  const handleSocialPostCode = () => {
-    setSocialPostCode(true);
-    setSocialPostPreview(false);
-  };
-
-  // product details skeleton
-  const [productDetailsPreview, setProductDetailsPreview] = useState(true);
-  const [productDetailsCode, setProductDetailsCode] = useState(false);
-
-  const handleProductDetailsPreview = () => {
-    setProductDetailsPreview(true);
-    setProductDetailsCode(false);
-  };
-
-  const handleProductDetailsCode = () => {
-    setProductDetailsCode(true);
-    setProductDetailsPreview(false);
+  const handleAppbarWithIconsCode = () => {
+    setAppbarWithIconsCode(true);
+    setAppbarWithIconsPreview(false);
   };
 
   const [isLogout, setIsLogout] = useState(false);
@@ -86,20 +74,20 @@ const Appbar = () => {
           <div className="">
             <button
               className={`${
-                cardSkeletonPreview && "bg-border"
+                basicAppPreview && "bg-border"
               } px-6 py-2 border-r border-b roudned border-border`}
-              onClick={handleCardSkeletonPreview}>
+              onClick={handleBasicAppPreview}>
               Preview
             </button>
             <button
               className={`${
-                cardSkeletonCode && "bg-border"
+                basicAppCode && "bg-border"
               } px-6 py-2 border-r border-b rounded border-border`}
-              onClick={handleCardSkeletonCode}>
+              onClick={handleBasicAppCode}>
               Code
             </button>
           </div>
-          {cardSkeletonPreview && (
+          {basicAppPreview && (
             <div className="p-8 mb-4 flex flex-col items-center gap-5 justify-center">
               <div className="p-4 bg-primary w-full flex items-center justify-between">
                 <div className="flex items-center gap-4">
@@ -130,10 +118,50 @@ const Appbar = () => {
             </div>
           )}
 
-          {cardSkeletonCode && (
+          {basicAppCode && (
             <Showcode
-              code="
-              "
+              code='
+import React, { useState } from "react";
+
+// icons
+import { FiMenu } from "react-icons/fi";
+import { FaRegCircleUser } from "react-icons/fa6";
+
+
+const AppbarWithUsericon = () => {
+  const [isLogout, setIsLogout] = useState(false);
+  return (
+    <>
+      <div className="p-4 bg-primary w-full flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <FiMenu className="text-secondary text-[1.7rem] cursor-pointer" />
+          <h2 className="text-[1.3rem] text-secondary font-[600]">Logo</h2>
+        </div>
+        {!isLogout && (
+          <FaRegCircleUser className="text-secondary text-[1.5rem] cursor-pointer" />
+        )}
+      </div>
+      <div className="flex items-center gap-3">
+        <div
+          className={`${
+            isLogout ? "!bg-[#b3b3b3]" : "!bg-[#83c2fd]"
+          } cursor-pointer px-4 py-2 rounded-lg before:bg-transparent before:w-[20px] before:h-[20px] before:rounded-full before:absolute relative before:top-[-12%] before:right-[-15%] before:cursor-pointer after:bg-primary after:absolute after:top-[-12%] after:left-[-15%] after:cursor-pointer  after:h-[20px] after:w-[20px] after:rounded-full transition-all duration-300 ${
+            isLogout && "after:!bg-transparent before:!bg-primary "
+          }`}
+          onClick={() => setIsLogout(!isLogout)}></div>
+        <span
+          className={`text-[1.2rem] font-[500] ${
+            isLogout ? "text-text" : "text-primary"
+          }`}>
+          Logout
+        </span>
+      </div>
+    </>
+  );
+};
+
+export default AppbarWithUsericon;
+              '
             />
           )}
         </div>
@@ -151,22 +179,22 @@ const Appbar = () => {
           <div className="">
             <button
               className={`${
-                imageGellaryPreview && "bg-border"
+                appBarWithSearchPreview && "bg-border"
               } px-6 py-2 border-r border-b roudned border-border`}
-              onClick={handleImageGellaryPreview}>
+              onClick={handleAppbarSearchPreview}>
               Preview
             </button>
             <button
               className={`${
-                imageGellaryCode && "bg-border"
+                appBarWithSearchCode && "bg-border"
               } px-6 py-2 border-r border-b rounded border-border`}
-              onClick={handleImageGellaryCode}>
+              onClick={handleAppbarSearchCode}>
               Code
             </button>
           </div>
-          {imageGellaryPreview && (
+          {appBarWithSearchPreview && (
             <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-              <div className="p-4 bg-primary w-full flex items-center justify-between">
+              <div className="px-4 py-2 bg-primary w-full flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <FiMenu className="text-secondary text-[1.7rem] cursor-pointer" />
                   <h2 className="text-[1.3rem] text-secondary font-[600]">
@@ -185,17 +213,46 @@ const Appbar = () => {
             </div>
           )}
 
-          {imageGellaryCode && (
+          {appBarWithSearchCode && (
             <Showcode
-              code="
+              code='
+import React, { useState } from "react";
 
-              "
+// icons
+import { FiMenu } from "react-icons/fi";
+import { CiSearch } from "react-icons/ci";
+
+
+const AppbarWithSearchbar = () => {
+
+  return (
+    <>
+      <div className="px-4 py-2 bg-primary w-full flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <FiMenu className="text-secondary text-[1.7rem] cursor-pointer" />
+          <h2 className="text-[1.3rem] text-secondary font-[600]">Logo</h2>
+        </div>
+        <div className="relative">
+          <input
+            type="search"
+            className="pl-10 py-2 bg-[#104c853d] border-none outline-none text-secondary placeholder:text-[#ffffffa8] "
+            placeholder="Search..."
+          />
+          <CiSearch className=" absolute top-2 left-3 text-secondary text-[1.4rem]" />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default AppbarWithSearchbar;  
+            '
             />
           )}
         </div>
 
         <div className="mt-8">
-          <ContentHeader text={"social post skeleton"} />
+          <ContentHeader text={"app bar with search and icons"} />
         </div>
 
         <p className="w-[80%] text-text text-[1rem]">
@@ -207,66 +264,122 @@ const Appbar = () => {
           <div className="">
             <button
               className={`${
-                socialPostPreview && "bg-border"
+                appbarWithIconsPreview && "bg-border"
               } px-6 py-2 border-r border-b roudned border-border`}
-              onClick={handleSocialPostPreview}>
+              onClick={handleAppbarWithIconsPreview}>
               Preview
             </button>
             <button
               className={`${
-                socialPostCode && "bg-border"
+                appbarWithIconsCode && "bg-border"
               } px-6 py-2 border-r border-b rounded border-border`}
-              onClick={handleSocialPostCode}>
+              onClick={handleAppbarWithIconsCode}>
               Code
             </button>
           </div>
-          {socialPostPreview && (
-            <div className="p-8 mb-4 flex items-center gap-5 justify-center"></div>
+          {appbarWithIconsPreview && (
+            <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+              <div className="px-4 py-2 bg-primary w-full flex items-center justify-between">
+                <div className="flex items-center gap-5">
+                  <div className="flex items-center gap-4">
+                    <FiMenu className="text-secondary text-[1.7rem] cursor-pointer" />
+                    <h2 className="text-[1.3rem] text-secondary font-[600]">
+                      Logo
+                    </h2>
+                  </div>
+                  <div className="relative">
+                    <input
+                      type="search"
+                      className="pl-10 py-2 bg-[#104c853d] border-none outline-none text-secondary placeholder:text-[#ffffffa8] "
+                      placeholder="Search..."
+                    />
+                    <CiSearch className=" absolute top-2 left-3 text-secondary text-[1.4rem]" />
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="relative">
+                    <IoCartOutline className="text-[1.8rem] text-[#ffffff]" />
+                    <div className=" absolute top-[-30%] right-[-10%]  text-secondary min-w-[20px] min-h-[20px] text-center">
+                      <span className="text-[0.6rem] bg-[#cf0e0e] py-1 px-1 rounded-full w-full h-full">
+                        10
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="relative">
+                    <IoIosNotifications className="text-[1.8rem] text-[#ffffff]" />
+                    <div className=" absolute top-[-30%] right-[-10%]  text-secondary min-w-[20px] min-h-[20px] text-center">
+                      <span className="text-[0.6rem] bg-[#cf0e0e] py-1 px-1 rounded-full w-full h-full">
+                        10
+                      </span>
+                    </div>
+                  </div>
+                  <FaRegCircleUser className="text-[1.4rem] text-[#ffffff]" />
+                </div>
+              </div>
+            </div>
           )}
 
-          {socialPostCode && (
+          {appbarWithIconsCode && (
             <Showcode
-              code="
-        "
+              code='
+import React, { useState } from "react";
+
+// icons
+import { FiMenu } from "react-icons/fi";
+import { FaRegCircleUser } from "react-icons/fa6";
+import { CiSearch } from "react-icons/ci";
+import { IoIosNotifications } from "react-icons/io";
+import { IoCartOutline } from "react-icons/io5";
+
+const AppbarWithIcons = () => {
+
+  return (
+    <>
+      <div className="px-4 py-2 bg-primary w-full flex items-center justify-between">
+        <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4">
+            <FiMenu className="text-secondary text-[1.7rem] cursor-pointer" />
+            <h2 className="text-[1.3rem] text-secondary font-[600]">Logo</h2>
+          </div>
+          <div className="relative">
+            <input
+              type="search"
+              className="pl-10 py-2 bg-[#104c853d] border-none outline-none text-secondary placeholder:text-[#ffffffa8] "
+              placeholder="Search..."
             />
-          )}
-        </div>
-
-        <div className="mt-8">
-          <ContentHeader text={"product details skeleton"} />
-        </div>
-
-        <p className="w-[80%] text-text text-[1rem]">
-          This is the skeleton of the product details page. You can use this
-          skeleton on the product details page of any of your e-commerce
-          websites. Each section is marked with comments within the code.
-        </p>
-
-        <div className="w-[80%] border border-border rounded mt-8">
-          <div className="">
-            <button
-              className={`${
-                productDetailsPreview && "bg-border"
-              } px-6 py-2 border-r border-b roudned border-border`}
-              onClick={handleProductDetailsPreview}>
-              Preview
-            </button>
-            <button
-              className={`${
-                productDetailsCode && "bg-border"
-              } px-6 py-2 border-r border-b rounded border-border`}
-              onClick={handleProductDetailsCode}>
-              Code
-            </button>
+            <CiSearch className=" absolute top-2 left-3 text-secondary text-[1.4rem]" />
           </div>
-          {productDetailsPreview && (
-            <div className="p-8 mb-4 flex items-center gap-5 justify-center"></div>
-          )}
+        </div>
 
-          {productDetailsCode && (
-            <Showcode
-              code="
-              "
+        <div className="flex items-center gap-4">
+          <div className="relative">
+            <IoCartOutline className="text-[1.8rem] text-[#ffffff]" />
+            <div className=" absolute top-[-30%] right-[-10%]  text-secondary min-w-[20px] min-h-[20px] text-center">
+              <span className="text-[0.6rem] bg-[#cf0e0e] py-1 px-1 rounded-full w-full h-full">
+                10
+              </span>
+            </div>
+          </div>
+
+          <div className="relative">
+            <IoIosNotifications className="text-[1.8rem] text-[#ffffff]" />
+            <div className=" absolute top-[-30%] right-[-10%]  text-secondary min-w-[20px] min-h-[20px] text-center">
+              <span className="text-[0.6rem] bg-[#cf0e0e] py-1 px-1 rounded-full w-full h-full">
+                10
+              </span>
+            </div>
+          </div>
+          <FaRegCircleUser className="text-[1.4rem] text-[#ffffff]" />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default AppbarWithIcons;              
+              '
             />
           )}
         </div>

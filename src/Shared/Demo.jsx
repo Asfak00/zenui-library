@@ -1,34 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 
-const ImageGallery = () => {
+// icons
+import { FiMenu } from "react-icons/fi";
+import { FaRegCircleUser } from "react-icons/fa6";
+import { CiSearch } from "react-icons/ci";
+import { IoIosNotifications } from "react-icons/io";
+import { IoCartOutline } from "react-icons/io5";
+
+const AppbarWithIcons = () => {
   return (
-    <div className="grid grid-cols-3 gap-3">
-      <img
-        src="https://img.freepik.com/free-photo/cascade-boat-clean-china-natural-rural_1417-1356.jpg?size=626&ext=jpg&ga=GA1.1.71340048.1688965399&semt=sph"
-        alt=""
-      />
-      <img
-        src="https://img.freepik.com/free-photo/beautiful-scenery-rock-formations-by-sea-queens-bath-kauai-hawaii-sunset_181624-36857.jpg?size=626&ext=jpg&ga=GA1.1.71340048.1688965399&semt=sph"
-        alt=""
-      />
-      <img
-        src="https://img.freepik.com/free-photo/green-sprouts-dark-soil-against-blurred-background-symbolizing-concept-growth-potential_90220-1462.jpg?size=626&ext=jpg&ga=GA1.1.71340048.1688965399&semt=sph"
-        alt=""
-      />
-      <img
-        src="https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?size=626&ext=jpg&ga=GA1.1.71340048.1688965399&semt=sph"
-        alt=""
-      />
-      <img
-        src="https://img.freepik.com/free-photo/group-elephants-big-green-tree-wilderness_181624-16897.jpg?size=626&ext=jpg&ga=GA1.1.71340048.1688965399&semt=sph"
-        alt=""
-      />
-      <img
-        src="https://img.freepik.com/free-photo/beautiful-shot-tree-savanna-plains-with-blue-sky_181624-21992.jpg?size=626&ext=jpg&ga=GA1.1.71340048.1688965399&semt=sph"
-        alt=""
-      />
-    </div>
+    <>
+      <div className="px-4 py-2 bg-primary w-full flex items-center justify-between">
+        <div className="flex items-center gap-5">
+          <div className="flex items-center gap-4">
+            <FiMenu className="text-secondary text-[1.7rem] cursor-pointer" />
+            <h2 className="text-[1.3rem] text-secondary font-[600]">Logo</h2>
+          </div>
+          <div className="relative">
+            <input
+              type="search"
+              className="pl-10 py-2 bg-[#104c853d] border-none outline-none text-secondary placeholder:text-[#ffffffa8] "
+              placeholder="Search..."
+            />
+            <CiSearch className=" absolute top-2 left-3 text-secondary text-[1.4rem]" />
+          </div>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <div className="relative">
+            <IoCartOutline className="text-[1.8rem] text-[#ffffff]" />
+            <div className=" absolute top-[-30%] right-[-10%]  text-secondary min-w-[20px] min-h-[20px] text-center">
+              <span className="text-[0.6rem] bg-[#cf0e0e] py-1 px-1 rounded-full w-full h-full">
+                10
+              </span>
+            </div>
+          </div>
+
+          <div className="relative">
+            <IoIosNotifications className="text-[1.8rem] text-[#ffffff]" />
+            <div className=" absolute top-[-30%] right-[-10%]  text-secondary min-w-[20px] min-h-[20px] text-center">
+              <span className="text-[0.6rem] bg-[#cf0e0e] py-1 px-1 rounded-full w-full h-full">
+                10
+              </span>
+            </div>
+          </div>
+          <FaRegCircleUser className="text-[1.4rem] text-[#ffffff]" />
+        </div>
+      </div>
+    </>
   );
 };
 
-export default ImageGallery;
+export default AppbarWithIcons;

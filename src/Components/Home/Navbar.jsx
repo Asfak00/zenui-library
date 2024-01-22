@@ -52,7 +52,6 @@ const Navbar = () => {
               type="search"
               name=""
               id=""
-              disabled
               placeholder="Search..."
               className="py-2 px-10 border bg-border border-[#c7d0dd] rounded-full focus:outline-none"
             />
