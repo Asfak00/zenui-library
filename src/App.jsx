@@ -18,6 +18,7 @@ import TempletePage from "./Pages/TempletePage";
 // buttons pages
 import NormalPage from "./Pages/Components/Buttons/NormalPage";
 import RgbButtonPage from "./Pages/Components/Buttons/RgbButtonPage";
+import AnimatedButtonPage from "./Pages/Components/Buttons/AnimatedButtonPage";
 
 // all components
 import AllComponentsPage from "./Pages/Components/AllComponentsPage";
@@ -63,6 +64,10 @@ const App = () => {
         {/* buttons */}
         <Route path="/components/normal-button" element={<NormalPage />} />
         <Route path="/components/rgb-border" element={<RgbButtonPage />} />
+        <Route
+          path="/components/animated-button"
+          element={<AnimatedButtonPage />}
+        />
 
         {/* navigation */}
         <Route path="/components/tabs" element={<TabsPage />} />

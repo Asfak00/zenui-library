@@ -16,15 +16,18 @@ const index = ({ startContent, setStartContent }) => {
         <h3
           className="flex items-center gap-1 text-[1rem] text-text font-[500] capitalize cursor-pointer"
           onClick={() => setStart(!start)}>
-          {start ? (
-            <MdKeyboardArrowDown className="text-[1.5rem] text-primary transition-all duration-300" />
-          ) : (
-            <MdKeyboardArrowRight className="text-[1.5rem] text-primary transition-all duration-300" />
-          )}
+          <MdKeyboardArrowRight
+            className={`${
+              start && "rotate-[90deg]"
+            } text-[1.5rem] text-primary transition-all duration-300`}
+          />
           getting-started
         </h3>
-        {start && (
-          <ul className={`flex flex-col ml-2 mt-3 `}>
+        <div
+          className={`grid overflow-hidden transition-all duration-500 ${
+            start ? " grid-rows-[1fr]" : " grid-rows-[0fr]"
+          }`}>
+          <ul className={`flex flex-col ml-2 mt-3 overflow-hidden pl-4`}>
             <Link
               to="/getting-started/overview"
               className={`${
@@ -62,22 +65,26 @@ const index = ({ startContent, setStartContent }) => {
               faq
             </Link>
           </ul>
-        )}
+        </div>
       </div>
 
       <div>
         <h3
           className="flex items-center gap-1 text-[1rem] text-text font-[500] capitalize cursor-pointer"
           onClick={() => setComponents(!components)}>
-          {components ? (
-            <MdKeyboardArrowDown className="text-[1.5rem] text-primary transition-all duration-300" />
-          ) : (
-            <MdKeyboardArrowRight className="text-[1.5rem] text-primary transition-all duration-300" />
-          )}
+          <MdKeyboardArrowRight
+            className={`${
+              components && "rotate-[90deg]"
+            } text-[1.5rem] text-primary transition-all duration-300`}
+          />
           Components
         </h3>
-        {components && (
-          <ul className={`flex flex-col ml-2 mt-3 `}>
+
+        <div
+          className={`grid overflow-hidden transition-all duration-500 ${
+            components ? " grid-rows-[1fr]" : " grid-rows-[0fr]"
+          }`}>
+          <ul className={`flex flex-col ml-2 mt-3 overflow-hidden pl-4`}>
             <Link
               to={"/components/all-components"}
               className={`${
@@ -113,7 +120,7 @@ const index = ({ startContent, setStartContent }) => {
               RGB border
             </Link>
             <Link
-              to={""}
+              to={"/components/animated-button"}
               className={`${
                 startContent === 7 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
@@ -276,7 +283,7 @@ const index = ({ startContent, setStartContent }) => {
               tooltip
             </Link>
           </ul>
-        )}
+        </div>
       </div>
     </aside>
   );
