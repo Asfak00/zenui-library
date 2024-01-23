@@ -248,6 +248,15 @@ const index = ({ startContent, setStartContent }) => {
               onClick={() => setStartContent(18)}>
               dialog
             </Link>
+            <Link
+              to={"/components/testimonials"}
+              className={`${
+                startContent === 18 &&
+                "border-l border-primary bg-[#f3f6f9] font-[500]"
+              } rounded  border-l border-border`}
+              onClick={() => setStartContent(18)}>
+              Testimonial
+            </Link>
 
             {/* data display */}
             <Link

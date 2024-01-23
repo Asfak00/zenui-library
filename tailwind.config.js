@@ -12,6 +12,7 @@ export default {
 
       boxShadow: {
         primary: "0 35px 80px -15px rgba(0, 0, 0, 0.3)",
+        secondary: "2px 2px 20px 2px rgba(0, 0, 0, 0.3)",
       },
     },
   },

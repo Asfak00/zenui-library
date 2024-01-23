@@ -38,8 +38,6 @@ const Dialog = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const [dialogValue, setDialogValue] = useState("please select");
 
-  console.log(dialogValue);
-
   const handleDialogAction = (e) => {
     let element = e.target;
     setDialogValue(element.innerText);
