@@ -38,15 +38,6 @@ const index = ({ startContent, setStartContent }) => {
               Overview
             </Link>
             <Link
-              to="/getting-started/usage"
-              className={`${
-                startContent === 1 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
-              } rounded  border-l border-border`}
-              onClick={() => setStartContent(1)}>
-              usage
-            </Link>
-            <Link
               to="/getting-started/templates"
               className={`${
                 startContent === 2 &&

@@ -50,7 +50,7 @@ const Templete = () => {
               </p>
 
               <button
-                className={`${utils.buttonSecondary} flex items-center justify-center mx-auto mt-3 !py-1.5`}>
+                className={`${utils.buttonSecondary} !w-full flex items-center justify-center mx-auto mt-3 !py-1.5`}>
                 source code
               </button>
             </div>

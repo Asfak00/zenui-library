@@ -11,7 +11,6 @@ import ComponentsPage from "./Pages/ComponentsPage";
 
 // documentation page
 import OverviewPage from "./Pages/OverviewPage";
-import UsagesPage from "./Pages/UsagesPage";
 import FaqPage from "./Pages/FaqPage";
 import TempletePage from "./Pages/TempletePage";
 
@@ -52,7 +51,6 @@ const App = () => {
         {/* documentation */}
         <Route path="/getting-started" element={<ComponentsPage />} />
         <Route path="/getting-started/overview" element={<OverviewPage />} />
-        <Route path="/getting-started/usage" element={<UsagesPage />} />
         <Route path="/getting-started/faq" element={<FaqPage />} />
         <Route path="/getting-started/templates" element={<TempletePage />} />
 

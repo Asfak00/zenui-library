@@ -1,54 +1,46 @@
-import React, { useState } from "react";
+import React from "react";
 
-// icons
-import { FiMenu } from "react-icons/fi";
-import { FaRegCircleUser } from "react-icons/fa6";
-import { CiSearch } from "react-icons/ci";
-import { IoIosNotifications } from "react-icons/io";
-import { IoCartOutline } from "react-icons/io5";
+import { FaQuoteLeft, FaRegStar, FaStar, FaQuoteRight } from "react-icons/fa";
 
-const AppbarWithIcons = () => {
+const Testimonial = () => {
   return (
     <>
-      <div className="px-4 py-2 bg-primary w-full flex items-center justify-between">
-        <div className="flex items-center gap-5">
-          <div className="flex items-center gap-4">
-            <FiMenu className="text-secondary text-[1.7rem] cursor-pointer" />
-            <h2 className="text-[1.3rem] text-secondary font-[600]">Logo</h2>
-          </div>
-          <div className="relative">
-            <input
-              type="search"
-              className="pl-10 py-2 bg-[#104c853d] border-none outline-none text-secondary placeholder:text-[#ffffffa8] "
-              placeholder="Search..."
-            />
-            <CiSearch className=" absolute top-2 left-3 text-secondary text-[1.4rem]" />
-          </div>
-        </div>
+      <div className="w-full border border-primary shadow-2xl rounded-lg flex items-center justify-between gap-6 px-6 py-16">
+        <img
+          src="https://img.freepik.com/free-photo/curly-man-with-broad-smile-shows-perfect-teeth-being-amused-by-interesting-talk-has-bushy-curly-dark-hair-stands-indoor-against-white-blank-wall_273609-17092.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.1.71340048.1688965399&semt=sph"
+          alt="demo/image"
+          className="w-[180px] h-[180px] object-cover rounded-full"
+        />
 
-        <div className="flex items-center gap-4">
-          <div className="relative">
-            <IoCartOutline className="text-[1.8rem] text-[#ffffff]" />
-            <div className=" absolute top-[-30%] right-[-10%]  text-secondary min-w-[20px] min-h-[20px] text-center">
-              <span className="text-[0.6rem] bg-[#cf0e0e] py-1 px-1 rounded-full w-full h-full">
-                10
-              </span>
+        <div className="w-[65%] relative">
+          <div className="flex items-center justify-between relative">
+            <FaQuoteRight className=" absolute top-[-150%] left-[0%] text-[2rem] text-primary" />
+            <div className="flex items-center gap-2">
+              <h2 className="text-[1rem] font-[500]">Jhone Dehon -</h2>
+              <p className="text-[0.9rem] text-[#9c9c9c]">CEO of Miracle</p>
+            </div>
+            <div className="flex items-center gap-1">
+              <FaStar className="text-[1.1rem] text-[#ffba24]" />
+              <FaStar className="text-[1.1rem] text-[#ffba24]" />
+              <FaStar className="text-[1.1rem] text-[#ffba24]" />
+              <FaStar className="text-[1.1rem] text-[#ffba24]" />
+              <FaRegStar className="text-[#ffba24] text-[1.1rem]" />
             </div>
           </div>
-
-          <div className="relative">
-            <IoIosNotifications className="text-[1.8rem] text-[#ffffff]" />
-            <div className=" absolute top-[-30%] right-[-10%]  text-secondary min-w-[20px] min-h-[20px] text-center">
-              <span className="text-[0.6rem] bg-[#cf0e0e] py-1 px-1 rounded-full w-full h-full">
-                10
-              </span>
-            </div>
-          </div>
-          <FaRegCircleUser className="text-[1.4rem] text-[#ffffff]" />
+          <h2 className="text-[1.5rem] font-[500] capitalize mt-1">
+            amazing customer service
+          </h2>
+          <p className=" text-justify text-[0.9rem] my-3 text-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+            nesciunt saepe quam doloremque nulla cumque vero sequi, repellendus
+            vel reiciendis? Eos totam quidem ducimus amet, in fuga quia minus
+            ab!
+          </p>
+          <FaQuoteLeft className=" absolute bottom-[-10%] right-[0%] text-[2rem] text-primary" />
         </div>
       </div>
     </>
   );
 };
 
-export default AppbarWithIcons;
+export default Testimonial;
