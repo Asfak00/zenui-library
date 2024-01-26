@@ -11,7 +11,7 @@ const AnimatedButtonPage = () => {
       <Navbar />
       <div className="flex w-full max-w-[1400px] mx-auto">
         <div className="w-[450px]">
-          <Sidebar startContent={7} />
+          <Sidebar startContent={6} />
         </div>
 
         <div className="w-full p-12">

@@ -11,7 +11,7 @@ const FaqPage = () => {
       <Navbar />
       <div className="flex w-full max-w-[1400px] mx-auto">
         <div className="w-[450px]">
-          <Sidebar startContent={3} />
+          <Sidebar startContent={2} />
         </div>
 
         <div className="w-full p-12">

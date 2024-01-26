@@ -11,7 +11,7 @@ const TooltipPage = () => {
       <Navbar />
       <div className="flex w-full max-w-[1400px] mx-auto">
         <div className="w-[450px]">
-          <Sidebar startContent={20} />
+          <Sidebar startContent={21} />
         </div>
 
         <div className="w-full p-12">

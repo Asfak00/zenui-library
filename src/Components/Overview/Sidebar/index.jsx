@@ -40,19 +40,19 @@ const index = ({ startContent, setStartContent }) => {
             <Link
               to="/getting-started/templates"
               className={`${
-                startContent === 2 &&
+                startContent === 1 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(2)}>
+              onClick={() => setStartContent(1)}>
               templates
             </Link>
             <Link
               to="/getting-started/faq"
               className={`${
-                startContent === 3 &&
+                startContent === 2 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(3)}>
+              onClick={() => setStartContent(2)}>
               faq
             </Link>
           </ul>
@@ -79,10 +79,10 @@ const index = ({ startContent, setStartContent }) => {
             <Link
               to={"/components/all-components"}
               className={`${
-                startContent === 4 &&
+                startContent === 3 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(4)}>
+              onClick={() => setStartContent(3)}>
               All Components
             </Link>
 
@@ -95,28 +95,28 @@ const index = ({ startContent, setStartContent }) => {
             <Link
               to={"/components/normal-button"}
               className={`${
-                startContent === 5 &&
+                startContent === 4 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(5)}>
+              onClick={() => setStartContent(4)}>
               normal button
             </Link>
             <Link
               to={"/components/rgb-border"}
               className={`${
-                startContent === 6 &&
+                startContent === 5 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(6)}>
+              onClick={() => setStartContent(5)}>
               RGB border
             </Link>
             <Link
               to={"/components/animated-button"}
               className={`${
-                startContent === 7 &&
+                startContent === 6 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(7)}>
+              onClick={() => setStartContent(6)}>
               animated button
             </Link>
 
@@ -129,37 +129,37 @@ const index = ({ startContent, setStartContent }) => {
             <Link
               to={"/components/cards"}
               className={`${
-                startContent === 8 &&
+                startContent === 7 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(8)}>
+              onClick={() => setStartContent(7)}>
               Cards
             </Link>
             <Link
               to={"/components/according"}
               className={`${
-                startContent === 9 &&
+                startContent === 8 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(9)}>
+              onClick={() => setStartContent(8)}>
               According
             </Link>
             <Link
               to={"/components/appbar"}
               className={`${
-                startContent === 10 &&
+                startContent === 9 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(10)}>
+              onClick={() => setStartContent(9)}>
               App bar
             </Link>
             <Link
               to={"/components/image-gallery"}
               className={`${
-                startContent === 11 &&
+                startContent === 10 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(11)}>
+              onClick={() => setStartContent(10)}>
               Image Gallery
             </Link>
 
@@ -172,37 +172,28 @@ const index = ({ startContent, setStartContent }) => {
             <Link
               to={""}
               className={`${
-                startContent === 12 &&
+                startContent === 11 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(12)}>
-              responsive navbar
-            </Link>
-            <Link
-              to={""}
-              className={`${
-                startContent === 13 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
-              } rounded  border-l border-border`}
-              onClick={() => setStartContent(13)}>
+              onClick={() => setStartContent(11)}>
               dropdown menu
             </Link>
             <Link
               to={""}
               className={`${
-                startContent === 14 &&
+                startContent === 12 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(14)}>
-              sidebar menu
+              onClick={() => setStartContent(12)}>
+              modal
             </Link>
             <Link
               to={"/components/tabs"}
               className={`${
-                startContent === 15 &&
+                startContent === 13 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(15)}>
+              onClick={() => setStartContent(13)}>
               tabs
             </Link>
 
@@ -215,29 +206,38 @@ const index = ({ startContent, setStartContent }) => {
             <Link
               to={"/components/skeleton"}
               className={`${
-                startContent === 16 &&
+                startContent === 14 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(16)}>
+              onClick={() => setStartContent(14)}>
               skeleton
             </Link>
             <Link
               to={"/components/alert-message"}
               className={`${
-                startContent === 17 &&
+                startContent === 15 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(17)}>
+              onClick={() => setStartContent(15)}>
               alert message
             </Link>
             <Link
               to={"/components/dialog-message"}
               className={`${
-                startContent === 18 &&
+                startContent === 16 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
-              onClick={() => setStartContent(18)}>
+              onClick={() => setStartContent(16)}>
               dialog
+            </Link>
+            <Link
+              to={"/components/testimonials"}
+              className={`${
+                startContent === 17 &&
+                "border-l border-primary bg-[#f3f6f9] font-[500]"
+              } rounded  border-l border-border`}
+              onClick={() => setStartContent(17)}>
+              Testimonial
             </Link>
             <Link
               to={"/components/testimonials"}
@@ -246,7 +246,16 @@ const index = ({ startContent, setStartContent }) => {
                 "border-l border-primary bg-[#f3f6f9] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(18)}>
-              Testimonial
+              Loader
+            </Link>
+            <Link
+              to={"/components/testimonials"}
+              className={`${
+                startContent === 19 &&
+                "border-l border-primary bg-[#f3f6f9] font-[500]"
+              } rounded  border-l border-border`}
+              onClick={() => setStartContent(19)}>
+              Notification
             </Link>
 
             {/* data display */}
@@ -254,15 +263,6 @@ const index = ({ startContent, setStartContent }) => {
               to={""}
               className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}>
               data display
-            </Link>
-            <Link
-              to={"/components/skeleton"}
-              className={`${
-                startContent === 19 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
-              } rounded  border-l border-border`}
-              onClick={() => setStartContent(19)}>
-              Avatar
             </Link>
             <Link
               to={"/components/badge"}
