@@ -249,7 +249,7 @@ const index = ({ startContent, setStartContent }) => {
               Loader
             </Link>
             <Link
-              to={"/components/testimonials"}
+              to={"/components/notification"}
               className={`${
                 startContent === 19 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"

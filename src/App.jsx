@@ -30,6 +30,7 @@ import SkeletonPage from "./Pages/Components/Feedback/SkeletonPage";
 import AlertMessagePage from "./Pages/Components/Feedback/AlertMessagePage";
 import DialogPage from "./Pages/Components/Feedback/DialogPage";
 import TestimonialPage from "./Pages/Components/Feedback/TestimonialPage";
+import NotificationPage from "./Pages/Components/Feedback/NotificationPage";
 
 // data display
 import BadgePage from "./Pages/Components/Data Display/BadgePage";
@@ -79,6 +80,7 @@ const App = () => {
         />
         <Route path="/components/dialog-message" element={<DialogPage />} />
         <Route path="/components/testimonials" element={<TestimonialPage />} />
+        <Route path="/components/notification" element={<NotificationPage />} />
 
         {/* surface */}
         <Route path="/components/cards" element={<CardPage />} />
