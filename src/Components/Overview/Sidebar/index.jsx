@@ -179,7 +179,7 @@ const index = ({ startContent, setStartContent }) => {
               dropdown menu
             </Link>
             <Link
-              to={""}
+              to={"/components/modal"}
               className={`${
                 startContent === 12 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"

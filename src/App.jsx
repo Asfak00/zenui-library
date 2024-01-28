@@ -24,6 +24,7 @@ import AllComponentsPage from "./Pages/Components/AllComponentsPage";
 
 // navigation pages
 import TabsPage from "./Pages/Components/Navigation/TabsPage";
+import ModalPage from "./Pages/Components/Navigation/ModalPage";
 
 // feedback pages
 import SkeletonPage from "./Pages/Components/Feedback/SkeletonPage";
@@ -71,6 +72,7 @@ const App = () => {
 
         {/* navigation */}
         <Route path="/components/tabs" element={<TabsPage />} />
+        <Route path="/components/modal" element={<ModalPage />} />
 
         {/* feedback */}
         <Route path="/components/skeleton" element={<SkeletonPage />} />

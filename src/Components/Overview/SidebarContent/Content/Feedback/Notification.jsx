@@ -118,8 +118,8 @@ const Notification = () => {
                 </button>
                 <div
                   className={`${
-                    isClicked && "translate-x-[0px]"
-                  } translate-x-[600px] transition-all duration-300 py-2 px-6 border border-primary rounded text-center cursor-pointer absolute top-5 right-5`}
+                    isClicked ? "translate-x-[0px]" : " translate-x-[600px]"
+                  } transition-all duration-300 py-2 px-6 border border-primary rounded text-center cursor-pointer absolute top-5 right-5`}
                   onClick={() => setIsClicked(false)}>
                   Click me again for closing
                 </div>
@@ -137,8 +137,8 @@ const Notification = () => {
     <>
       <div
         className={`${
-          isClicked && "translate-x-[0px]"
-        } translate-x-[600px] transition-all duration-300 py-2 px-6 border border-primary rounded text-center cursor-pointer absolute top-5 right-5`}
+          isClicked ? "translate-x-[0px]":"translate-x-[600px]"
+        }  transition-all duration-300 py-2 px-6 border border-primary rounded text-center cursor-pointer absolute top-5 right-5`}
         onClick={() => setIsClicked(false)}>
         Click me again for closing
       </div>
@@ -205,8 +205,8 @@ export default Notification;
                 </div>
                 <div
                   className={`${
-                    isInfo && "translate-x-[0px]"
-                  } translate-x-[600px] transition-all duration-300 py-2 px-6 border-[#418944] text-[#418944] border rounded text-center absolute top-5 right-5 flex items-center justify-between gap-6`}>
+                    isInfo ? "translate-x-[0px]" : " translate-x-[600px]"
+                  } transition-all duration-300 py-2 px-6 border-[#418944] text-[#418944] border rounded text-center absolute top-5 right-5 flex items-center justify-between gap-6`}>
                   <p>Click me again for closing</p>{" "}
                   <RxCross1
                     className="text-[#418944] text-[1rem] cursor-pointer"
@@ -215,8 +215,8 @@ export default Notification;
                 </div>
                 <div
                   className={`${
-                    isSuccess && "translate-x-[0px]"
-                  } translate-x-[600px] transition-all duration-300 py-2 px-6  rounded text-center border border-[#2d9dda] text-[#2d9dda] absolute top-5 right-5 flex items-center justify-between gap-6`}>
+                    isSuccess ? "translate-x-[0px]" : " translate-x-[600px]"
+                  } transition-all duration-300 py-2 px-6  rounded text-center border border-[#2d9dda] text-[#2d9dda] absolute top-5 right-5 flex items-center justify-between gap-6`}>
                   <p>Click me again for closing</p>{" "}
                   <RxCross1
                     className="text-[#2d9dda] text-[1rem] cursor-pointer"
@@ -225,8 +225,8 @@ export default Notification;
                 </div>
                 <div
                   className={`${
-                    isError && "translate-x-[0px]"
-                  } translate-x-[600px] transition-all duration-300 py-2 px-6  rounded text-center border border-[#d74242] text-[#d74242] absolute top-5 right-5 flex items-center justify-between gap-6`}>
+                    isError ? "translate-x-[0px]" : "translate-x-[600px]"
+                  }  transition-all duration-300 py-2 px-6  rounded text-center border border-[#d74242] text-[#d74242] absolute top-5 right-5 flex items-center justify-between gap-6`}>
                   <p>Click me again for closing</p>{" "}
                   <RxCross1
                     className="text-[#ca3434] text-[1rem] cursor-pointer"
@@ -235,8 +235,8 @@ export default Notification;
                 </div>
                 <div
                   className={`${
-                    isWarning && "translate-x-[0px]"
-                  } translate-x-[600px] transition-all duration-300 py-2 px-6  rounded text-center border border-[#f18831] text-[#f18831] absolute top-5 right-5 flex items-center justify-between gap-6`}>
+                    isWarning ? "translate-x-[0px]" : "translate-x-[600px]"
+                  }  transition-all duration-300 py-2 px-6  rounded text-center border border-[#f18831] text-[#f18831] absolute top-5 right-5 flex items-center justify-between gap-6`}>
                   <p>Click me again for closing</p>{" "}
                   <RxCross1
                     className="text-[#f18831] text-[1rem] cursor-pointer"
@@ -258,8 +258,8 @@ const Notification = () => {
       {/* info notification */}
       <div
         className={`${
-          isInfo && "translate-x-[0px]"
-        } translate-x-[600px] transition-all duration-300 py-2 px-6 border-[#418944] text-[#418944] border rounded text-center absolute top-5 right-5 flex items-center justify-between gap-6`}>
+          isInfo ? "translate-x-[0px]":"translate-x-[600px]"
+        }  transition-all duration-300 py-2 px-6 border-[#418944] text-[#418944] border rounded text-center absolute top-5 right-5 flex items-center justify-between gap-6`}>
         <p>Click me again for closing</p>{" "}
         <RxCross1
           className="text-[#418944] text-[1rem] cursor-pointer"
@@ -270,8 +270,8 @@ const Notification = () => {
       {/* success notification */}
       <div
         className={`${
-          isSuccess && "translate-x-[0px]"
-        } translate-x-[600px] transition-all duration-300 py-2 px-6  rounded text-center border border-[#2d9dda] text-[#2d9dda] absolute top-5 right-5 flex items-center justify-between gap-6`}>
+          isSuccess ? "translate-x-[0px]":"translate-x-[600px]"
+        }  transition-all duration-300 py-2 px-6  rounded text-center border border-[#2d9dda] text-[#2d9dda] absolute top-5 right-5 flex items-center justify-between gap-6`}>
         <p>Click me again for closing</p>{" "}
         <RxCross1
           className="text-[#2d9dda] text-[1rem] cursor-pointer"
@@ -282,8 +282,8 @@ const Notification = () => {
       {/* error notification */}
       <div
         className={`${
-          isError && "translate-x-[0px]"
-        } translate-x-[600px] transition-all duration-300 py-2 px-6  rounded text-center border border-[#d74242] text-[#d74242] absolute top-5 right-5 flex items-center justify-between gap-6`}>
+          isError && "translate-x-[0px]":"translate-x-[600px] "
+        } transition-all duration-300 py-2 px-6  rounded text-center border border-[#d74242] text-[#d74242] absolute top-5 right-5 flex items-center justify-between gap-6`}>
         <p>Click me again for closing</p>{" "}
         <RxCross1
           className="text-[#ca3434] text-[1rem] cursor-pointer"
@@ -294,8 +294,8 @@ const Notification = () => {
       {/* warning notification */}
       <div
         className={`${
-          isWarning && "translate-x-[0px]"
-        } translate-x-[600px] transition-all duration-300 py-2 px-6  rounded text-center border border-[#f18831] text-[#f18831] absolute top-5 right-5 flex items-center justify-between gap-6`}>
+          isWarning ? "translate-x-[0px]":" translate-x-[600px
+        } transition-all duration-300 py-2 px-6  rounded text-center border border-[#f18831] text-[#f18831] absolute top-5 right-5 flex items-center justify-between gap-6`}>
         <p>Click me again for closing</p>{" "}
         <RxCross1
           className="text-[#f18831] text-[1rem] cursor-pointer"
