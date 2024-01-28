@@ -1,47 +1,40 @@
 import React from "react";
 
 // icons
-import { RxCross1 } from "react-icons/rx";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
-const Modal = () => {
+const DropDown = () => {
   return (
     <>
-      <div
-        className={`${
-          modalOpen ? " scale-[1] opacity-100" : " scale-[0] opacity-0"
-        } w-full h-screen fixed top-0 left-0 z-50 bg-[#0000002a] flex items-center justify-center transition-all duration-300`}>
-        <div className={` w-[40%] bg-[#ffffff] rounded-lg p-4 `}>
-          <div className="w-full flex items-end justify-end">
-            <RxCross1
-              className="p-2 text-[2.5rem] hover:bg-[#e7e7e7] rounded-full transition-all duration-300 cursor-pointer"
-              onClick={() => setModalOpen(false)}
-            />
-          </div>
-
-          <div className="w-full pl-8">
-            <h2 className="text-[1.7rem] font-[500] text-[#202020]">
-              Are you sure about it?
-            </h2>
-            <p className="text-[1rem] text-[#525252]">
-              you can't undo this action
-            </p>
-          </div>
-          <div className="flex items-center gap-5 w-full justify-end mt-6">
-            <button
-              className="px-4 py-2 border border-[#a8a8a8] rounded-lg text-[#585858]"
-              onClick={() => setModalOpen(false)}>
-              Cancel
-            </button>
-            <button
-              className="px-4 py-2 bg-[#3B9DF8] rounded-lg text-[#ffffff]"
-              onClick={() => setModalOpen(false)}>
-              Confirm
-            </button>
-          </div>
-        </div>
-      </div>
+      <nav className="w-full px-4 flex items-center justify-between bg-primary relative mb-24">
+        <h2 className="text-[#ffffff] font-[600] text-[1.3rem]">Logo</h2>
+        <ul className="flex items-center gap-5 text-secondary">
+          <li className=" cursor-pointer py-2">Home</li>
+          <li className="cursor-pointer group py-2 flex items-center gap-1">
+            Categories
+            <MdKeyboardArrowDown className="text-[1.5rem] group-hover:rotate-[180deg] transition-all duration-300" />
+            <div className=" hidden group-hover:block absolute top-[100%] left-[50%] bg-secondary shadow-2xl p-4">
+              <ul className="text-[#000]">
+                <li className="hover:text-primary hover:tracking-widest transition-all duration-300">
+                  item 1
+                </li>
+                <li className="hover:text-primary hover:tracking-widest transition-all duration-300">
+                  item 2
+                </li>
+                <li className="hover:text-primary hover:tracking-widest transition-all duration-300">
+                  item 3
+                </li>
+                <li className="hover:text-primary hover:tracking-widest transition-all duration-300">
+                  item 4
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <FaRegCircleUser className="text-[1.4rem] text-[#ffffff]" />
+      </nav>
     </>
   );
 };
 
-export default Modal;
+export default DropDown;

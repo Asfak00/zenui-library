@@ -170,7 +170,7 @@ const index = ({ startContent, setStartContent }) => {
               navigation
             </Link>
             <Link
-              to={""}
+              to={"/components/dropdown"}
               className={`${
                 startContent === 11 &&
                 "border-l border-primary bg-[#f3f6f9] font-[500]"

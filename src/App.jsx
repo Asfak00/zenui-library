@@ -23,6 +23,7 @@ import AnimatedButtonPage from "./Pages/Components/Buttons/AnimatedButtonPage";
 import AllComponentsPage from "./Pages/Components/AllComponentsPage";
 
 // navigation pages
+import DropDownPage from "./Pages/Components/Navigation/DropDownPage";
 import TabsPage from "./Pages/Components/Navigation/TabsPage";
 import ModalPage from "./Pages/Components/Navigation/ModalPage";
 
@@ -71,6 +72,7 @@ const App = () => {
         />
 
         {/* navigation */}
+        <Route path="/components/dropdown" element={<DropDownPage />} />
         <Route path="/components/tabs" element={<TabsPage />} />
         <Route path="/components/modal" element={<ModalPage />} />
 

@@ -108,20 +108,20 @@ const BorderTab = () => {
     <ul className='flex items-center gap-5'>
       <li
         className={`${
-          isActive === 1 && 'bg-primary text-secondary'
-        } px-6 py-2 border  text-primary transition duration-300 border-primary cursor-pointer`}
+          isActive === 1 && 'bg-[#3B9DF8] text-[#ffffff]'
+        } px-6 py-2 border  text-[#3B9DF8] transition duration-300 border-[#3B9DF8] cursor-pointer`}
         onClick={() => setIsActive(1)}> Home
       </li>
       <li
         className={`${
-          isActive === 2 && 'bg-primary text-secondary'
-        } px-6 py-2 border text-primary transition duration-300 border-primary cursor-pointer`}
+          isActive === 2 && 'bg-[#3B9DF8] text-[#ffffff]'
+        } px-6 py-2 border text-[#3B9DF8] transition duration-300 border-[#3B9DF8] cursor-pointer`}
         onClick={() => setIsActive(2)}> About
       </li>
       <li
         className={`${
-          isActive === 3 && 'bg-primary text-secondary'
-        } px-6 py-2 border text-primary transition duration-300 border-primary cursor-pointer`}
+          isActive === 3 && 'bg-[#3B9DF8] text-[#ffffff]'
+        } px-6 py-2 border text-[#3B9DF8] transition duration-300 border-[#3B9DF8] cursor-pointer`}
         onClick={() => setIsActive(3)}> Support
       </li>
     </ul>
@@ -201,20 +201,20 @@ const BottomBorderTab = () => {
     <ul className='flex items-center gap-5'>
       <li
         className={`${
-          isActive === 1 && '!border-primary !text-primary'
-        } px-6 py-2 border-b  text-text transition duration-300 border-transparent cursor-pointer`}
+          isActive === 1 && '!border-[#3B9DF8] !text-[#3B9DF8]'
+        } px-6 py-2 border-b  text-[#424242] transition duration-300 border-transparent cursor-pointer`}
         onClick={() => setIsActive(1)}> Home
       </li>
       <li
         className={`${
-          isActive === 2 && '!border-primary !text-primary'
-        } px-6 py-2 border-b  text-text transition duration-300 border-transparent cursor-pointer`}
+          isActive === 2 && '!border-[#3B9DF8] !text-[#3B9DF8]'
+        } px-6 py-2 border-b  text-[#424242] transition duration-300 border-transparent cursor-pointer`}
         onClick={() => setIsActive(2)}> About
       </li>
       <li
         className={`${
-          isActive === 3 && '!border-primary !text-primary'
-        } px-6 py-2 border-b  text-text transition duration-300 border-transparent cursor-pointer`}
+          isActive === 3 && '!border-[#3B9DF8] !text-[#3B9DF8]'
+        } px-6 py-2 border-b  text-[#424242] transition duration-300 border-transparent cursor-pointer`}
         onClick={() => setIsActive(3)}> Support
       </li>
     </ul>
