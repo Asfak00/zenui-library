@@ -9,6 +9,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 
 *::selection {
@@ -28,6 +29,10 @@
 *::-webkit-scrollbar-thumb {
   background-color: #3b9df8;
   border-radius: 30px;
+}
+
+.codeContainer::-webkit-scrollbar {
+  display: none;
 }
 
 /* navbar hover effect */

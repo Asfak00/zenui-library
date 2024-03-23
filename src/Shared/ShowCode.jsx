@@ -20,8 +20,8 @@ const ShowCode = ({ code }) => {
     }, 1000);
   };
   return (
-    <div className=" transition-all duration-300 ease-in-out relative">
-      <div className="w-[40px] h-[40px] flex items-center justify-center bg-[#000000d7] absolute right-0 top-0">
+    <div className=" codeContainer transition-all duration-300 ease-in-out relative overflow-x-scroll max-w-[600px]">
+      <div className="w-[40px] h-[40px] flex items-center justify-center bg-[#000000d7] absolute right-0 top-3 cursor-pointer">
         {isCopy ? (
           <MdOutlineDone className="text-[1.3rem] text-primary" />
         ) : (
@@ -31,11 +31,7 @@ const ShowCode = ({ code }) => {
           />
         )}
       </div>
-      <SyntaxHighlighter
-        language="jsx"
-        style={dracula}
-        showLineNumbers
-        wrapLongLines>
+      <SyntaxHighlighter language="jsx" style={dracula} showLineNumbers>
         {code}
       </SyntaxHighlighter>
     </div>
