@@ -26,7 +26,8 @@ const OverviewFooter = () => {
     <footer className="w-[80%] mt-8">
       <div className="flex items-center justify-between w-full pb-5">
         <button
-          className={`${utils.buttonSecondary} flex items-center gap-2 !px-2 !py-1 text-[0.9rem]`}>
+          className={`${utils.buttonSecondary} flex items-center gap-2 !px-2 !py-1 text-[0.9rem]`}
+        >
           <FaGithub />
           Give a star
         </button>
@@ -57,16 +58,19 @@ const OverviewFooter = () => {
           <textarea
             name="message"
             id="message"
-            className="w-full h-[130px] border border-primary outline-none rounded p-4 mt-1"></textarea>
+            className="w-full h-[130px] border border-primary outline-none rounded p-4 mt-1"
+          ></textarea>
           <div className="w-full flex items-center mt-2 justify-end gap-3">
             <button
               type="submit"
-              className={`${utils.buttonSecondary} !py-1 !px-3`}>
+              className={`${utils.buttonSecondary} !py-1 !px-3`}
+            >
               Cancel
             </button>
             <button
               type="submit"
-              className={`${utils.buttonPrimary} !py-1 !px-3`}>
+              className={`${utils.buttonPrimary} !py-1 !px-3`}
+            >
               Submit
             </button>
           </div>
@@ -80,7 +84,8 @@ const OverviewFooter = () => {
           <textarea
             name="message"
             id="message"
-            className="w-full h-[130px] border border-primary outline-none rounded p-4 mt-1"></textarea>
+            className="w-full h-[130px] border border-primary outline-none rounded p-4 mt-1"
+          ></textarea>
 
           <div className="w-full border border-[#ffa90a] rounded p-3 flex gap-4 items-start my-4 bg-[#ffa90a21]">
             <p>
@@ -99,12 +104,14 @@ const OverviewFooter = () => {
           <div className="w-full flex items-center mt-2 justify-end gap-3">
             <button
               type="submit"
-              className={`${utils.buttonSecondary} !py-1 !px-3`}>
+              className={`${utils.buttonSecondary} !py-1 !px-3`}
+            >
               Cancel
             </button>
             <button
               type="submit"
-              className={`${utils.buttonPrimary} !py-1 !px-3`}>
+              className={`${utils.buttonPrimary} !py-1 !px-3`}
+            >
               Submit
             </button>
           </div>
@@ -112,7 +119,7 @@ const OverviewFooter = () => {
       )}
 
       <div className="flex items-center justify-between w-full border-t border-border pt-5">
-        <img src="/footerlogo.png" alt="logo-image" className="w-[130px]" />
+        <img src="/logo.jpg" alt="logo-image" className="w-[50px]" />
 
         <div className="flex items-center gap-3">
           <p className="text-text font-[600] text-[1rem]">Support:</p>

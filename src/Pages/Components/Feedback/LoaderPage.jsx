@@ -3,23 +3,23 @@ import React from "react";
 // components
 import Navbar from "../../../Components/Home/Navbar";
 import Sidebar from "../../../Components/Overview/Sidebar";
-import AnimatedButton from "../../../Components/Overview/SidebarContent/Content/Buttons/AnimatedButton";
+import Loader from "../../../Components/Overview/SidebarContent/Content/Feedback/Loader";
 
-const AnimatedButtonPage = () => {
+const LoaderPage = () => {
   return (
     <>
       <Navbar />
       <div className="flex w-full max-w-[1400px] mx-auto">
         <div className="w-[450px]">
-          <Sidebar startContent={12} />
+          <Sidebar startContent={26} />
         </div>
 
         <div className="w-full p-12">
-          <AnimatedButton />
+          <Loader />
         </div>
       </div>
     </>
   );
 };
 
-export default AnimatedButtonPage;
+export default LoaderPage;
