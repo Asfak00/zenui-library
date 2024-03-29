@@ -11,7 +11,7 @@ const SkeletonPage = () => {
       <Navbar />
       <div className="flex w-full max-w-[1400px] mx-auto">
         <div className="w-[450px]">
-          <Sidebar startContent={14} />
+          <Sidebar startContent={22} />
         </div>
 
         <div className="w-full p-12">

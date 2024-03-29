@@ -10,18 +10,21 @@ import { SiGmail } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <footer className="w-full px-10 py-8 bg-secondary shadow-primary">
+    <footer className="w-full px-10 py-8 dark:bg-[#060024] dark:text-[#D9EEFF] bg-secondary shadow-primary">
       <div className="w-full flex justify-between items-start">
         <div className="w-[33%]">
-          <img src="/footerlogo.png" alt="logo" className="w-[200px] my-3" />
+          <img src="/logo.jpg" alt="logo" className="w-[80px] my-3" />
 
-          <p className="text-text text-[1rem]">
+          <p className="text-text text-[1rem] dark:text-[#D9EEFF]">
             Keep up to date Join our newsletter for regular updates. No spam
             ever.
           </p>
 
           <form className="mt-4">
-            <label htmlFor="email" className="text-text text-[0.9rem] mb-2">
+            <label
+              htmlFor="email"
+              className="text-text dark:text-[#D9EEFF] text-[0.9rem] mb-2"
+            >
               Your Email
             </label>
             <div className="flex items-center gap-3">
@@ -41,7 +44,7 @@ const Footer = () => {
 
         <div className=" flex gap-32">
           <div className="flex gap-2 flex-col mt-4">
-            <h3 className="font-[600] text-text text-[20px] capitalize">
+            <h3 className="font-[600] dark:text-[#D9EEFF] text-text text-[20px] capitalize">
               resources
             </h3>
             <ul className="footer font-[400] text-[0.9rem] flex flex-col gap-2">
@@ -65,7 +68,7 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-2 flex-col mt-4">
-            <h3 className="font-[600] text-text text-[20px] capitalize">
+            <h3 className="font-[600]  dark:text-[#D9EEFF] text-text text-[20px] capitalize">
               Explore
             </h3>
             <ul className="footer font-[400] text-[0.9rem] flex flex-col gap-2">
@@ -89,7 +92,7 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-2 flex-col mt-4">
-            <h3 className="font-[600] text-text text-[20px] capitalize">
+            <h3 className="font-[600] dark:text-[#D9EEFF] text-text text-[20px] capitalize">
               Company
             </h3>
             <ul className="footer font-[400] text-[0.9rem] flex flex-col gap-2">
@@ -119,7 +122,7 @@ const Footer = () => {
       </div>
 
       <div className="w-full border-t border-[#d3d3d3] flex items-center justify-between mt-12 pt-6">
-        <p className="text-text text-[0.9rem]">
+        <p className="text-text dark:text-[#D9EEFF] text-[0.9rem]">
           Copyright &copy; 2024 by Asfak Ahmed.
         </p>
         <div className="flex items-center gap-4">

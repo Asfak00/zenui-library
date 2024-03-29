@@ -11,7 +11,7 @@ const TestimonialPage = () => {
       <Navbar />
       <div className="flex w-full max-w-[1400px] mx-auto">
         <div className="w-[450px]">
-          <Sidebar startContent={17} />
+          <Sidebar startContent={25} />
         </div>
 
         <div className="w-full p-12">
