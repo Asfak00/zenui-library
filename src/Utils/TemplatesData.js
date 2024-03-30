@@ -136,4 +136,20 @@ export const templatesData = [
       "https://github.com/ZenUI-Templates/react-tailwind-blog-template",
     liveLink: "https://react-tailwind-blog-template.netlify.app/",
   },
+  {
+    title: "pricing section",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores accusamus quidem, eveniet facere voluptas ipsum! Aperiam cum eaque beatae aspernatur!",
+    image: "https://i.ibb.co/j8xgRM9/Untitled-design-26.png",
+    githubLink: "https://github.com/ZenUI-Templates/pricing-section",
+    liveLink: "https://rtui-pricing-section.netlify.app/",
+  },
+  {
+    title: "login and signup form",
+    description:
+      "Here is the login and sign up form design. And click the wizard to navigate from the login form to the signup form, and this is done via react-router-dom. Everything is very nicely structured so that you can understand it well.",
+    image: "https://i.ibb.co/yn3vtsB/Untitled-design-27.png",
+    githubLink: "https://github.com/ZenUI-Templates/signin-signup-page",
+    liveLink: "https://rtui-signup-signin.netlify.app/",
+  },
 ];
