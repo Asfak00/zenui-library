@@ -3,23 +3,23 @@ import React from "react";
 // components
 import Navbar from "../../../Components/Home/Navbar";
 import Sidebar from "../../../Components/Overview/Sidebar";
-import Skeleton from "../../../Components/Overview/SidebarContent/Content/Feedback/Skeleton";
+import RadioInput from "../../../Components/Overview/SidebarContent/Content/Inputs/RadioInput";
 
-const SkeletonPage = () => {
+const InputRadioPage = () => {
   return (
     <>
       <Navbar />
       <div className="flex w-full max-w-[1400px] mx-auto">
         <div className="w-[450px]">
-          <Sidebar startContent={22} />
+          <Sidebar startContent={8} />
         </div>
 
         <div className="w-full p-12">
-          <Skeleton />
+          <RadioInput />
         </div>
       </div>
     </>
   );
 };
 
-export default SkeletonPage;
+export default InputRadioPage;

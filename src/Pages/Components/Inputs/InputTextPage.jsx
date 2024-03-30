@@ -3,23 +3,23 @@ import React from "react";
 // components
 import Navbar from "../../../Components/Home/Navbar";
 import Sidebar from "../../../Components/Overview/Sidebar";
-import Skeleton from "../../../Components/Overview/SidebarContent/Content/Feedback/Skeleton";
+import TextInput from "../../../Components/Overview/SidebarContent/Content/Inputs/TextInput";
 
-const SkeletonPage = () => {
+const InputTextPage = () => {
   return (
     <>
       <Navbar />
       <div className="flex w-full max-w-[1400px] mx-auto">
         <div className="w-[450px]">
-          <Sidebar startContent={22} />
+          <Sidebar startContent={4} />
         </div>
 
         <div className="w-full p-12">
-          <Skeleton />
+          <TextInput />
         </div>
       </div>
     </>
   );
 };
 
-export default SkeletonPage;
+export default InputTextPage;

@@ -11,7 +11,7 @@ const CardPage = () => {
       <Navbar />
       <div className="flex w-full max-w-[1400px] mx-auto">
         <div className="w-[450px]">
-          <Sidebar startContent={9} />
+          <Sidebar startContent={15} />
         </div>
 
         <div className="w-full p-12">

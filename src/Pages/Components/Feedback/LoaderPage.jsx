@@ -3,23 +3,23 @@ import React from "react";
 // components
 import Navbar from "../../../Components/Home/Navbar";
 import Sidebar from "../../../Components/Overview/Sidebar";
-import Skeleton from "../../../Components/Overview/SidebarContent/Content/Feedback/Skeleton";
+import Loader from "../../../Components/Overview/SidebarContent/Content/Feedback/Loader";
 
-const SkeletonPage = () => {
+const LoaderPage = () => {
   return (
     <>
       <Navbar />
       <div className="flex w-full max-w-[1400px] mx-auto">
         <div className="w-[450px]">
-          <Sidebar startContent={22} />
+          <Sidebar startContent={26} />
         </div>
 
         <div className="w-full p-12">
-          <Skeleton />
+          <Loader />
         </div>
       </div>
     </>
   );
 };
 
-export default SkeletonPage;
+export default LoaderPage;
