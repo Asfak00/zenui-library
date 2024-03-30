@@ -1,45 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import { BiLike } from "react-icons/bi";
 
 // icons
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { BsEye, BsThreeDotsVertical } from "react-icons/bs";
 import { FaHeart } from "react-icons/fa";
 import { HiMiniShare } from "react-icons/hi2";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-const BlogCard = () => {
+
+const ProductCard = () => {
   // action constrols
-  const [isOpen, setIsOpen] = useState(false);
+  
   const [isFavorite, setIsFavorite] = useState(false);
 
   return (
     <div className="w-[70%] shadow-lg bg-[#fff] rounded">
+    <img
+    src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzfGVufDB8fDB8fHww"
+    alt=""
+    className="w-full h-[250px] object-cover"
+  />
       <div className="flex w-full justify-between items-center p-4">
         <div className="flex items-center gap-4">
-          <div
-            className="w-[50px] h-[50px] flex items-center 
-          justify-center text-[#fff] text-[1.3rem] rounded-full bg-[#f36f23]"
-          >
+          <div className="w-[50px] h-[50px] flex items-center 
+          justify-center text-[#fff] text-[1.3rem] rounded-full bg-[#f36f23]">
             R
           </div>
 
           <div className="">
             <h2 className="font-[500] text-[1.2rem]">Author Name</h2>
             <p className="text-[#424242] text-[0.9rem]">September 14, 2016</p>
+             <div className="flex flex-row justify-between">
+                 <button className="flex flex-row "> <BsEye className="text-2xl p-1"/>  50</button>
+                 <button className="flex flex-row "><BiLike className="text-2xl p-1"/> 10</button>
+              </div>
           </div>
         </div>
-        <BsThreeDotsVertical
-          className="text-text rounded-full 
-        text-[2.5rem] p-2 hover:bg-[#ececec] cursor-pointer"
-        />
+        <BsThreeDotsVertical className="text-text rounded-full 
+        text-[2.5rem] p-2 hover:bg-[#ececec] cursor-pointer" />
       </div>
-
-      <img
-        src="https://img.freepik.com/premium-photo/tasty-tofu-stir-fry-with-veggies-crispy-tofu-
-        fresh-cilantro-perfect-vegan-meal-healthy_763042-1514.jpg"
-        alt=""
-        className="w-full h-[250px] object-cover"
-      />
-
       <p className="text-[#424242] p-4">
         This impressive paella is a perfect party dish and a fun meal to cook
         together with your guests. Add 1 cup of frozen peas along with the
@@ -56,52 +54,12 @@ const BlogCard = () => {
           />
           <HiMiniShare className="text-[#424242] text-[1.4rem] cursor-pointer" />
         </div>
-        {isOpen ? (
-          <IoIosArrowUp
-            className="text-[#424242] text-[1.4rem] cursor-pointer"
-            onClick={() => setIsOpen(false)}
-          />
-        ) : (
-          <IoIosArrowDown
-            className="text-[#424242] text-[1.4rem] cursor-pointer"
-            onClick={() => setIsOpen(true)}
-          />
-        )}
-      </div>
+        <button className="btn p-3 rounded border bg-black text-white hover:bg-blue-700 hover:text-white">Add to cart</button>
 
-      {isOpen && (
-        <div className={`p-4 text-[0.9rem] `}>
-          <b>Method:</b>
-          <p className="mt-3">
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and
-            set aside for 10 minutes.
-          </p>
-          <p className="mt-5">
-            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet
-            over medium-high heat. Add chicken, shrimp and chorizo, and cook,
-            stirring occasionally until lightly browned, 6 to 8 minutes.
-            Transfer shrimp to a large plate and set aside, leaving chicken and
-            chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes,
-            onion, salt and pepper, and cook, stirring often until thickened and
-            fragrant, about 10 minutes. Add saffron broth and remaining 4 1/2
-            cups chicken broth; bring to a boil.
-          </p>
-          <p className="mt-5">
-            Add rice and stir very gently to distribute. Top with artichokes and
-            peppers, and cook without stirring, until most of the liquid is
-            absorbed, 15 to 18 minutes. Reduce heat to medium-low, add reserved
-            shrimp and mussels, tucking them down
-          </p>
-          <p className="mt-5">
-            into the rice, and cook again without stirring, until mussels have
-            opened and rice is just tender, 5 to 7 minutes more. (Discard any
-            mussels that don"t open.) Set aside off of the heat to let rest for
-            10 minutes, and then serve.
-          </p>
-        </div>
-      )}
+      </div>
+      
     </div>
   );
 };
 
-export default BlogCard;
+export default ProductCard;
