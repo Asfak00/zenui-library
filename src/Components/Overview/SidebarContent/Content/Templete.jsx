@@ -31,7 +31,7 @@ const Templete = () => {
             <div className=" relative mb-2 group cursor-pointer">
               <img
                 src={template.image}
-                alt="image"
+                alt={template.title}
                 className="w-full h-[120px] object-cover "
               />
 
