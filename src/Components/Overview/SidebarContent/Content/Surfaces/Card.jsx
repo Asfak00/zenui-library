@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 // components
 import Showcode from "../../../../../Shared/ShowCode";
@@ -9,12 +9,12 @@ import ContentHeader from "../../../../../Shared/ContentHeader";
 import { Helmet } from "react-helmet";
 
 // icons
-import { BsThreeDotsVertical } from "react-icons/bs";
+import { BsEye, BsThreeDotsVertical } from "react-icons/bs";
 import { FaHeart, FaRegDotCircle } from "react-icons/fa";
 import { HiMiniShare } from "react-icons/hi2";
 import { IoIosArrowDown, IoIosArrowUp, IoIosRocket } from "react-icons/io";
 import { RiTeamFill } from "react-icons/ri";
-import { BiRightArrowAlt } from "react-icons/bi";
+import { BiLike, BiRightArrowAlt } from "react-icons/bi";
 import { MdDone } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 
@@ -33,7 +33,19 @@ const Card = () => {
     setBlogCardCode(true);
     setBlogCardPreview(false);
   };
+  // products card
+  const [productCardPreview, setProductCardPreview] = useState(true);
+  const [productCardCode, setProductCardCode] = useState(false);
 
+  const handleProductCardPreview = () => {
+    setProductCardPreview(true);
+    setProductCardCode(false);
+  };
+
+  const handleProductCardCode = () => {
+    setProductCardCode(true);
+    setProductCardPreview(false);
+  };
   // Profile Card
   const [profileCardPreview, setProfileCardPreview] = useState(true);
   const [profileCardCode, setProfileCardCode] = useState(false);
@@ -105,7 +117,7 @@ const Card = () => {
             all websites. They are very simple.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-[80%] border border-border rounded my-8">
             <div className="">
               <button
                 className={`${
@@ -329,6 +341,164 @@ const BlogCard = () => {
 };
 
 export default BlogCard;
+            '
+              />
+            )}
+          </div>
+
+          <ContentHeader id="Product_Card" className="mt-8" text={"Product Card"} />
+
+          <p className="w-[80%] text-text text-[1rem]">
+            We see navigation Card with borders on all sides like this on almost
+            all websites. They are very simple.
+          </p>
+          <div className="w-[80%] border border-border rounded mt-8">
+            <div className="">
+              <button
+                className={`${
+                  productCardCode && "bg-border"
+                } px-6 py-2 border-r border-b roudned border-border`}
+                onClick={handleProductCardPreview}
+              >
+                Preview
+              </button>
+              <button
+                className={`${
+                  productCardCode && "bg-border"
+                } px-6 py-2 border-r border-b rounded border-border`}
+                onClick={handleProductCardCode}
+              >
+                Code
+              </button>
+            </div>
+            {productCardPreview && (
+              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                <div className="w-[70%] shadow-lg bg-secondary rounded">
+                  <img
+                    src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzfGVufDB8fDB8fHww"
+                    alt=""
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="flex w-full justify-between items-center p-4">
+                  <div>
+                        {''}
+                      </div>
+                    <div className="flex  items-center gap-4">
+                      
+
+                      <div className=" flex flex-col items-center">
+                        <h2 className="font-[500] text-[1.2rem]">
+                         Shoes
+                        </h2>
+                        <p className="text-text text-[0.9rem]">
+                         Price : $25
+                        </p>
+                        <div className="flex flex-row justify-between">
+                          <button className="flex flex-row ">
+                            {" "}
+                            <BsEye className="text-2xl p-1" /> 50
+                          </button>
+                          <button className="flex flex-row ">
+                            <BiLike className="text-2xl p-1" /> 10
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <BsThreeDotsVertical className="text-text rounded-full text-[2.5rem] p-2 hover:bg-[#ececec] cursor-pointer" />
+                  </div>
+
+                  <p className="text-text p-4">
+                    This impressive paella is a perfect party dish and a fun
+                    meal to cook together with your guests. Add 1 cup of frozen
+                    peas along with the mussels, if you like.
+                  </p>
+
+                  <div className="flex items-center justify-between w-full p-4 ">
+                    <div className="flex items-center gap-4 ">
+                      <FaHeart
+                        className={`${
+                          isFavorite ? "text-[#ff3d3d]" : "text-text"
+                        } text-[1.4rem] cursor-pointer`}
+                        onClick={() => setIsFavorite(!isFavorite)}
+                      />
+                      <HiMiniShare className="text-text text-[1.4rem] cursor-pointer" />
+                    </div>
+                    <button className="btn p-3 rounded border bg-black text-white hover:bg-blue-700 hover:text-white">Add to cart</button>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {productCardCode && (
+              <Showcode
+                code='
+import React from "react";
+
+// icons
+import { BsThreeDotsVertical } from "react-icons/bs";
+import { FaHeart } from "react-icons/fa";
+import { HiMiniShare } from "react-icons/hi2";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
+const ProductCard = () => {
+  // action constrols
+  const [isOpen, setIsOpen] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  return (
+    <div className="w-[70%] shadow-lg bg-[#fff] rounded">
+    <img
+    src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzfGVufDB8fDB8fHww"
+    alt=""
+    className="w-full h-[250px] object-cover"
+  />
+      <div className="flex w-full justify-between items-center p-4">
+        <div className="flex items-center gap-4">
+          <div className="w-[50px] h-[50px] flex items-center 
+          justify-center text-[#fff] text-[1.3rem] rounded-full bg-[#f36f23]">
+            R
+          </div>
+
+          <div className="">
+            <h2 className="font-[500] text-[1.2rem]">Author Name</h2>
+            <p className="text-[#424242] text-[0.9rem]">September 14, 2016</p>
+             <div className="flex flex-row justify-between">
+                 <button className="flex flex-row "> <BsEye className="text-2xl p-1"/>  50</button>
+                 <button className="flex flex-row "><BiLike className="text-2xl p-1"/> 10</button>
+              </div>
+          </div>
+        </div>
+        <BsThreeDotsVertical className="text-text rounded-full 
+        text-[2.5rem] p-2 hover:bg-[#ececec] cursor-pointer" />
+      </div>
+
+       
+
+      <p className="text-[#424242] p-4">
+        This impressive paella is a perfect party dish and a fun meal to cook
+        together with your guests. Add 1 cup of frozen peas along with the
+        mussels, if you like.
+      </p>
+
+      <div className="flex items-center justify-between w-full p-4 ">
+        <div className="flex items-center gap-4 ">
+          <FaHeart
+            className={`${
+              isFavorite ? "text-[#ff3d3d]" : "text-[#424242]"
+            } text-[1.4rem] cursor-pointer`}
+            onClick={() => setIsFavorite(!isFavorite)}
+          />
+          <HiMiniShare className="text-[#424242] text-[1.4rem] cursor-pointer" />
+        </div>
+        <button className="btn p-3 rounded border bg-black text-white hover:bg-blue-700 hover:text-white">Add to cart</button>
+
+      </div>
+      
+    </div>
+  );
+};
+
+export default ProductCard;
             '
               />
             )}
