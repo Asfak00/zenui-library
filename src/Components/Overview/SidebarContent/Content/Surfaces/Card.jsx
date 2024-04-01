@@ -10,12 +10,17 @@ import { Helmet } from "react-helmet";
 
 // icons
 import { BsEye, BsThreeDotsVertical } from "react-icons/bs";
-import { FaHeart, FaRegDotCircle } from "react-icons/fa";
+import {
+  FaArrowAltCircleLeft,
+  FaArrowAltCircleRight,
+  FaHeart,
+  FaRegDotCircle,
+} from "react-icons/fa";
 import { HiMiniShare } from "react-icons/hi2";
 import { IoIosArrowDown, IoIosArrowUp, IoIosRocket } from "react-icons/io";
 import { RiTeamFill } from "react-icons/ri";
 import { BiLike, BiRightArrowAlt } from "react-icons/bi";
-import { MdDone } from "react-icons/md";
+import { MdDone, MdPlayArrow } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 
 const Card = () => {
@@ -46,6 +51,34 @@ const Card = () => {
     setProductCardCode(true);
     setProductCardPreview(false);
   };
+  //Music Card
+  const [musicCardPreview, setMusicCardPreview] = useState(true);
+  const [musicCardCode, setMusicCardCode] = useState(false);
+
+  const handleMusicCardPreview = () => {
+    setMusicCardPreview(true);
+    setMusicCardCode(false);
+  };
+
+  const handleMusicCardCode = () => {
+    setMusicCardCode(true);
+    setMusicCardPreview(false);
+  };
+  // simple Profile card
+  const [simpleProfileCardPreview, setSimpleProfileCardPreview] =
+    useState(true);
+  const [simpleProfileCardCode, setSimpleProfileCardCode] = useState(false);
+
+  const handleSimpleProfileCardPreview = () => {
+    setSimpleProfileCardPreview(true);
+    setSimpleProfileCardCode(false);
+  };
+
+  const handleSimpleProfileCardCode = () => {
+    setSimpleProfileCardCode(true);
+    setSimpleProfileCardPreview(false);
+  };
+
   // Profile Card
   const [profileCardPreview, setProfileCardPreview] = useState(true);
   const [profileCardCode, setProfileCardCode] = useState(false);
@@ -346,7 +379,11 @@ export default BlogCard;
             )}
           </div>
 
-          <ContentHeader id="Product_Card" className="mt-8" text={"Product Card"} />
+          <ContentHeader
+            id="Product_Card"
+            className="mt-8"
+            text={"Product Card"}
+          />
 
           <p className="w-[80%] text-text text-[1rem]">
             We see navigation Card with borders on all sides like this on almost
@@ -380,50 +417,51 @@ export default BlogCard;
                     className="w-full h-64 object-cover"
                   />
                   <div className="flex w-full justify-between items-center p-4">
-                  <div>
-                        {''}
-                      </div>
+                    
                     <div className="flex  items-center gap-4">
-                      
-
                       <div className=" flex flex-col items-center">
-                        <h2 className="font-[500] text-[1.2rem]">
-                         Shoes
-                        </h2>
-                        <p className="text-text text-[0.9rem]">
-                         Price : $25
-                        </p>
-                        <div className="flex flex-row justify-between">
-                          <button className="flex flex-row ">
-                            {" "}
-                            <BsEye className="text-2xl p-1" /> 50
-                          </button>
-                          <button className="flex flex-row ">
-                            <BiLike className="text-2xl p-1" /> 10
-                          </button>
-                        </div>
+                        <h2 className="font-semibold text-3xl">Shoes</h2>
                       </div>
                     </div>
                     <BsThreeDotsVertical className="text-text rounded-full text-[2.5rem] p-2 hover:bg-[#ececec] cursor-pointer" />
                   </div>
 
                   <p className="text-text p-4">
+                    <div className="flex flex-row ">
+                      <button className="flex flex-row ">
+                        {" "}
+                        <BsEye className="text-2xl p-1" /> 50
+                      </button>
+                      <button className="flex flex-row ">
+                        <BiLike className="text-2xl p-1" /> 10
+                      </button>
+                    </div>
                     This impressive paella is a perfect party dish and a fun
                     meal to cook together with your guests. Add 1 cup of frozen
                     peas along with the mussels, if you like.
                   </p>
 
                   <div className="flex items-center justify-between w-full p-4 ">
-                    <div className="flex items-center gap-4 ">
-                      <FaHeart
-                        className={`${
-                          isFavorite ? "text-[#ff3d3d]" : "text-text"
-                        } text-[1.4rem] cursor-pointer`}
-                        onClick={() => setIsFavorite(!isFavorite)}
-                      />
-                      <HiMiniShare className="text-text text-[1.4rem] cursor-pointer" />
+                    <div className="flex flex-col items-center gap-4 ">
+                      <div>
+                        {" "}
+                        <p className="text-text text-[0.9rem]">
+                          Price : $25
+                        </p>{" "}
+                      </div>
+                      <div className="flex flex-row gap-5">
+                        <FaHeart
+                          className={`${
+                            isFavorite ? "text-[#ff3d3d]" : "text-text"
+                          } text-[1.4rem] cursor-pointer`}
+                          onClick={() => setIsFavorite(!isFavorite)}
+                        />
+                        <HiMiniShare className="text-text text-[1.4rem] cursor-pointer" />
+                      </div>
                     </div>
-                    <button className="btn p-3 rounded border bg-black text-white hover:bg-blue-700 hover:text-white">Add to cart</button>
+                    <button className="btn p-3 rounded border bg-black text-white hover:bg-blue-700 hover:text-white">
+                      Add to cart
+                    </button>
                   </div>
                 </div>
               </div>
@@ -432,76 +470,320 @@ export default BlogCard;
             {productCardCode && (
               <Showcode
                 code='
-import React from "react";
-
-// icons
-import { BsThreeDotsVertical } from "react-icons/bs";
-import { FaHeart } from "react-icons/fa";
-import { HiMiniShare } from "react-icons/hi2";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-
-const ProductCard = () => {
-  // action constrols
-  const [isOpen, setIsOpen] = useState(false);
-  const [isFavorite, setIsFavorite] = useState(false);
-
-  return (
-    <div className="w-[70%] shadow-lg bg-[#fff] rounded">
-    <img
-    src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzfGVufDB8fDB8fHww"
-    alt=""
-    className="w-full h-[250px] object-cover"
-  />
-      <div className="flex w-full justify-between items-center p-4">
-        <div className="flex items-center gap-4">
-          <div className="w-[50px] h-[50px] flex items-center 
-          justify-center text-[#fff] text-[1.3rem] rounded-full bg-[#f36f23]">
-            R
-          </div>
-
-          <div className="">
-            <h2 className="font-[500] text-[1.2rem]">Author Name</h2>
-            <p className="text-[#424242] text-[0.9rem]">September 14, 2016</p>
-             <div className="flex flex-row justify-between">
-                 <button className="flex flex-row "> <BsEye className="text-2xl p-1"/>  50</button>
-                 <button className="flex flex-row "><BiLike className="text-2xl p-1"/> 10</button>
-              </div>
-          </div>
-        </div>
-        <BsThreeDotsVertical className="text-text rounded-full 
-        text-[2.5rem] p-2 hover:bg-[#ececec] cursor-pointer" />
-      </div>
-
-       
-
-      <p className="text-[#424242] p-4">
-        This impressive paella is a perfect party dish and a fun meal to cook
-        together with your guests. Add 1 cup of frozen peas along with the
-        mussels, if you like.
-      </p>
-
-      <div className="flex items-center justify-between w-full p-4 ">
-        <div className="flex items-center gap-4 ">
-          <FaHeart
-            className={`${
-              isFavorite ? "text-[#ff3d3d]" : "text-[#424242]"
-            } text-[1.4rem] cursor-pointer`}
-            onClick={() => setIsFavorite(!isFavorite)}
-          />
-          <HiMiniShare className="text-[#424242] text-[1.4rem] cursor-pointer" />
-        </div>
-        <button className="btn p-3 rounded border bg-black text-white hover:bg-blue-700 hover:text-white">Add to cart</button>
-
-      </div>
-      
-    </div>
-  );
-};
-
-export default ProductCard;
+                import React, { useState } from "react";
+                import { BiLike } from "react-icons/bi";
+                
+                // icons
+                import { BsEye, BsThreeDotsVertical } from "react-icons/bs";
+                import { FaHeart } from "react-icons/fa";
+                import { HiMiniShare } from "react-icons/hi2";
+                
+                
+                const ProductCard = () => {
+                 
+                  
+                  const [isFavorite, setIsFavorite] = useState(false);
+                
+                  return (
+                    <div className="w-[70%] shadow-lg bg-[#fff] rounded">
+                    <img
+                    src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzfGVufDB8fDB8fHww"
+                    alt=""
+                    className="w-full h-[250px] object-cover"
+                  />
+                      <div className="flex w-full justify-between items-center p-4">
+                        <div className="flex items-center gap-4">
+                          <div className="w-[50px] h-[50px] flex items-center 
+                          justify-center text-[#fff] text-[1.3rem] rounded-full bg-[#f36f23]">
+                            R
+                          </div>
+                
+                          <div className="">
+                            <h2 className="font-[500] text-[1.2rem]">Author Name</h2>
+                            <p className="text-[#424242] text-[0.9rem]">September 14, 2016</p>
+                             <div className="flex flex-row justify-between">
+                                 <button className="flex flex-row "> <BsEye className="text-2xl p-1"/>  50</button>
+                                 <button className="flex flex-row "><BiLike className="text-2xl p-1"/> 10</button>
+                              </div>
+                          </div>
+                        </div>
+                        <BsThreeDotsVertical className="text-text rounded-full 
+                        text-[2.5rem] p-2 hover:bg-[#ececec] cursor-pointer" />
+                      </div>
+                      <p className="text-[#424242] p-4">
+                        This impressive paella is a perfect party dish and a fun meal to cook
+                        together with your guests. Add 1 cup of frozen peas along with the
+                        mussels, if you like.
+                      </p>
+                
+                      <div className="flex items-center justify-between w-full p-4 ">
+                        <div className="flex items-center gap-4 ">
+                          <FaHeart
+                            className={`${
+                              isFavorite ? "text-[#ff3d3d]" : "text-[#424242]"
+                            } text-[1.4rem] cursor-pointer`}
+                            onClick={() => setIsFavorite(!isFavorite)}
+                          />
+                          <HiMiniShare className="text-[#424242] text-[1.4rem] cursor-pointer" />
+                        </div>
+                        <button className="btn p-3 rounded border bg-black text-white hover:bg-blue-700 hover:text-white">Add to cart</button>
+                
+                      </div>
+                      
+                    </div>
+                  );
+                };
+                
+                export default ProductCard;
             '
               />
             )}
+          </div>
+
+          <div>
+            <ContentHeader
+              id="Music_Card"
+              className="mt-8"
+              text={"Music Card"}
+            />
+            <div className="w-[80%] border border-border rounded mt-8">
+              <div className="">
+                <button
+                  className={`${
+                    musicCardPreview && "bg-border"
+                  } px-6 py-2 border-r border-b roudned border-border`}
+                  onClick={handleMusicCardPreview}
+                >
+                  Preview
+                </button>
+                <button
+                  className={`${
+                    musicCardCode && "bg-border"
+                  } px-6 py-2 border-r border-b rounded border-border`}
+                  onClick={handleMusicCardCode}
+                >
+                  Code
+                </button>
+              </div>
+              {musicCardPreview && (
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-[100%] lg:w-[80%] shadow-lg bg-secondary rounded">
+                    <div className="grid grid-cols-12 w-full  items-center bg-black text-white ">
+                      <div className="grid col-span-5 justify-center gap-3 ">
+                        <div>
+                          <h1 className="text-2xl">Pop Music</h1>
+                          <p>Arjit singh</p>
+                        </div>
+                        <div className="flex flex-row gap-3">
+                          <FaArrowAltCircleLeft className="text-2xl" />
+                          <MdPlayArrow className="text-2xl" />
+                          <FaArrowAltCircleRight className="text-2xl" />
+                        </div>
+                      </div>
+
+                      <div className="grid col-span-7">
+                        <img
+                          src="https://media.istockphoto.com/id/1388162040/photo/a-crowded-concert-hall-with-scene-stage-in-red-lights-rock-show-performance-with-people.jpg?s=1024x1024&w=is&k=20&c=NARCbVE2aAOnSEVWr1ZxK0G4fpr60vMY7iDMsjnHjFg="
+                          alt=""
+                          className="w-full h-64 cover"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between w-full p-4 ">
+                      <div className="flex items-center gap-4 ">
+                        <FaHeart
+                          className={`${
+                            isFavorite ? "text-[#ff3d3d]" : "text-text"
+                          } text-[1.4rem] cursor-pointer`}
+                          onClick={() => setIsFavorite(!isFavorite)}
+                        />
+                        <HiMiniShare className="text-text text-[1.4rem] cursor-pointer" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {musicCardCode && (
+                <Showcode
+                  code='
+                import React, { useState } from "react";
+
+                import {
+                  FaArrowAltCircleLeft,
+                  FaArrowAltCircleRight,
+                  FaHeart,
+                } from "react-icons/fa";
+                import { HiMiniShare } from "react-icons/hi2";
+                import { MdPlayArrow } from "react-icons/md";
+                
+                const MusicCard = () => {
+                  const [isFavorite, setIsFavorite] = useState(false);
+                
+                  return (
+                    <div className="w-[100%] lg:w-[80%] shadow-lg bg-secondary rounded">
+                      <div className="grid grid-cols-12 w-full  items-center bg-black text-white ">
+                        <div className="grid col-span-5 justify-center gap-3 ">
+                          <div>
+                            <h1 className="text-2xl">Pop Music</h1>
+                            <p>Arjit singh</p>
+                          </div>
+                          <div className="flex flex-row gap-3">
+                            <FaArrowAltCircleLeft className="text-2xl" />
+                            <MdPlayArrow className="text-2xl" />
+                            <FaArrowAltCircleRight className="text-2xl" />
+                          </div>
+                        </div>
+                
+                        <div className="grid col-span-7">
+                          <img
+                            src="https://media.istockphoto.com/id/1388162040/photo/a-crowded-concert-hall-with-scene-stage-in-red-lights-rock-show-performance-with-people.jpg?s=1024x1024&w=is&k=20&c=NARCbVE2aAOnSEVWr1ZxK0G4fpr60vMY7iDMsjnHjFg="
+                            alt=""
+                            className="w-full h-64 cover"
+                          />
+                        </div>
+                      </div>
+                
+                      <div className="flex items-center justify-between w-full p-4 ">
+                        <div className="flex items-center gap-4 ">
+                          <FaHeart
+                            className={`${
+                              isFavorite ? "text-[#ff3d3d]" : "text-text"
+                            } text-[1.4rem] cursor-pointer`}
+                            onClick={() => setIsFavorite(!isFavorite)}
+                          />
+                          <HiMiniShare className="text-text text-[1.4rem] cursor-pointer" />
+                        </div>
+                      </div>
+                    </div>
+                  );
+                };
+                
+                export default MusicCard;
+                 
+            '
+                />
+              )}
+            </div>
+          </div>
+
+          <div className="mt-8">
+            <ContentHeader
+              id="simple_profile_card"
+              text={"Simple profile card"}
+            />
+            <div className="w-[80%] border border-border rounded mt-3">
+              <div className="">
+                <button
+                  className={`${
+                    simpleProfileCardPreview && "bg-border"
+                  } px-6 py-2 border-r border-b roudned border-border`}
+                  onClick={handleSimpleProfileCardPreview}
+                >
+                  Preview
+                </button>
+                <button
+                  className={`${
+                    simpleProfileCardCode && "bg-border"
+                  } px-6 py-2 border-r border-b rounded border-border`}
+                  onClick={handleSimpleProfileCardCode}
+                >
+                  Code
+                </button>
+              </div>
+              {simpleProfileCardPreview && (
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-[60%] shadow-lg rounded flex flex-col">
+                    <div className="w-full  flex justify-center items-center  ">
+                      <img
+                        src="https://images.pexels.com/photos/3772623/pexels-photo-3772623.jpeg"
+                        alt=""
+                        className="w-[80px] h-[80px] rounded-full  flex justify-center border-blue-800 border-2   -mt-16 object-cover"
+                      />
+                    </div>
+
+                    <div>
+                      <div className="w-full start mt-3 px-2">
+                        <h2 className="font-[600] text-center text-[1.4rem]">
+                          Description
+                        </h2>
+                        <p className="text-text text-[0.9rem]">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Fugit voluptatibus porro at praesentium enim
+                          animi deserunt totam voluptatem tempora repudiandae
+                          possimus iure cum veniam nesciunt, ipsa ad illo,
+                          magnam tenetur?
+                        </p>
+                      </div>
+
+                      <div className="w-full p-4 mt-8 border-t border-border flex items-center justify-between">
+                        <div className="flex items-center justify-center flex-col">
+                          <h2 className=" text-[1.2rem] font-[600]">80k</h2>
+                          <p className="text-text text-[0.9rem]">Post</p>
+                        </div>
+
+                        <div className="flex items-center justify-center flex-col">
+                          <h2 className=" text-[1.2rem] font-[600]">8k</h2>
+                          <p className="text-text text-[0.9rem]">Following</p>
+                        </div>
+
+                        <div className="flex items-center justify-center flex-col">
+                          <h2 className=" text-[1.2rem] font-[600]">200k</h2>
+                          <p className="text-text text-[0.9rem]">Followers</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {simpleProfileCardCode && (
+                <Showcode
+                  code={`
+                const SimpleProfileCard = () => {
+                  return (
+                    <div className="w-[60%] shadow-lg rounded">
+                      <div className="w-full h-[150px] relative bg-[url('https://img.freepik.com/premium-vector/content-writer-vector-colored-round-line-illustration_104589-2571.jpg')] bg-center">
+                        <img
+                          src="https://images.pexels.com/photos/3772623/pexels-photo-3772623.jpeg"
+                          alt=""
+                          className="w-[80px] h-[80px] rounded-full border-secondary border-4 absolute -bottom-12 left-1/2 transform -translate-x-1/2 object-cover"
+                        />
+                      </div>
+                
+                      <div className="w-full text-center mt-16">
+                        <h2 className="font-[600] text-[1.4rem]">User Name</h2>
+                        <p className="text-text text-[0.9rem]">London</p>
+                      </div>
+                
+                      <div className="w-full p-4 mt-8 border-t border-border flex items-center justify-between">
+                        <div className="flex items-center justify-center flex-col">
+                          <h2 className=" text-[1.2rem] font-[600]">80k</h2>
+                          <p className="text-text text-[0.9rem]">Post</p>
+                        </div>
+                
+                        <div className="flex items-center justify-center flex-col">
+                          <h2 className=" text-[1.2rem] font-[600]">8k</h2>
+                          <p className="text-text text-[0.9rem]">Following</p>
+                        </div>
+                
+                        <div className="flex items-center justify-center flex-col">
+                          <h2 className=" text-[1.2rem] font-[600]">200k</h2>
+                          <p className="text-text text-[0.9rem]">Followers</p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                };
+                
+                export default SimpleProfileCard;
+                
+                
+          `}
+                />
+              )}
+            </div>
           </div>
 
           <div className="mt-8">
@@ -517,7 +799,7 @@ export default ProductCard;
             <div className="">
               <button
                 className={`${
-                  profileCardPreview && "bg-border"
+                  productCardPreview && "bg-border"
                 } px-6 py-2 border-r border-b roudned border-border`}
                 onClick={handleProfileCardPreview}
               >
