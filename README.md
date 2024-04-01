@@ -55,8 +55,8 @@ For support, email asfakahmed680@gmail.com .
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Brand Color | ![#3B9DF8](https://via.placeholder.com/10/0a192f?text=+) #3B9DF8 |
-| Secondary Color | ![#ffffff](https://via.placeholder.com/10/f8f8f8?text=+) #ffffff |
-| Border Color | ![#e5eaf2](https://via.placeholder.com/10/00b48a?text=+) #e5eaf2 |
-| Text Color | ![#424242](https://via.placeholder.com/10/00b48a?text=+) #424242 |
+| Brand Color | #3B9DF8 |
+| Secondary Color |  #ffffff |
+| Border Color | #e5eaf2 |
+| Text Color |  #424242 |
 
