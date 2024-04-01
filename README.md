@@ -1,8 +1,62 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Welcome To ZENUI Library
 
-Currently, two official plugins are available:
+Tailwind UI is a free platform where you can use all the React components and designs you need. It is completely free.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Founder
+
+- [@asfakahmed](https://www.github.com/asfak00)
+
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Asfak00/react-tailwind-ui.git
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+
+## FAQ
+
+#### What does the "demo" file do?
+
+This file is just created to test the code of those who will create the component. When you create a new component, test the code that you will give to the user in the demo file and then if everything is fine, then give it to our code editor. The file is created only for testing the code.
+
+#### How do I push working code?
+
+Before you start work, create a branch according to your name + which tab you will work on and work on that file and after work, give a pull request from that branch to the production branch.
+
+#### Can I manually merge with a pull request?
+
+No, never do that. I will always merge your pull request.
+
+#### Where can I find design ideas?
+
+You are googling and going to different places and creating beautiful design components from those places. Always try to create modern design.
+## Support
+
+For support, email asfakahmed680@gmail.com .
+
+## Color Reference
+
+| Color             | Hex                                                                |
+| ----------------- | ------------------------------------------------------------------ |
+| Brand Color | #3B9DF8 |
+| Secondary Color |  #ffffff |
+| Border Color | #e5eaf2 |
+| Text Color |  #424242 |
+
