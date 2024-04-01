@@ -1,34 +1,61 @@
+import { useState } from "react";
+import { BiLike } from "react-icons/bi";
+import { BsEye, BsThreeDotsVertical } from "react-icons/bs";
+import { FaHeart } from "react-icons/fa";
+import { HiMiniShare } from "react-icons/hi2";
+
 const SimpleProfileCard = () => {
+  const [isFavorite, setIsFavorite] = useState(false);
   return (
-    <div className="w-[60%] shadow-lg rounded">
-      <div className="w-full h-[150px] relative bg-[url('https://img.freepik.com/premium-vector/content-writer-vector-colored-round-line-illustration_104589-2571.jpg')] bg-center">
-        <img
-          src="https://images.pexels.com/photos/3772623/pexels-photo-3772623.jpeg"
-          alt=""
-          className="w-[80px] h-[80px] rounded-full border-secondary border-4 absolute -bottom-12 left-1/2 transform -translate-x-1/2 object-cover"
-        />
+    <div className="w-[70%] shadow-lg bg-secondary rounded">
+      <img
+        src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzfGVufDB8fDB8fHww"
+        alt=""
+        className="w-full h-64 object-cover"
+      />
+      <div className="flex w-full justify-between items-center p-4">
+        <div className="flex  items-center gap-4">
+          <div className=" flex flex-col items-center">
+            <h2 className="font-semibold text-3xl">Shoes</h2>
+          </div>
+        </div>
+        <BsThreeDotsVertical className="text-text rounded-full text-[2.5rem] p-2 hover:bg-[#ececec] cursor-pointer" />
       </div>
 
-      <div className="w-full text-center mt-16">
-        <h2 className="font-[600] text-[1.4rem]">User Name</h2>
-        <p className="text-text text-[0.9rem]">London</p>
-      </div>
-
-      <div className="w-full p-4 mt-8 border-t border-border flex items-center justify-between">
-        <div className="flex items-center justify-center flex-col">
-          <h2 className=" text-[1.2rem] font-[600]">80k</h2>
-          <p className="text-text text-[0.9rem]">Post</p>
+      <p className="text-text p-4">
+        <div className="flex flex-row ">
+          <button className="flex flex-row ">
+            {" "}
+            <BsEye className="text-2xl p-1" /> 50
+          </button>
+          <button className="flex flex-row ">
+            <BiLike className="text-2xl p-1" /> 10
+          </button>
         </div>
+        This impressive paella is a perfect party dish and a fun meal to cook
+        together with your guests. Add 1 cup of frozen peas along with the
+        mussels, if you like.
+      </p>
 
-        <div className="flex items-center justify-center flex-col">
-          <h2 className=" text-[1.2rem] font-[600]">8k</h2>
-          <p className="text-text text-[0.9rem]">Following</p>
+      <div className="flex items-center justify-between w-full p-4 ">
+        <div className="flex flex-col items-center gap-4 ">
+          <div>
+            {" "}
+            <p className="text-text text-[0.9rem]">Price : $25</p>{" "}
+          </div>
+          <div className="flex flex-row gap-5">
+            <FaHeart
+              className={`${
+                isFavorite ? "text-[#ff3d3d]" : "text-text"
+              } text-[1.4rem] cursor-pointer`}
+              onClick={() => setIsFavorite(!isFavorite)}
+            />
+            <HiMiniShare className="text-text text-[1.4rem] cursor-pointer" />
+          </div>
         </div>
-
-        <div className="flex items-center justify-center flex-col">
-          <h2 className=" text-[1.2rem] font-[600]">200k</h2>
-          <p className="text-text text-[0.9rem]">Followers</p>
-        </div>
+        <button className="btn p-3 rounded border bg-black text-white hover:bg-blue-700 hover:text-white">
+          Add to cart
+        </button>
       </div>
     </div>
   );
