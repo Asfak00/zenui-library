@@ -1,74 +1,31 @@
 // icons
-import { IoChevronDown } from "react-icons/io5";
-import { IoMdFootball } from "react-icons/io";
-import { MdOutlineSportsTennis, MdOutlineSportsCricket } from "react-icons/md";
-import { GiTennisRacket } from "react-icons/gi";
+import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 
-const Select = () => {
-  // close the dropdown is clicked outside
-  document.addEventListener("click", function (event) {
-    let target = event.target;
-
-    if (!target.closest(".dropdown")) {
-      setIsActive(false);
-    }
-  });
-
-  // actions
-  const [isActive, setIsActive] = useState(false);
-  const [content, setContent] = useState("Select Option");
-
-  const optionArray = [
-    {
-      icon: <IoMdFootball />,
-      title: "Football",
-    },
-    {
-      icon: <MdOutlineSportsCricket />,
-      title: "Cricket",
-    },
-    {
-      icon: <MdOutlineSportsTennis />,
-      title: "Tennis",
-    },
-    {
-      icon: <GiTennisRacket />,
-      title: "Badminton",
-    },
-  ];
+const Inputs = () => {
+  const [isPassword, setIsPassword] = useState(false);
 
   return (
-    <button
-      className="bg-[#fff] border border-[#d1d1d1] rounded-xl w-[200px] justify-between px-3 py-2 flex items-center gap-8  relative cursor-pointer dropdown"
-      onClick={() => setIsActive(!isActive)}
-    >
-      {content}
-      <IoChevronDown
-        className={`${
-          isActive ? " rotate-[180deg]" : " rotate-0"
-        } transition-all duration-300 text-[1.2rem]`}
+    <div className="w-[60%] relative">
+      <input
+        type={isPassword ? "text" : "password"}
+        name="password"
+        id="password"
+        placeholder="Password"
+        className="peer border-border border rounded-md outline-none pl-4 pr-12 py-3 w-full focus:border-primary transition-colors duration-300"
       />
-      <div
-        className={`${
-          isActive ? " opacity-100 scale-[1]" : " opacity-0 scale-[0.8]"
-        } w-full absolute top-12 left-0 right-0 z-40 bg-[#fff] rounded-xl flex flex-col  overflow-hidden transition-all duration-300 ease-in-out`}
-        style={{
-          boxShadow: "0 15px 60px -15px rgba(0, 0, 0, 0.3)",
-        }}
-      >
-        {optionArray?.map((option, index) => (
-          <p
-            className="py-2 px-4 hover:bg-[#ececec] transition-all duration-200 flex items-center gap-2"
-            key={index}
-            onClick={(e) => setContent(e.target.textContent)}
-          >
-            {option.icon}
-            {option.title}
-          </p>
-        ))}
-      </div>
-    </button>
+      {isPassword ? (
+        <IoEyeOutline
+          className=" absolute top-3.5 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
+          onClick={() => setIsPassword(false)}
+        />
+      ) : (
+        <IoEyeOffOutline
+          className=" absolute top-3.5 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
+          onClick={() => setIsPassword(true)}
+        />
+      )}
+    </div>
   );
 };
 
-export default Select;
+export default Inputs;
