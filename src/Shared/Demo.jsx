@@ -1,29 +1,49 @@
 // icons
-import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
+import { CgProfile } from "react-icons/cg";
 
 const Inputs = () => {
-  const [isPassword, setIsPassword] = useState(false);
+  const [imageLink, setImageLink] = useState("");
+
+  const handleUploadImageClick = () => {
+    document.getElementById("image").click();
+  };
+
+  const handleFileChange = (e) => {
+    e.preventDefault();
+    const file = event.target.files[0];
+    if (file) {
+      const imageURL = URL.createObjectURL(file);
+      setImageLink(imageURL);
+    }
+  };
 
   return (
-    <div className="w-[60%] relative">
+    <div className=" text-center">
       <input
-        type={isPassword ? "text" : "password"}
-        name="password"
-        id="password"
-        placeholder="Password"
-        className="peer border-border border rounded-md outline-none pl-4 pr-12 py-3 w-full focus:border-primary transition-colors duration-300"
+        type="file"
+        name="image"
+        id="fourthImage"
+        className="hidden"
+        onChange={handleFileChange}
       />
-      {isPassword ? (
-        <IoEyeOutline
-          className=" absolute top-3.5 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
-          onClick={() => setIsPassword(false)}
-        />
-      ) : (
-        <IoEyeOffOutline
-          className=" absolute top-3.5 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
-          onClick={() => setIsPassword(true)}
-        />
-      )}
+      <div className="w-[150px] h-[150px] rounded-full border border-[#e5eaf2] flex items-center justify-center">
+        {imageLink === "" ? (
+          <CgProfile className="text-[10rem] text-[#e5eaf2]" />
+        ) : (
+          <img
+            src={imageLink}
+            alt="image"
+            className="w-full h-full object-cover rounded-full"
+          />
+        )}
+      </div>
+
+      <button
+        className="px-4 py-2 bg-[#3B9DF8] text-white rounded-md mt-5"
+        onClick={handleUploadImageClick}
+      >
+        Upload profile
+      </button>
     </div>
   );
 };
