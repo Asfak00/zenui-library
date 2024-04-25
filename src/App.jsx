@@ -59,6 +59,8 @@ import AppbarPage from "./Pages/Components/Surfaces/AppbarPage";
 import CodeSnippetPage from "./Pages/Components/Randoms/CodeSnippetPage";
 import SnippetPage from "./Pages/Components/Randoms/SnippetPage";
 
+// faq
+import FaqComponentPage from "./Pages/Components/Faq/FAQPage";
 const App = () => {
   return (
     <>
@@ -132,6 +134,9 @@ const App = () => {
         {/* randoms */}
         <Route path="/components/code" element={<CodeSnippetPage />} />
         <Route path="/components/snippet" element={<SnippetPage />} />
+
+        {/* faq */}
+        <Route path="/components/faq" element={<FaqComponentPage />} />
       </Routes>
     </>
   );

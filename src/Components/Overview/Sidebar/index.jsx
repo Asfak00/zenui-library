@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable react-hooks/rules-of-hooks */
+import { useState } from "react";
 
 // icons
 import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
@@ -438,6 +439,25 @@ const index = ({ startContent, setStartContent }) => {
               onClick={() => setStartContent(31)}
             >
               Snippet
+            </Link>
+
+            {/* Faq */}
+             
+            <Link
+              to={""}
+              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}
+            >
+              Faq
+            </Link>
+            <Link
+              to={"/components/faq"}
+              className={`${
+                startContent === 32 &&
+                "border-l border-primary bg-[#f3f6f9] font-[500]"
+              } rounded  border-l border-border`}
+              onClick={() => setStartContent(32)}
+            >
+              FAQ
             </Link>
           </ul>
         </div>
