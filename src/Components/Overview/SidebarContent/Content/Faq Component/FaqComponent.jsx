@@ -26,7 +26,7 @@ const Faq = () => {
 
   const toggle = (index) => {
     if (open === index) {
-      return setOpen(null);
+      return setOpen(0);
     }
     setOpen(index);
   };
