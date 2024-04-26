@@ -1,11 +1,11 @@
 import { useState } from "react";
+import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 
 // components
 import Showcode from "../../../../../Shared/ShowCode";
 import OverviewFooter from "../../../../../Shared/OverviewFooter";
 import ContentHeader from "../../../../../Shared/ContentHeader";
 import { Helmet } from "react-helmet";
-import Accordion from "./Accordion";
 
 const Faq = () => {
   // Faq button
@@ -90,13 +90,29 @@ const Faq = () => {
                 <div className="  border rounded-xl p-6 sm:p-5 m-3 transition-all duration-300">
                   {accordionData.map((data, index) => {
                     return (
-                      <Accordion
-                        key={data.id}
-                        open={index === open}
-                        question={data.question}
-                        answer={data.answer}
-                        toggle={() => toggle(index)}
-                      ></Accordion>
+                      <div key={index}>
+                        <div
+                          className="transition-all duration-500 py-[15px] gap-4  flex justify-between items-center cursor-pointer "
+                          onClick={() => toggle(index)}
+                        >
+                          <p className="font-[600] text-[#000] capitalize text-[1.3rem] transition-all duration-500">
+                            {data.question}
+                          </p>
+                          <div className="text-xl sm:text-[25px] transition-all duration-500">
+                            {open === index ? (
+                              <AiOutlineMinus />
+                            ) : (
+                              <AiOutlinePlus />
+                            )}
+                          </div>
+                        </div>
+
+                        {open === index && (
+                          <div className="transition-all duration-500 text-justify w-[90%] text-[13px] sm:text-[16px] leading-relaxed ">
+                            {data.answer}
+                          </div>
+                        )}
+                      </div>
                     );
                   })}
                 </div>
