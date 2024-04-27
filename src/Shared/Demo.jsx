@@ -1,51 +1,25 @@
-// icons
-import { CgProfile } from "react-icons/cg";
+import { useState } from "react";
 
-const Inputs = () => {
-  const [imageLink, setImageLink] = useState("");
-
-  const handleUploadImageClick = () => {
-    document.getElementById("image").click();
-  };
-
-  const handleFileChange = (e) => {
-    e.preventDefault();
-    const file = event.target.files[0];
-    if (file) {
-      const imageURL = URL.createObjectURL(file);
-      setImageLink(imageURL);
-    }
-  };
+const InputSwitch = () => {
+  const [toggle, setToggle] = useState(false);
 
   return (
-    <div className=" text-center">
-      <input
-        type="file"
-        name="image"
-        id="fourthImage"
-        className="hidden"
-        onChange={handleFileChange}
-      />
-      <div className="w-[150px] h-[150px] rounded-full border border-[#e5eaf2] flex items-center justify-center">
-        {imageLink === "" ? (
-          <CgProfile className="text-[10rem] text-[#e5eaf2]" />
-        ) : (
-          <img
-            src={imageLink}
-            alt="image"
-            className="w-full h-full object-cover rounded-full"
-          />
-        )}
-      </div>
-
-      <button
-        className="px-4 py-2 bg-[#3B9DF8] text-white rounded-md mt-5"
-        onClick={handleUploadImageClick}
+    <>
+      <div
+        className={`${
+          toggle ? " bg-primary" : "bg-[#f0f0f0]"
+        } w-[70px] h-[32px] p-1 border transition-colors duration-500 border-border  rounded-full relative`}
       >
-        Upload profile
-      </button>
-    </div>
+        <div
+          className={`${
+            toggle ? " translate-x-[36px]" : "translate-x-[0px]"
+          } w-[21px] h-[21px] transition-all duration-500 rounded-full cursor-pointer bg-[#fff]`}
+          style={{ boxShadow: "1px 2px 5px 2px rgb(0,0,0,0.1)" }}
+          onClick={() => setToggle(!toggle)}
+        ></div>
+      </div>
+    </>
   );
 };
 
-export default Inputs;
+export default InputSwitch;
