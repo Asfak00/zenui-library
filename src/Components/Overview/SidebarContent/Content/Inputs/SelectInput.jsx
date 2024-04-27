@@ -52,6 +52,13 @@ const SelectInput = () => {
   const [isActive2, setIsActive2] = useState(false);
   const [content, setContent] = useState("Select Option");
   const [content2, setContent2] = useState("Select Option");
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const [optionArray5, setOptionArray5] = useState([
+    "Football",
+    "Cricket",
+    "Tennis",
+    "Badminton",
+  ]);
 
   const optionArray = ["Football", "Cricket", "Tennis", "Badminton"];
   const optionArray2 = [
@@ -81,6 +88,25 @@ const SelectInput = () => {
       setIsActive2(false);
     }
   });
+
+  const handleSelect = (option) => {
+    if (selectedOptions.includes(option)) {
+      setSelectedOptions(selectedOptions.filter((item) => item !== option)); // Remove option from selectedOptions
+      return; // Exit the function early if the option is already selected
+    }
+
+    setSelectedOptions([...selectedOptions, option]); // Add option to selectedOptions
+
+    const index = optionArray5.indexOf(option); // Find the index of the selected option in optionArray
+    if (index !== -1) {
+      const updatedOptions = [...optionArray5]; // Create a copy of optionArray
+      updatedOptions.splice(index, 1); // Remove the selected option
+      setOptionArray5([
+        ...updatedOptions,
+        updatedOptions.length > 0 ? "," : "",
+      ]); // Update optionArray state
+    }
+  };
 
   return (
     <>
@@ -127,8 +153,8 @@ const SelectInput = () => {
                   <div
                     className={`${
                       isActive
-                        ? " opacity-100 scale-[1]"
-                        : " opacity-0 scale-[0.8]"
+                        ? " z-[1] opacity-100 scale-[1]"
+                        : " z-[-1] opacity-0 scale-[0.8]"
                     } w-full absolute top-12 left-0 right-0 z-40 bg-[#fff] rounded-xl flex flex-col  overflow-hidden transition-all duration-300 ease-in-out`}
                     style={{
                       boxShadow: "0 15px 60px -15px rgba(0, 0, 0, 0.3)",
@@ -251,8 +277,8 @@ export default Select;
                   <div
                     className={`${
                       isActive2
-                        ? " opacity-100 scale-[1]"
-                        : " opacity-0 scale-[0.8]"
+                        ? "z-[1] opacity-100 scale-[1]"
+                        : "z-[-1] opacity-0 scale-[0.8]"
                     } w-full absolute top-12 left-0 right-0 z-40 bg-[#fff] rounded-xl flex flex-col  overflow-hidden transition-all duration-300 ease-in-out`}
                     style={{
                       boxShadow: "0 15px 60px -15px rgba(0, 0, 0, 0.3)",
@@ -355,6 +381,83 @@ export default Select;
             )}
           </div>
 
+          <div className="mt-8">
+            <ContentHeader text={"multiple select"} id={"multiple_select"} />
+          </div>
+
+          <p className="w-[80%] text-text text-[1rem]">
+            This is the card skeleton. The skeleton provided here basically
+            shows the information of an account.
+          </p>
+
+          <div className="w-[80%] border border-border rounded mt-8">
+            <div className="">
+              <button
+                className={`${
+                  iconSelectPreview && "bg-border"
+                } px-6 py-2 border-r border-b roudned border-border`}
+                onClick={handleIconSelectPreview}
+              >
+                Preview
+              </button>
+              <button
+                className={`${
+                  iconSelectCode && "bg-border"
+                } px-6 py-2 border-r border-b rounded border-border`}
+                onClick={handleIconSelectCode}
+              >
+                Code
+              </button>
+            </div>
+            {iconSelectPreview && (
+              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                <div className="w-[200px] relative">
+                  <button
+                    className="bg-[#fff] border border-[#d1d1d1] rounded-xl w-full justify-between px-3 py-2 flex items-center gap-8   cursor-pointer dropdown text-wrap"
+                    onClick={() => setIsActive2(!isActive2)}
+                  >
+                    {selectedOptions.length < 0
+                      ? "Select Option"
+                      : selectedOptions.map((item) => item)}
+                    <IoChevronDown
+                      className={`${
+                        isActive2 ? " rotate-[180deg]" : " rotate-0"
+                      } transition-all duration-300 text-[1.2rem]`}
+                    />
+                  </button>
+
+                  <div
+                    className={`${
+                      isActive2
+                        ? "z-[1] opacity-100 scale-[1]"
+                        : "z-[-1] opacity-0 scale-[0.8]"
+                    } w-full absolute top-12 left-0 right-0 z-40 bg-[#fff] rounded-xl flex flex-col  overflow-hidden transition-all duration-300 ease-in-out`}
+                    style={{
+                      boxShadow: "0 15px 60px -15px rgba(0, 0, 0, 0.3)",
+                    }}
+                  >
+                    {optionArray5?.map((option, index) => (
+                      <p
+                        className="py-2 px-4 hover:bg-[#ececec] transition-all duration-200 flex items-center gap-2"
+                        key={index}
+                        onClick={(e) => handleSelect(e.target.textContent)}
+                      >
+                        {option}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {iconSelectCode && (
+              <Showcode
+                code="
+                "
+              />
+            )}
+          </div>
+
           <OverviewFooter />
         </div>
 
@@ -381,13 +484,13 @@ export default Select;
             Select With Icon
           </a>
           <a
-            href="#multi_select"
+            href="#multiple_select"
             className={`${
               contentActiveTab === 3 && "!text-primary !border-primary"
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(3)}
           >
-            Multi Select
+            Multiple Select
           </a>
         </div>
       </aside>
