@@ -80,12 +80,12 @@ const SwitchInput = () => {
                 <div
                   className={`${
                     squareToggle ? " bg-primary" : "bg-[#f0f0f0]"
-                  } w-[70px] h-[32px] p-1 border transition-colors duration-500 border-border  rounded-full relative`}
+                  } w-[60px] h-[32px] p-[0.2rem] border transition-colors duration-500 border-border  rounded-full relative`}
                 >
                   <div
                     className={`${
-                      squareToggle ? " translate-x-[36px]" : "translate-x-[0px]"
-                    } w-[21px] h-[21px] transition-all duration-500 rounded-full cursor-pointer bg-[#fff]`}
+                      squareToggle ? " translate-x-[27px]" : "translate-x-[0px]"
+                    } w-[24px] h-[24px] pb-1 transition-all duration-500 rounded-full cursor-pointer bg-[#fff]`}
                     style={{ boxShadow: "1px 2px 5px 2px rgb(0,0,0,0.1)" }}
                     onClick={() => setSquareToggle(!squareToggle)}
                   ></div>
@@ -106,12 +106,12 @@ const InputSwitch = () => {
       <div
         className={`${
           toggle ? " bg-[#3B9DF8]" : "bg-[#f0f0f0]"
-        } w-[70px] h-[32px] p-1 border transition-colors duration-500 border-[#e5eaf2]  rounded-full relative`}
+        } w-[60px] h-[32px] p-[0.2rem] border transition-colors duration-500 border-[#e5eaf2]  rounded-full relative`}
       >
         <div
           className={`${
-            toggle ? " translate-x-[36px]" : "translate-x-[0px]"
-          } w-[21px] h-[21px] transition-all duration-500 rounded-full cursor-pointer bg-[#fff]`}
+            toggle ? " translate-x-[27px]" : "translate-x-[0px]"
+          } w-[24px] h-[24px] transition-all duration-500 rounded-full cursor-pointer bg-[#fff]`}
           style={{ boxShadow: "1px 2px 5px 2px rgb(0,0,0,0.1)" }}
           onClick={() => setToggle(!toggle)}
         ></div>
@@ -159,14 +159,14 @@ export default InputSwitch;
                 <div
                   className={`${
                     toggle ? " bg-primary" : "bg-[#f0f0f0]"
-                  } w-[70px] h-[32px] py-1.5 px-2 border transition-colors duration-500 border-border  rounded-full relative`}
+                  } w-[60px] h-[32px] py-[0.230rem] px-2 border transition-colors duration-500 border-border  rounded-full relative`}
                 >
                   <div
                     className={`${
                       toggle
-                        ? " translate-x-[30px] rotate-[90deg]"
+                        ? " translate-x-[18px] rotate-[90deg]"
                         : "translate-x-[0px] rotate-[0deg]"
-                    } w-[19px] h-[19px] transition-all duration-500 rounded-sm cursor-pointer bg-[#fff]`}
+                    } w-[21px] h-[21px] transition-all duration-500 rounded-sm cursor-pointer bg-[#fff]`}
                     style={{ boxShadow: "1px 2px 5px 2px rgb(0,0,0,0.1)" }}
                     onClick={() => setToggle(!toggle)}
                   ></div>
@@ -187,14 +187,14 @@ const InputSwitch = () => {
       <div
         className={`${
           toggle ? " bg-[#3B9DF8]" : "bg-[#f0f0f0]"
-        } w-[70px] h-[32px] py-1.5 px-2 border transition-colors duration-500 border-[#e5eaf2]  rounded-full relative`}
+        } w-[60px] h-[32px] py-[0.230rem] px-2 border transition-colors duration-500 border-[#e5eaf2]  rounded-full relative`}
       >
         <div
           className={`${
             toggle
-              ? " translate-x-[30px] rotate-[90deg]"
+              ? " translate-x-[18px] rotate-[90deg]"
               : "translate-x-[0px] rotate-[0deg]"
-          } w-[19px] h-[19px] transition-all duration-500 rounded-sm cursor-pointer bg-[#fff]`}
+          } w-[21px] h-[21px] transition-all duration-500 rounded-sm cursor-pointer bg-[#fff]`}
           style={{ boxShadow: "1px 2px 5px 2px rgb(0,0,0,0.1)" }}
           onClick={() => setToggle(!toggle)}
         ></div>

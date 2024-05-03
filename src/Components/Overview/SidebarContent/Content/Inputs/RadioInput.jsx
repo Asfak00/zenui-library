@@ -78,7 +78,7 @@ const RadioInput = () => {
             {circlePreview && (
               <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
                 <div
-                  className={` w-[35px] h-[35px] p-1 border border-primary  rounded-full flex items-center justify-center cursor-pointer `}
+                  className={` w-[35px] h-[35px] border border-primary  rounded-full flex items-center justify-center cursor-pointer `}
                   onClick={() => setSquareToggle(!squareToggle)}
                 >
                   <div
@@ -103,7 +103,7 @@ const InputRadio = () => {
   return (
     <>
       <div
-        className={` w-[35px] h-[35px] p-1 border border-[#3B9DF8]  rounded-full flex items-center justify-center cursor-pointer `}
+        className={` w-[35px] h-[35px] border border-[#3B9DF8]  rounded-full flex items-center justify-center cursor-pointer `}
         onClick={() => setToggle(!toggle)}
       >
         <div
@@ -153,7 +153,7 @@ export default InputRadio;
             {squarePreview && (
               <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
                 <div
-                  className={` w-[35px] h-[35px] p-1 border border-primary  rounded-md flex items-center justify-center cursor-pointer `}
+                  className={` w-[35px] h-[35px] border border-primary  rounded-md flex items-center justify-center cursor-pointer `}
                   onClick={() => setToggle(!toggle)}
                 >
                   <div
@@ -178,7 +178,7 @@ const InputRadio = () => {
   return (
     <>
       <div
-        className={` w-[35px] h-[35px] p-1 border border-[#3B9DF8]  rounded-md flex items-center justify-center cursor-pointer `}
+        className={` w-[35px] h-[35px] border border-[#3B9DF8]  rounded-md flex items-center justify-center cursor-pointer `}
         onClick={() => setToggle(!toggle)}
       >
         <div
