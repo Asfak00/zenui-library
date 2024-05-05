@@ -79,6 +79,20 @@ const Tabs = () => {
     setBoxButtonPreview(false);
   };
 
+  // animated button
+  const [animatedTabPreview, setAnimatedTabPreview] = useState(true);
+  const [animatedTabCode, setAnimatedTabCode] = useState(false);
+
+  const handleAnimatedTabPreview = () => {
+    setAnimatedTabPreview(true);
+    setAnimatedTabCode(false);
+  };
+
+  const handleAnimatedTabCode = () => {
+    setAnimatedTabCode(true);
+    setAnimatedTabPreview(false);
+  };
+
   // state for full border tab
   const [isActive, setIsActive] = useState(1);
 
@@ -193,6 +207,142 @@ const BorderTab = () => {
 
 export default BorderTab;
 "
+              />
+            )}
+          </div>
+
+          <div className="mt-8">
+            <ContentHeader id="animated_tab" text={"animated tab"} />
+          </div>
+
+          <p className="w-[80%] text-text text-[1rem]">
+            Many times it is seen that only the bottom of the bar does not come
+            from all sides, that is the tab of the bottom bar.
+          </p>
+
+          <div className="w-[80%] border border-border rounded mt-8">
+            <div className="">
+              <button
+                className={`${
+                  animatedTabPreview && "bg-border"
+                } px-6 py-2 border-r border-b roudned border-border`}
+                onClick={handleAnimatedTabPreview}
+              >
+                Preview
+              </button>
+              <button
+                className={`${
+                  animatedTabCode && "bg-border"
+                } px-6 py-2 border-r border-b rounded border-border`}
+                onClick={handleAnimatedTabCode}
+              >
+                Code
+              </button>
+            </div>
+            {animatedTabPreview && (
+              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                <ul className="flex items-center bg-[#59bdf738] rounded-full p-1 relative">
+                  <div
+                    className={`${
+                      (boxButtonActive === 1 && "translate-x-[0px]") ||
+                      (boxButtonActive === 2 && "translate-x-[90px]") ||
+                      (boxButtonActive === 3 && "translate-x-[186px]") ||
+                      (boxButtonActive === 4 &&
+                        "!w-[100px] translate-x-[290px]")
+                    } !bg-primary absolute !text-[#fff] h-[85%] w-[95px] transition duration-700 rounded-full border-transparent cursor-pointer`}
+                  ></div>
+                  <li
+                    className={`${
+                      boxButtonActive === 1 && " !text-[#fff]"
+                    } px-6 py-2  text-text z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+                    onClick={() => setBoxButtonActive(1)}
+                  >
+                    Home
+                  </li>
+                  <li
+                    className={`${
+                      boxButtonActive === 2 && " !text-[#fff]"
+                    } px-6 py-2  text-text z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+                    onClick={() => setBoxButtonActive(2)}
+                  >
+                    About
+                  </li>
+                  <li
+                    className={`${
+                      boxButtonActive === 3 && " !text-[#fff]"
+                    } px-6 py-2  text-text z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+                    onClick={() => setBoxButtonActive(3)}
+                  >
+                    Support
+                  </li>
+                  <li
+                    className={`${
+                      boxButtonActive === 4 && " !text-[#fff]"
+                    } px-6 py-2  text-text z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+                    onClick={() => setBoxButtonActive(4)}
+                  >
+                    Contact
+                  </li>
+                </ul>
+              </div>
+            )}
+
+            {animatedTabCode && (
+              <Showcode
+                code='
+import { useState } from "react";
+
+const AnimatedTab = () => {
+  const [activeTab, setActiveTab] = useState(1);
+
+  return (
+    <ul className="flex items-center bg-[#59bdf738] rounded-full p-1 relative">
+      <div
+        className={`${
+          (activeTab === 1 && "translate-x-[0px]") ||
+          (activeTab === 2 && "translate-x-[90px]") ||
+          (activeTab === 3 && "translate-x-[186px]") ||
+          (activeTab === 4 && "!w-[100px] translate-x-[290px]")
+        } !bg-[#3B9DF8] absolute !text-[#fff] h-[85%] w-[95px] transition duration-700 rounded-full border-transparent cursor-pointer`}
+      ></div>
+      <li
+        className={`${
+          activeTab === 1 && " !text-[#fff]"
+        } px-6 py-2  text-[#424242] z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+        onClick={() => setActiveTab(1)}
+      >
+        Home
+      </li>
+      <li
+        className={`${
+          activeTab === 2 && " !text-[#fff]"
+        } px-6 py-2  text-[#424242] z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+        onClick={() => setActiveTab(2)}
+      >
+        About
+      </li>
+      <li
+        className={`${
+          activeTab === 3 && " !text-[#fff]"
+        } px-6 py-2  text-[#424242] z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+        onClick={() => setActiveTab(3)}
+      >
+        Support
+      </li>
+      <li
+        className={`${
+          activeTab === 4 && " !text-[#fff]"
+        } px-6 py-2  text-[#424242] z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+        onClick={() => setActiveTab(4)}
+      >
+        Contact
+      </li>
+    </ul>
+  );
+};
+
+export default AnimatedTab;
+                '
               />
             )}
           </div>
@@ -707,20 +857,29 @@ export default DropDown;
             Border Navigation
           </a>
           <a
-            href="#bottom_border_navigation"
+            href="#animated_tab"
             className={`${
               contentActiveTab === 2 && "!text-primary !border-primary"
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(2)}
+          >
+            Animated Tab
+          </a>
+          <a
+            href="#bottom_border_navigation"
+            className={`${
+              contentActiveTab === 3 && "!text-primary !border-primary"
+            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+            onClick={() => setContentActiveTab(3)}
           >
             Bottom Border Navigation
           </a>
           <a
             href="#top_border_navigation"
             className={`${
-              contentActiveTab === 3 && "!text-primary !border-primary"
+              contentActiveTab === 4 && "!text-primary !border-primary"
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(3)}
+            onClick={() => setContentActiveTab(4)}
           >
             Top Border Navigation
           </a>
@@ -728,9 +887,9 @@ export default DropDown;
           <a
             href="#Squre_border_navigation"
             className={`${
-              contentActiveTab === 4 && "!text-primary !border-primary"
+              contentActiveTab === 5 && "!text-primary !border-primary"
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(4)}
+            onClick={() => setContentActiveTab(5)}
           >
             Squre Border Navigation
           </a>
@@ -738,9 +897,9 @@ export default DropDown;
           <a
             href="#box_navigation"
             className={`${
-              contentActiveTab === 5 && "!text-primary !border-primary"
+              contentActiveTab === 6 && "!text-primary !border-primary"
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(5)}
+            onClick={() => setContentActiveTab(6)}
           >
             Box Navigation
           </a>

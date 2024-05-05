@@ -1,25 +1,52 @@
 import { useState } from "react";
 
-const InputSwitch = () => {
-  const [toggle, setToggle] = useState(false);
+const AnimatedTab = () => {
+  const [activeTab, setActiveTab] = useState(1);
 
   return (
-    <>
+    <ul className="flex items-center bg-[#59bdf738] rounded-full p-1 relative">
       <div
         className={`${
-          toggle ? " bg-primary" : "bg-[#f0f0f0]"
-        } w-[70px] h-[32px] p-1 border transition-colors duration-500 border-border  rounded-full relative`}
+          (activeTab === 1 && "translate-x-[0px]") ||
+          (activeTab === 2 && "translate-x-[90px]") ||
+          (activeTab === 3 && "translate-x-[186px]") ||
+          (activeTab === 4 && "!w-[100px] translate-x-[290px]")
+        } !bg-primary absolute !text-[#fff] h-[85%] w-[95px] transition duration-700 rounded-full border-transparent cursor-pointer`}
+      ></div>
+      <li
+        className={`${
+          activeTab === 1 && " !text-[#fff]"
+        } px-6 py-2  text-text z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+        onClick={() => setActiveTab(1)}
       >
-        <div
-          className={`${
-            toggle ? " translate-x-[36px]" : "translate-x-[0px]"
-          } w-[21px] h-[21px] transition-all duration-500 rounded-full cursor-pointer bg-[#fff]`}
-          style={{ boxShadow: "1px 2px 5px 2px rgb(0,0,0,0.1)" }}
-          onClick={() => setToggle(!toggle)}
-        ></div>
-      </div>
-    </>
+        Home
+      </li>
+      <li
+        className={`${
+          activeTab === 2 && " !text-[#fff]"
+        } px-6 py-2  text-text z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+        onClick={() => setActiveTab(2)}
+      >
+        About
+      </li>
+      <li
+        className={`${
+          activeTab === 3 && " !text-[#fff]"
+        } px-6 py-2  text-text z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+        onClick={() => setActiveTab(3)}
+      >
+        Support
+      </li>
+      <li
+        className={`${
+          activeTab === 4 && " !text-[#fff]"
+        } px-6 py-2  text-text z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+        onClick={() => setActiveTab(4)}
+      >
+        Contact
+      </li>
+    </ul>
   );
 };
 
-export default InputSwitch;
+export default AnimatedTab;

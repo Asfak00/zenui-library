@@ -12,6 +12,7 @@ import { FiUpload } from "react-icons/fi";
 import { IoMdCloudUpload } from "react-icons/io";
 import { PiFilesThin } from "react-icons/pi";
 import { CgProfile } from "react-icons/cg";
+import { MdDelete } from "react-icons/md";
 
 // showing the code
 import Showcode from "../../../../../Shared/ShowCode";
