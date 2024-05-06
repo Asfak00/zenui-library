@@ -35,6 +35,10 @@
   display: none;
 }
 
+.showCode::-webkit-scrollbar {
+  height: 3px;
+}
+
 /* navbar hover effect */
 .navUl li {
   position: relative;

@@ -95,7 +95,7 @@ const TextInput = () => {
     <>
       <aside className="flex items-start justify-between gap-6">
         <div>
-          <ContentHeader text={"primary input"} id={"primary_input"} />
+          <ContentHeader text={"required input"} id={"primary_input"} />
 
           <p className="w-[80%] text-text text-[1rem]">
             This is the card skeleton. The skeleton provided here basically
@@ -123,21 +123,43 @@ const TextInput = () => {
             </div>
             {primaryInputPreview && (
               <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Your name"
-                  className="border-border border rounded-md outline-none px-4 w-[60%] py-3 focus:border-primary transition-colors duration-300"
-                />
+                <div className="w-[80%]">
+                  <label htmlFor="name" className="text-[15px] font-[400]">
+                    Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Your name"
+                    className="border-border border rounded-md outline-none px-4 w-full mt-1 py-3 focus:border-primary transition-colors duration-300"
+                  />
+                </div>
               </div>
             )}
 
             {primaryInputCode && (
               <Showcode
                 code='
-<input type="text" name="name" id="name" placeholder="Your name" className="border-[#e5eaf2] border rounded-md outline-none px-4 w-[60%] py-3 focus:border-[#3B9DF8] transition-colors duration-300"
-/>'
+const Textarea = () => {
+  return (
+    <div className="w-[80%]">
+      <label htmlFor="name" className="text-[15px] font-[400]">
+        Name <span className="text-red-500">*</span>
+      </label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Your name"
+        className="border-[#e5eaf2] border rounded-md outline-none px-4 w-full mt-1 py-3 focus:border-[#3B9DF8] transition-colors duration-300"
+      />
+    </div>
+  );
+};
+
+export default Textarea;
+                '
               />
             )}
           </div>
@@ -180,7 +202,7 @@ const TextInput = () => {
                   name="name"
                   id="name"
                   placeholder="Your name"
-                  className="border-border border-b outline-none px-4 w-[60%] py-3 focus:border-primary transition-colors duration-300"
+                  className="border-border border-b outline-none px-4 w-[80%] py-3 focus:border-primary transition-colors duration-300"
                 />
               </div>
             )}
@@ -188,7 +210,7 @@ const TextInput = () => {
             {bottomBorderCode && (
               <Showcode
                 code='
-<input type="text" name="name" id="name" placeholder="Your name" className="border-[#e5eaf2] border-b outline-none px-4 w-[60%] py-3 focus:border-[#3B9DF8] transition-colors duration-300"
+<input type="text" name="name" id="name" placeholder="Your name" className="border-[#e5eaf2] border-b outline-none px-4 w-[80%] py-3 focus:border-[#3B9DF8] transition-colors duration-300"
 />
                 '
               />
@@ -228,7 +250,7 @@ const TextInput = () => {
             </div>
             {animateLabelPreiview && (
               <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <label className="relative w-[60%]">
+                <label className="relative w-[80%]">
                   <input
                     type="text"
                     name="name"
@@ -245,7 +267,7 @@ const TextInput = () => {
             {animateLabelCode && (
               <Showcode
                 code='
-<label className="relative w-[60%]">
+<label className="relative w-[80%]">
   <input type="text" name="name" id="name" className="peer border-[#e5eaf2] border rounded-md outline-none px-4 py-3 w-full focus:border-[#3B9DF8] transition-colors duration-300"
   />
   <span className=" absolute top-3.5 left-5 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
@@ -287,7 +309,7 @@ const TextInput = () => {
             </div>
             {iconInputPreview && (
               <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <div className="w-[60%] relative">
+                <div className="w-[80%] relative">
                   <RiAccountCircleLine className=" absolute top-3.5 left-3 text-[1.5rem] text-[#777777]" />
                   <input
                     type="text"
@@ -298,7 +320,7 @@ const TextInput = () => {
                   />
                 </div>
 
-                <div className="w-[60%] relative">
+                <div className="w-[80%] relative">
                   <RiLockPasswordLine className=" absolute top-3.5 left-3 text-[1.5rem] text-[#777777]" />
                   <input
                     type="password"
@@ -309,7 +331,7 @@ const TextInput = () => {
                   />
                 </div>
 
-                <div className="w-[60%] relative">
+                <div className="w-[80%] relative">
                   <MdOutlineMail className=" absolute top-3.5 left-3 text-[1.5rem] text-[#777777]" />
                   <input
                     type="email"
@@ -333,7 +355,7 @@ const Inputs = () => {
   return (
     <>
       {/* username */}
-      <div className="w-[60%] relative">
+      <div className="w-[80%] relative">
         <RiAccountCircleLine className=" absolute top-3.5 left-3 text-[1.5rem] text-[#777777]" />
         <input
           type="text"
@@ -345,7 +367,7 @@ const Inputs = () => {
       </div>
 
       {/* password */}
-      <div className="w-[60%] relative">
+      <div className="w-[80%] relative">
         <RiLockPasswordLine className=" absolute top-3.5 left-3 text-[1.5rem] text-[#777777]" />
         <input
           type="password"
@@ -357,7 +379,7 @@ const Inputs = () => {
       </div>
 
       {/* email */}
-      <div className="w-[60%] relative">
+      <div className="w-[80%] relative">
         <MdOutlineMail className=" absolute top-3.5 left-3 text-[1.5rem] text-[#777777]" />
         <input
           type="email"
@@ -407,25 +429,30 @@ export default Inputs;
             </div>
             {passwordInputPreview && (
               <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <div className="w-[60%] relative">
-                  <input
-                    type={isEyeOpen ? "text" : "password"}
-                    name="password"
-                    id="password"
-                    placeholder="Password"
-                    className="peer border-border border rounded-md outline-none pl-4 pr-12 py-3 w-full focus:border-primary transition-colors duration-300"
-                  />
-                  {isEyeOpen ? (
-                    <IoEyeOutline
-                      className=" absolute top-3.5 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
-                      onClick={() => setIsEyeOpen(false)}
+                <div className="w-[80%]">
+                  <label htmlFor="password" className="text-[15px] font-[400]">
+                    Password
+                  </label>
+                  <div className="w-full relative">
+                    <input
+                      type={isEyeOpen ? "text" : "password"}
+                      name="password"
+                      id="password"
+                      placeholder="Password"
+                      className="peer border-border border rounded-md outline-none pl-4 pr-12 py-3 w-full mt-1 focus:border-primary transition-colors duration-300"
                     />
-                  ) : (
-                    <IoEyeOffOutline
-                      className=" absolute top-3.5 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
-                      onClick={() => setIsEyeOpen(true)}
-                    />
-                  )}
+                    {isEyeOpen ? (
+                      <IoEyeOutline
+                        className=" absolute top-4 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
+                        onClick={() => setIsEyeOpen(false)}
+                      />
+                    ) : (
+                      <IoEyeOffOutline
+                        className=" absolute top-4 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
+                        onClick={() => setIsEyeOpen(true)}
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
             )}
@@ -433,37 +460,37 @@ export default Inputs;
             {passwordInputCode && (
               <Showcode
                 code='
-// icons
-import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
-
-const Inputs = () => {
-  const [isPassword, setIsPassword] = useState(false);
-
+const Textarea = () => {
   return (
-    <div className="w-[60%] relative">
-      <input
-        type={isPassword ? "text" : "password"}
-        name="password"
-        id="password"
-        placeholder="Password"
-        className="peer border-[#e5eaf2] border rounded-md outline-none pl-4 pr-12 py-3 w-full focus:border-[#3B9DF8] transition-colors duration-300"
-      />
-      {isPassword ? (
-        <IoEyeOutline
-          className=" absolute top-3.5 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
-          onClick={() => setIsPassword(false)}
+    <div className="w-[80%]">
+      <label htmlFor="password" className="text-[15px] font-[400]">
+        Password
+      </label>
+      <div className="w-full relative">
+        <input
+          type={isEyeOpen ? "text" : "password"}
+          name="password"
+          id="password"
+          placeholder="Password"
+          className="peer border-[#e5eaf2] border rounded-md outline-none pl-4 pr-12 py-3 w-full mt-1 focus:border-[#3B9DF8] transition-colors duration-300"
         />
-      ) : (
-        <IoEyeOffOutline
-          className=" absolute top-3.5 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
-          onClick={() => setIsPassword(true)}
-        />
-      )}
+        {isEyeOpen ? (
+          <IoEyeOutline
+            className=" absolute top-4 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
+            onClick={() => setIsEyeOpen(false)}
+          />
+        ) : (
+          <IoEyeOffOutline
+            className=" absolute top-4 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
+            onClick={() => setIsEyeOpen(true)}
+          />
+        )}
+      </div>
     </div>
   );
 };
 
-export default Inputs;
+export default Textarea;
                 '
               />
             )}
