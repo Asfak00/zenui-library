@@ -127,7 +127,7 @@ const SwitchInput = () => {
                   <div
                     className={`${
                       squareToggle ? " translate-x-[27px]" : "translate-x-[0px]"
-                    } w-[23px] h-[22px] pb-1 transition-all duration-500 rounded-full cursor-pointer bg-[#fff]`}
+                    } w-[23px] h-[23px] pb-1 transition-all duration-500 rounded-full cursor-pointer bg-[#fff]`}
                     style={{ boxShadow: "1px 2px 5px 2px rgb(0,0,0,0.1)" }}
                     onClick={() => setSquareToggle(!squareToggle)}
                   ></div>
@@ -199,7 +199,7 @@ const InputSwitch = () => {
         <div
           className={`${
             toggle ? " translate-x-[27px]" : "translate-x-[0px]"
-          } w-[23px] h-[22px] pb-1 transition-all duration-500 rounded-full cursor-pointer bg-[#fff]`}
+          } w-[23px] h-[23px] pb-1 transition-all duration-500 rounded-full cursor-pointer bg-[#fff]`}
           style={{ boxShadow: "1px 2px 5px 2px rgb(0,0,0,0.1)" }}
           onClick={() => setToggle(!toggle)}
         ></div>
@@ -302,7 +302,7 @@ export default InputSwitch;
                       toggle
                         ? " translate-x-[24px] rotate-[90deg]"
                         : "translate-x-[0px] rotate-[0deg]"
-                    } w-[22px] h-[23px] transition-all duration-500 rounded-md cursor-pointer bg-[#fff]`}
+                    } w-[23px] h-[23px] transition-all duration-500 rounded-md cursor-pointer bg-[#fff]`}
                     style={{ boxShadow: "1px 2px 5px 2px rgb(0,0,0,0.1)" }}
                     onClick={() => setToggle(!toggle)}
                   ></div>
@@ -382,7 +382,7 @@ const InputSwitch = () => {
             toggle
               ? " translate-x-[24px] rotate-[90deg]"
               : "translate-x-[0px] rotate-[0deg]"
-          } w-[22px] h-[23px] transition-all duration-500 rounded-md cursor-pointer bg-[#fff]`}
+          } w-[23px] h-[23px] transition-all duration-500 rounded-md cursor-pointer bg-[#fff]`}
           style={{ boxShadow: "1px 2px 5px 2px rgb(0,0,0,0.1)" }}
           onClick={() => setToggle(!toggle)}
         ></div>

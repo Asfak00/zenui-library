@@ -18,8 +18,8 @@ const Templete = () => {
       </h1>
       <p className="w-[70%] text-text text-[1rem] dark:text-[#D9EEFF]">
         Browse our collection of free React templates to get started building
-        your app with TAILWIND UI, including a React home page, React landing
-        page, and more.
+        your app with ZenUI, including a React home page, React landing page,
+        and more.
       </p>
 
       <div className="grid grid-cols-3 w-full mt-12 gap-5">

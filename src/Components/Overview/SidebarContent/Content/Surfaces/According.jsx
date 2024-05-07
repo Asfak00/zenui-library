@@ -252,7 +252,7 @@ export default BorderAccording;
           </div>
 
           <div className="mt-8">
-            <ContentHeader id="Border_According" text={"Border According"} />
+            <ContentHeader id="border_according" text={"Border According"} />
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
@@ -407,7 +407,7 @@ export default BorderAccording;
 
           <div className="mt-8">
             <ContentHeader
-              id="background_According"
+              id="background_according"
               text={"background According"}
             />
           </div>
@@ -606,7 +606,7 @@ export default BackgroundAccording;
             Default Open
           </a>
           <a
-            href="#Border_According"
+            href="#border_according"
             className={`${
               contentActiveTab === 2 && "!text-primary !border-primary"
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
@@ -615,7 +615,7 @@ export default BackgroundAccording;
             Border According
           </a>
           <a
-            href="#background_According"
+            href="#background_according"
             className={`${
               contentActiveTab === 3 && "!text-primary !border-primary"
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}

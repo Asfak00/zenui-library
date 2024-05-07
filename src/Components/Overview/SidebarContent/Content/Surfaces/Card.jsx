@@ -380,7 +380,7 @@ export default BlogCard;
           </div>
 
           <ContentHeader
-            id="Product_Card"
+            id="product_card"
             className="mt-8"
             text={"Product Card"}
           />
@@ -417,7 +417,6 @@ export default BlogCard;
                     className="w-full h-64 object-cover"
                   />
                   <div className="flex w-full justify-between items-center p-4">
-                    
                     <div className="flex  items-center gap-4">
                       <div className=" flex flex-col items-center">
                         <h2 className="font-semibold text-3xl">Shoes</h2>
@@ -541,11 +540,19 @@ export default SimpleProfileCard;
           </div>
 
           <div>
-            <ContentHeader
-              id="Music_Card"
-              className="mt-8"
-              text={"Music Card"}
-            />
+            <div className="mt-8">
+              <ContentHeader
+                id="music_card"
+                className="mt-8"
+                text={"Music Card"}
+              />
+            </div>
+
+            <p className="w-[80%] text-text text-[1rem]">
+              We see navigation Card with borders on all sides like this on
+              almost all websites. They are very simple.
+            </p>
+
             <div className="w-[80%] border border-border rounded mt-8">
               <div className="">
                 <button
@@ -669,10 +676,13 @@ export default SimpleProfileCard;
           </div>
 
           <div className="mt-8">
-            <ContentHeader
-              id="simple_profile_card"
-              text={"Simple profile card"}
-            />
+            <ContentHeader id={"profile_card_2"} text={"Simple profile card"} />
+
+            <p className="w-[80%] text-text text-[1rem]">
+              We see navigation Card with borders on all sides like this on
+              almost all websites. They are very simple.
+            </p>
+
             <div className="w-[80%] border border-border rounded mt-3">
               <div className="">
                 <button
@@ -1399,20 +1409,38 @@ export default PricingCard;
             Blog Card
           </a>
           <a
-            href="#profile_card"
+            href="#product_card"
             className={`${
               contentActiveTab === 2 && "!text-primary !border-primary"
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(2)}
           >
-            Profile Card
+            Product Card
           </a>
           <a
-            href="#Team_card"
+            href="#music_card"
             className={`${
               contentActiveTab === 3 && "!text-primary !border-primary"
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(3)}
+          >
+            Music Card
+          </a>
+          <a
+            href="#profile_card_2"
+            className={`${
+              contentActiveTab === 4 && "!text-primary !border-primary"
+            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+            onClick={() => setContentActiveTab(4)}
+          >
+            Profile Card 2
+          </a>
+          <a
+            href="#Team_card"
+            className={`${
+              contentActiveTab === 5 && "!text-primary !border-primary"
+            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+            onClick={() => setContentActiveTab(5)}
           >
             Team Card
           </a>
@@ -1420,9 +1448,9 @@ export default PricingCard;
           <a
             href="#Pricing_card_1"
             className={`${
-              contentActiveTab === 4 && "!text-primary !border-primary"
+              contentActiveTab === 6 && "!text-primary !border-primary"
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(4)}
+            onClick={() => setContentActiveTab(6)}
           >
             Pricing Card 1
           </a>
@@ -1430,9 +1458,9 @@ export default PricingCard;
           <a
             href="#Pricing_card_2"
             className={`${
-              contentActiveTab === 5 && "!text-primary !border-primary"
+              contentActiveTab === 7 && "!text-primary !border-primary"
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(5)}
+            onClick={() => setContentActiveTab(7)}
           >
             Pricing Card 2
           </a>
