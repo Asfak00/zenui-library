@@ -1,11 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 
 // card component
 import ComponentCardTemplete from "../../../../Shared/ComponentCardTemplete";
 import OverviewFooter from "../../../../Shared/OverviewFooter";
 import { Helmet } from "react-helmet";
+import { allComponents } from "../../../../Utils/AllComponents";
 
 const AllComponents = () => {
+  const [buttonsData, setButtonsData] = useState([]);
+  const [inputsData, setInputsData] = useState([]);
+  const [displayData, setDisplayData] = useState([]);
+  const [navigationsData, setNavigationsData] = useState([]);
+  const [surfaceData, setSurfaceData] = useState([]);
+  const [feedbackData, setFeedbackData] = useState([]);
+
+  allComponents?.map((componentObj) => {
+    if (componentObj.groupName === "button") {
+      buttonsData.push(componentObj);
+      return;
+    }
+    if (componentObj.groupName === "input") {
+      inputsData.push(componentObj);
+      return;
+    }
+    if (componentObj.groupName === "surface") {
+      surfaceData.push(componentObj);
+      return;
+    }
+    if (componentObj.groupName === "feedback") {
+      feedbackData.push(componentObj);
+      return;
+    }
+    if (componentObj.groupName === "data_display") {
+      displayData.push(componentObj);
+      return;
+    }
+    if (componentObj.groupName === "navigation") {
+      navigationsData.push(componentObj);
+      return;
+    }
+  });
+
   return (
     <>
       <aside className="w-[80%]">
@@ -25,41 +60,112 @@ const AllComponents = () => {
           confidence.
         </p>
 
-        <h2 className="mt-12 font-[600] text-[1.5rem] ">Buttons</h2>
-        <div className="grid grid-cols-3  gap-8">
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-        </div>
-
         <h2 className="mt-12 font-[600] text-[1.5rem] ">input</h2>
         <div className="grid grid-cols-3 mt-4 gap-8">
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-        </div>
-
-        <h2 className="mt-12 font-[600] text-[1.5rem] ">Feedback</h2>
-        <div className="grid grid-cols-3 mt-4 gap-8">
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
+          {inputsData?.map((button) => (
+            <a href={button.url} className="border border-border rounded">
+              <img
+                src={button.image}
+                alt="component/image"
+                className="w-full h-[150px] object-cover"
+              />
+              <div className="border-t border-border p-4">
+                <h2 className="text-text font-[600] text-[1rem] capitalize">
+                  {button.title}
+                </h2>
+              </div>
+            </a>
+          ))}
         </div>
 
         <h2 className="mt-12 font-[600] text-[1.5rem] ">Navigation</h2>
         <div className="grid grid-cols-3 mt-4 gap-8">
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
-          <ComponentCardTemplete title={"animated button"} />
+          {navigationsData?.map((button) => (
+            <a href={button.url} className="border border-border rounded">
+              <img
+                src={button.image}
+                alt="component/image"
+                className="w-full h-[150px] object-cover"
+              />
+              <div className="border-t border-border p-4">
+                <h2 className="text-text font-[600] text-[1rem] capitalize">
+                  {button.title}
+                </h2>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <h2 className="mt-12 font-[600] text-[1.5rem] mb-3">Buttons</h2>
+        <div className="grid grid-cols-3  gap-8">
+          {buttonsData?.map((button) => (
+            <a href={button.url} className="border border-border rounded">
+              <img
+                src={button.image}
+                alt="component/image"
+                className="w-full h-[150px] object-cover"
+              />
+              <div className="border-t border-border p-4">
+                <h2 className="text-text font-[600] text-[1rem] capitalize">
+                  {button.title}
+                </h2>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <h2 className="mt-12 font-[600] text-[1.5rem] ">Feedback</h2>
+        <div className="grid grid-cols-3 mt-4 gap-8">
+          {feedbackData?.map((button) => (
+            <a href={button.url} className="border border-border rounded">
+              <img
+                src={button.image}
+                alt="component/image"
+                className="w-full h-[150px] object-cover"
+              />
+              <div className="border-t border-border p-4">
+                <h2 className="text-text font-[600] text-[1rem] capitalize">
+                  {button.title}
+                </h2>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <h2 className="mt-12 font-[600] text-[1.5rem] mb-3">Surface</h2>
+        <div className="grid grid-cols-3  gap-8">
+          {surfaceData?.map((button) => (
+            <a href={button.url} className="border border-border rounded">
+              <img
+                src={button.image}
+                alt="component/image"
+                className="w-full h-[150px] object-cover"
+              />
+              <div className="border-t border-border p-4">
+                <h2 className="text-text font-[600] text-[1rem] capitalize">
+                  {button.title}
+                </h2>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <h2 className="mt-12 font-[600] text-[1.5rem] mb-3">Data Display</h2>
+        <div className="grid grid-cols-3  gap-8">
+          {displayData?.map((button) => (
+            <a href={button.url} className="border border-border rounded">
+              <img
+                src={button.image}
+                alt="component/image"
+                className="w-full h-[150px] object-cover"
+              />
+              <div className="border-t border-border p-4">
+                <h2 className="text-text font-[600] text-[1rem] capitalize">
+                  {button.title}
+                </h2>
+              </div>
+            </a>
+          ))}
         </div>
       </aside>
 

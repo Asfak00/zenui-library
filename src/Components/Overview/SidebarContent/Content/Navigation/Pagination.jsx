@@ -75,6 +75,15 @@ const Pagination = () => {
     setAvatarChipPreview(false);
   };
 
+  const [paginationNum, setPaginationNum] = useState(0);
+  const totalPageNumber = 5;
+  const updatePageNumber = (num) => {
+    if (num > totalPageNumber - 1 || 0 > num) {
+      return setPaginationNum(0);
+    }
+    setPaginationNum(num);
+  };
+
   return (
     <>
       <aside className="flex items-start justify-between gap-6">
@@ -110,7 +119,86 @@ const Pagination = () => {
             </div>
             {primaryChipPreview && (
               <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div></div>
+                <div className="flex select-none justify-center items-center gap-5 ">
+                  {/* left arrow */}
+                  <div
+                    onClick={() => {
+                      updatePageNumber(paginationNum - 1);
+                    }}
+                    className=" hover:scale-110 scale-100 transition-all duration-200 cursor-pointer hover:bg-sky-200 px-1 py-1 rounded-full"
+                  >
+                    <svg
+                      className="w-10"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" strokeWidth={0} />
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <g id="SVGRepo_iconCarrier">
+                        {" "}
+                        <path
+                          d="M15 7L10 12L15 17"
+                          stroke="#0284C7"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />{" "}
+                      </g>
+                    </svg>
+                  </div>
+                  <div className="flex justify-center items-center gap-2 ">
+                    {[...Array(totalPageNumber).keys()].map((item) => (
+                      <div
+                        onClick={() => {
+                          setPaginationNum(item);
+                        }}
+                        className={`cursor-pointer hover:scale-110 scale-100 transition-all duration-200 px-5 ${
+                          paginationNum === item
+                            ? "bg-sky-500 text-white"
+                            : "bg-white"
+                        } border-sky-300  font-semibold text-gray-700   py-3 rounded-full`}
+                        key={item}
+                      >
+                        {item + 1}
+                      </div>
+                    ))}
+                  </div>
+                  {/* right arrow */}
+                  <div
+                    onClick={() => {
+                      updatePageNumber(paginationNum + 1);
+                    }}
+                    className="bg-gray-200 hover:scale-110 scale-100 transition-all duration-200 cursor-pointer hover:bg-sky-100 px-4 py-4 rounded-full"
+                  >
+                    <svg
+                      className="w-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" strokeWidth={0} />
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                      <g id="SVGRepo_iconCarrier">
+                        {" "}
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M12.2929 4.29289C12.6834 3.90237 13.3166 3.90237 13.7071 4.29289L20.7071 11.2929C21.0976 11.6834 21.0976 12.3166 20.7071 12.7071L13.7071 19.7071C13.3166 20.0976 12.6834 20.0976 12.2929 19.7071C11.9024 19.3166 11.9024 18.6834 12.2929 18.2929L17.5858 13H4C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11H17.5858L12.2929 5.70711C11.9024 5.31658 11.9024 4.68342 12.2929 4.29289Z"
+                          fill="#000000"
+                        />{" "}
+                      </g>
+                    </svg>
+                  </div>
+                </div>
               </div>
             )}
 
@@ -120,261 +208,6 @@ const Pagination = () => {
 <div className="px-6 py-1 bg-[#d1d1d180] rounded-full text-[0.9rem] font-[500]">
      ZenUI
 </div>
-                '
-              />
-            )}
-          </div>
-
-          <div className="mt-8">
-            <ContentHeader text={"Chip variants"} id={"chip_variant"} />
-          </div>
-
-          <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
-          </p>
-
-          <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
-              <button
-                className={`${
-                  chipVariantPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleChipVariantPreview}
-              >
-                Preview
-              </button>
-              <button
-                className={`${
-                  chipVariantCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleChipVariantCode}
-              >
-                Code
-              </button>
-            </div>
-            {chipVariantPreview && (
-              <div className="p-8 mb-4 flex items-start flex-wrap gap-5 justify-center">
-                <div className="px-6 py-1 bg-[#3B9DF8] text-[#fff] rounded-full text-[0.9rem] font-[500]">
-                  ZenUI
-                </div>
-                <div className="px-6 py-1 border border-[#3B9DF8] text-[#3B9DF8] rounded-full text-[0.9rem] font-[500]">
-                  ZenUI
-                </div>
-                <div className="px-6 py-1 bg-[#e9e9e9] text-[#9c9c9c] rounded-full text-[0.9rem] font-[500]">
-                  ZenUI
-                </div>
-              </div>
-            )}
-
-            {chipVariantCode && (
-              <Showcode
-                code='
-<div className="px-6 py-1 bg-[#3B9DF8] text-[#fff] rounded-full text-[0.9rem] font-[500]">
-      ZenUI
-</div>
-
-<div className="px-6 py-1 border border-[#3B9DF8] text-[#3B9DF8] rounded-full text-[0.9rem] font-[500]">
-   ZenUI
-</div>
-
-<div className="px-6 py-1 bg-[#e9e9e9] text-[#9c9c9c] rounded-full text-[0.9rem] font-[500]">
-    ZenUI
-</div>
-                '
-              />
-            )}
-          </div>
-
-          <div className="mt-8">
-            <ContentHeader text={"Icon Chip"} id={"icon_chip"} />
-          </div>
-
-          <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
-          </p>
-
-          <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
-              <button
-                className={`${
-                  iconChipPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleIconChipPreview}
-              >
-                Preview
-              </button>
-              <button
-                className={`${
-                  iconChipCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleIconChipCode}
-              >
-                Code
-              </button>
-            </div>
-            {iconChipPreview && (
-              <div className="p-8 mb-4 flex items-start flex-wrap gap-5 justify-center">
-                <div className="px-4 py-1.5 bg-[#ececec80] border border-[#d1d1d180] text-[#18c964] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-                  <MdDone className="p-0.5 text-[1.1rem] rounded-full bg-[#18c964] text-[#fff]" />
-                  ZenUI
-                </div>
-
-                <div className="px-4 py-1.5 bg-[#e4d4f4] text-[#7828c8] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-                  <IoMdNotifications className="text-[1.3rem] text-[#7828c8]" />
-                  ZenUI
-                </div>
-
-                <div className="px-4 py-1.5 border border-border text-text rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-                  <TbPointFilled className="text-[1.3rem] text-text" />
-                  ZenUI
-                </div>
-
-                <div className="px-4 py-1.5 border border-border text-text rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-                  ZenUI
-                  <RxCross2 className="text-[1.1rem] text-[#fff] rounded-full p-0.5  bg-text " />
-                </div>
-              </div>
-            )}
-
-            {iconChipCode && (
-              <Showcode
-                code='
-// icons
-import { MdDone } from "react-icons/md";
-import { IoMdNotifications } from "react-icons/io";
-import { TbPointFilled } from "react-icons/tb";
-import { RxCross2 } from "react-icons/rx";
-
-const Chip = () => {
-  return (
-    <>
-      <div className="px-4 py-1.5 bg-[#ececec80] border border-[#d1d1d180] text-[#18c964] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-        <MdDone className="p-0.5 text-[1.1rem] rounded-full bg-[#18c964] text-[#fff]" />
-        ZenUI
-      </div>
-
-      <div className="px-4 py-1.5 bg-[#e4d4f4] text-[#7828c8] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-        <IoMdNotifications className="text-[1.3rem] text-[#7828c8]" />
-        ZenUI
-      </div>
-
-      <div className="px-4 py-1.5 border border-[#e5eaf2] text-[#424242] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-        <TbPointFilled className="text-[1.3rem] text-text" />
-        ZenUI
-      </div>
-
-      <div className="px-4 py-1.5 border border-[#e5eaf2] text-[#424242] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-        ZenUI
-      <RxCross2 className="text-[1.1rem] text-[#fff] rounded-full p-0.5  bg-[#424242] " />
-      </div>
-    </>
-  );
-};
-
-export default Chip;
-                '
-              />
-            )}
-          </div>
-
-          <div className="mt-8">
-            <ContentHeader text={"avatar Chip"} id={"avatar_chip"} />
-          </div>
-
-          <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
-          </p>
-
-          <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
-              <button
-                className={`${
-                  avatarChipPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleAvatarChipPreview}
-              >
-                Preview
-              </button>
-              <button
-                className={`${
-                  avatarChipCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleAvatarChipCode}
-              >
-                Code
-              </button>
-            </div>
-            {avatarChipPreview && (
-              <div className="p-8 mb-4 flex items-center flex-wrap gap-5 justify-center">
-                <div className="pl-2 pr-4 py-1 bg-[#ececec80] border border-[#d1d1d180] text-[#18c964] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-                  <img
-                    src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1712077473~exp=1712081073~hmac=63310a81f493e9368aeb918070f9181f5f316124f4793e1499d65115fc45ef46&w=740"
-                    className="w-[25px] h-[25px] rounded-full"
-                    alt=""
-                  />
-                  ZenUI
-                </div>
-
-                <div className="pl-2 pr-4 py-1 bg-[#ececec80] border border-[#d1d1d180] text-[#18c964] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-                  <img
-                    src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1712077473~exp=1712081073~hmac=63310a81f493e9368aeb918070f9181f5f316124f4793e1499d65115fc45ef46&w=740"
-                    className="w-[35px] h-[35px] rounded-full"
-                    alt=""
-                  />
-                  ZenUI
-                </div>
-
-                <div className="pl-2 pr-4 py-1 bg-[#ececec80] border border-[#d1d1d180] text-[#18c964] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-                  <img
-                    src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1712077473~exp=1712081073~hmac=63310a81f493e9368aeb918070f9181f5f316124f4793e1499d65115fc45ef46&w=740"
-                    className="w-[45px] h-[45px] rounded-full"
-                    alt=""
-                  />
-                  ZenUI
-                </div>
-              </div>
-            )}
-
-            {avatarChipCode && (
-              <Showcode
-                code='
-const Chip = () => {
-  return (
-    <>
-      <div className="pl-2 pr-4 py-1 bg-[#ececec80] border border-[#d1d1d180] text-[#18c964] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-        <img
-          src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1712077473~exp=1712081073~hmac=63310a81f493e9368aeb918070f9181f5f316124f4793e1499d65115fc45ef46&w=740"
-          className="w-[25px] h-[25px] rounded-full"
-          alt=""
-        />
-        ZenUI
-      </div>
-
-      <div className="pl-2 pr-4 py-1 bg-[#ececec80] border border-[#d1d1d180] text-[#18c964] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-        <img
-          src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1712077473~exp=1712081073~hmac=63310a81f493e9368aeb918070f9181f5f316124f4793e1499d65115fc45ef46&w=740"
-          className="w-[35px] h-[35px] rounded-full"
-          alt=""
-        />
-        ZenUI
-      </div>
-
-      <div className="pl-2 pr-4 py-1 bg-[#ececec80] border border-[#d1d1d180] text-[#18c964] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-        <img
-          src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1712077473~exp=1712081073~hmac=63310a81f493e9368aeb918070f9181f5f316124f4793e1499d65115fc45ef46&w=740"
-          className="w-[45px] h-[45px] rounded-full"
-          alt=""
-        />
-        ZenUI
-      </div>
-    </>
-  );
-};
-
-export default Chip;
                 '
               />
             )}

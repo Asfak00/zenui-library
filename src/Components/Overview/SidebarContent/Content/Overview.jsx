@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet";
 const Overview = () => {
   return (
     <aside>
-      <h1 className="font-[600] text-[#000] text-[3rem] capitalize">
+      <h1 className="font-[600] text-[#000] text-[3rem] uppercase">
         ZenUI Library
       </h1>
       <p className="w-[70%] text-text text-[1rem]">
