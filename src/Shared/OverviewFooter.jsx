@@ -119,7 +119,7 @@ const OverviewFooter = () => {
       )}
 
       <div className="flex items-center justify-between w-full border-t border-border pt-5">
-        <img src="/logo.jpg" alt="logo-image" className="w-[50px]" />
+        <img src="/darklogo.png" alt="logo-image" className="w-[50px]" />
 
         <div className="flex items-center gap-3">
           <p className="text-text font-[600] text-[1rem]">Support:</p>

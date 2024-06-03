@@ -9,6 +9,7 @@ export default {
         secondary: "#ffffff",
         border: "#e5eaf2",
         text: "#424242",
+        shadowColor: 'rgba(0, 0, 0, 0.2)'
       },
 
       boxShadow: {

@@ -9,13 +9,22 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 
 const Footer = () => {
+
+  const containerStyle = {
+    backgroundImage: 'url(/footerImg.png)',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    width: '100%',
+    height: '100%',
+  };
+
   return (
-    <footer className="w-full px-10 py-8 dark:bg-[#060024] dark:text-[#D9EEFF] bg-secondary shadow-primary">
+    <footer className="w-full px-10 py-8 dark:bg-[#060024] dark:text-[#D9EEFF] bg-secondary shadow-shadowColor" style={containerStyle}>
       <div className="w-full flex justify-between items-start">
         <div className="w-[33%]">
-          <img src="/logo.jpg" alt="logo" className="w-[80px] my-3" />
+          <img src="/darklogo.png" alt="logo" className="w-[80px] my-3" />
 
-          <p className="text-text text-[1rem] dark:text-[#D9EEFF]">
+          <p className="text-[#9caebc] text-[1rem] dark:text-[#D9EEFF]">
             Keep up to date Join our newsletter for regular updates. No spam
             ever.
           </p>
@@ -23,7 +32,7 @@ const Footer = () => {
           <form className="mt-4">
             <label
               htmlFor="email"
-              className="text-text dark:text-[#D9EEFF] text-[0.9rem] mb-2"
+              className="text-[#9caebc] dark:text-[#D9EEFF] text-[0.9rem] mb-2"
             >
               Your Email
             </label>
@@ -33,7 +42,7 @@ const Footer = () => {
                 name=""
                 id=""
                 placeholder="example@gmail.com"
-                className="py-2 px-3 border rounded border-primary focus:outline-none"
+                className="py-2 px-3 border bg-[#0471d6] rounded border-[#024C92] text-[#024C92] placeholder:text-[#024C92] focus:outline-none"
               />
               <button type="submit" className={utils.buttonSecondary}>
                 Subscribe
@@ -44,10 +53,10 @@ const Footer = () => {
 
         <div className=" flex gap-32">
           <div className="flex gap-2 flex-col mt-4">
-            <h3 className="font-[600] dark:text-[#D9EEFF] text-text text-[20px] capitalize">
+            <h3 className="font-[600] dark:text-[#0471d6] text-[#0471d6] text-[20px] capitalize">
               resources
             </h3>
-            <ul className="footer font-[400] text-[0.9rem] flex flex-col gap-2">
+            <ul className="footer font-[400] text-[#9caebc] text-[0.9rem] flex flex-col gap-2">
               <li>
                 <p>Free templates</p>
                 <span>Free templates</span>
@@ -68,10 +77,10 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-2 flex-col mt-4">
-            <h3 className="font-[600]  dark:text-[#D9EEFF] text-text text-[20px] capitalize">
+            <h3 className="font-[600]  dark:text-[#0471d6] text-[#0471d6] text-[20px] capitalize">
               Explore
             </h3>
-            <ul className="footer font-[400] text-[0.9rem] flex flex-col gap-2">
+            <ul className="footer font-[400] text-[0.9rem] text-[#9caebc] flex flex-col gap-2">
               <li>
                 <p>Documentation</p>
                 <span>Documentation</span>
@@ -92,10 +101,10 @@ const Footer = () => {
           </div>
 
           <div className="flex gap-2 flex-col mt-4">
-            <h3 className="font-[600] dark:text-[#D9EEFF] text-text text-[20px] capitalize">
+            <h3 className="font-[600] dark:text-[#0471d6] text-[#0471d6] text-[20px] capitalize">
               Company
             </h3>
-            <ul className="footer font-[400] text-[0.9rem] flex flex-col gap-2">
+            <ul className="footer font-[400] text-[0.9rem] text-[#9caebc] flex flex-col gap-2">
               <li>
                 <p>About</p>
                 <span>About</span>
@@ -121,29 +130,29 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full border-t border-[#d3d3d3] flex items-center justify-between mt-12 pt-6">
-        <p className="text-text dark:text-[#D9EEFF] text-[0.9rem]">
-          Copyright &copy; 2024 by Asfak Ahmed.
+      <div className="w-full border-t border-[#9caebc] flex items-center justify-between mt-12 pt-6">
+        <p className="text-[#9caebc] dark:text-[#D9EEFF] text-[0.9rem]">
+          Copyright &copy; 2024 by ZenUI Library.
         </p>
         <div className="flex items-center gap-4">
           <a href="">
-            <FaGithub className="text-text text-[1.5rem]" />
+            <FaGithub className="text-[#9caebc] text-[1.5rem]" />
           </a>
 
           <a href="">
-            <FaFacebook className="text-text text-[1.4rem]" />
+            <FaFacebook className="text-[#9caebc] text-[1.4rem]" />
           </a>
 
           <a href="">
-            <FaLinkedin className="text-text text-[1.4rem]" />
+            <FaLinkedin className="text-[#9caebc] text-[1.4rem]" />
           </a>
 
           <a href="">
-            <FaXTwitter className="text-text text-[1.4rem]" />
+            <FaXTwitter className="text-[#9caebc] text-[1.4rem]" />
           </a>
 
           <a href="mailto:asfakahmed680@gmail.com">
-            <SiGmail className="text-text text-[1.4rem]" />
+            <SiGmail className="text-[#9caebc] text-[1.4rem]" />
           </a>
         </div>
       </div>
