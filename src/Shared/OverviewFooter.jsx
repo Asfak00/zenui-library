@@ -33,18 +33,18 @@ const OverviewFooter = () => {
         </button>
 
         <div className="flex items-center gap-4">
-          <span>Was this page helpful?</span>
+          <span className='text-[#0471d6]'>Was this page helpful?</span>
           <div className="flex items-center gap-3">
             <BiSolidLike
               className={`${
                 isLiked && "!text-primary"
-              } p-2 border border-border rounded-full text-[2.4rem] cursor-pointer text-text`}
+              } p-2 border border-[#0471d6] rounded-full text-[2.4rem] cursor-pointer text-[#9caebc]`}
               onClick={handleLikeBtn}
             />
             <BiSolidDislike
               className={`${
                 isDisLiked && "!text-[#d30c0c]"
-              } p-2 border border-border rounded-full text-[2.4rem] cursor-pointer text-text`}
+              } p-2 border border-[#0471d6] rounded-full text-[2.4rem] cursor-pointer text-[#9caebc]`}
               onClick={handleDislikeBtn}
             />
           </div>
@@ -122,10 +122,10 @@ const OverviewFooter = () => {
         <img src="/darklogo.png" alt="logo-image" className="w-[50px]" />
 
         <div className="flex items-center gap-3">
-          <p className="text-text font-[600] text-[1rem]">Support:</p>
+          <p className=" font-[600] text-[1rem] text-[#9caebc]">Support:</p>
           <a href="https://www.buymeacoffee.com/asfak00" target="_blank">
             <img
-              src="https://helloimjessa.files.wordpress.com/2021/06/bmc-button.png"
+              src="https://www.codehim.com/wp-content/uploads/2022/09/bmc-button-640x180.png.webp"
               alt="sponser-image"
               className="w-[120px]"
             />

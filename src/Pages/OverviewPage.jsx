@@ -9,12 +9,12 @@ const OverviewPage = () => {
   return (
     <>
       <Navbar />
-      <div className="flex w-full max-w-[1400px] mx-auto">
-        <div className="w-[450px]">
+      <div className="flex w-full mx-auto">
+        <div className="w-[400px]">
           <Sidebar startContent={0} />
         </div>
 
-        <div className="w-full p-12">
+        <div className="w-full p-12 bg-gradient-to-r from-[#012D57] to-[#0471D6]">
           <Overview />
         </div>
       </div>

@@ -40,7 +40,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex items-center justify-between w-full px-10 bg-[#131558] dark:bg-[#060024]  py-3 shadow-sm dark:shadow-[#9a9ea1] sticky shadow-shadowColor top-0 left-0 z-50">
+      <nav className="flex items-center justify-between w-full px-10 backdrop-blur-md dark:bg-[#060024]  py-3 shadow-sm dark:shadow-[#9a9ea1] fixed shadow-shadowColor top-0 left-0 z-50">
         <div className="flex items-center gap-8">
           {toggle ? (
             <img

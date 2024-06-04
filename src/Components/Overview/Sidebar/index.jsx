@@ -11,16 +11,16 @@ const index = ({ startContent, setStartContent }) => {
   const [components, setComponents] = useState(true);
 
   return (
-    <aside className="py-6 px-10 border-r border-border flex flex-col gap-4 h-[90vh] overflow-y-scroll fixed top-18 left-0 w-[320px] dark:bg-[#060024] bg-secondary z-20">
+    <aside className="py-6 pt-[6rem] px-10 border-r border-border flex flex-col gap-4 h-[100vh] overflow-y-scroll fixed top-18 left-0 w-[320px] dark:bg-[#060024] bg-[#012D57] z-20">
       <div>
         <h3
-          className="flex items-center gap-1 text-[1rem] text-text font-[500] capitalize cursor-pointer dark:text-[#D9EEFF]"
+          className="flex items-center gap-1 text-[1rem] text-[#0471d6] font-[500] capitalize cursor-pointer dark:text-[#D9EEFF]"
           onClick={() => setStart(!start)}
         >
           <MdKeyboardArrowRight
             className={`${
               start && "rotate-[90deg]"
-            } text-[1.5rem] text-primary transition-all duration-300`}
+            } text-[1.5rem] text-[#0471d6] transition-all duration-300`}
           />
           getting-started
         </h3>
@@ -36,8 +36,8 @@ const index = ({ startContent, setStartContent }) => {
               to="/getting-started/overview"
               className={`${
                 startContent === 0 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l border-primary bg-[#013B62] font-[500]"
+              } rounded text-[#9caebc] border-l border-[#9caebc]`}
               onClick={() => setStartContent(0)}
             >
               Overview
@@ -46,39 +46,39 @@ const index = ({ startContent, setStartContent }) => {
               to="/getting-started/templates"
               className={`${
                 startContent === 1 &&
-                "border-l border-primary bg-[#f3f6f9] dark:bg-[#1c173bfb] font-[500]"
-              } rounded  border-l border-border flex items-center gap-3`}
+                "border-l border-primary bg-[#013B62] dark:bg-[#1c173bfb] font-[500]"
+              } rounded  border-l text-[#9caebc] border-border flex items-center gap-3`}
               onClick={() => setStartContent(1)}
             >
               templates
-              <span className="py-1 px-3 rounded-[20px] text-[12px] flex items-center gap-2 font-[600] text-red-800 bg-red-50">
+              <span className={`${startContent === 1 && 'bg-[#012C49]'} py-1 px-3 rounded-[20px] text-[12px] flex items-center gap-2 font-[600] text-red-800 bg-[#013B62]`}>
                 <img src="/hotIcon.png" alt="hot Icon" className="w-[10px]" />
                 HOT
               </span>
             </Link>
-            <Link
-              to="/getting-started/faq"
-              className={`${
-                startContent === 2 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
-              } rounded  border-l border-border`}
-              onClick={() => setStartContent(2)}
-            >
-              faq
-            </Link>
+            {/*<Link*/}
+            {/*  to="/getting-started/faq"*/}
+            {/*  className={`${*/}
+            {/*    startContent === 2 &&*/}
+            {/*    "border-l border-primary bg-[#f3f6f9] font-[500]"*/}
+            {/*  } rounded  border-l border-border`}*/}
+            {/*  onClick={() => setStartContent(2)}*/}
+            {/*>*/}
+            {/*  faq*/}
+            {/*</Link>*/}
           </ul>
         </div>
       </div>
 
       <div>
         <h3
-          className="flex items-center gap-1 text-[1rem] text-text font-[500] capitalize cursor-pointer dark:text-[#D9EEFF]"
+          className="flex items-center gap-1 text-[1rem] text-[#0471d6] font-[500] capitalize cursor-pointer dark:text-[#D9EEFF]"
           onClick={() => setComponents(!components)}
         >
           <MdKeyboardArrowRight
             className={`${
               components && "rotate-[90deg]"
-            } text-[1.5rem] text-primary transition-all duration-300`}
+            } text-[1.5rem] text-[#0471d6] transition-all duration-300`}
           />
           Components
         </h3>
@@ -89,13 +89,13 @@ const index = ({ startContent, setStartContent }) => {
           }`}
         >
           <ul
-            className={`flex flex-col ml-2 mt-3 overflow-hidden pl-4 dark:text-[#D9EEFF]`}
+            className={`flex flex-col ml-2 text-[#9caebc] mt-3 overflow-hidden pl-4 dark:text-[#D9EEFF]`}
           >
             <Link
               to={"/components/all-components"}
               className={`${
                 startContent === 3 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(3)}
             >
@@ -114,7 +114,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-text"}
               className={`${
                 startContent === 4 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(4)}
             >
@@ -124,7 +124,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-textarea"}
               className={`${
                 startContent === 5 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(5)}
             >
@@ -134,7 +134,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-switch"}
               className={`${
                 startContent === 6 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(6)}
             >
@@ -144,7 +144,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-select"}
               className={`${
                 startContent === 7 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(7)}
             >
@@ -154,7 +154,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-radio"}
               className={`${
                 startContent === 8 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(8)}
             >
@@ -164,7 +164,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-file"}
               className={`${
                 startContent === 9 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(9)}
             >
@@ -174,7 +174,7 @@ const index = ({ startContent, setStartContent }) => {
             {/* buttons */}
             <Link
               to={""}
-              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}
+              className={`sectionHeader tracking-widest  font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}
             >
               Buttons
             </Link>
@@ -182,7 +182,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/normal-button"}
               className={`${
                 startContent === 10 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(10)}
             >
@@ -192,7 +192,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/rgb-border"}
               className={`${
                 startContent === 11 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(11)}
             >
@@ -202,7 +202,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/animated-button"}
               className={`${
                 startContent === 12 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(12)}
             >
@@ -220,7 +220,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/cards"}
               className={`${
                 startContent === 13 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(13)}
             >
@@ -230,7 +230,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/according"}
               className={`${
                 startContent === 14 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(14)}
             >
@@ -240,7 +240,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/appbar"}
               className={`${
                 startContent === 15 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(15)}
             >
@@ -250,7 +250,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/image-gallery"}
               className={`${
                 startContent === 16 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(16)}
             >
@@ -268,7 +268,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/pagination"}
               className={`${
                 startContent === 17 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(17)}
             >
@@ -278,7 +278,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/dropdown"}
               className={`${
                 startContent === 18 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(18)}
             >
@@ -288,7 +288,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/chip"}
               className={`${
                 startContent === 19 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(19)}
             >
@@ -298,7 +298,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/modal"}
               className={`${
                 startContent === 20 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(20)}
             >
@@ -308,7 +308,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/tabs"}
               className={`${
                 startContent === 21 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(21)}
             >
@@ -326,7 +326,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/skeleton"}
               className={`${
                 startContent === 22 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(22)}
             >
@@ -336,7 +336,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/alert-message"}
               className={`${
                 startContent === 23 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(23)}
             >
@@ -346,7 +346,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/dialog-message"}
               className={`${
                 startContent === 24 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(24)}
             >
@@ -356,7 +356,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/testimonials"}
               className={`${
                 startContent === 25 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(25)}
             >
@@ -366,7 +366,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/loader"}
               className={`${
                 startContent === 26 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(26)}
             >
@@ -376,7 +376,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/notification"}
               className={`${
                 startContent === 27 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(27)}
             >
@@ -394,7 +394,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/badge"}
               className={`${
                 startContent === 28 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(28)}
             >
@@ -404,7 +404,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/tooltip"}
               className={`${
                 startContent === 29 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(29)}
             >
@@ -423,7 +423,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/code"}
               className={`${
                 startContent === 30 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(30)}
             >
@@ -433,7 +433,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/snippet"}
               className={`${
                 startContent === 31 &&
-                "border-l border-primary bg-[#f3f6f9] font-[500]"
+                "border-l border-primary bg-[#013B62] font-[500]"
               } rounded  border-l border-border`}
               onClick={() => setStartContent(31)}
             >
