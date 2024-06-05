@@ -8,12 +8,12 @@ import Sponser from "../Components/Home/Sponser.jsx";
 
 const HomePage = () => {
   return (
-    <>
+    <div className='overflow-x-hidden'>
       <Navbar />
       <Hero />
         <Sponser/>
       <Footer />
-    </>
+    </div>
   );
 };
 

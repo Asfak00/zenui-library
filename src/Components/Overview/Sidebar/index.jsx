@@ -36,8 +36,8 @@ const index = ({ startContent, setStartContent }) => {
               to="/getting-started/overview"
               className={`${
                 startContent === 0 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded text-[#9caebc] border-l border-[#9caebc]`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }  text-[#9caebc] border-l border-[#9caebc]`}
               onClick={() => setStartContent(0)}
             >
               Overview
@@ -46,8 +46,8 @@ const index = ({ startContent, setStartContent }) => {
               to="/getting-started/templates"
               className={`${
                 startContent === 1 &&
-                "border-l border-primary bg-[#013B62] dark:bg-[#1c173bfb] font-[500]"
-              } rounded  border-l text-[#9caebc] border-border flex items-center gap-3`}
+                "border-l rounded border-primary bg-[#013B62] dark:bg-[#1c173bfb] font-[500]"
+              }   border-l text-[#9caebc] border-border flex items-center gap-3`}
               onClick={() => setStartContent(1)}
             >
               templates
@@ -95,8 +95,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/all-components"}
               className={`${
                 startContent === 3 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(3)}
             >
               All Components
@@ -105,7 +105,7 @@ const index = ({ startContent, setStartContent }) => {
             {/* inputs */}
             <Link
               to={""}
-              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}
+              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
             >
               Inputs
             </Link>
@@ -114,8 +114,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-text"}
               className={`${
                 startContent === 4 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(4)}
             >
               Input
@@ -124,8 +124,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-textarea"}
               className={`${
                 startContent === 5 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(5)}
             >
               Textarea
@@ -134,8 +134,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-switch"}
               className={`${
                 startContent === 6 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(6)}
             >
               Switch
@@ -144,8 +144,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-select"}
               className={`${
                 startContent === 7 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(7)}
             >
               Select
@@ -154,8 +154,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-radio"}
               className={`${
                 startContent === 8 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(8)}
             >
               Radio
@@ -164,8 +164,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-file"}
               className={`${
                 startContent === 9 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(9)}
             >
               File
@@ -174,7 +174,7 @@ const index = ({ startContent, setStartContent }) => {
             {/* buttons */}
             <Link
               to={""}
-              className={`sectionHeader tracking-widest  font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}
+              className={`sectionHeader tracking-widest  font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
             >
               Buttons
             </Link>
@@ -182,8 +182,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/normal-button"}
               className={`${
                 startContent === 10 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(10)}
             >
               normal button
@@ -192,8 +192,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/rgb-border"}
               className={`${
                 startContent === 11 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(11)}
             >
               RGB border
@@ -202,8 +202,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/animated-button"}
               className={`${
                 startContent === 12 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(12)}
             >
               animated button
@@ -212,7 +212,7 @@ const index = ({ startContent, setStartContent }) => {
             {/* SURFACES */}
             <Link
               to={""}
-              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}
+              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase border-l border-border !text-[0.750rem] `}
             >
               SURFACES
             </Link>
@@ -220,8 +220,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/cards"}
               className={`${
                 startContent === 13 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(13)}
             >
               Cards
@@ -230,8 +230,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/according"}
               className={`${
                 startContent === 14 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(14)}
             >
               According
@@ -240,8 +240,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/appbar"}
               className={`${
                 startContent === 15 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(15)}
             >
               App bar
@@ -250,8 +250,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/image-gallery"}
               className={`${
                 startContent === 16 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(16)}
             >
               Image Gallery
@@ -260,7 +260,7 @@ const index = ({ startContent, setStartContent }) => {
             {/* navigation */}
             <Link
               to={""}
-              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}
+              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase border-l border-border !text-[0.750rem] `}
             >
               navigation
             </Link>
@@ -268,8 +268,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/pagination"}
               className={`${
                 startContent === 17 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(17)}
             >
               Pagination
@@ -278,8 +278,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/dropdown"}
               className={`${
                 startContent === 18 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(18)}
             >
               dropdown menu
@@ -288,8 +288,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/chip"}
               className={`${
                 startContent === 19 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(19)}
             >
               Chip
@@ -298,8 +298,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/modal"}
               className={`${
                 startContent === 20 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(20)}
             >
               modal
@@ -308,8 +308,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/tabs"}
               className={`${
                 startContent === 21 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(21)}
             >
               tabs
@@ -318,7 +318,7 @@ const index = ({ startContent, setStartContent }) => {
             {/* FEEDBACK */}
             <Link
               to={""}
-              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}
+              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase border-l border-border !text-[0.750rem] `}
             >
               feedback
             </Link>
@@ -326,8 +326,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/skeleton"}
               className={`${
                 startContent === 22 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(22)}
             >
               skeleton
@@ -336,8 +336,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/alert-message"}
               className={`${
                 startContent === 23 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(23)}
             >
               alert message
@@ -346,8 +346,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/dialog-message"}
               className={`${
                 startContent === 24 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(24)}
             >
               dialog
@@ -356,8 +356,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/testimonials"}
               className={`${
                 startContent === 25 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(25)}
             >
               Testimonial
@@ -366,8 +366,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/loader"}
               className={`${
                 startContent === 26 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(26)}
             >
               Loader
@@ -376,8 +376,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/notification"}
               className={`${
                 startContent === 27 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(27)}
             >
               Notification
@@ -386,7 +386,7 @@ const index = ({ startContent, setStartContent }) => {
             {/* data display */}
             <Link
               to={""}
-              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}
+              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
             >
               data display
             </Link>
@@ -394,8 +394,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/badge"}
               className={`${
                 startContent === 28 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(28)}
             >
               Badge
@@ -404,8 +404,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/tooltip"}
               className={`${
                 startContent === 29 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(29)}
             >
               tooltip
@@ -414,7 +414,7 @@ const index = ({ startContent, setStartContent }) => {
             {/* Randoms */}
             <Link
               to={""}
-              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase rounded  border-l border-border !text-[0.750rem] `}
+              className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
             >
               Randoms
             </Link>
@@ -423,8 +423,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/code"}
               className={`${
                 startContent === 30 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(30)}
             >
               Code
@@ -433,8 +433,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/snippet"}
               className={`${
                 startContent === 31 &&
-                "border-l border-primary bg-[#013B62] font-[500]"
-              } rounded  border-l border-border`}
+                "border-l rounded  border-primary bg-[#013B62] font-[500]"
+              }   border-l border-border`}
               onClick={() => setStartContent(31)}
             >
               Snippet

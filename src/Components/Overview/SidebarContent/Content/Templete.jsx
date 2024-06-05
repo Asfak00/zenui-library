@@ -12,8 +12,8 @@ import { templatesData } from "../../../../Utils/TemplatesData";
 
 const Templete = () => {
   return (
-    <aside className="dark:text-[#D9EEFF]">
-      <h1 className="font-[600] text-[#000] dark:text-[#D9EEFF] text-[3rem] capitalize">
+    <aside className="dark:text-[#D9EEFF] pt-[4.5rem] pl-[5rem] ">
+      <h1 className="font-[600] text-[#0471d6] dark:text-[#D9EEFF] text-[3rem] capitalize">
         React Templates
       </h1>
       <p className="w-[70%] text-text text-[1rem] dark:text-[#D9EEFF]">
@@ -22,7 +22,7 @@ const Templete = () => {
         and more.
       </p>
 
-      <div className="grid grid-cols-3 w-full mt-12 gap-5">
+      <div className="grid grid-cols-3 w-[80%] mt-12 gap-5">
         {templatesData?.map((template, index) => (
           <div
             key={index}
@@ -32,10 +32,10 @@ const Templete = () => {
               <img
                 src={template.image}
                 alt={template.title}
-                className="w-full h-[120px] object-cover "
+                className="w-full h-[120px] rounded-t-md object-cover "
               />
 
-              <div className="w-full absolute hidden top-0 left-0 h-full gap-3 flex-col  group-hover:flex items-center backdrop-blur-md justify-center">
+              <div className="w-full absolute hidden top-0 left-0 h-full gap-3 flex-col  group-hover:flex items-center backdrop-blur-sm justify-center">
                 <FaEye className="text-primary text-[1.5rem]" />
                 <h4 className=" capitalize underline text-text">
                   <a href={template.liveLink} target="_blank">

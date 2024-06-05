@@ -43,15 +43,15 @@ const AllComponents = () => {
 
   return (
     <>
-      <aside className="w-[80%]">
-        <h2 className="font-[600] text-[#000] capitalize text-[2.5rem]">
+      <aside className="w-[80%] pl-[5rem] pt-[4.5rem] ">
+        <h2 className="font-[600] text-[#0471d6] uppercase text-[2.5rem]">
           ZenUI Library
         </h2>
-        <p className="text-text text-[0.9rem]">
+        <p className="text-[#9caebc] text-[0.9rem]">
           Every ZenUI Library component available for free.
         </p>
 
-        <p className="text-text text-[0.9rem] mt-8">
+        <p className="text-[#9caebc] text-[0.9rem] mt-8">
           ZenUI is a website where you can get all the component designs you
           want and they are completely free. You can copy and use them in your
           own projects from here. All the guidelines are given very nicely on
@@ -60,17 +60,17 @@ const AllComponents = () => {
           confidence.
         </p>
 
-        <h2 className="mt-12 font-[600] text-[1.5rem] ">input</h2>
+        <h2 className="mt-12 font-[600] text-[1.5rem] text-[#0471d6]">input</h2>
         <div className="grid grid-cols-3 mt-4 gap-8">
           {inputsData?.map((button) => (
             <a href={button.url} className="border border-border rounded">
               <img
                 src={button.image}
                 alt="component/image"
-                className="w-full h-[150px] object-cover"
+                className="w-full h-[150px] rounded-t object-cover"
               />
               <div className="border-t border-border p-4">
-                <h2 className="text-text font-[600] text-[1rem] capitalize">
+                <h2 className="text-[#9caebc] font-[600] text-[1rem] capitalize">
                   {button.title}
                 </h2>
               </div>
@@ -78,14 +78,14 @@ const AllComponents = () => {
           ))}
         </div>
 
-        <h2 className="mt-12 font-[600] text-[1.5rem] ">Navigation</h2>
+        <h2 className="mt-12 font-[600] text-[1.5rem] text-[#0471d6]">Navigation</h2>
         <div className="grid grid-cols-3 mt-4 gap-8">
           {navigationsData?.map((button) => (
             <a href={button.url} className="border border-border rounded">
               <img
                 src={button.image}
                 alt="component/image"
-                className="w-full h-[150px] object-cover"
+                className="w-full h-[150px] rounded-t object-cover"
               />
               <div className="border-t border-border p-4">
                 <h2 className="text-text font-[600] text-[1rem] capitalize">
@@ -96,14 +96,14 @@ const AllComponents = () => {
           ))}
         </div>
 
-        <h2 className="mt-12 font-[600] text-[1.5rem] mb-3">Buttons</h2>
+        <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-[#0471d6]">Buttons</h2>
         <div className="grid grid-cols-3  gap-8">
           {buttonsData?.map((button) => (
             <a href={button.url} className="border border-border rounded">
               <img
                 src={button.image}
                 alt="component/image"
-                className="w-full h-[150px] object-cover"
+                className="w-full h-[150px] rounded-t object-cover"
               />
               <div className="border-t border-border p-4">
                 <h2 className="text-text font-[600] text-[1rem] capitalize">
@@ -114,14 +114,14 @@ const AllComponents = () => {
           ))}
         </div>
 
-        <h2 className="mt-12 font-[600] text-[1.5rem] ">Feedback</h2>
+        <h2 className="mt-12 font-[600] text-[1.5rem] text-[#0471d6]">Feedback</h2>
         <div className="grid grid-cols-3 mt-4 gap-8">
           {feedbackData?.map((button) => (
             <a href={button.url} className="border border-border rounded">
               <img
                 src={button.image}
                 alt="component/image"
-                className="w-full h-[150px] object-cover"
+                className="w-full h-[150px] rounded-t object-cover"
               />
               <div className="border-t border-border p-4">
                 <h2 className="text-text font-[600] text-[1rem] capitalize">
@@ -132,14 +132,14 @@ const AllComponents = () => {
           ))}
         </div>
 
-        <h2 className="mt-12 font-[600] text-[1.5rem] mb-3">Surface</h2>
+        <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-[#0471d6]">Surface</h2>
         <div className="grid grid-cols-3  gap-8">
           {surfaceData?.map((button) => (
             <a href={button.url} className="border border-border rounded">
               <img
                 src={button.image}
                 alt="component/image"
-                className="w-full h-[150px] object-cover"
+                className="w-full h-[150px] rounded-t object-cover"
               />
               <div className="border-t border-border p-4">
                 <h2 className="text-text font-[600] text-[1rem] capitalize">
@@ -150,14 +150,14 @@ const AllComponents = () => {
           ))}
         </div>
 
-        <h2 className="mt-12 font-[600] text-[1.5rem] mb-3">Data Display</h2>
+        <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-[#0471d6] ">Data Display</h2>
         <div className="grid grid-cols-3  gap-8">
           {displayData?.map((button) => (
             <a href={button.url} className="border border-border rounded">
               <img
                 src={button.image}
                 alt="component/image"
-                className="w-full h-[150px] object-cover"
+                className="w-full h-[150px] rounded-t object-cover"
               />
               <div className="border-t border-border p-4">
                 <h2 className="text-text font-[600] text-[1rem] capitalize">
@@ -169,7 +169,9 @@ const AllComponents = () => {
         </div>
       </aside>
 
-      <OverviewFooter />
+      <div className='pl-[5rem]'>
+        <OverviewFooter />
+      </div>
       <Helmet>
         <title>React-Tailwind UI Components</title>
       </Helmet>

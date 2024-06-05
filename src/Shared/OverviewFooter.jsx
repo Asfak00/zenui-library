@@ -53,16 +53,18 @@ const OverviewFooter = () => {
 
       {isLiked && (
         <form action="#" className="w-full mb-5">
-          <label htmlFor="message">What did you like about this page?</label>
+          <label htmlFor="message" className='text-[#9caebc]'>What did you like about this page?</label>
           <br />
           <textarea
             name="message"
             id="message"
-            className="w-full h-[130px] border border-primary outline-none rounded p-4 mt-1"
+            placeholder='Give feedback'
+            className="w-full h-[130px] bg-[#035099] outline-none rounded p-4 mt-1"
           ></textarea>
           <div className="w-full flex items-center mt-2 justify-end gap-3">
             <button
-              type="submit"
+              type="button"
+              onClick={handleLikeBtn}
               className={`${utils.buttonSecondary} !py-1 !px-3`}
             >
               Cancel
@@ -79,19 +81,20 @@ const OverviewFooter = () => {
 
       {isDisLiked && (
         <form action="#" className="w-full mb-5">
-          <label htmlFor="message">How can we improve this page?</label>
+          <label htmlFor="message" className='text-[#9caebc]'>How can we improve this page?</label>
           <br />
           <textarea
             name="message"
             id="message"
-            className="w-full h-[130px] border border-primary outline-none rounded p-4 mt-1"
+            placeholder='Report summary'
+            className="w-full h-[130px] bg-[#02488A] outline-none rounded p-4 mt-1"
           ></textarea>
 
           <div className="w-full border border-[#ffa90a] rounded p-3 flex gap-4 items-start my-4 bg-[#ffa90a21]">
             <p>
               <FaHand className="text-[1.2rem] text-[#ffa90a]" />
             </p>
-            <p className="text-[1rem]">
+            <p className="text-[1rem] text-[#9caebc]">
               If something is broken or if you need a reply to a problem you've
               encountered, please{" "}
               <a href="" className=" text-primary font-[500] underline">
@@ -103,7 +106,8 @@ const OverviewFooter = () => {
           </div>
           <div className="w-full flex items-center mt-2 justify-end gap-3">
             <button
-              type="submit"
+              type="button"
+              onClick={handleDislikeBtn}
               className={`${utils.buttonSecondary} !py-1 !px-3`}
             >
               Cancel

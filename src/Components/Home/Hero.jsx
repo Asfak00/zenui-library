@@ -36,14 +36,14 @@ const Hero = () => {
   return (
     <main className="w-full min-h-screen" style={containerStyle}>
       <div className="flex justify-center items-center text-center gap-12 ">
-        <div className="w-[50%] pl-10 mt-[12rem] relative">
+        <div className="w-[55%] pl-10 mt-[12rem] relative">
           <h1 data-aos="zoom-in" className="heroText font-[900] text-[4.5rem] leading-[6rem] uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#064168] to-[#25A5C3]">
             ZenUI Library
           </h1>
           <h3 data-aos="zoom-in" className="text-[1.680rem] dark:text-[#D9EEFF] capitalize font-[500] text-[#9caebc]">
             Free platform, use your favorite components and designs
           </h3>
-          <p data-aos="zoom-in" className=" text-[#9caebc] w-[98%] mx-auto font-[400] dark:text-[#D9EEFF] text-[0.9rem] mt-3">
+          <p data-aos="zoom-in" className=" text-[#9caebc] w-[91%] mx-auto font-[400] dark:text-[#D9EEFF] text-[0.9rem] mt-3">
             ZenUI is a free platform where you get all the
             components and designs you need to use. So find your favorite design
             or component.
@@ -75,7 +75,7 @@ const Hero = () => {
       </div>
 
       {/* services */}
-      <div className="grid grid-cols-4 gap-5 px-10 pt-[9rem] pb-[2rem]">
+      <div className="grid grid-cols-4 gap-5 px-10 pt-[9rem] pb-20">
         <div data-aos="fade-up" data-aos-duration="700" className="p-4 serviceCard rounded-md backdrop-blur-sm">
           <div className="flex items-center gap-3 mb-3">
             <MdDashboardCustomize className=" text-primary text-[2.5rem] rounded-full bg-[#3b9df827] p-2" />
