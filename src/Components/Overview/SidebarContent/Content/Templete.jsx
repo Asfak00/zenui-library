@@ -22,7 +22,7 @@ const Templete = () => {
         and more.
       </p>
 
-      <div className="grid grid-cols-3 w-[80%] mt-12 gap-5">
+      <div className="grid grid-cols-3 w-[950px] mt-12 gap-5">
         {templatesData?.map((template, index) => (
           <div
             key={index}

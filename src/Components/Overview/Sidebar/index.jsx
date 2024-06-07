@@ -47,7 +47,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 1 &&
                 "border-l rounded border-primary bg-[#013B62] dark:bg-[#1c173bfb] font-[500]"
-              }   border-l text-[#9caebc] border-border flex items-center gap-3`}
+              }   border-l text-[#9caebc] border-[#9caebc] flex items-center gap-3`}
               onClick={() => setStartContent(1)}
             >
               templates
@@ -96,7 +96,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 3 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(3)}
             >
               All Components
@@ -115,7 +115,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 4 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(4)}
             >
               Input
@@ -125,7 +125,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 5 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(5)}
             >
               Textarea
@@ -135,7 +135,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 6 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(6)}
             >
               Switch
@@ -145,7 +145,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 7 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(7)}
             >
               Select
@@ -155,7 +155,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 8 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(8)}
             >
               Radio
@@ -165,7 +165,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 9 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(9)}
             >
               File
@@ -183,7 +183,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 10 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(10)}
             >
               normal button
@@ -193,7 +193,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 11 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(11)}
             >
               RGB border
@@ -203,7 +203,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 12 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(12)}
             >
               animated button
@@ -221,7 +221,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 13 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(13)}
             >
               Cards
@@ -231,7 +231,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 14 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(14)}
             >
               According
@@ -241,7 +241,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 15 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(15)}
             >
               App bar
@@ -251,7 +251,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 16 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(16)}
             >
               Image Gallery
@@ -269,7 +269,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 17 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(17)}
             >
               Pagination
@@ -279,7 +279,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 18 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(18)}
             >
               dropdown menu
@@ -289,7 +289,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 19 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(19)}
             >
               Chip
@@ -299,7 +299,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 20 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(20)}
             >
               modal
@@ -309,7 +309,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 21 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(21)}
             >
               tabs
@@ -327,7 +327,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 22 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(22)}
             >
               skeleton
@@ -337,7 +337,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 23 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(23)}
             >
               alert message
@@ -347,7 +347,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 24 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(24)}
             >
               dialog
@@ -357,7 +357,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 25 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(25)}
             >
               Testimonial
@@ -367,7 +367,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 26 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(26)}
             >
               Loader
@@ -377,7 +377,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 27 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(27)}
             >
               Notification
@@ -395,7 +395,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 28 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(28)}
             >
               Badge
@@ -405,7 +405,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 29 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(29)}
             >
               tooltip
@@ -424,7 +424,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 30 &&
                 "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(30)}
             >
               Code
@@ -434,7 +434,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 31 &&
                 "border-l rounded  border-primary bg-[#013B62] font-[500]"
-              }   border-l border-border`}
+              }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(31)}
             >
               Snippet

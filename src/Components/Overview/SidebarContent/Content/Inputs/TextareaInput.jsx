@@ -57,7 +57,7 @@ const TextareaInput = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6">
+      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem] ">
         <div>
           <ContentHeader text={"required textarea"} id={"required_textarea"} />
 

@@ -93,7 +93,7 @@ const TextInput = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6">
+      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem] ">
         <div>
           <ContentHeader text={"required input"} id={"primary_input"} />
 
@@ -103,19 +103,20 @@ const TextInput = () => {
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${primaryInputPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
                 className={`${
-                  primaryInputPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
+                  primaryInputPreview && "text-tabTextColorL"
+                } px-6 py-2 border-b z-[2] relative text-border border-border`}
                 onClick={handlePrimaryInputPreview}
               >
                 Preview
               </button>
               <button
                 className={`${
-                  primaryInputCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
+                  primaryInputCode && " text-tabTextColorL"
+                } px-6 py-2 border-r z-[2] relative text-border border-b rounded-br border-border`}
                 onClick={handlePrimaryInputCode}
               >
                 Code
@@ -124,7 +125,7 @@ const TextInput = () => {
             {primaryInputPreview && (
               <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
                 <div className="w-[80%]">
-                  <label htmlFor="name" className="text-[15px] font-[400]">
+                  <label htmlFor="name" className="text-[15px] text-text font-[400]">
                     Name <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -177,29 +178,29 @@ export default Textarea;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${bottomBorderPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  bottomBorderPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleBottomBorderPreview}
+                  className={`${
+                      bottomBorderPreview && "text-tabTextColorL"
+                  } px-6 py-2 border-b text-border z-[2] relative border-border`}
+                  onClick={handleBottomBorderPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  bottomBorderCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleBottomBorderCode}
+                  className={`${
+                      bottomBorderCode && "text-tabTextColorL"
+                  } px-6 py-2 border-r border-b text-border relative z-[2] rounded-br border-border`}
+                  onClick={handleBottomBorderCode}
               >
                 Code
               </button>
             </div>
             {bottomBorderPreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <input
-                  type="text"
-                  name="name"
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <input type="text" name="name"
                   id="name"
                   placeholder="Your name"
                   className="border-border border-b outline-none px-4 w-[80%] py-3 focus:border-primary transition-colors duration-300"
@@ -230,29 +231,31 @@ export default Textarea;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${animateLabelPreiview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  animateLabelPreiview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleAnimateLabelPreview}
+                  className={`${
+                      animateLabelPreiview && "text-tabTextColorL"
+                  } px-6 py-2 border-b text-border z-[2] relative border-border`}
+                  onClick={handleAnimateLabelPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  animateLabelCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleAnimateLabelCode}
+                  className={`${
+                      animateLabelCode && "text-tabTextColorL"
+                  } px-6 py-2 border-r border-b rounded-br text-border z-[2] relative border-border`}
+                  onClick={handleAnimateLabelCode}
               >
                 Code
               </button>
             </div>
             {animateLabelPreiview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <label className="relative w-[80%]">
-                  <input
-                    type="text"
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <label className="relative w-[80%]">
+                    <input
+                        type="text"
                     name="name"
                     id="name"
                     className="peer border-border border rounded-md outline-none px-4 py-3 w-full focus:border-primary transition-colors duration-300"
@@ -289,28 +292,30 @@ export default Textarea;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${iconInputPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  iconInputPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleIconInputPreview}
+                  className={`${
+                      iconInputPreview && "text-tabTextColorL"
+                  } px-6 py-2 border-b text-border z-[2] relative border-border`}
+                  onClick={handleIconInputPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  iconInputCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleIconInputCode}
+                  className={`${
+                      iconInputCode && "text-tabTextColorL"
+                  } px-6 py-2 border-r border-b rounded-br text-border z-[2] relative border-border`}
+                  onClick={handleIconInputCode}
               >
                 Code
               </button>
             </div>
             {iconInputPreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <div className="w-[80%] relative">
-                  <RiAccountCircleLine className=" absolute top-3.5 left-3 text-[1.5rem] text-[#777777]" />
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <div className="w-[80%] relative">
+                    <RiAccountCircleLine className=" absolute top-3.5 left-3 text-[1.5rem] text-[#777777]" />
                   <input
                     type="text"
                     name="text"
@@ -409,28 +414,30 @@ export default Inputs;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${passwordInputPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  passwordInputPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handlePasswordInputPreview}
+                  className={`${
+                      passwordInputPreview && "text-tabTextColorL"
+                  } px-6 py-2 border-b text-border z-[2] relative border-border`}
+                  onClick={handlePasswordInputPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  passwordInputCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handlePasswordInputCode}
+                  className={`${
+                      passwordInputCode && "text-tabTextColorL"
+                  } px-6 py-2 border-r border-b rounded-br text-border z-[2] relative border-border`}
+                  onClick={handlePasswordInputCode}
               >
                 Code
               </button>
             </div>
             {passwordInputPreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <div className="w-[80%]">
-                  <label htmlFor="password" className="text-[15px] font-[400]">
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <div className="w-[80%]">
+                    <label htmlFor="password" className="text-[15px] text-text font-[400]">
                     Password
                   </label>
                   <div className="w-full relative">
@@ -507,7 +514,7 @@ export default Textarea;
             href="#primary_input"
             className={`${
               contentActiveTab === 1 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+            } text-[0.9rem] text-[#9caebc] border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(1)}
           >
             Primary Input
@@ -516,7 +523,7 @@ export default Textarea;
             href="#bottom_bordered_input"
             className={`${
               contentActiveTab === 2 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+            } text-[0.9rem] text-[#9caebc] border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(2)}
           >
             Bottom Border Input
@@ -525,7 +532,7 @@ export default Textarea;
             href="#animate_label_input"
             className={`${
               contentActiveTab === 3 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+            } text-[0.9rem] text-[#9caebc] border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(3)}
           >
             Animate Label
@@ -534,7 +541,7 @@ export default Textarea;
             href="#input_with_icon"
             className={`${
               contentActiveTab === 4 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+            } text-[0.9rem] text-[#9caebc] border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(4)}
           >
             Input With Icon
@@ -543,7 +550,7 @@ export default Textarea;
             href="#password_input"
             className={`${
               contentActiveTab === 5 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+            } text-[0.9rem] text-[#9caebc] border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(5)}
           >
             Password Input

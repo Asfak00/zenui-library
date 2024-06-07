@@ -7,7 +7,8 @@ export default {
       colors: {
         primary: "#3B9DF8",
         secondary: "#ffffff",
-        border: "#9caebc",
+        border: "#3B9DF8",
+        tabTextColorL: '#012d57',
         text: "#9caebc",
         shadowColor: 'rgba(0, 0, 0, 0.2)'
       },
