@@ -14,21 +14,21 @@
 }
 
 *::selection {
-  background-color: #0471D6;
+  background-color: #3b9df8;
   color: #fff;
 }
 
 *::-webkit-scrollbar {
-  background-color: #012D57;
+  background-color: #3b9df825;
   width: 0.1rem;
 }
 
 *::-webkit-scrollbar-track {
-  background-color: #012D57;
+  background-color: #3b9df825;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #0471D6;
+  background-color: #3b9df8;
   border-radius: 30px;
 }
 
@@ -147,9 +147,12 @@ aside ul a {
 }
 
 aside ul a:hover {
-  background-color: #013B62;
+  background-color: #e5eaf2;
   font-weight: 500;
   border-left: 1px solid #9caebc;
+  border-radius: 0.25rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 /* sidebar component section header  */

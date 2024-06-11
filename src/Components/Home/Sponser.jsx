@@ -17,7 +17,7 @@ const Sponser = () => {
     }, []);
 
     const containerStyle = {
-        backgroundImage: 'url(/sponsorbg.png)',
+        backgroundImage: 'url(/sponserbg.png)',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         width: '100%',

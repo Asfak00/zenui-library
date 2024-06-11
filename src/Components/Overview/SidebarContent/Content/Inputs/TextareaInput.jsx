@@ -67,30 +67,32 @@ const TextareaInput = () => {
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${primaryInputPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  primaryInputPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handlePrimaryInputPreview}
+                  className={`${
+                      primaryInputPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handlePrimaryInputPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  primaryInputCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handlePrimaryInputCode}
+                  className={`${
+                      primaryInputCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handlePrimaryInputCode}
               >
                 Code
               </button>
             </div>
             {primaryInputPreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <div className="w-[80%]">
-                  <label
-                    htmlFor="description"
-                    className="font-[400] text-[15px]"
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <div className="w-[80%]">
+                    <label
+                        htmlFor="description"
+                    className="font-[400] text-[15px] text-text"
                   >
                     Description <span className="text-red-500">*</span>
                   </label>
@@ -144,47 +146,49 @@ export default Textarea;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${bottomBorderPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  bottomBorderPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleBottomBorderPreview}
+                  className={`${
+                      bottomBorderPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleBottomBorderPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  bottomBorderCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleBottomBorderCode}
+                  className={`${
+                      bottomBorderCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleBottomBorderCode}
               >
                 Code
               </button>
             </div>
             {bottomBorderPreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <div className="w-[80%]">
-                  <label
-                    htmlFor="description"
-                    className="font-[400] text-[15px]"
-                  >
-                    Description
-                  </label>
-                  <textarea
-                    type="text"
-                    name="name"
-                    id="name"
-                    placeholder="Write something about zenUI"
-                    className="border-border border outline-none px-4 w-full mt-1 min-h-[100px] bg-gray-200 rounded-md py-3 focus:border-gray-400 transition-colors duration-300"
-                  />
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <div className="w-[80%]">
+                    <label
+                        htmlFor="description"
+                        className="font-[400] text-[15px] text-text"
+                    >
+                      Description
+                    </label>
+                    <textarea
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Write something about zenUI"
+                        className="border-border border outline-none px-4 w-full mt-1 min-h-[100px] bg-gray-200 rounded-md py-3 focus:border-gray-400 transition-colors duration-300"
+                    />
+                  </div>
                 </div>
-              </div>
             )}
 
             {bottomBorderCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 const Textarea = () => {
   return (
     <div className="w-[80%]">
@@ -204,14 +208,14 @@ const Textarea = () => {
 
 export default Textarea;
                 '
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
             <ContentHeader
-              text={"animate label textarea"}
-              id={"animate_label_textarea"}
+                text={"animate label textarea"}
+                id={"animate_label_textarea"}
             />
           </div>
 
@@ -221,48 +225,49 @@ export default Textarea;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${animateLabelPreiview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  animateLabelPreiview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleAnimateLabelPreview}
+                  className={`${
+                      animateLabelPreiview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleAnimateLabelPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  animateLabelCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleAnimateLabelCode}
+                  className={`${
+                      animateLabelCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleAnimateLabelCode}
               >
                 Code
               </button>
             </div>
             {animateLabelPreiview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <label className="relative w-[80%]">
-                  <textarea
-                    type="text"
-                    name="name"
-                    id="name"
-                    className="peer border-border border rounded-md outline-none px-4 min-h-[200px] py-3 w-full focus:border-primary transition-colors duration-300"
-                  />
-                  <span className=" absolute top-3.5 left-5 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-primary text-[#777777] peer-focus:px-1 transition-all duration-300 ">
-                    Write something about zenUI
-                  </span>
-                </label>
-              </div>
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <label className="relative w-[80%]">
+      <textarea
+          name="name"
+          id="name"
+          className="peer border-[#e5eaf2] border rounded-md outline-none px-4 min-h-[200px] py-3 w-full focus:border-[#3B9DF8] transition-colors duration-300"
+      />
+                    <span
+                        className=" absolute top-3.5 left-5 peer-focus:-top-3 peer-focus:bg-white peer-focus:left-2 peer-focus:scale-[0.9] peer-focus:text-[#3B9DF8] text-[#777777] peer-focus:px-1 transition-all duration-300 ">
+        Write something about zenUI
+      </span>
+                  </label>
+                </div>
             )}
 
             {animateLabelCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 const Textarea = () => {
   return (
     <label className="relative w-[80%]">
       <textarea
-        type="text"
         name="name"
         id="name"
         className="peer border-[#e5eaf2] border rounded-md outline-none px-4 min-h-[200px] py-3 w-full focus:border-[#3B9DF8] transition-colors duration-300"
@@ -276,11 +281,11 @@ const Textarea = () => {
 
 export default Textarea;
                 '
-              />
+                />
             )}
           </div>
 
-          <OverviewFooter />
+          <OverviewFooter/>
         </div>
 
         <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
@@ -288,28 +293,28 @@ export default Textarea;
             CONTENTS
           </h2>
           <a
-            href="#required_textarea"
-            className={`${
-              contentActiveTab === 1 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(1)}
+              href="#required_textarea"
+              className={`${
+                  contentActiveTab === 1 && "!text-primary !border-primary"
+              } text-[0.9rem] text-text border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(1)}
           >
             Required Textarea
           </a>
           <a
-            href="#background_textarea"
-            className={`${
-              contentActiveTab === 2 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(2)}
+              href="#background_textarea"
+              className={`${
+                  contentActiveTab === 2 && "!text-primary !border-primary"
+              } text-[0.9rem] text-text border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(2)}
           >
             Background Textarea
           </a>
           <a
-            href="#animate_label_textarea"
+              href="#animate_label_textarea"
             className={`${
               contentActiveTab === 3 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+            } text-[0.9rem] text-text border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(3)}
           >
             Animate Label Textarea

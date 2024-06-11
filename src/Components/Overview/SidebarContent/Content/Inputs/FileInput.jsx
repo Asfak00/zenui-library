@@ -139,7 +139,7 @@ const FileInput = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6">
+      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem] ">
         <div>
           <ContentHeader text={"upload with icon"} id={"upload_with_icon"} />
 
@@ -149,60 +149,62 @@ const FileInput = () => {
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${iconUploadPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  iconUploadPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleIconUploadPreview}
+                  className={`${
+                      iconUploadPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleIconUploadPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  iconUploadCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleIconUploadCode}
+                  className={`${
+                      iconUploadCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleIconUploadCode}
               >
                 Code
               </button>
             </div>
             {iconUploadPreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <input
-                  type="file"
-                  name="image"
-                  id="image"
-                  className="hidden"
-                  onChange={handleFirstImageChange}
-                />
-                {imageUploaded === "" ? (
-                  <div
-                    className="w-[90%] flex items-center justify-center flex-col gap-4 border-border border rounded-md py-6 cursor-pointer"
-                    onClick={handleUploadImageClick}
-                  >
-                    <FiUpload className="text-[2rem] text-[#777777]" />
-                    <p className="text-[#777777]">Browse to upload you file</p>
-                  </div>
-                ) : (
-                  <div className="relative w-[80%] h-[300px]">
-                    <img
-                      src={imageUploaded}
-                      alt="image"
-                      className="w-full h-full object-cover"
-                    />
-                    <MdDelete
-                      className="text-[2rem] text-white bg-[#000000ad] p-1 absolute top-0 right-0 cursor-pointer"
-                      onClick={() => setImageUploaded("")}
-                    />
-                  </div>
-                )}
-              </div>
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <input
+                      type="file"
+                      name="image"
+                      id="image"
+                      className="hidden"
+                      onChange={handleFirstImageChange}
+                  />
+                  {imageUploaded === "" ? (
+                      <div
+                          className="w-[90%] flex items-center justify-center flex-col gap-4 border-border border rounded-md py-6 cursor-pointer"
+                          onClick={handleUploadImageClick}
+                      >
+                        <FiUpload className="text-[2rem] text-[#777777]"/>
+                        <p className="text-[#777777]">Browse to upload you file</p>
+                      </div>
+                  ) : (
+                      <div className="relative w-[80%] h-[300px]">
+                        <img
+                            src={imageUploaded}
+                            alt="image"
+                            className="w-full h-full object-cover"
+                        />
+                        <MdDelete
+                            className="text-[2rem] text-white bg-[#000000ad] p-1 absolute top-0 right-0 cursor-pointer"
+                            onClick={() => setImageUploaded("")}
+                        />
+                      </div>
+                  )}
+                </div>
             )}
 
             {iconUploadCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 // icons
 import { FiUpload } from "react-icons/fi";
 
@@ -258,14 +260,14 @@ const FileUpload = () => {
 
 export default FileUpload;
             '
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
             <ContentHeader
-              text={"upload with button"}
-              id={"upload_with_button"}
+                text={"upload with button"}
+                id={"upload_with_button"}
             />
           </div>
 
@@ -275,65 +277,68 @@ export default FileUpload;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${buttonUploadPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  buttonUploadPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleButtonUploadPreview}
+                  className={`${
+                      buttonUploadPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleButtonUploadPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  buttonUploadCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleButtonUploadCode}
+                  className={`${
+                      buttonUploadCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleButtonUploadCode}
               >
                 Code
               </button>
             </div>
             {buttonUploadPreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <input
-                  type="file"
-                  name="image"
-                  id="secondImage"
-                  className="hidden"
-                  onChange={handleSecondImageChange}
-                />
-                {imageUploaded2 === "" ? (
-                  <div className="w-[90%] flex items-center justify-center flex-col bg-white border border-dashed border-primary rounded-md py-6 ">
-                    <IoMdCloudUpload className="text-[3rem] text-primary" />
-                    <p className="mt-2 text-text">Drag and drop here</p>
-                    <p className=" text-text">or</p>
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <input
+                      type="file"
+                      name="image"
+                      id="secondImage"
+                      className="hidden"
+                      onChange={handleSecondImageChange}
+                  />
+                  {imageUploaded2 === "" ? (
+                      <div
+                          className="w-[90%] flex items-center justify-center flex-col bg-white border border-dashed border-primary rounded-md py-6 ">
+                        <IoMdCloudUpload className="text-[3rem] text-primary"/>
+                        <p className="mt-2 text-text">Drag and drop here</p>
+                        <p className=" text-text">or</p>
 
-                    <button
-                      className="px-6 py-1.5 text-primary"
-                      onClick={handleSecondImageClick}
-                    >
-                      Browse
-                    </button>
-                  </div>
-                ) : (
-                  <div className="relative w-[80%] h-[200px]">
-                    <img
-                      src={imageUploaded2}
-                      alt="image"
-                      className="w-full h-full object-cover"
-                    />
-                    <MdDelete
-                      className="text-[2rem] text-white bg-[#000000ad] p-1 absolute top-0 right-0 cursor-pointer"
-                      onClick={() => setImageUploaded2("")}
-                    />
-                  </div>
-                )}
-              </div>
+                        <button
+                            className="px-6 py-1.5 text-primary"
+                            onClick={handleSecondImageClick}
+                        >
+                          Browse
+                        </button>
+                      </div>
+                  ) : (
+                      <div className="relative w-[80%] h-[200px]">
+                        <img
+                            src={imageUploaded2}
+                            alt="image"
+                            className="w-full h-full object-cover"
+                        />
+                        <MdDelete
+                            className="text-[2rem] text-white bg-[#000000ad] p-1 absolute top-0 right-0 cursor-pointer"
+                            onClick={() => setImageUploaded2("")}
+                        />
+                      </div>
+                  )}
+                </div>
             )}
 
             {buttonUploadCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 // icons
 import { IoMdCloudUpload } from "react-icons/io";
 
@@ -394,14 +399,14 @@ const Inputs = () => {
 
 export default Inputs;
                 '
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
             <ContentHeader
-              text={"upload with heading"}
-              id={"upload_with_heading"}
+                text={"upload with heading"}
+                id={"upload_with_heading"}
             />
           </div>
 
@@ -411,68 +416,70 @@ export default Inputs;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${headingUploadPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  headingUploadPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleHeadingUploadPreview}
+                  className={`${
+                      headingUploadPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleHeadingUploadPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  headingUploadCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleHeadingUploadCode}
+                  className={`${
+                      headingUploadCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleHeadingUploadCode}
               >
                 Code
               </button>
             </div>
             {headingUploadPreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                {imageUploaded3 === "" ? (
-                  <div className="text-center w-[90%]">
-                    <input
-                      type="file"
-                      name="image"
-                      id="thridImage"
-                      className="hidden"
-                      onChange={handleThirdImageChange}
-                    />
-                    <h1 className="text-[1.5rem] text-text font-[600]">
-                      Upload your files
-                    </h1>
-                    <p className="text-[#777777] font-[400] text-[1rem]">
-                      JPG,PNG,JPEG
-                    </p>
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  {imageUploaded3 === "" ? (
+                      <div className="text-center w-[90%]">
+                        <input
+                            type="file"
+                            name="image"
+                            id="thridImage"
+                            className="hidden"
+                            onChange={handleThirdImageChange}
+                        />
+                        <h1 className="text-[1.5rem] text-text font-[600]">
+                          Upload your files
+                        </h1>
+                        <p className="text-[#777777] font-[400] text-[1rem]">
+                          JPG,PNG,JPEG
+                        </p>
 
-                    <div
-                      className="mt-5 w-[70%] mx-auto flex items-center justify-center flex-col bg-white border-[2px] border-dashed border-primary rounded-md py-10 cursor-pointer"
-                      onClick={handleThirdImageClick}
-                    >
-                      <PiFilesThin className="text-[4rem] text-text" />
-                    </div>
-                  </div>
-                ) : (
-                  <div className="relative w-[80%] h-[200px]">
-                    <img
-                      src={imageUploaded3}
-                      alt="image"
-                      className="w-full h-full object-cover"
-                    />
-                    <MdDelete
-                      className="text-[2rem] text-white bg-[#000000ad] p-1 absolute top-0 right-0 cursor-pointer"
-                      onClick={() => setImageUploaded3("")}
-                    />
-                  </div>
-                )}
-              </div>
+                        <div
+                            className="mt-5 w-[70%] mx-auto flex items-center justify-center flex-col bg-white border-[2px] border-dashed border-primary rounded-md py-10 cursor-pointer"
+                            onClick={handleThirdImageClick}
+                        >
+                          <PiFilesThin className="text-[4rem] text-text"/>
+                        </div>
+                      </div>
+                  ) : (
+                      <div className="relative w-[80%] h-[200px]">
+                        <img
+                            src={imageUploaded3}
+                            alt="image"
+                            className="w-full h-full object-cover"
+                        />
+                        <MdDelete
+                            className="text-[2rem] text-white bg-[#000000ad] p-1 absolute top-0 right-0 cursor-pointer"
+                            onClick={() => setImageUploaded3("")}
+                        />
+                      </div>
+                  )}
+                </div>
             )}
 
             {headingUploadCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 // icons
 import { PiFilesThin } from "react-icons/pi";
 
@@ -534,12 +541,12 @@ const Inputs = () => {
 
 export default Inputs;
                 '
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
-            <ContentHeader text={"profile upload"} id={"profile_upload"} />
+            <ContentHeader text={"profile upload"} id={"profile_upload"}/>
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
@@ -548,59 +555,62 @@ export default Inputs;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${profileUploadPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  profileUploadPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleProfileUploadPreview}
+                  className={`${
+                      profileUploadPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleProfileUploadPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  profileUploadCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleProfileUploadCode}
+                  className={`${
+                      profileUploadCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleProfileUploadCode}
               >
                 Code
               </button>
             </div>
             {profileUploadPreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <div className="text-center">
-                  <input
-                    type="file"
-                    name="image"
-                    id="fourthImage"
-                    className="hidden"
-                    onChange={handleFourthImageChange}
-                  />
-                  <div className="w-[150px] h-[150px] rounded-full border border-border flex items-center justify-center">
-                    {imageUploaded4 === "" ? (
-                      <CgProfile className="text-[10rem] text-border" />
-                    ) : (
-                      <img
-                        src={imageUploaded4}
-                        alt="image"
-                        className="w-full h-full object-cover rounded-full"
-                      />
-                    )}
-                  </div>
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <div className="text-center">
+                    <input
+                        type="file"
+                        name="image"
+                        id="fourthImage"
+                        className="hidden"
+                        onChange={handleFourthImageChange}
+                    />
+                    <div
+                        className="w-[150px] h-[150px] rounded-full border border-border flex items-center justify-center">
+                      {imageUploaded4 === "" ? (
+                          <CgProfile className="text-[10rem] text-border"/>
+                      ) : (
+                          <img
+                              src={imageUploaded4}
+                              alt="image"
+                              className="w-full h-full object-cover rounded-full"
+                          />
+                      )}
+                    </div>
 
-                  <button
-                    className="px-4 py-2 bg-primary text-white rounded-md mt-5"
-                    onClick={handleFourthImageClick}
-                  >
-                    Upload profile
-                  </button>
+                    <button
+                        className="px-4 py-2 bg-primary text-white rounded-md mt-5"
+                        onClick={handleFourthImageClick}
+                    >
+                      Upload profile
+                    </button>
+                  </div>
                 </div>
-              </div>
             )}
 
             {profileUploadCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 // icons
 import { CgProfile } from "react-icons/cg";
 
@@ -653,11 +663,11 @@ const Inputs = () => {
 
 export default Inputs;
                 '
-              />
+                />
             )}
           </div>
 
-          <OverviewFooter />
+          <OverviewFooter/>
         </div>
 
         <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
@@ -665,20 +675,20 @@ export default Inputs;
             CONTENTS
           </h2>
           <a
-            href="#upload_with_icon"
-            className={`${
-              contentActiveTab === 1 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(1)}
+              href="#upload_with_icon"
+              className={`${
+                  contentActiveTab === 1 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(1)}
           >
             Upload With Icon
           </a>
           <a
-            href="#upload_with_button"
-            className={`${
-              contentActiveTab === 2 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(2)}
+              href="#upload_with_button"
+              className={`${
+                  contentActiveTab === 2 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(2)}
           >
             Upload With Button
           </a>

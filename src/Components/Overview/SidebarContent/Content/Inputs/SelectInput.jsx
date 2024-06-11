@@ -96,7 +96,7 @@ const SelectInput = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6">
+      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem] ">
         <div>
           <ContentHeader text={"Select"} id={"select"} />
 
@@ -106,63 +106,65 @@ const SelectInput = () => {
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${selectPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  selectPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleSelectPreview}
+                  className={`${
+                      selectPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleSelectPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  selectCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleSelectCode}
+                  className={`${
+                      selectCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleSelectCode}
               >
                 Code
               </button>
             </div>
             {selectPreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <button
-                  className="bg-[#fff] border border-[#d1d1d1] rounded-xl w-[200px] justify-between px-3 py-2 flex items-center gap-8  relative cursor-pointer dropdown"
-                  onClick={() => setIsActive(!isActive)}
-                >
-                  {content}
-                  <IoChevronDown
-                    className={`${
-                      isActive ? " rotate-[180deg]" : " rotate-0"
-                    } transition-all duration-300 text-[1.2rem]`}
-                  />
-                  <div
-                    className={`${
-                      isActive
-                        ? " z-[1] opacity-100 scale-[1]"
-                        : " z-[-1] opacity-0 scale-[0.8]"
-                    } w-full absolute top-12 left-0 right-0 z-40 bg-[#fff] rounded-xl flex flex-col  overflow-hidden transition-all duration-300 ease-in-out`}
-                    style={{
-                      boxShadow: "0 15px 60px -15px rgba(0, 0, 0, 0.3)",
-                    }}
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <button
+                      className="bg-[#fff] border border-[#d1d1d1] rounded-xl w-[200px] justify-between px-3 py-2 flex items-center gap-8  relative cursor-pointer dropdown"
+                      onClick={() => setIsActive(!isActive)}
                   >
-                    {optionArray?.map((option, index) => (
-                      <p
-                        className="py-2 px-4 hover:bg-[#ececec] transition-all duration-200"
-                        key={index}
-                        onClick={(e) => setContent(e.target.textContent)}
-                      >
-                        {option}
-                      </p>
-                    ))}
-                  </div>
-                </button>
-              </div>
+                    {content}
+                    <IoChevronDown
+                        className={`${
+                            isActive ? " rotate-[180deg]" : " rotate-0"
+                        } transition-all duration-300 text-[1.2rem]`}
+                    />
+                    <div
+                        className={`${
+                            isActive
+                                ? " z-[1] opacity-100 scale-[1]"
+                                : " z-[-1] opacity-0 scale-[0.8]"
+                        } w-full absolute top-12 left-0 right-0 z-40 bg-[#fff] rounded-xl flex flex-col  overflow-hidden transition-all duration-300 ease-in-out`}
+                        style={{
+                          boxShadow: "0 15px 60px -15px rgba(0, 0, 0, 0.3)",
+                        }}
+                    >
+                      {optionArray?.map((option, index) => (
+                          <p
+                              className="py-2 px-4 hover:bg-[#ececec] transition-all duration-200"
+                              key={index}
+                              onClick={(e) => setContent(e.target.textContent)}
+                          >
+                            {option}
+                          </p>
+                      ))}
+                    </div>
+                  </button>
+                </div>
             )}
 
             {selectCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 // icons
 import { IoChevronDown } from "react-icons/io5";
 
@@ -216,12 +218,12 @@ const Select = () => {
 
 export default Select;
                 '
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
-            <ContentHeader text={"Select with icon"} id={"select_with_icon"} />
+            <ContentHeader text={"Select with icon"} id={"select_with_icon"}/>
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
@@ -230,64 +232,66 @@ export default Select;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${iconSelectPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  iconSelectPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleIconSelectPreview}
+                  className={`${
+                      iconSelectPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleIconSelectPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  iconSelectCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleIconSelectCode}
+                  className={`${
+                      iconSelectCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleIconSelectCode}
               >
                 Code
               </button>
             </div>
             {iconSelectPreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <button
-                  className="bg-[#fff] border border-[#d1d1d1] rounded-xl w-[200px] justify-between px-3 py-2 flex items-center gap-8  relative cursor-pointer dropdown"
-                  onClick={() => setIsActive2(!isActive2)}
-                >
-                  {content2}
-                  <IoChevronDown
-                    className={`${
-                      isActive2 ? " rotate-[180deg]" : " rotate-0"
-                    } transition-all duration-300 text-[1.2rem]`}
-                  />
-                  <div
-                    className={`${
-                      isActive2
-                        ? "z-[1] opacity-100 scale-[1]"
-                        : "z-[-1] opacity-0 scale-[0.8]"
-                    } w-full absolute top-12 left-0 right-0 z-40 bg-[#fff] rounded-xl flex flex-col  overflow-hidden transition-all duration-300 ease-in-out`}
-                    style={{
-                      boxShadow: "0 15px 60px -15px rgba(0, 0, 0, 0.3)",
-                    }}
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <button
+                      className="bg-[#fff] border border-[#d1d1d1] rounded-xl w-[200px] justify-between px-3 py-2 flex items-center gap-8  relative cursor-pointer dropdown"
+                      onClick={() => setIsActive2(!isActive2)}
                   >
-                    {optionArray2?.map((option, index) => (
-                      <p
-                        className="py-2 px-4 hover:bg-[#ececec] transition-all duration-200 flex items-center gap-2"
-                        key={index}
-                        onClick={(e) => setContent2(e.target.textContent)}
-                      >
-                        {option.icon}
-                        {option.title}
-                      </p>
-                    ))}
-                  </div>
-                </button>
-              </div>
+                    {content2}
+                    <IoChevronDown
+                        className={`${
+                            isActive2 ? " rotate-[180deg]" : " rotate-0"
+                        } transition-all duration-300 text-[1.2rem]`}
+                    />
+                    <div
+                        className={`${
+                            isActive2
+                                ? "z-[1] opacity-100 scale-[1]"
+                                : "z-[-1] opacity-0 scale-[0.8]"
+                        } w-full absolute top-12 left-0 right-0 z-40 bg-[#fff] rounded-xl flex flex-col  overflow-hidden transition-all duration-300 ease-in-out`}
+                        style={{
+                          boxShadow: "0 15px 60px -15px rgba(0, 0, 0, 0.3)",
+                        }}
+                    >
+                      {optionArray2?.map((option, index) => (
+                          <p
+                              className="py-2 px-4 hover:bg-[#ececec] transition-all duration-200 flex items-center gap-2"
+                              key={index}
+                              onClick={(e) => setContent2(e.target.textContent)}
+                          >
+                            {option.icon}
+                            {option.title}
+                          </p>
+                      ))}
+                    </div>
+                  </button>
+                </div>
             )}
 
             {iconSelectCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 // icons
 import { IoChevronDown } from "react-icons/io5";
 import { IoMdFootball } from "react-icons/io";
@@ -363,11 +367,11 @@ const Select = () => {
 
 export default Select;
                 '
-              />
+                />
             )}
           </div>
 
-          <OverviewFooter />
+          <OverviewFooter/>
         </div>
 
         <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
@@ -375,20 +379,20 @@ export default Select;
             CONTENTS
           </h2>
           <a
-            href="#select"
-            className={`${
-              contentActiveTab === 1 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(1)}
+              href="#select"
+              className={`${
+                  contentActiveTab === 1 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(1)}
           >
             Select
           </a>
           <a
-            href="#select_with_icon"
-            className={`${
-              contentActiveTab === 2 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(2)}
+              href="#select_with_icon"
+              className={`${
+                  contentActiveTab === 2 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(2)}
           >
             Select With Icon
           </a>

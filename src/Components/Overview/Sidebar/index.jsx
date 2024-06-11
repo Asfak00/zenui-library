@@ -11,7 +11,7 @@ const index = ({ startContent, setStartContent }) => {
   const [components, setComponents] = useState(true);
 
   return (
-    <aside className="py-6 pt-[6rem] px-10 border-r border-border flex flex-col gap-4 h-[100vh] overflow-y-scroll fixed top-18 left-0 w-[320px] dark:bg-[#060024] bg-[#012D57] z-20">
+    <aside className="py-6 pt-[6rem] px-10 border-r h-[100vh] border-border flex flex-col gap-4 overflow-y-scroll fixed top-18 left-0 w-[320px] dark:bg-[#060024] bg-secondary z-20">
       <div>
         <h3
           className="flex items-center gap-1 text-[1rem] text-[#0471d6] font-[500] capitalize cursor-pointer dark:text-[#D9EEFF]"
@@ -36,8 +36,8 @@ const index = ({ startContent, setStartContent }) => {
               to="/getting-started/overview"
               className={`${
                 startContent === 0 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }  text-[#9caebc] border-l border-[#9caebc]`}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] !text-secondary font-[500]"
+              }  text-text border-l border-[#9caebc]`}
               onClick={() => setStartContent(0)}
             >
               Overview
@@ -46,13 +46,14 @@ const index = ({ startContent, setStartContent }) => {
               to="/getting-started/templates"
               className={`${
                 startContent === 1 &&
-                "border-l rounded border-primary bg-[#013B62] dark:bg-[#1c173bfb] font-[500]"
-              }   border-l text-[#9caebc] border-[#9caebc] flex items-center gap-3`}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] !text-secondary dark:bg-[#1c173bfb] font-[500]"
+              }   border-l text-text border-[#9caebc] flex items-center gap-3`}
               onClick={() => setStartContent(1)}
             >
               templates
-              <span className={`${startContent === 1 && 'bg-[#012C49]'} py-1 px-3 rounded-[20px] text-[12px] flex items-center gap-2 font-[600] text-red-800 bg-[#013B62]`}>
-                <img src="/hotIcon.png" alt="hot Icon" className="w-[10px]" />
+              <span
+                  className="py-1 px-3 rounded-[20px] text-[12px] flex items-center gap-2 font-[600] text-red-800 bg-red-50">
+                <img src="/hotIcon.png" alt="hot Icon" className="w-[10px]"/>
                 HOT
               </span>
             </Link>
@@ -89,13 +90,13 @@ const index = ({ startContent, setStartContent }) => {
           }`}
         >
           <ul
-            className={`flex flex-col ml-2 text-[#9caebc] mt-3 overflow-hidden pl-4 dark:text-[#D9EEFF]`}
+            className={`flex flex-col ml-2 text-text mt-3 overflow-hidden pl-4 dark:text-[#D9EEFF]`}
           >
             <Link
               to={"/components/all-components"}
               className={`${
                 startContent === 3 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(3)}
             >
@@ -114,8 +115,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-text"}
               className={`${
                 startContent === 4 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-[#9caebc] `}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc]`}
               onClick={() => setStartContent(4)}
             >
               Input
@@ -124,8 +125,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-textarea"}
               className={`${
                 startContent === 5 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-[#9caebc] `}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc]`}
               onClick={() => setStartContent(5)}
             >
               Textarea
@@ -134,8 +135,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-switch"}
               className={`${
                 startContent === 6 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-[#9caebc] `}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc]`}
               onClick={() => setStartContent(6)}
             >
               Switch
@@ -144,8 +145,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-select"}
               className={`${
                 startContent === 7 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-[#9caebc] `}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc]`}
               onClick={() => setStartContent(7)}
             >
               Select
@@ -154,8 +155,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-radio"}
               className={`${
                 startContent === 8 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-[#9caebc] `}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc]`}
               onClick={() => setStartContent(8)}
             >
               Radio
@@ -164,7 +165,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/input-file"}
               className={`${
                 startContent === 9 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(9)}
             >
@@ -182,8 +183,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/normal-button"}
               className={`${
                 startContent === 10 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-[#9caebc] `}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc]`}
               onClick={() => setStartContent(10)}
             >
               normal button
@@ -192,8 +193,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/rgb-border"}
               className={`${
                 startContent === 11 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-[#9caebc] `}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc]`}
               onClick={() => setStartContent(11)}
             >
               RGB border
@@ -202,8 +203,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/animated-button"}
               className={`${
                 startContent === 12 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-[#9caebc] `}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc]`}
               onClick={() => setStartContent(12)}
             >
               animated button
@@ -220,8 +221,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/cards"}
               className={`${
                 startContent === 13 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-[#9caebc] `}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc]`}
               onClick={() => setStartContent(13)}
             >
               Cards
@@ -230,8 +231,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/according"}
               className={`${
                 startContent === 14 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-[#9caebc] `}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc]`}
               onClick={() => setStartContent(14)}
             >
               According
@@ -240,7 +241,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/appbar"}
               className={`${
                 startContent === 15 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(15)}
             >
@@ -250,8 +251,8 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/image-gallery"}
               className={`${
                 startContent === 16 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
-              }   border-l border-[#9caebc] `}
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc]`}
               onClick={() => setStartContent(16)}
             >
               Image Gallery
@@ -268,7 +269,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/pagination"}
               className={`${
                 startContent === 17 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(17)}
             >
@@ -278,7 +279,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/dropdown"}
               className={`${
                 startContent === 18 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(18)}
             >
@@ -288,7 +289,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/chip"}
               className={`${
                 startContent === 19 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(19)}
             >
@@ -298,7 +299,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/modal"}
               className={`${
                 startContent === 20 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(20)}
             >
@@ -308,7 +309,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/tabs"}
               className={`${
                 startContent === 21 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(21)}
             >
@@ -326,7 +327,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/skeleton"}
               className={`${
                 startContent === 22 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(22)}
             >
@@ -336,7 +337,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/alert-message"}
               className={`${
                 startContent === 23 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(23)}
             >
@@ -346,7 +347,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/dialog-message"}
               className={`${
                 startContent === 24 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(24)}
             >
@@ -356,7 +357,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/testimonials"}
               className={`${
                 startContent === 25 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(25)}
             >
@@ -366,7 +367,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/loader"}
               className={`${
                 startContent === 26 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(26)}
             >
@@ -376,7 +377,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/notification"}
               className={`${
                 startContent === 27 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(27)}
             >
@@ -394,7 +395,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/badge"}
               className={`${
                 startContent === 28 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(28)}
             >
@@ -404,7 +405,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/tooltip"}
               className={`${
                 startContent === 29 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(29)}
             >
@@ -423,7 +424,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/code"}
               className={`${
                 startContent === 30 &&
-                "border-l rounded border-primary bg-[#013B62] font-[500]"
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(30)}
             >
@@ -433,7 +434,7 @@ const index = ({ startContent, setStartContent }) => {
               to={"/components/snippet"}
               className={`${
                 startContent === 31 &&
-                "border-l rounded  border-primary bg-[#013B62] font-[500]"
+                "border-l rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
               }   border-l border-[#9caebc] `}
               onClick={() => setStartContent(31)}
             >

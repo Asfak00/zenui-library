@@ -53,13 +53,13 @@ const OverviewFooter = () => {
 
       {isLiked && (
         <form action="#" className="w-full mb-5">
-          <label htmlFor="message" className='text-[#9caebc]'>What did you like about this page?</label>
+          <label htmlFor="message" className=''>What did you like about this page?</label>
           <br />
           <textarea
             name="message"
             id="message"
             placeholder='Give feedback'
-            className="w-full h-[130px] bg-[#035099] outline-none rounded p-4 mt-1"
+            className="w-full h-[130px] bg-border outline-none rounded p-4 mt-1"
           ></textarea>
           <div className="w-full flex items-center mt-2 justify-end gap-3">
             <button
@@ -81,20 +81,20 @@ const OverviewFooter = () => {
 
       {isDisLiked && (
         <form action="#" className="w-full mb-5">
-          <label htmlFor="message" className='text-[#9caebc]'>How can we improve this page?</label>
+          <label htmlFor="message" className=''>How can we improve this page?</label>
           <br />
           <textarea
             name="message"
             id="message"
             placeholder='Report summary'
-            className="w-full h-[130px] bg-[#02488A] outline-none rounded p-4 mt-1"
+            className="w-full h-[130px] bg-border outline-none rounded p-4 mt-1"
           ></textarea>
 
           <div className="w-full border border-[#ffa90a] rounded p-3 flex gap-4 items-start my-4 bg-[#ffa90a21]">
             <p>
               <FaHand className="text-[1.2rem] text-[#ffa90a]" />
             </p>
-            <p className="text-[1rem] text-[#9caebc]">
+            <p className="text-[1rem] text-text">
               If something is broken or if you need a reply to a problem you've
               encountered, please{" "}
               <a href="" className=" text-primary font-[500] underline">
@@ -126,7 +126,7 @@ const OverviewFooter = () => {
         <img src="/darklogo.png" alt="logo-image" className="w-[50px]" />
 
         <div className="flex items-center gap-3">
-          <p className=" font-[600] text-[1rem] text-[#9caebc]">Support:</p>
+          <p className=" font-[600] text-[1rem] text-text">Support:</p>
           <a href="https://www.buymeacoffee.com/asfak00" target="_blank">
             <img
               src="https://www.codehim.com/wp-content/uploads/2022/09/bmc-button-640x180.png.webp"

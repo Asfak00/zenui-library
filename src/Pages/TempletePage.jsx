@@ -14,7 +14,7 @@ const TempletePage = () => {
           <Sidebar startContent={1} />
         </div>
 
-        <div className="w-full min-h-screen p-12 bg-gradient-to-r from-[#012D57] to-[#0471D6]">
+        <div className="w-full min-h-screen p-12">
           <Templete />
         </div>
       </div>

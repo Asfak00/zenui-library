@@ -107,16 +107,16 @@ const TextInput = () => {
               <div className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${primaryInputPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
                 className={`${
-                  primaryInputPreview && "text-tabTextColorL"
-                } px-6 py-2 border-b z-[2] relative text-border border-border`}
+                  primaryInputPreview && "text-tabTextColor"
+                } px-6 py-2 border-b z-[2] relative text-text border-border`}
                 onClick={handlePrimaryInputPreview}
               >
                 Preview
               </button>
               <button
                 className={`${
-                  primaryInputCode && " text-tabTextColorL"
-                } px-6 py-2 border-r z-[2] relative text-border border-b rounded-br border-border`}
+                  primaryInputCode && " text-tabTextColor"
+                } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
                 onClick={handlePrimaryInputCode}
               >
                 Code
@@ -183,16 +183,16 @@ export default Textarea;
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${bottomBorderPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
                   className={`${
-                      bottomBorderPreview && "text-tabTextColorL"
-                  } px-6 py-2 border-b text-border z-[2] relative border-border`}
+                      bottomBorderPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b text-text z-[2] relative border-border`}
                   onClick={handleBottomBorderPreview}
               >
                 Preview
               </button>
               <button
                   className={`${
-                      bottomBorderCode && "text-tabTextColorL"
-                  } px-6 py-2 border-r border-b text-border relative z-[2] rounded-br border-border`}
+                      bottomBorderCode && "text-tabTextColor"
+                  } px-6 py-2 border-r border-b text-text relative z-[2] rounded-br border-border`}
                   onClick={handleBottomBorderCode}
               >
                 Code
@@ -236,16 +236,16 @@ export default Textarea;
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${animateLabelPreiview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
                   className={`${
-                      animateLabelPreiview && "text-tabTextColorL"
-                  } px-6 py-2 border-b text-border z-[2] relative border-border`}
+                      animateLabelPreiview && "text-tabTextColor"
+                  } px-6 py-2 border-b text-text z-[2] relative border-border`}
                   onClick={handleAnimateLabelPreview}
               >
                 Preview
               </button>
               <button
                   className={`${
-                      animateLabelCode && "text-tabTextColorL"
-                  } px-6 py-2 border-r border-b rounded-br text-border z-[2] relative border-border`}
+                      animateLabelCode && "text-tabTextColor"
+                  } px-6 py-2 border-r border-b rounded-br text-text z-[2] relative border-border`}
                   onClick={handleAnimateLabelCode}
               >
                 Code
@@ -297,16 +297,16 @@ export default Textarea;
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${iconInputPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
                   className={`${
-                      iconInputPreview && "text-tabTextColorL"
-                  } px-6 py-2 border-b text-border z-[2] relative border-border`}
+                      iconInputPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b text-text z-[2] relative border-border`}
                   onClick={handleIconInputPreview}
               >
                 Preview
               </button>
               <button
                   className={`${
-                      iconInputCode && "text-tabTextColorL"
-                  } px-6 py-2 border-r border-b rounded-br text-border z-[2] relative border-border`}
+                      iconInputCode && "text-tabTextColor"
+                  } px-6 py-2 border-r border-b rounded-br text-text z-[2] relative border-border`}
                   onClick={handleIconInputCode}
               >
                 Code
@@ -419,16 +419,16 @@ export default Inputs;
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${passwordInputPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
                   className={`${
-                      passwordInputPreview && "text-tabTextColorL"
-                  } px-6 py-2 border-b text-border z-[2] relative border-border`}
+                      passwordInputPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b text-text z-[2] relative border-border`}
                   onClick={handlePasswordInputPreview}
               >
                 Preview
               </button>
               <button
                   className={`${
-                      passwordInputCode && "text-tabTextColorL"
-                  } px-6 py-2 border-r border-b rounded-br text-border z-[2] relative border-border`}
+                      passwordInputCode && "text-tabTextColor"
+                  } px-6 py-2 border-r border-b rounded-br text-text z-[2] relative border-border`}
                   onClick={handlePasswordInputCode}
               >
                 Code
@@ -514,7 +514,7 @@ export default Textarea;
             href="#primary_input"
             className={`${
               contentActiveTab === 1 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#9caebc] border-l border-transparent pl-4`}
+            } text-[0.9rem] text-text border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(1)}
           >
             Primary Input
@@ -523,7 +523,7 @@ export default Textarea;
             href="#bottom_bordered_input"
             className={`${
               contentActiveTab === 2 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#9caebc] border-l border-transparent pl-4`}
+            } text-[0.9rem] text-text border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(2)}
           >
             Bottom Border Input
@@ -532,7 +532,7 @@ export default Textarea;
             href="#animate_label_input"
             className={`${
               contentActiveTab === 3 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#9caebc] border-l border-transparent pl-4`}
+            } text-[0.9rem] text-text border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(3)}
           >
             Animate Label
@@ -541,7 +541,7 @@ export default Textarea;
             href="#input_with_icon"
             className={`${
               contentActiveTab === 4 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#9caebc] border-l border-transparent pl-4`}
+            } text-[0.9rem] text-text border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(4)}
           >
             Input With Icon
@@ -550,7 +550,7 @@ export default Textarea;
             href="#password_input"
             className={`${
               contentActiveTab === 5 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#9caebc] border-l border-transparent pl-4`}
+            } text-[0.9rem] text-text border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(5)}
           >
             Password Input
