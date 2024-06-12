@@ -51,7 +51,7 @@ const RgbButton = () => {
     setAnimationBorderPreview(false);
   };
   return (
-    <aside className="flex items-start justify-between gap-6">
+    <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
       <div>
         <ContentHeader text={"RGB border"} id={"rgb_border"} />
 
@@ -61,47 +61,49 @@ const RgbButton = () => {
         </p>
 
         <div className="w-[80%] border border-border rounded mt-8">
-          <div className="">
+          <div className="relative">
+            <div
+                className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${rgbBorderPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
             <button
-              className={`${
-                rgbBorderPreview && "bg-border"
-              } px-6 py-2 border-r border-b roudned border-border`}
-              onClick={handleRgbBorderPreview}
+                className={`${
+                    rgbBorderPreview && "text-tabTextColor"
+                } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                onClick={handleRgbBorderPreview}
             >
               Preview
             </button>
             <button
-              className={`${
-                rgbBorderCode && "bg-border"
-              } px-6 py-2 border-r border-b rounded border-border`}
-              onClick={handleRgbBorderCode}
+                className={`${
+                    rgbBorderCode && "text-tabTextColor"
+                } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                onClick={handleRgbBorderCode}
             >
               Code
             </button>
           </div>
           {rgbBorderPreview && (
-            <div className="p-8 mb-4 flex flex-wrap gap-5">
-              <div className="p-1 bg-gradient-to-r from-primary to-[#8000f8]">
-                <div className="px-6 py-2 bg-secondary">Left To Right</div>
-              </div>
+              <div className="p-8 mb-4 flex flex-wrap gap-5">
+                <div className="p-1 bg-gradient-to-r from-primary to-[#8000f8]">
+                  <div className="px-6 py-2 bg-secondary">Left To Right</div>
+                </div>
 
-              <div className="p-1 bg-gradient-to-l from-[#00e0e0] to-[#0010f3]">
-                <div className="px-6 py-2 bg-secondary">Right To Left</div>
-              </div>
+                <div className="p-1 bg-gradient-to-l from-[#00e0e0] to-[#0010f3]">
+                  <div className="px-6 py-2 bg-secondary">Right To Left</div>
+                </div>
 
-              <div className="p-1 bg-gradient-to-t from-[#07cc00] to-[#fa0000]">
-                <div className="px-6 py-2 bg-secondary">Top To Bottom</div>
-              </div>
+                <div className="p-1 bg-gradient-to-t from-[#07cc00] to-[#fa0000]">
+                  <div className="px-6 py-2 bg-secondary">Top To Bottom</div>
+                </div>
 
-              <div className="p-1 bg-gradient-to-b from-[#e28000] to-[#f800f8]">
-                <div className="px-6 py-2 bg-secondary">Bottom To Top</div>
+                <div className="p-1 bg-gradient-to-b from-[#e28000] to-[#f800f8]">
+                  <div className="px-6 py-2 bg-secondary">Bottom To Top</div>
+                </div>
               </div>
-            </div>
           )}
 
           {rgbBorderCode && (
-            <ShowCode
-              code={`
+              <ShowCode
+                  code={`
 // Left To Right
 <div className="p-1 bg-gradient-to-r from-primary to-[#8000f8]">
   <div className="px-6 py-2 bg-secondary">Left To Right</div>
@@ -122,14 +124,14 @@ const RgbButton = () => {
   <div className="px-6 py-2 bg-secondary">Bottom To Top</div>
 </div>
 `}
-            />
+              />
           )}
         </div>
 
         <div className="mt-8">
           <ContentHeader
-            text={"border hover animation"}
-            id={"border_animated"}
+              text={"border hover animation"}
+              id={"border_animated"}
           />
         </div>
 
@@ -139,39 +141,43 @@ const RgbButton = () => {
         </p>
 
         <div className="w-[80%] border border-border rounded mt-8">
-          <div className="">
+          <div className="relative">
+            <div
+                className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${animatedBorderPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
             <button
-              className={`${
-                animatedBorderPreview && "bg-border"
-              } px-6 py-2 border-r border-b roudned border-border`}
-              onClick={handleAnimatedBorderPreview}
+                className={`${
+                    animatedBorderPreview && "text-tabTextColor"
+                } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                onClick={handleAnimatedBorderPreview}
             >
               Preview
             </button>
             <button
-              className={`${
-                animatedBorderCode && "bg-border"
-              } px-6 py-2 border-r border-b rounded border-border`}
-              onClick={handldeAnimatedBorderCode}
+                className={`${
+                    animatedBorderCode && "text-tabTextColor"
+                } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                onClick={handldeAnimatedBorderCode}
             >
               Code
             </button>
           </div>
           {animatedBorderPreview && (
-            <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-              <button className="px-8 py-3 relative shadow-lg before:absolute before:top-0 before:left-0 before:w-0 before:h-0 before:border-l-[4px] before:border-t-[4px] before:border-transparent hover:before:w-full hover:before:h-full hover:before:border-primary hover:before:transition-all hover:before:duration-500 after:border-r-[4px] after:border-b-[4px] after:border-transparent hover:after:border-primary after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0 hover:after:w-full hover:after:h-full hover:after:transition-all hover:after:duration-500">
-                Animate 1
-              </button>
+              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                <button
+                    className="px-8 py-3 relative shadow-lg before:absolute before:top-0 before:left-0 before:w-0 before:h-0 before:border-l-[4px] before:border-t-[4px] before:border-transparent hover:before:w-full hover:before:h-full hover:before:border-primary hover:before:transition-all hover:before:duration-500 after:border-r-[4px] after:border-b-[4px] after:border-transparent hover:after:border-primary after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0 hover:after:w-full hover:after:h-full hover:after:transition-all hover:after:duration-500">
+                  Animate 1
+                </button>
 
-              <button className="py-2 px-6 shadow-lg before:block before:-left-1 before:-top-1 before:bg-primary before:absolute before:h-0 before:w-0 before:hover:w-[100%] before:hover:h-[100%]  before:duration-500 before:-z-40 after:block after:-right-1 after:-bottom-1 after:bg-primary after:absolute after:h-0 after:w-0 after:hover:w-[100%] after:hover:h-[100%] after:duration-500 after:-z-40 bg-secondary relative ">
-                Animate 2
-              </button>
-            </div>
+                <button
+                    className="py-2 px-6 shadow-lg before:block before:-left-1 before:-top-1 before:bg-primary before:absolute before:h-0 before:w-0 before:hover:w-[100%] before:hover:h-[100%]  before:duration-500 before:-z-40 after:block after:-right-1 after:-bottom-1 after:bg-primary after:absolute after:h-0 after:w-0 after:hover:w-[100%] after:hover:h-[100%] after:duration-500 after:-z-40 bg-secondary relative ">
+                  Animate 2
+                </button>
+              </div>
           )}
 
           {animatedBorderCode && (
-            <ShowCode
-              code={`
+              <ShowCode
+                  code={`
 // Animate 1
 <button className="px-8 py-3 relative shadow-lg before:absolute 
 before:top-0 before:left-0 before:w-0 before:h-0 before:border-l-[4px] before:border-t-[4px] before:border-transparent 
@@ -191,32 +197,32 @@ after:hover:w-[100%] after:hover:h-[100%] after:duration-500
 after:-z-40 bg-secondary relative "> Animate 2
 </button>
 `}
-            />
+              />
           )}
         </div>
 
-        <OverviewFooter />
+        <OverviewFooter/>
       </div>
 
-      <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
+      <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
         <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
           CONTENTS
         </h2>
         <a
-          href="#rgb_border"
-          className={`${
-            contentActiveTab === 1 && "!text-primary !border-primary"
-          } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-          onClick={() => setContentActiveTab(1)}
+            href="#rgb_border"
+            className={`${
+                contentActiveTab === 1 && "!text-primary !border-primary"
+            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+            onClick={() => setContentActiveTab(1)}
         >
           RGB Border
         </a>
         <a
-          href="#border_animated"
-          className={`${
-            contentActiveTab === 2 && "!text-primary !border-primary"
-          } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-          onClick={() => setContentActiveTab(2)}
+            href="#border_animated"
+            className={`${
+                contentActiveTab === 2 && "!text-primary !border-primary"
+            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+            onClick={() => setContentActiveTab(2)}
         >
           Border Animated
         </a>

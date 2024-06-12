@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 // components
 import Showcode from "../../../../../Shared/ShowCode";
@@ -38,7 +38,7 @@ const Normal = () => {
   };
   return (
     <>
-      <aside className="flex items-start justify-between gap-6">
+      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
         <div>
           <ContentHeader text={"normal button"} id={"normal_button"} />
 
@@ -48,38 +48,42 @@ const Normal = () => {
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${isPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  isPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleOnPreview}
+                  className={`${
+                      isPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleOnPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  isCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleOnCode}
+                  className={`${
+                      isCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleOnCode}
               >
                 Code
               </button>
             </div>
             {isPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <button className="px-6 py-2 border border-primary bg-primary text-secondary hover:bg-secondary hover:text-primary transition duration-300 rounded ">
-                  Button 1
-                </button>
-                <button className="px-6 py-2 border border-primary hover:bg-primary text-primary hover:text-secondary  transition duration-300 rounded ">
-                  Button 2
-                </button>
-              </div>
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <button
+                      className="px-6 py-2 border border-primary bg-primary text-secondary hover:bg-secondary hover:text-primary transition duration-300 rounded ">
+                    Button 1
+                  </button>
+                  <button
+                      className="px-6 py-2 border border-primary hover:bg-primary text-primary hover:text-secondary  transition duration-300 rounded ">
+                    Button 2
+                  </button>
+                </div>
             )}
 
             {isCode && (
-              <Showcode
-                code={`
+                <Showcode
+                    code={`
 // button 1
 <button className="px-6 py-2 border border-[#3B9DF8] bg-[#3B9DF8] 
 text-[#ffffff] hover:bg-[#ffffff] hover:text-primary transition duration-300 rounded"> Button
@@ -90,14 +94,14 @@ text-[#ffffff] hover:bg-[#ffffff] hover:text-primary transition duration-300 rou
 hover:text-[#ffffff]  transition duration-300 rounded "> Button
 </button>
 `}
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
             <ContentHeader
-              text={"background animated"}
-              id={"background_animated"}
+                text={"background animated"}
+                id={"background_animated"}
             />
           </div>
 
@@ -107,47 +111,53 @@ hover:text-[#ffffff]  transition duration-300 rounded "> Button
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${bgAnimatedPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  bgAnimatedPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleBgAnimatedPreview}
+                  className={`${
+                      bgAnimatedPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleBgAnimatedPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  bgAnimatedCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleBgAnimatedCode}
+                  className={`${
+                      bgAnimatedCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleBgAnimatedCode}
               >
                 Code
               </button>
             </div>
             {bgAnimatedPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <button className="px-6 py-2 border border-primary relative before:absolute overflow-hidden before:translate-x-[-200px] hover:before:translate-x-0 before:z-[-1] before:transition before:duration-300 hover:text-secondary  before:w-full before:h-full before:bg-primary before:top-0 before:left-0">
-                  Left
-                </button>
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <button
+                      className="px-6 py-2 border border-primary relative before:absolute overflow-hidden before:translate-x-[-200px] hover:before:translate-x-0 before:z-[-1] before:transition before:duration-300 hover:text-secondary  before:w-full before:h-full before:bg-primary before:top-0 before:left-0">
+                    Left
+                  </button>
 
-                <button className="px-6 py-2 border border-primary relative before:absolute overflow-hidden before:translate-x-[200px] hover:before:translate-x-0 before:z-[-1] before:transition before:duration-300 hover:text-secondary  before:w-full before:h-full before:bg-primary before:top-0 before:left-0">
-                  Right
-                </button>
+                  <button
+                      className="px-6 py-2 border border-primary relative before:absolute overflow-hidden before:translate-x-[200px] hover:before:translate-x-0 before:z-[-1] before:transition before:duration-300 hover:text-secondary  before:w-full before:h-full before:bg-primary before:top-0 before:left-0">
+                    Right
+                  </button>
 
-                <button className="px-6 py-2 border border-primary relative before:absolute overflow-hidden before:translate-y-[-200px] hover:before:translate-y-0 before:z-[-1] before:transition before:duration-300 hover:text-secondary  before:w-full before:h-full before:bg-primary before:top-0 before:left-0">
-                  Top
-                </button>
+                  <button
+                      className="px-6 py-2 border border-primary relative before:absolute overflow-hidden before:translate-y-[-200px] hover:before:translate-y-0 before:z-[-1] before:transition before:duration-300 hover:text-secondary  before:w-full before:h-full before:bg-primary before:top-0 before:left-0">
+                    Top
+                  </button>
 
-                <button className="px-6 py-2 border border-primary relative before:absolute overflow-hidden before:translate-y-[200px] hover:before:translate-y-0 before:z-[-1] before:transition before:duration-300 hover:text-secondary  before:w-full before:h-full before:bg-primary before:top-0 before:left-0">
-                  Bottom
-                </button>
-              </div>
+                  <button
+                      className="px-6 py-2 border border-primary relative before:absolute overflow-hidden before:translate-y-[200px] hover:before:translate-y-0 before:z-[-1] before:transition before:duration-300 hover:text-secondary  before:w-full before:h-full before:bg-primary before:top-0 before:left-0">
+                    Bottom
+                  </button>
+                </div>
             )}
 
             {bgAnimatedCode && (
-              <Showcode
-                code={`
+                <Showcode
+                    code={`
 // Left
 <button className="px-6 py-2 border border-[#3B9DF8] relative 
 before:absolute overflow-hidden before:translate-x-[-200px hover:before:translate-x-0 before:z-[-1] before:transition 
@@ -175,32 +185,32 @@ relative before:absolute overflow-hidden before:translate-y-[200px] hover:before
 before:z-[-1] before:transition before:duration-300 hover:text-secondary  before:w-full 
 before:h-full before:bg-primary before:top-0 before:left-0"> Bottom
 </button>`}
-              />
+                />
             )}
           </div>
 
-          <OverviewFooter />
+          <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
+        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>
           <a
-            href="#normal_button"
-            className={`${
-              contentActiveTab === 1 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(1)}
+              href="#normal_button"
+              className={`${
+                  contentActiveTab === 1 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(1)}
           >
             Normal Button
           </a>
           <a
-            href="#background_animated"
-            className={`${
-              contentActiveTab === 2 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(2)}
+              href="#background_animated"
+              className={`${
+                  contentActiveTab === 2 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(2)}
           >
             Background Animated
           </a>

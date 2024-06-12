@@ -1,31 +1,33 @@
-const Textarea = () => {
+import React, {useState} from "react";
+
+const Pagination = () => {
+    const [paginationNum, setPaginationNum] = useState(0);
+    const totalPageNumber = 5;
+    const updatePageNumber = (num) => {
+        if (num > totalPageNumber - 1 || 0 > num) {
+            return setPaginationNum(0);
+        }
+        setPaginationNum(num);
+    };
   return (
-    <div className="w-[80%]">
-      <label htmlFor="password" className="text-[15px] font-[400]">
-        Password
-      </label>
-      <div className="w-full relative">
-        <input
-          type={isEyeOpen ? "text" : "password"}
-          name="password"
-          id="password"
-          placeholder="Password"
-          className="peer border-[#e5eaf2] border rounded-md outline-none pl-4 pr-12 py-3 w-full mt-1 focus:border-[#3B9DF8] transition-colors duration-300"
-        />
-        {isEyeOpen ? (
-          <IoEyeOutline
-            className=" absolute top-4 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
-            onClick={() => setIsEyeOpen(false)}
-          />
-        ) : (
-          <IoEyeOffOutline
-            className=" absolute top-4 right-4 text-[1.5rem] text-[#777777] cursor-pointer"
-            onClick={() => setIsEyeOpen(true)}
-          />
-        )}
+
+      // small
+      <div className="px-6 py-1 bg-[#3B9DF8] text-[#fff] rounded-full text-[0.9rem] font-[500]">
+          ZenUI
       </div>
+
+    // medium
+    <div
+        className="px-6 py-1 border border-[#3B9DF8] text-[#3B9DF8] rounded-full text-[0.9rem] font-[500]">
+        ZenUI
     </div>
-  );
+
+    // large
+    <div className="px-6 py-1 bg-[#e9e9e9] text-[#9c9c9c] rounded-full text-[0.9rem] font-[500]">
+        ZenUI
+    </div>
+)
+    ;
 };
 
-export default Textarea;
+export default Pagination;

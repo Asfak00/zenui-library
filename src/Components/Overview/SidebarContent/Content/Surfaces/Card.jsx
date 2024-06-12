@@ -141,7 +141,7 @@ const Card = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6">
+      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
         <div className="w-[80%]">
           <ContentHeader id="Blog_Card" text={"Blog Card"} />
 
@@ -151,126 +151,130 @@ const Card = () => {
           </p>
 
           <div className="w-[80%] border border-border rounded my-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${blogCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  blogCardPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleBlogCardPreview}
+                  className={`${
+                      blogCardPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleBlogCardPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  blogCardCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleBlogCardCode}
+                  className={`${
+                      blogCardCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleBlogCardCode}
               >
                 Code
               </button>
             </div>
             {blogCardPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className="w-[70%] shadow-lg bg-secondary rounded">
-                  <div className="flex w-full justify-between items-center p-4">
-                    <div className="flex items-center gap-4">
-                      <div className="w-[50px] h-[50px] flex items-center justify-center text-secondary text-[1.3rem] rounded-full bg-[#f36f23]">
-                        R
-                      </div>
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-[70%] shadow-lg bg-secondary rounded">
+                    <div className="flex w-full justify-between items-center p-4">
+                      <div className="flex items-center gap-4">
+                        <div
+                            className="w-[50px] h-[50px] flex items-center justify-center text-secondary text-[1.3rem] rounded-full bg-[#f36f23]">
+                          R
+                        </div>
 
-                      <div className="">
-                        <h2 className="font-[500] text-[1.2rem]">
-                          Author Name
-                        </h2>
-                        <p className="text-text text-[0.9rem]">
-                          September 14, 2016
+                        <div className="">
+                          <h2 className="font-[500] text-[1.2rem]">
+                            Author Name
+                          </h2>
+                          <p className="text-text text-[0.9rem]">
+                            September 14, 2016
+                          </p>
+                        </div>
+                      </div>
+                      <BsThreeDotsVertical
+                          className="text-text rounded-full text-[2.5rem] p-2 hover:bg-[#ececec] cursor-pointer"/>
+                    </div>
+
+                    <img
+                        src="https://img.freepik.com/premium-photo/tasty-tofu-stir-fry-with-veggies-crispy-tofu-fresh-cilantro-perfect-vegan-meal-healthy_763042-1514.jpg"
+                        alt=""
+                        className="w-full h-[250px] object-cover"
+                    />
+
+                    <p className="text-text p-4">
+                      This impressive paella is a perfect party dish and a fun
+                      meal to cook together with your guests. Add 1 cup of frozen
+                      peas along with the mussels, if you like.
+                    </p>
+
+                    <div className="flex items-center justify-between w-full p-4 ">
+                      <div className="flex items-center gap-4 ">
+                        <FaHeart
+                            className={`${
+                                isFavorite ? "text-[#ff3d3d]" : "text-text"
+                            } text-[1.4rem] cursor-pointer`}
+                            onClick={() => setIsFavorite(!isFavorite)}
+                        />
+                        <HiMiniShare className="text-text text-[1.4rem] cursor-pointer"/>
+                      </div>
+                      {isOpen ? (
+                          <IoIosArrowUp
+                              className="text-text text-[1.4rem] cursor-pointer"
+                              onClick={() => setIsOpen(false)}
+                          />
+                      ) : (
+                          <IoIosArrowDown
+                              className="text-text text-[1.4rem] cursor-pointer"
+                              onClick={() => setIsOpen(true)}
+                          />
+                      )}
+                    </div>
+
+                    <div
+                        className={`grid overflow-hidden transition-all duration-300 ${
+                            isOpen ? "grid-rows-[1fr] p-4" : "grid-rows-[0fr]"
+                        } text-[0.9rem] `}
+                    >
+                      <div className=" overflow-hidden">
+                        <b>Method:</b>
+                        <p className="mt-3">
+                          Heat 1/2 cup of the broth in a pot until simmering, add
+                          saffron and set aside for 10 minutes.
+                        </p>
+                        <p className="mt-5">
+                          Heat oil in a (14- to 16-inch) paella pan or a large,
+                          deep skillet over medium-high heat. Add chicken, shrimp
+                          and chorizo, and cook, stirring occasionally until
+                          lightly browned, 6 to 8 minutes. Transfer shrimp to a
+                          large plate and set aside, leaving chicken and chorizo
+                          in the pan. Add pimentón, bay leaves, garlic, tomatoes,
+                          onion, salt and pepper, and cook, stirring often until
+                          thickened and fragrant, about 10 minutes. Add saffron
+                          broth and remaining 4 1/2 cups chicken broth; bring to a
+                          boil.
+                        </p>
+                        <p className="mt-5">
+                          Add rice and stir very gently to distribute. Top with
+                          artichokes and peppers, and cook without stirring, until
+                          most of the liquid is absorbed, 15 to 18 minutes. Reduce
+                          heat to medium-low, add reserved shrimp and mussels,
+                          tucking them down
+                        </p>
+                        <p className="mt-5">
+                          into the rice, and cook again without stirring, until
+                          mussels have opened and rice is just tender, 5 to 7
+                          minutes more. (Discard any mussels that don't open.) Set
+                          aside off of the heat to let rest for 10 minutes, and
+                          then serve.
                         </p>
                       </div>
                     </div>
-                    <BsThreeDotsVertical className="text-text rounded-full text-[2.5rem] p-2 hover:bg-[#ececec] cursor-pointer" />
-                  </div>
-
-                  <img
-                    src="https://img.freepik.com/premium-photo/tasty-tofu-stir-fry-with-veggies-crispy-tofu-fresh-cilantro-perfect-vegan-meal-healthy_763042-1514.jpg"
-                    alt=""
-                    className="w-full h-[250px] object-cover"
-                  />
-
-                  <p className="text-text p-4">
-                    This impressive paella is a perfect party dish and a fun
-                    meal to cook together with your guests. Add 1 cup of frozen
-                    peas along with the mussels, if you like.
-                  </p>
-
-                  <div className="flex items-center justify-between w-full p-4 ">
-                    <div className="flex items-center gap-4 ">
-                      <FaHeart
-                        className={`${
-                          isFavorite ? "text-[#ff3d3d]" : "text-text"
-                        } text-[1.4rem] cursor-pointer`}
-                        onClick={() => setIsFavorite(!isFavorite)}
-                      />
-                      <HiMiniShare className="text-text text-[1.4rem] cursor-pointer" />
-                    </div>
-                    {isOpen ? (
-                      <IoIosArrowUp
-                        className="text-text text-[1.4rem] cursor-pointer"
-                        onClick={() => setIsOpen(false)}
-                      />
-                    ) : (
-                      <IoIosArrowDown
-                        className="text-text text-[1.4rem] cursor-pointer"
-                        onClick={() => setIsOpen(true)}
-                      />
-                    )}
-                  </div>
-
-                  <div
-                    className={`grid overflow-hidden transition-all duration-300 ${
-                      isOpen ? "grid-rows-[1fr] p-4" : "grid-rows-[0fr]"
-                    } text-[0.9rem] `}
-                  >
-                    <div className=" overflow-hidden">
-                      <b>Method:</b>
-                      <p className="mt-3">
-                        Heat 1/2 cup of the broth in a pot until simmering, add
-                        saffron and set aside for 10 minutes.
-                      </p>
-                      <p className="mt-5">
-                        Heat oil in a (14- to 16-inch) paella pan or a large,
-                        deep skillet over medium-high heat. Add chicken, shrimp
-                        and chorizo, and cook, stirring occasionally until
-                        lightly browned, 6 to 8 minutes. Transfer shrimp to a
-                        large plate and set aside, leaving chicken and chorizo
-                        in the pan. Add pimentón, bay leaves, garlic, tomatoes,
-                        onion, salt and pepper, and cook, stirring often until
-                        thickened and fragrant, about 10 minutes. Add saffron
-                        broth and remaining 4 1/2 cups chicken broth; bring to a
-                        boil.
-                      </p>
-                      <p className="mt-5">
-                        Add rice and stir very gently to distribute. Top with
-                        artichokes and peppers, and cook without stirring, until
-                        most of the liquid is absorbed, 15 to 18 minutes. Reduce
-                        heat to medium-low, add reserved shrimp and mussels,
-                        tucking them down
-                      </p>
-                      <p className="mt-5">
-                        into the rice, and cook again without stirring, until
-                        mussels have opened and rice is just tender, 5 to 7
-                        minutes more. (Discard any mussels that don't open.) Set
-                        aside off of the heat to let rest for 10 minutes, and
-                        then serve.
-                      </p>
-                    </div>
                   </div>
                 </div>
-              </div>
             )}
 
             {blogCardCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 import React from "react";
 
 // icons
@@ -375,14 +379,14 @@ const BlogCard = () => {
 
 export default BlogCard;
             '
-              />
+                />
             )}
           </div>
 
           <ContentHeader
-            id="product_card"
-            className="mt-8"
-            text={"Product Card"}
+              id="product_card"
+              className="mt-8"
+              text={"Product Card"}
           />
 
           <p className="w-[80%] text-text text-[1rem]">
@@ -390,85 +394,88 @@ export default BlogCard;
             all websites. They are very simple.
           </p>
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${productCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  productCardPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleProductCardPreview}
+                  className={`${
+                      productCardPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleProductCardPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  productCardCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleProductCardCode}
+                  className={`${
+                      productCardCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleProductCardCode}
               >
                 Code
               </button>
             </div>
             {productCardPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className="w-[70%] shadow-lg bg-secondary rounded">
-                  <img
-                    src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzfGVufDB8fDB8fHww"
-                    alt=""
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="flex w-full justify-between items-center p-4">
-                    <div className="flex  items-center gap-4">
-                      <div className=" flex flex-col items-center">
-                        <h2 className="font-semibold text-3xl">Shoes</h2>
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-[70%] shadow-lg bg-secondary rounded">
+                    <img
+                        src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzfGVufDB8fDB8fHww"
+                        alt=""
+                        className="w-full h-64 object-cover"
+                    />
+                    <div className="flex w-full justify-between items-center p-4">
+                      <div className="flex  items-center gap-4">
+                        <div className=" flex flex-col items-center">
+                          <h2 className="font-semibold text-3xl">Shoes</h2>
+                        </div>
                       </div>
+                      <BsThreeDotsVertical
+                          className="text-text rounded-full text-[2.5rem] p-2 hover:bg-[#ececec] cursor-pointer"/>
                     </div>
-                    <BsThreeDotsVertical className="text-text rounded-full text-[2.5rem] p-2 hover:bg-[#ececec] cursor-pointer" />
-                  </div>
 
-                  <p className="text-text p-4">
-                    <div className="flex flex-row ">
-                      <button className="flex flex-row ">
-                        {" "}
-                        <BsEye className="text-2xl p-1" /> 50
-                      </button>
-                      <button className="flex flex-row ">
-                        <BiLike className="text-2xl p-1" /> 10
-                      </button>
-                    </div>
-                    This impressive paella is a perfect party dish and a fun
-                    meal to cook together with your guests. Add 1 cup of frozen
-                    peas along with the mussels, if you like.
-                  </p>
+                    <p className="text-text p-4">
+                      <div className="flex flex-row ">
+                        <button className="flex flex-row ">
+                          {" "}
+                          <BsEye className="text-2xl p-1"/> 50
+                        </button>
+                        <button className="flex flex-row ">
+                          <BiLike className="text-2xl p-1"/> 10
+                        </button>
+                      </div>
+                      This impressive paella is a perfect party dish and a fun
+                      meal to cook together with your guests. Add 1 cup of frozen
+                      peas along with the mussels, if you like.
+                    </p>
 
-                  <div className="flex items-center justify-between w-full p-4 ">
-                    <div className="flex flex-col items-center gap-4 ">
-                      <div>
-                        {" "}
-                        <p className="text-text text-[0.9rem]">
-                          Price : $25
-                        </p>{" "}
+                    <div className="flex items-center justify-between w-full p-4 ">
+                      <div className="flex flex-col items-center gap-4 ">
+                        <div>
+                          {" "}
+                          <p className="text-text text-[0.9rem]">
+                            Price : $25
+                          </p>{" "}
+                        </div>
+                        <div className="flex flex-row gap-5">
+                          <FaHeart
+                              className={`${
+                                  isFavorite ? "text-[#ff3d3d]" : "text-text"
+                              } text-[1.4rem] cursor-pointer`}
+                              onClick={() => setIsFavorite(!isFavorite)}
+                          />
+                          <HiMiniShare className="text-text text-[1.4rem] cursor-pointer"/>
+                        </div>
                       </div>
-                      <div className="flex flex-row gap-5">
-                        <FaHeart
-                          className={`${
-                            isFavorite ? "text-[#ff3d3d]" : "text-text"
-                          } text-[1.4rem] cursor-pointer`}
-                          onClick={() => setIsFavorite(!isFavorite)}
-                        />
-                        <HiMiniShare className="text-text text-[1.4rem] cursor-pointer" />
-                      </div>
+                      <button className="btn p-3 rounded border bg-black text-white hover:bg-blue-700 hover:text-white">
+                        Add to cart
+                      </button>
                     </div>
-                    <button className="btn p-3 rounded border bg-black text-white hover:bg-blue-700 hover:text-white">
-                      Add to cart
-                    </button>
                   </div>
                 </div>
-              </div>
             )}
 
             {productCardCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
                 import { useState } from "react";
 import { BiLike } from "react-icons/bi";
 import { BsEye, BsThreeDotsVertical } from "react-icons/bs";
@@ -535,16 +542,16 @@ const SimpleProfileCard = () => {
 export default SimpleProfileCard;
 
             '
-              />
+                />
             )}
           </div>
 
           <div>
             <div className="mt-8">
               <ContentHeader
-                id="music_card"
-                className="mt-8"
-                text={"Music Card"}
+                  id="music_card"
+                  className="mt-8"
+                  text={"Music Card"}
               />
             </div>
 
@@ -554,67 +561,69 @@ export default SimpleProfileCard;
             </p>
 
             <div className="w-[80%] border border-border rounded mt-8">
-              <div className="">
+              <div className="relative">
+                <div
+                    className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${musicCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
                 <button
-                  className={`${
-                    musicCardPreview && "bg-border"
-                  } px-6 py-2 border-r border-b roudned border-border`}
-                  onClick={handleMusicCardPreview}
+                    className={`${
+                        musicCardPreview && "text-tabTextColor"
+                    } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                    onClick={handleMusicCardPreview}
                 >
                   Preview
                 </button>
                 <button
-                  className={`${
-                    musicCardCode && "bg-border"
-                  } px-6 py-2 border-r border-b rounded border-border`}
-                  onClick={handleMusicCardCode}
+                    className={`${
+                        musicCardCode && "text-tabTextColor"
+                    } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                    onClick={handleMusicCardCode}
                 >
                   Code
                 </button>
               </div>
               {musicCardPreview && (
-                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="w-[100%] lg:w-[80%] shadow-lg bg-secondary rounded">
-                    <div className="grid grid-cols-12 w-full  items-center bg-black text-white ">
-                      <div className="grid col-span-5 justify-center gap-3 ">
-                        <div>
-                          <h1 className="text-2xl">Pop Music</h1>
-                          <p>Arjit singh</p>
+                  <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                    <div className="w-[100%] lg:w-[80%] shadow-lg bg-secondary rounded">
+                      <div className="grid grid-cols-12 w-full  items-center bg-black text-white ">
+                        <div className="grid col-span-5 justify-center gap-3 ">
+                          <div>
+                            <h1 className="text-2xl">Pop Music</h1>
+                            <p>Arjit singh</p>
+                          </div>
+                          <div className="flex flex-row gap-3">
+                            <FaArrowAltCircleLeft className="text-2xl"/>
+                            <MdPlayArrow className="text-2xl"/>
+                            <FaArrowAltCircleRight className="text-2xl"/>
+                          </div>
                         </div>
-                        <div className="flex flex-row gap-3">
-                          <FaArrowAltCircleLeft className="text-2xl" />
-                          <MdPlayArrow className="text-2xl" />
-                          <FaArrowAltCircleRight className="text-2xl" />
+
+                        <div className="grid col-span-7">
+                          <img
+                              src="https://media.istockphoto.com/id/1388162040/photo/a-crowded-concert-hall-with-scene-stage-in-red-lights-rock-show-performance-with-people.jpg?s=1024x1024&w=is&k=20&c=NARCbVE2aAOnSEVWr1ZxK0G4fpr60vMY7iDMsjnHjFg="
+                              alt=""
+                              className="w-full h-64 cover"
+                          />
                         </div>
                       </div>
 
-                      <div className="grid col-span-7">
-                        <img
-                          src="https://media.istockphoto.com/id/1388162040/photo/a-crowded-concert-hall-with-scene-stage-in-red-lights-rock-show-performance-with-people.jpg?s=1024x1024&w=is&k=20&c=NARCbVE2aAOnSEVWr1ZxK0G4fpr60vMY7iDMsjnHjFg="
-                          alt=""
-                          className="w-full h-64 cover"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="flex items-center justify-between w-full p-4 ">
-                      <div className="flex items-center gap-4 ">
-                        <FaHeart
-                          className={`${
-                            isFavorite ? "text-[#ff3d3d]" : "text-text"
-                          } text-[1.4rem] cursor-pointer`}
-                          onClick={() => setIsFavorite(!isFavorite)}
-                        />
-                        <HiMiniShare className="text-text text-[1.4rem] cursor-pointer" />
+                      <div className="flex items-center justify-between w-full p-4 ">
+                        <div className="flex items-center gap-4 ">
+                          <FaHeart
+                              className={`${
+                                  isFavorite ? "text-[#ff3d3d]" : "text-text"
+                              } text-[1.4rem] cursor-pointer`}
+                              onClick={() => setIsFavorite(!isFavorite)}
+                          />
+                          <HiMiniShare className="text-text text-[1.4rem] cursor-pointer"/>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
               )}
 
               {musicCardCode && (
-                <Showcode
-                  code='
+                  <Showcode
+                      code='
                 import React, { useState } from "react";
 
                 import {
@@ -670,13 +679,13 @@ export default SimpleProfileCard;
                 export default MusicCard;
                  
             '
-                />
+                  />
               )}
             </div>
           </div>
 
           <div className="mt-8">
-            <ContentHeader id={"profile_card_2"} text={"Simple profile card"} />
+            <ContentHeader id={"profile_card_2"} text={"Simple profile card"}/>
 
             <p className="w-[80%] text-text text-[1rem]">
               We see navigation Card with borders on all sides like this on
@@ -684,73 +693,75 @@ export default SimpleProfileCard;
             </p>
 
             <div className="w-[80%] border border-border rounded mt-3">
-              <div className="">
+              <div className="relative">
+                <div
+                    className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${simpleProfileCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
                 <button
-                  className={`${
-                    simpleProfileCardPreview && "bg-border"
-                  } px-6 py-2 border-r border-b roudned border-border`}
-                  onClick={handleSimpleProfileCardPreview}
+                    className={`${
+                        simpleProfileCardPreview && "text-tabTextColor"
+                    } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                    onClick={handleSimpleProfileCardPreview}
                 >
                   Preview
                 </button>
                 <button
-                  className={`${
-                    simpleProfileCardCode && "bg-border"
-                  } px-6 py-2 border-r border-b rounded border-border`}
-                  onClick={handleSimpleProfileCardCode}
+                    className={`${
+                        simpleProfileCardCode && "text-tabTextColor"
+                    } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                    onClick={handleSimpleProfileCardCode}
                 >
                   Code
                 </button>
               </div>
               {simpleProfileCardPreview && (
-                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="w-[60%] shadow-lg rounded flex flex-col">
-                    <div className="w-full  flex justify-center items-center  ">
-                      <img
-                        src="https://images.pexels.com/photos/3772623/pexels-photo-3772623.jpeg"
-                        alt=""
-                        className="w-[80px] h-[80px] rounded-full  flex justify-center border-blue-800 border-2   -mt-16 object-cover"
-                      />
-                    </div>
-
-                    <div>
-                      <div className="w-full start mt-3 px-2">
-                        <h2 className="font-[600] text-center text-[1.4rem]">
-                          Description
-                        </h2>
-                        <p className="text-text text-[0.9rem]">
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Fugit voluptatibus porro at praesentium enim
-                          animi deserunt totam voluptatem tempora repudiandae
-                          possimus iure cum veniam nesciunt, ipsa ad illo,
-                          magnam tenetur?
-                        </p>
+                  <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                    <div className="w-[60%] shadow-lg rounded flex flex-col">
+                      <div className="w-full  flex justify-center items-center  ">
+                        <img
+                            src="https://images.pexels.com/photos/3772623/pexels-photo-3772623.jpeg"
+                            alt=""
+                            className="w-[80px] h-[80px] rounded-full  flex justify-center border-blue-800 border-2   -mt-16 object-cover"
+                        />
                       </div>
 
-                      <div className="w-full p-4 mt-8 border-t border-border flex items-center justify-between">
-                        <div className="flex items-center justify-center flex-col">
-                          <h2 className=" text-[1.2rem] font-[600]">80k</h2>
-                          <p className="text-text text-[0.9rem]">Post</p>
+                      <div>
+                        <div className="w-full start mt-3 px-2">
+                          <h2 className="font-[600] text-center text-[1.4rem]">
+                            Description
+                          </h2>
+                          <p className="text-text text-[0.9rem]">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Fugit voluptatibus porro at praesentium enim
+                            animi deserunt totam voluptatem tempora repudiandae
+                            possimus iure cum veniam nesciunt, ipsa ad illo,
+                            magnam tenetur?
+                          </p>
                         </div>
 
-                        <div className="flex items-center justify-center flex-col">
-                          <h2 className=" text-[1.2rem] font-[600]">8k</h2>
-                          <p className="text-text text-[0.9rem]">Following</p>
-                        </div>
+                        <div className="w-full p-4 mt-8 border-t border-border flex items-center justify-between">
+                          <div className="flex items-center justify-center flex-col">
+                            <h2 className=" text-[1.2rem] font-[600]">80k</h2>
+                            <p className="text-text text-[0.9rem]">Post</p>
+                          </div>
 
-                        <div className="flex items-center justify-center flex-col">
-                          <h2 className=" text-[1.2rem] font-[600]">200k</h2>
-                          <p className="text-text text-[0.9rem]">Followers</p>
+                          <div className="flex items-center justify-center flex-col">
+                            <h2 className=" text-[1.2rem] font-[600]">8k</h2>
+                            <p className="text-text text-[0.9rem]">Following</p>
+                          </div>
+
+                          <div className="flex items-center justify-center flex-col">
+                            <h2 className=" text-[1.2rem] font-[600]">200k</h2>
+                            <p className="text-text text-[0.9rem]">Followers</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
               )}
 
               {simpleProfileCardCode && (
-                <Showcode
-                  code={`
+                  <Showcode
+                      code={`
                 const SimpleProfileCard = () => {
                   return (
                     <div className="w-[60%] shadow-lg rounded">
@@ -791,13 +802,13 @@ export default SimpleProfileCard;
                 
                 
           `}
-                />
+                  />
               )}
             </div>
           </div>
 
           <div className="mt-8">
-            <ContentHeader id="profile_card" text={"profile card"} />
+            <ContentHeader id="profile_card" text={"profile card"}/>
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
@@ -806,63 +817,66 @@ export default SimpleProfileCard;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${profileCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  productCardPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleProfileCardPreview}
+                  className={`${
+                      profileCardPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleProfileCardPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  profileCardCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleProfileCardCode}
+                  className={`${
+                      profileCardCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleProfileCardCode}
               >
                 Code
               </button>
             </div>
             {profileCardPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className="w-[60%] shadow-lg rounded">
-                  <div className="w-full h-[150px] relative bg-[url('https://img.freepik.com/premium-vector/content-writer-vector-colored-round-line-illustration_104589-2571.jpg')] bg-center">
-                    <img
-                      src="https://images.pexels.com/photos/3772623/pexels-photo-3772623.jpeg"
-                      alt=""
-                      className="w-[80px] h-[80px] rounded-full border-secondary border-4 absolute -bottom-12 left-1/2 transform -translate-x-1/2 object-cover"
-                    />
-                  </div>
-
-                  <div className="w-full text-center mt-16">
-                    <h2 className="font-[600] text-[1.4rem]">User Name</h2>
-                    <p className="text-text text-[0.9rem]">London</p>
-                  </div>
-
-                  <div className="w-full p-4 mt-8 border-t border-border flex items-center justify-between">
-                    <div className="flex items-center justify-center flex-col">
-                      <h2 className=" text-[1.2rem] font-[600]">80k</h2>
-                      <p className="text-text text-[0.9rem]">Post</p>
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-[60%] shadow-lg rounded">
+                    <div
+                        className="w-full h-[150px] relative bg-[url('https://img.freepik.com/premium-vector/content-writer-vector-colored-round-line-illustration_104589-2571.jpg')] bg-center">
+                      <img
+                          src="https://images.pexels.com/photos/3772623/pexels-photo-3772623.jpeg"
+                          alt=""
+                          className="w-[80px] h-[80px] rounded-full border-secondary border-4 absolute -bottom-12 left-1/2 transform -translate-x-1/2 object-cover"
+                      />
                     </div>
 
-                    <div className="flex items-center justify-center flex-col">
-                      <h2 className=" text-[1.2rem] font-[600]">8k</h2>
-                      <p className="text-text text-[0.9rem]">Following</p>
+                    <div className="w-full text-center mt-16">
+                      <h2 className="font-[600] text-[1.4rem]">User Name</h2>
+                      <p className="text-text text-[0.9rem]">London</p>
                     </div>
 
-                    <div className="flex items-center justify-center flex-col">
-                      <h2 className=" text-[1.2rem] font-[600]">200k</h2>
-                      <p className="text-text text-[0.9rem]">Followers</p>
+                    <div className="w-full p-4 mt-8 border-t border-border flex items-center justify-between">
+                      <div className="flex items-center justify-center flex-col">
+                        <h2 className=" text-[1.2rem] font-[600]">80k</h2>
+                        <p className="text-text text-[0.9rem]">Post</p>
+                      </div>
+
+                      <div className="flex items-center justify-center flex-col">
+                        <h2 className=" text-[1.2rem] font-[600]">8k</h2>
+                        <p className="text-text text-[0.9rem]">Following</p>
+                      </div>
+
+                      <div className="flex items-center justify-center flex-col">
+                        <h2 className=" text-[1.2rem] font-[600]">200k</h2>
+                        <p className="text-text text-[0.9rem]">Followers</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
             )}
 
             {profileCardCode && (
-              <Showcode
-                code={`
+                <Showcode
+                    code={`
 import React from "react";
 
 const profileCard = () => {
@@ -906,12 +920,12 @@ const profileCard = () => {
 
 export default profileCard;
           `}
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
-            <ContentHeader id="Team_card" text={"Team card"} />
+            <ContentHeader id="Team_card" text={"Team card"}/>
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
@@ -920,89 +934,94 @@ export default profileCard;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${teamCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  teamCardPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleTeamCardPreview}
+                  className={`${
+                      teamCardPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleTeamCardPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  teamCardCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleTeamCardCode}
+                  className={`${
+                      teamCardCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleTeamCardCode}
               >
                 Code
               </button>
             </div>
             {teamCardPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className="w-[60%] rounded shadow-lg p-4">
-                  <div className="w-full flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      <RiTeamFill className="text-[2rem] p-2 rounded-full bg-[#3b9df828] text-[#3B9DF8] cursor-pointer" />
-                      <h3>Teams</h3>
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-[60%] rounded shadow-lg p-4">
+                    <div className="w-full flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-2">
+                        <RiTeamFill
+                            className="text-[2rem] p-2 rounded-full bg-[#3b9df828] text-[#3B9DF8] cursor-pointer"/>
+                        <h3>Teams</h3>
+                      </div>
+                      <BsThreeDotsVertical
+                          className="text-[2rem] p-2 rounded-full bg-[#3b9df828] text-[#3B9DF8] cursor-pointer"/>
                     </div>
-                    <BsThreeDotsVertical className="text-[2rem] p-2 rounded-full bg-[#3b9df828] text-[#3B9DF8] cursor-pointer" />
-                  </div>
 
-                  <img
-                    src="https://img.freepik.com/free-psd/3d-interface-website-presentation-mockup-isolated_359791-208.jpg"
-                    alt=""
-                    className="rounded-lg"
-                  />
+                    <img
+                        src="https://img.freepik.com/free-psd/3d-interface-website-presentation-mockup-isolated_359791-208.jpg"
+                        alt=""
+                        className="rounded-lg"
+                    />
 
-                  <h2 className="font-[600] text-[1.3rem] py-4">
-                    Simple Design
-                  </h2>
+                    <h2 className="font-[600] text-[1.3rem] py-4">
+                      Simple Design
+                    </h2>
 
-                  <div className="w-full flex items-center justify-between relative">
-                    <button className="py-1 px-4 bg-[#3b9df828] text-[#2367a7] rounded">
-                      Design
-                    </button>
-                    <div className=" w-[50%] h-full">
-                      <div className="flex items-center">
-                        <img
-                          src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
-                          alt=""
-                          className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute right-[25%] top-0"
-                        />
-                        <img
-                          src="https://img.freepik.com/free-photo/confident-attractive-caucasian-guy-beige-pullon-smiling-broadly-while-standing-against-gray_176420-44508.jpg"
-                          alt=""
-                          className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute right-[20%] top-0"
-                        />
-                        <img
-                          src="https://img.freepik.com/free-photo/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes_176532-10257.jpg"
-                          alt=""
-                          className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute right-[15%] top-0"
-                        />
-                        <img
-                          src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg"
-                          alt=""
-                          className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute right-[10%] top-0"
-                        />
-                        <img
-                          src="https://img.freepik.com/free-photo/portrait-hacker_23-2148165910.jpg"
-                          alt=""
-                          className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute top-0 right-[5%]"
-                        />
-                        <div className="w-[30px] h-[30px] object-cover rounded-full border border-secondary bg-[#e5eaf2] text-[#424242] absolute top-0 right-[0%] flex items-center justify-center">
-                          <p className="text-[0.7rem] cursor-pointer">18+</p>
+                    <div className="w-full flex items-center justify-between relative">
+                      <button className="py-1 px-4 bg-[#3b9df828] text-[#2367a7] rounded">
+                        Design
+                      </button>
+                      <div className=" w-[50%] h-full">
+                        <div className="flex items-center">
+                          <img
+                              src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"
+                              alt=""
+                              className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute right-[25%] top-0"
+                          />
+                          <img
+                              src="https://img.freepik.com/free-photo/confident-attractive-caucasian-guy-beige-pullon-smiling-broadly-while-standing-against-gray_176420-44508.jpg"
+                              alt=""
+                              className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute right-[20%] top-0"
+                          />
+                          <img
+                              src="https://img.freepik.com/free-photo/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes_176532-10257.jpg"
+                              alt=""
+                              className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute right-[15%] top-0"
+                          />
+                          <img
+                              src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg"
+                              alt=""
+                              className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute right-[10%] top-0"
+                          />
+                          <img
+                              src="https://img.freepik.com/free-photo/portrait-hacker_23-2148165910.jpg"
+                              alt=""
+                              className="w-[30px] h-[30px] object-cover rounded-full border border-secondary absolute top-0 right-[5%]"
+                          />
+                          <div
+                              className="w-[30px] h-[30px] object-cover rounded-full border border-secondary bg-[#e5eaf2] text-[#424242] absolute top-0 right-[0%] flex items-center justify-center">
+                            <p className="text-[0.7rem] cursor-pointer">18+</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
             )}
 
             {teamCardCode && (
-              <Showcode
-                code={`
+                <Showcode
+                    code={`
 import React from "react";
 
 // icons
@@ -1085,12 +1104,12 @@ const TeamCard = () => {
 
 export default TeamCard;
           `}
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
-            <ContentHeader id="Pricing_card_1" text={"Pricing card 1"} />
+            <ContentHeader id="Pricing_card_1" text={"Pricing card 1"}/>
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
@@ -1099,79 +1118,82 @@ export default TeamCard;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${pricingCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  pricingCardPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handlePricingCardPreview}
+                  className={`${
+                      pricingCardPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handlePricingCardPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  pricingCardCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handlePricingCardCode}
+                  className={`${
+                      pricingCardCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handlePricingCardCode}
               >
                 Code
               </button>
             </div>
             {pricingCardPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className="w-[80%] border border-border p-2 rounded-2xl">
-                  <div className="w-full bg-primary rounded-2xl p-4">
-                    <div className="flex items-center justify-between w-full mb-5">
-                      <IoIosRocket className="text-secondary text-[3.5rem]" />
-                      <button className="px-2 py-1 border border-secondary rounded-md text-[0.8rem] bg-secondary">
-                        ENTERPRISE
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-[80%] border border-border p-2 rounded-2xl">
+                    <div className="w-full bg-primary rounded-2xl p-4">
+                      <div className="flex items-center justify-between w-full mb-5">
+                        <IoIosRocket className="text-secondary text-[3.5rem]"/>
+                        <button className="px-2 py-1 border border-secondary rounded-md text-[0.8rem] bg-secondary">
+                          ENTERPRISE
+                        </button>
+                      </div>
+                      <h2 className="text-[2.3rem] font-[800] text-secondary">
+                        $79.58{" "}
+                        <span className="text-[1rem] font-[400]">/ month</span>
+                      </h2>
+                      <p className="text-[1rem] text-secondary">
+                        True power of marketing
+                      </p>
+                    </div>
+
+                    <div className="flex flex-col px-8 text-text mt-6">
+                      <p className="flex items-center gap-2 py-3 border-b border-border text-[1rem]">
+                        <FaRegDotCircle className="text-[1rem] text-[#000]"/>
+                        Lorem ipsum dolor sit.
+                      </p>
+                      <p className="flex items-center gap-2 py-3 border-b border-border text-[1rem]">
+                        <FaRegDotCircle className="text-[1rem] text-[#000]"/>
+                        Lorem ipsum dolor sit.
+                      </p>
+                      <p className="flex items-center gap-2 py-3 border-b border-border text-[1rem]">
+                        <FaRegDotCircle className="text-[1rem] text-[#000]"/>
+                        Lorem ipsum dolor sit.
+                      </p>
+                      <p className="flex items-center gap-2 py-3 border-b border-border text-[1rem]">
+                        <FaRegDotCircle className="text-[1rem] text-[#000]"/>
+                        Lorem ipsum dolor sit.
+                      </p>
+                      <p className="flex items-center gap-2 py-3 text-[1rem]">
+                        <FaRegDotCircle className="text-[1rem] text-[#000]"/>
+                        Lorem ipsum dolor sit.
+                      </p>
+                    </div>
+
+                    <div className="px-8 my-5">
+                      <button
+                          className="px-4 py-2 border border-primary bg-primary rounded-2xl text-secondary flex items-center gap-1 group">
+                        GET STARTED
+                        <BiRightArrowAlt className="text-[1.4rem] group-hover:ml-3 transition-all duration-300"/>
                       </button>
                     </div>
-                    <h2 className="text-[2.3rem] font-[800] text-secondary">
-                      $79.58{" "}
-                      <span className="text-[1rem] font-[400]">/ month</span>
-                    </h2>
-                    <p className="text-[1rem] text-secondary">
-                      True power of marketing
-                    </p>
-                  </div>
-
-                  <div className="flex flex-col px-8 text-text mt-6">
-                    <p className="flex items-center gap-2 py-3 border-b border-border text-[1rem]">
-                      <FaRegDotCircle className="text-[1rem] text-[#000]" />
-                      Lorem ipsum dolor sit.
-                    </p>
-                    <p className="flex items-center gap-2 py-3 border-b border-border text-[1rem]">
-                      <FaRegDotCircle className="text-[1rem] text-[#000]" />
-                      Lorem ipsum dolor sit.
-                    </p>
-                    <p className="flex items-center gap-2 py-3 border-b border-border text-[1rem]">
-                      <FaRegDotCircle className="text-[1rem] text-[#000]" />
-                      Lorem ipsum dolor sit.
-                    </p>
-                    <p className="flex items-center gap-2 py-3 border-b border-border text-[1rem]">
-                      <FaRegDotCircle className="text-[1rem] text-[#000]" />
-                      Lorem ipsum dolor sit.
-                    </p>
-                    <p className="flex items-center gap-2 py-3 text-[1rem]">
-                      <FaRegDotCircle className="text-[1rem] text-[#000]" />
-                      Lorem ipsum dolor sit.
-                    </p>
-                  </div>
-
-                  <div className="px-8 my-5">
-                    <button className="px-4 py-2 border border-primary bg-primary rounded-2xl text-secondary flex items-center gap-1 group">
-                      GET STARTED
-                      <BiRightArrowAlt className="text-[1.4rem] group-hover:ml-3 transition-all duration-300" />
-                    </button>
                   </div>
                 </div>
-              </div>
             )}
 
             {pricingCardCode && (
-              <Showcode
-                code={`
+                <Showcode
+                    code={`
 import React from "react";
 
 // icons
@@ -1237,12 +1259,12 @@ const PricingCard = () => {
 
 export default PricingCard;
           `}
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
-            <ContentHeader id="Pricing_card_2" text={"Pricing card 2"} />
+            <ContentHeader id="Pricing_card_2" text={"Pricing card 2"}/>
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
@@ -1251,84 +1273,86 @@ export default PricingCard;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${pricingCard2Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  pricingCard2Preview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handlePricingCard2Preview}
+                  className={`${
+                      pricingCard2Preview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handlePricingCard2Preview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  pricingCard2Code && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handlePricingCard2Code}
+                  className={`${
+                      pricingCard2Code && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handlePricingCard2Code}
               >
                 Code
               </button>
             </div>
             {pricingCard2Preview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className="w-[80%] border border-border shadow-lg">
-                  <div className="w-full flex items-center justify-center flex-col p-6">
-                    <h2 className="text-[1.5rem] text-primary font-[600]">
-                      Standard
-                    </h2>
-                    <p className="text-text text-[1rem]">
-                      Ideal for growing businesses
-                    </p>
-
-                    <div className="flex mt-6 gap-1">
-                      <h2 className="font-[800] text-[4rem] leading-[4rem]">
-                        49.50
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-[80%] border border-border shadow-lg">
+                    <div className="w-full flex items-center justify-center flex-col p-6">
+                      <h2 className="text-[1.5rem] text-primary font-[600]">
+                        Standard
                       </h2>
-                      <span className="text-[1.2rem] font-[500]">$</span>
+                      <p className="text-text text-[1rem]">
+                        Ideal for growing businesses
+                      </p>
+
+                      <div className="flex mt-6 gap-1">
+                        <h2 className="font-[800] text-[4rem] leading-[4rem]">
+                          49.50
+                        </h2>
+                        <span className="text-[1.2rem] font-[500]">$</span>
+                      </div>
+                      <p className="text-text text-[0.9rem]">per month</p>
+
+                      <button className="px-12 py-2 bg-primary rounded-3xl text-secondary text-[1rem] my-6">
+                        Buy Now
+                      </button>
                     </div>
-                    <p className="text-text text-[0.9rem]">per month</p>
 
-                    <button className="px-12 py-2 bg-primary rounded-3xl text-secondary text-[1rem] my-6">
-                      Buy Now
-                    </button>
+                    <h3 className="text-[1.2rem] font-[600] text-text mt-3 px-6">
+                      What you will get?
+                    </h3>
+                    <div className="flex gap-3 flex-col py-4 px-6">
+                      <p className="flex items-center gap-2 text-text text-[1rem]">
+                        <MdDone className="text-primary text-[1.5rem]"/>5 Users
+                      </p>
+                      <p className="flex items-center gap-2 text-text text-[1rem]">
+                        <MdDone className="text-primary text-[1.5rem]"/>
+                        50GB Storage
+                      </p>
+                      <p className="flex items-center gap-2 text-text text-[1rem]">
+                        <MdDone className="text-primary text-[1.5rem]"/>
+                        Priority Email Support
+                      </p>
+                      <p className="flex items-center gap-3 text-text text-[1rem]">
+                        <RxCross1 className="text-[#e73939] text-[1.2rem]"/>
+                        Unlimited Users
+                      </p>
+                      <p className="flex items-center gap-3 text-text text-[1rem]">
+                        <RxCross1 className="text-[#e73939] text-[1.2rem]"/>
+                        100GB Storage
+                      </p>
+                      <p className="flex items-center gap-3 text-text text-[1rem]">
+                        <RxCross1 className="text-[#e73939] text-[1.2rem]"/>
+                        24/7 Live Chat Support
+                      </p>
+                    </div>
+                    <div className="w-full h-[10px] bg-primary"></div>
                   </div>
-
-                  <h3 className="text-[1.2rem] font-[600] text-text mt-3 px-6">
-                    What you will get?
-                  </h3>
-                  <div className="flex gap-3 flex-col py-4 px-6">
-                    <p className="flex items-center gap-2 text-text text-[1rem]">
-                      <MdDone className="text-primary text-[1.5rem]" />5 Users
-                    </p>
-                    <p className="flex items-center gap-2 text-text text-[1rem]">
-                      <MdDone className="text-primary text-[1.5rem]" />
-                      50GB Storage
-                    </p>
-                    <p className="flex items-center gap-2 text-text text-[1rem]">
-                      <MdDone className="text-primary text-[1.5rem]" />
-                      Priority Email Support
-                    </p>
-                    <p className="flex items-center gap-3 text-text text-[1rem]">
-                      <RxCross1 className="text-[#e73939] text-[1.2rem]" />
-                      Unlimited Users
-                    </p>
-                    <p className="flex items-center gap-3 text-text text-[1rem]">
-                      <RxCross1 className="text-[#e73939] text-[1.2rem]" />
-                      100GB Storage
-                    </p>
-                    <p className="flex items-center gap-3 text-text text-[1rem]">
-                      <RxCross1 className="text-[#e73939] text-[1.2rem]" />
-                      24/7 Live Chat Support
-                    </p>
-                  </div>
-                  <div className="w-full h-[10px] bg-primary"></div>
                 </div>
-              </div>
             )}
 
             {pricingCard2Code && (
-              <Showcode
-                code={`
+                <Showcode
+                    code={`
 import React from "react";
 
 // icons
@@ -1388,37 +1412,37 @@ const PricingCard = () => {
 
 export default PricingCard;
           `}
-              />
+                />
             )}
           </div>
 
-          <OverviewFooter />
+          <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
+        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>
           <a
-            href="#Blog_Card"
-            className={`${
-              contentActiveTab === 1 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(1)}
+              href="#Blog_Card"
+              className={`${
+                  contentActiveTab === 1 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(1)}
           >
             Blog Card
           </a>
           <a
-            href="#product_card"
-            className={`${
-              contentActiveTab === 2 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(2)}
+              href="#product_card"
+              className={`${
+                  contentActiveTab === 2 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(2)}
           >
             Product Card
           </a>
           <a
-            href="#music_card"
+              href="#music_card"
             className={`${
               contentActiveTab === 3 && "!text-primary !border-primary"
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
