@@ -47,11 +47,11 @@ const AllComponents = () => {
         <h2 className="font-[600] text-[#0471d6] uppercase text-[2.5rem]">
           ZenUI Library
         </h2>
-        <p className="text-[#9caebc] text-[0.9rem]">
+        <p className="text-text text-[0.9rem]">
           Every ZenUI Library component available for free.
         </p>
 
-        <p className="text-[#9caebc] text-[0.9rem] mt-8">
+        <p className="text-text text-[0.9rem] mt-8">
           ZenUI is a website where you can get all the component designs you
           want and they are completely free. You can copy and use them in your
           own projects from here. All the guidelines are given very nicely on
@@ -62,15 +62,15 @@ const AllComponents = () => {
 
         <h2 className="mt-12 font-[600] text-[1.5rem] text-[#0471d6]">input</h2>
         <div className="grid grid-cols-3 mt-4 gap-8">
-          {inputsData?.map((button) => (
-            <a href={button.url} className="border border-border rounded">
+          {inputsData?.map((button, index) => (
+            <a href={button.url} className="border border-border rounded" key={index}>
               <img
                 src={button.image}
                 alt="component/image"
                 className="w-full h-[150px] rounded-t object-cover"
               />
               <div className="border-t border-border p-4">
-                <h2 className="text-[#9caebc] font-[600] text-[1rem] capitalize">
+                <h2 className="text-text font-[600] text-[1rem] capitalize">
                   {button.title}
                 </h2>
               </div>
@@ -80,8 +80,8 @@ const AllComponents = () => {
 
         <h2 className="mt-12 font-[600] text-[1.5rem] text-[#0471d6]">Navigation</h2>
         <div className="grid grid-cols-3 mt-4 gap-8">
-          {navigationsData?.map((button) => (
-            <a href={button.url} className="border border-border rounded">
+          {navigationsData?.map((button, index) => (
+            <a href={button.url} className="border border-border rounded" key={index}>
               <img
                 src={button.image}
                 alt="component/image"
@@ -98,8 +98,8 @@ const AllComponents = () => {
 
         <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-[#0471d6]">Buttons</h2>
         <div className="grid grid-cols-3  gap-8">
-          {buttonsData?.map((button) => (
-            <a href={button.url} className="border border-border rounded">
+          {buttonsData?.map((button, index) => (
+            <a href={button.url} className="border border-border rounded" key={index}>
               <img
                 src={button.image}
                 alt="component/image"
@@ -116,8 +116,8 @@ const AllComponents = () => {
 
         <h2 className="mt-12 font-[600] text-[1.5rem] text-[#0471d6]">Feedback</h2>
         <div className="grid grid-cols-3 mt-4 gap-8">
-          {feedbackData?.map((button) => (
-            <a href={button.url} className="border border-border rounded">
+          {feedbackData?.map((button, index) => (
+            <a href={button.url} className="border border-border rounded" key={index}>
               <img
                 src={button.image}
                 alt="component/image"
@@ -134,8 +134,8 @@ const AllComponents = () => {
 
         <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-[#0471d6]">Surface</h2>
         <div className="grid grid-cols-3  gap-8">
-          {surfaceData?.map((button) => (
-            <a href={button.url} className="border border-border rounded">
+          {surfaceData?.map((button, index) => (
+            <a href={button.url} className="border border-border rounded" key={index}>
               <img
                 src={button.image}
                 alt="component/image"
@@ -152,8 +152,8 @@ const AllComponents = () => {
 
         <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-[#0471d6] ">Data Display</h2>
         <div className="grid grid-cols-3  gap-8">
-          {displayData?.map((button) => (
-            <a href={button.url} className="border border-border rounded">
+          {displayData?.map((button, index) => (
+            <a href={button.url} className="border border-border rounded" key={index}>
               <img
                 src={button.image}
                 alt="component/image"
@@ -173,7 +173,7 @@ const AllComponents = () => {
         <OverviewFooter />
       </div>
       <Helmet>
-        <title>React-Tailwind UI Components</title>
+        <title>ZenUI All Components</title>
       </Helmet>
     </>
   );

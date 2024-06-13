@@ -101,8 +101,7 @@ const SelectInput = () => {
           <ContentHeader text={"Select"} id={"select"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a select component. Choose options from the dropdown menu for seamless interaction.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -227,8 +226,7 @@ export default Select;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a select with icon component. Select options from the dropdown menu enriched with intuitive icons.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

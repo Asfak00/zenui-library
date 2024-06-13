@@ -79,7 +79,7 @@ const AlertMessage = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6">
+      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
         <div className="w-[80%]">
           <ContentHeader
             text={"alert message with background"}
@@ -92,61 +92,63 @@ const AlertMessage = () => {
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${backgroundPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  backgroundPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleBackgroundPreview}
+                  className={`${
+                      backgroundPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleBackgroundPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  backgroundCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleBackgroundCode}
+                  className={`${
+                      backgroundCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleBackgroundCode}
               >
                 Code
               </button>
             </div>
             {backgroundPreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <div className="w-full h-full flex flex-col gap-4">
-                  <div className=" p-3 flex items-center gap-3 bg-[#edf7ed] rounded">
-                    <IoCheckmarkDoneCircleOutline className="text-[#418944] text-[1.5rem]" />
-                    <p className="text-[#418944] text-[1rem]">
-                      This is a success Alert.
-                    </p>
-                  </div>
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <div className="w-full h-full flex flex-col gap-4">
+                    <div className=" p-3 flex items-center gap-3 bg-[#edf7ed] rounded">
+                      <IoCheckmarkDoneCircleOutline className="text-[#418944] text-[1.5rem]"/>
+                      <p className="text-[#418944] text-[1rem]">
+                        This is a success Alert.
+                      </p>
+                    </div>
 
-                  <div className="p-3 flex items-center gap-3 bg-[#e5f6fd] rounded">
-                    <MdOutlineInfo className="text-[#2d9dda] text-[1.5rem]" />
-                    <p className="text-[#2d9dda] text-[1rem]">
-                      This is a info Alert.
-                    </p>
-                  </div>
+                    <div className="p-3 flex items-center gap-3 bg-[#e5f6fd] rounded">
+                      <MdOutlineInfo className="text-[#2d9dda] text-[1.5rem]"/>
+                      <p className="text-[#2d9dda] text-[1rem]">
+                        This is a info Alert.
+                      </p>
+                    </div>
 
-                  <div className="p-3 flex items-center gap-3 bg-[#fdeded] rounded">
-                    <MdErrorOutline className="text-[#d74242] text-[1.5rem]" />
-                    <p className="text-[#d74242] text-[1rem]">
-                      This is a error Alert.
-                    </p>
-                  </div>
+                    <div className="p-3 flex items-center gap-3 bg-[#fdeded] rounded">
+                      <MdErrorOutline className="text-[#d74242] text-[1.5rem]"/>
+                      <p className="text-[#d74242] text-[1rem]">
+                        This is a error Alert.
+                      </p>
+                    </div>
 
-                  <div className="p-3  flex items-center gap-3 bg-[#fff4e5] rounded">
-                    <IoWarningOutline className="text-[#f18831] text-[1.5rem]" />
-                    <p className="text-[#f18831] text-[1rem]">
-                      This is a warning Alert.
-                    </p>
+                    <div className="p-3  flex items-center gap-3 bg-[#fff4e5] rounded">
+                      <IoWarningOutline className="text-[#f18831] text-[1.5rem]"/>
+                      <p className="text-[#f18831] text-[1rem]">
+                        This is a warning Alert.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
             )}
 
             {backgroundCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 import React from "react";
 
 // icons
@@ -188,14 +190,14 @@ const AlertMessageWithBackground = () => {
 
 export default AlertMessageWithBackground;
               '
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
             <ContentHeader
-              text={"alert message with title"}
-              id={"alert_message_with_title"}
+                text={"alert message with title"}
+                id={"alert_message_with_title"}
             />
           </div>
 
@@ -205,81 +207,83 @@ export default AlertMessageWithBackground;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${alertWithTitlePreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  alertWithTitlePreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleAlertWithTitlePreview}
+                  className={`${
+                      alertWithTitlePreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleAlertWithTitlePreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  alertWithTitleCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleAlertWithTitleCode}
+                  className={`${
+                      alertWithTitleCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleAlertWithTitleCode}
               >
                 Code
               </button>
             </div>
             {alertWithTitlePreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className="w-full h-full flex flex-col gap-4">
-                  <div className=" p-3 flex gap-3 bg-[#edf7ed] rounded">
-                    <IoCheckmarkDoneCircleOutline className="text-[#418944] text-[1.5rem]" />
-                    <div className="flex flex-col gap-1">
-                      <h2 className="text-[#418944] text-[1.2rem] font-[500]">
-                        Message Title
-                      </h2>
-                      <p className="text-[#418944] text-[1rem]">
-                        This is a success Alert.
-                      </p>
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-full h-full flex flex-col gap-4">
+                    <div className=" p-3 flex gap-3 bg-[#edf7ed] rounded">
+                      <IoCheckmarkDoneCircleOutline className="text-[#418944] text-[1.5rem]"/>
+                      <div className="flex flex-col gap-1">
+                        <h2 className="text-[#418944] text-[1.2rem] font-[500]">
+                          Message Title
+                        </h2>
+                        <p className="text-[#418944] text-[1rem]">
+                          This is a success Alert.
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="p-3 flex gap-3 bg-[#e5f6fd] rounded">
-                    <MdOutlineInfo className="text-[#2d9dda] text-[1.5rem]" />
-                    <div className="flex flex-col gap-1">
-                      <h2 className="text-[#2d9dda] text-[1.2rem] font-[500]">
-                        Message Title
-                      </h2>
-                      <p className="text-[#2d9dda] text-[1rem]">
-                        This is a info Alert.
-                      </p>
+                    <div className="p-3 flex gap-3 bg-[#e5f6fd] rounded">
+                      <MdOutlineInfo className="text-[#2d9dda] text-[1.5rem]"/>
+                      <div className="flex flex-col gap-1">
+                        <h2 className="text-[#2d9dda] text-[1.2rem] font-[500]">
+                          Message Title
+                        </h2>
+                        <p className="text-[#2d9dda] text-[1rem]">
+                          This is a info Alert.
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="p-3 flex gap-3 bg-[#fdeded] rounded">
-                    <MdErrorOutline className="text-[#d74242] text-[1.5rem]" />
-                    <div className="flex flex-col gap-1">
-                      <h2 className="text-[#d74242] text-[1.2rem] font-[500]">
-                        Message Title
-                      </h2>
-                      <p className="text-[#d74242] text-[1rem]">
-                        This is a error Alert.
-                      </p>
+                    <div className="p-3 flex gap-3 bg-[#fdeded] rounded">
+                      <MdErrorOutline className="text-[#d74242] text-[1.5rem]"/>
+                      <div className="flex flex-col gap-1">
+                        <h2 className="text-[#d74242] text-[1.2rem] font-[500]">
+                          Message Title
+                        </h2>
+                        <p className="text-[#d74242] text-[1rem]">
+                          This is a error Alert.
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="p-3  flex gap-3 bg-[#fff4e5] rounded">
-                    <IoWarningOutline className="text-[#f18831] text-[1.5rem]" />
-                    <div className="flex flex-col gap-1">
-                      <h2 className="text-[#f18831] text-[1.2rem] font-[500]">
-                        Message Title
-                      </h2>
-                      <p className="text-[#f18831] text-[1rem]">
-                        This is a warning Alert.
-                      </p>
+                    <div className="p-3  flex gap-3 bg-[#fff4e5] rounded">
+                      <IoWarningOutline className="text-[#f18831] text-[1.5rem]"/>
+                      <div className="flex flex-col gap-1">
+                        <h2 className="text-[#f18831] text-[1.2rem] font-[500]">
+                          Message Title
+                        </h2>
+                        <p className="text-[#f18831] text-[1rem]">
+                          This is a warning Alert.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
             )}
 
             {alertWithTitleCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 import React from "react";
 
 // icons
@@ -337,14 +341,14 @@ const AlertMessageWithTitle = () => {
 
 export default AlertMessageWithTitle;
               '
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
             <ContentHeader
-              text={"alert message with border"}
-              id={"alert_message_with_border"}
+                text={"alert message with border"}
+                id={"alert_message_with_border"}
             />
           </div>
 
@@ -354,61 +358,63 @@ export default AlertMessageWithTitle;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${borderPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  borderPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleBorderPreview}
+                  className={`${
+                      borderPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleBorderPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  borderCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleBorderCode}
+                  className={`${
+                      borderCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleBorderCode}
               >
                 Code
               </button>
             </div>
             {borderPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className="w-full h-full flex flex-col gap-4">
-                  <div className=" p-3 flex items-center gap-3 border-[2px] border-[#418944] rounded">
-                    <IoCheckmarkDoneCircleOutline className="text-[#418944] text-[1.5rem]" />
-                    <p className="text-[#418944] text-[1rem]">
-                      This is a success Alert.
-                    </p>
-                  </div>
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-full h-full flex flex-col gap-4">
+                    <div className=" p-3 flex items-center gap-3 border-[2px] border-[#418944] rounded">
+                      <IoCheckmarkDoneCircleOutline className="text-[#418944] text-[1.5rem]"/>
+                      <p className="text-[#418944] text-[1rem]">
+                        This is a success Alert.
+                      </p>
+                    </div>
 
-                  <div className="p-3 flex items-center gap-3 border-[2px] border-[#2d9dda] rounded">
-                    <MdOutlineInfo className="text-[#2d9dda] text-[1.5rem]" />
-                    <p className="text-[#2d9dda] text-[1rem]">
-                      This is a info Alert.
-                    </p>
-                  </div>
+                    <div className="p-3 flex items-center gap-3 border-[2px] border-[#2d9dda] rounded">
+                      <MdOutlineInfo className="text-[#2d9dda] text-[1.5rem]"/>
+                      <p className="text-[#2d9dda] text-[1rem]">
+                        This is a info Alert.
+                      </p>
+                    </div>
 
-                  <div className="p-3 flex items-center gap-3 border-[2px] border-[#d74242] rounded">
-                    <MdErrorOutline className="text-[#d74242] text-[1.5rem]" />
-                    <p className="text-[#d74242] text-[1rem]">
-                      This is a error Alert.
-                    </p>
-                  </div>
+                    <div className="p-3 flex items-center gap-3 border-[2px] border-[#d74242] rounded">
+                      <MdErrorOutline className="text-[#d74242] text-[1.5rem]"/>
+                      <p className="text-[#d74242] text-[1rem]">
+                        This is a error Alert.
+                      </p>
+                    </div>
 
-                  <div className="p-3  flex items-center gap-3 border-[2px] border-[#f18831] rounded">
-                    <IoWarningOutline className="text-[#f18831] text-[1.5rem]" />
-                    <p className="text-[#f18831] text-[1rem]">
-                      This is a warning Alert.
-                    </p>
+                    <div className="p-3  flex items-center gap-3 border-[2px] border-[#f18831] rounded">
+                      <IoWarningOutline className="text-[#f18831] text-[1.5rem]"/>
+                      <p className="text-[#f18831] text-[1rem]">
+                        This is a warning Alert.
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
             )}
 
             {borderCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 import React from "react";
 
 // icons
@@ -450,14 +456,14 @@ const AlertMessageWithBorder = () => {
 
 export default AlertMessageWithBorder;
               '
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
             <ContentHeader
-              text={"message take action"}
-              id={"message_take_action"}
+                text={"message take action"}
+                id={"message_take_action"}
             />
           </div>
 
@@ -468,73 +474,79 @@ export default AlertMessageWithBorder;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${alertActionPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  alertActionPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleAlertActionPreview}
+                  className={`${
+                      alertActionPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleAlertActionPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  alertActionCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleAlertActionCode}
+                  className={`${
+                      alertActionCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleAlertActionCode}
               >
                 Code
               </button>
             </div>
             {alertActionPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className="w-full h-full flex flex-col gap-4">
-                  <div className=" p-3 flex items-center justify-between bg-[#edf7ed] rounded">
-                    <div className="flex items-center gap-3">
-                      <IoCheckmarkDoneCircleOutline className="text-[#418944] text-[1.5rem]" />
-                      <p className="text-[#418944] text-[1rem]">
-                        This is a success Alert.
-                      </p>
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-full h-full flex flex-col gap-4">
+                    <div className=" p-3 flex items-center justify-between bg-[#edf7ed] rounded">
+                      <div className="flex items-center gap-3">
+                        <IoCheckmarkDoneCircleOutline className="text-[#418944] text-[1.5rem]"/>
+                        <p className="text-[#418944] text-[1rem]">
+                          This is a success Alert.
+                        </p>
+                      </div>
+                      <HiOutlineXMark
+                          className="text-[#418944] text-[1.8rem] p-1 rounded-full hover:bg-[#41894317] cursor-pointer active:scale-[0.9]"/>
                     </div>
-                    <HiOutlineXMark className="text-[#418944] text-[1.8rem] p-1 rounded-full hover:bg-[#41894317] cursor-pointer active:scale-[0.9]" />
-                  </div>
 
-                  <div className="p-3 flex items-center justify-between bg-[#e5f6fd] rounded">
-                    <div className="flex items-center gap-3">
-                      <MdOutlineInfo className="text-[#2d9dda] text-[1.5rem]" />
-                      <p className="text-[#2d9dda] text-[1rem]">
-                        This is a info Alert.
-                      </p>
+                    <div className="p-3 flex items-center justify-between bg-[#e5f6fd] rounded">
+                      <div className="flex items-center gap-3">
+                        <MdOutlineInfo className="text-[#2d9dda] text-[1.5rem]"/>
+                        <p className="text-[#2d9dda] text-[1rem]">
+                          This is a info Alert.
+                        </p>
+                      </div>
+                      <HiOutlineXMark
+                          className="text-[#2d9dda] text-[1.8rem] p-1 rounded-full hover:bg-[#2d9dda15] cursor-pointer active:scale-[0.9]"/>
                     </div>
-                    <HiOutlineXMark className="text-[#2d9dda] text-[1.8rem] p-1 rounded-full hover:bg-[#2d9dda15] cursor-pointer active:scale-[0.9]" />
-                  </div>
 
-                  <div className="p-3 flex items-center justify-between bg-[#fdeded] rounded">
-                    <div className="flex items-center gap-3">
-                      <MdErrorOutline className="text-[#d74242] text-[1.5rem]" />
-                      <p className="text-[#d74242] text-[1rem]">
-                        This is a error Alert.
-                      </p>
+                    <div className="p-3 flex items-center justify-between bg-[#fdeded] rounded">
+                      <div className="flex items-center gap-3">
+                        <MdErrorOutline className="text-[#d74242] text-[1.5rem]"/>
+                        <p className="text-[#d74242] text-[1rem]">
+                          This is a error Alert.
+                        </p>
+                      </div>
+                      <HiOutlineXMark
+                          className="text-[#d74242] text-[1.8rem] p-1 rounded-full hover:bg-[#d7424215] cursor-pointer active:scale-[0.9]"/>
                     </div>
-                    <HiOutlineXMark className="text-[#d74242] text-[1.8rem] p-1 rounded-full hover:bg-[#d7424215] cursor-pointer active:scale-[0.9]" />
-                  </div>
 
-                  <div className="p-3  flex items-center justify-between bg-[#fff4e5] rounded">
-                    <div className="flex items-center gap-3">
-                      <IoWarningOutline className="text-[#f18831] text-[1.5rem]" />
-                      <p className="text-[#f18831] text-[1rem]">
-                        This is a warning Alert.
-                      </p>
+                    <div className="p-3  flex items-center justify-between bg-[#fff4e5] rounded">
+                      <div className="flex items-center gap-3">
+                        <IoWarningOutline className="text-[#f18831] text-[1.5rem]"/>
+                        <p className="text-[#f18831] text-[1rem]">
+                          This is a warning Alert.
+                        </p>
+                      </div>
+                      <HiOutlineXMark
+                          className="text-[#f18831] text-[1.8rem] p-1 rounded-full hover:bg-[#f1873118] cursor-pointer active:scale-[0.9]"/>
                     </div>
-                    <HiOutlineXMark className="text-[#f18831] text-[1.8rem] p-1 rounded-full hover:bg-[#f1873118] cursor-pointer active:scale-[0.9]" />
                   </div>
                 </div>
-              </div>
             )}
 
             {alertActionCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 import React from "react";
 
 // icons
@@ -593,32 +605,32 @@ const AlertMessageWithAction = () => {
 
 export default AlertMessageWithAction;
               '
-              />
+                />
             )}
           </div>
 
-          <OverviewFooter />
+          <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
+        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>
           <a
-            href="#alert_message_with_background"
-            className={`${
-              contentActiveTab === 1 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(1)}
+              href="#alert_message_with_background"
+              className={`${
+                  contentActiveTab === 1 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(1)}
           >
             Alert Message With Background
           </a>
           <a
-            href="#alert_message_with_title"
-            className={`${
-              contentActiveTab === 2 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(2)}
+              href="#alert_message_with_title"
+              className={`${
+                  contentActiveTab === 2 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(2)}
           >
             Alert Message With Title
           </a>

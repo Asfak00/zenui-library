@@ -71,8 +71,7 @@ const Appbar = () => {
           />
 
           <p className=" w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an app bar with profile login/logout component. Manage user sessions seamlessly with profile access.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -185,8 +184,7 @@ export default AppbarWithUsericon;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the image gallery skeleton. Here the skeleton is created for
-            the image, similar to the grid layout.
+            This is an app bar with menu and search bar for intuitive navigation and quick access.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -277,8 +275,7 @@ export default AppbarWithSearchbar;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the skeleton of a social post, and you can also use it as a
-            card. Here is image, name, bio and post details.
+            This is an app bar with menu, cart, notification icons, and search bar for comprehensive navigation and interaction.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

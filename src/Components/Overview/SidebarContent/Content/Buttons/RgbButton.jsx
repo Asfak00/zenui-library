@@ -56,8 +56,7 @@ const RgbButton = () => {
         <ContentHeader text={"RGB border"} id={"rgb_border"} />
 
         <p className="w-[80%] text-text text-[1rem]">
-          Buttons like this are used a lot on our websites and are very easy to
-          create but you can copy the codes from here to save your time.
+          This is an RGB bordered button component. Click to engage with vibrant, customizable borders for stylish interaction.
         </p>
 
         <div className="w-[80%] border border-border rounded mt-8">
@@ -136,8 +135,7 @@ const RgbButton = () => {
         </div>
 
         <p className="w-[80%] text-text text-[1rem]">
-          Here we are animating from bottom, right and left over the button's
-          background color via position.
+          This is a hover animated button component. Experience dynamic interaction with engaging animations on hover.
         </p>
 
         <div className="w-[80%] border border-border rounded mt-8">

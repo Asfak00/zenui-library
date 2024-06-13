@@ -52,8 +52,7 @@ const SwitchInput = () => {
           <ContentHeader text={"circle switch"} id={"circle_switch"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a circle switch button component. Toggle options with a simple tap on the sleek, circular design.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -222,8 +221,7 @@ export default InputSwitch;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a square switch button component. Toggle options with a tap on the modern, square design.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

@@ -62,8 +62,7 @@ const TextareaInput = () => {
           <ContentHeader text={"required textarea"} id={"required_textarea"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a required textarea component. Please enter your text here; this field cannot be left empty.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -141,8 +140,7 @@ export default Textarea;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a textarea input with a background color. Enter your text here for a more visually appealing experience.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -220,8 +218,7 @@ export default Textarea;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a textarea input with an animated label. Enter your text here; the label animates accordingly for clarity.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

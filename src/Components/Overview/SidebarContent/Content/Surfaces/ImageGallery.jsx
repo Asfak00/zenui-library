@@ -106,8 +106,7 @@ const ImageGallery = () => {
           <ContentHeader text={"image Gallery 1"} id={"image_gallery_1"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an image gallery with a simple layout for easy browsing and viewing.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -209,8 +208,7 @@ export default ImageGallery;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an image gallery with a complex layout for detailed and organized viewing.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -314,8 +312,7 @@ export default ImageGallery;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an image gallery with a sleek layout for stylish and organized viewing.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -409,8 +406,7 @@ export default ImageGallery;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an image gallery with a robust layout for structured and efficient viewing.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -556,8 +552,7 @@ export default ImageGallery;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an image gallery with a complex layout for detailed and organized viewing.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -694,8 +689,7 @@ export default ImageGallery;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an image gallery with a stylish layout featuring title text and icons for enhanced visual appeal.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

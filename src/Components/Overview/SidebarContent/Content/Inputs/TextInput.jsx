@@ -98,8 +98,7 @@ const TextInput = () => {
           <ContentHeader text={"required input"} id={"primary_input"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an input text field. Use it to enter your information, which will be processed accordingly.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -173,8 +172,7 @@ export default Textarea;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a bottom-bordered input text field. Enter your information here for it to be processed accordingly.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -226,8 +224,7 @@ export default Textarea;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an animated label text input field. Enter your data here, and the label will animate accordingly.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -287,8 +284,7 @@ export default Textarea;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an input field with an icon. Enter your information here and use the icon for additional actions.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -409,8 +405,7 @@ export default Inputs;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a password input field with show/hide functionality. Enter your password and toggle visibility as needed.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

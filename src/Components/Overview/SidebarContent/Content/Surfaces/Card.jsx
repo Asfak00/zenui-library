@@ -146,8 +146,7 @@ const Card = () => {
           <ContentHeader id="Blog_Card" text={"Blog Card"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            We see navigation Card with borders on all sides like this on almost
-            all websites. They are very simple.
+            This is a blog card with icon and dropdown component. Explore content with icons and interactive dropdowns for seamless navigation.
           </p>
 
           <div className="w-[80%] border border-border rounded my-8">
@@ -390,8 +389,7 @@ export default BlogCard;
           />
 
           <p className="w-[80%] text-text text-[1rem]">
-            We see navigation Card with borders on all sides like this on almost
-            all websites. They are very simple.
+            This is a product card with icon and add to cart button. Browse products and add them to your cart effortlessly.
           </p>
           <div className="w-[80%] border border-border rounded mt-8">
             <div className="relative">
@@ -556,8 +554,7 @@ export default SimpleProfileCard;
             </div>
 
             <p className="w-[80%] text-text text-[1rem]">
-              We see navigation Card with borders on all sides like this on
-              almost all websites. They are very simple.
+              This is a music card component. Explore tracks, albums, and artists with ease and convenience.
             </p>
 
             <div className="w-[80%] border border-border rounded mt-8">
@@ -688,8 +685,7 @@ export default SimpleProfileCard;
             <ContentHeader id={"profile_card_2"} text={"Simple profile card"}/>
 
             <p className="w-[80%] text-text text-[1rem]">
-              We see navigation Card with borders on all sides like this on
-              almost all websites. They are very simple.
+              This is a profile card with statistics component. View detailed insights and information about profiles seamlessly.
             </p>
 
             <div className="w-[80%] border border-border rounded mt-3">
@@ -812,8 +808,7 @@ export default SimpleProfileCard;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            Many times it is seen that only the bottom of the bar does not come
-            from all sides, that is the tab of the bottom bar.
+            This is a profile card displaying followers, posts, and likes. Explore engagement metrics effortlessly.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -929,8 +924,7 @@ export default profileCard;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            Many times it is seen that only the bottom of the bar does not come
-            from all sides, that is the tab of the bottom bar.
+            This is a team member card with elegant alignment. View team details with stylish presentation.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -1113,8 +1107,7 @@ export default TeamCard;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            Many times it is seen that only the bottom of the bar does not come
-            from all sides, that is the tab of the bottom bar.
+            This is a pricing card with highlighted points. Compare plans with clear, marked features for easy selection.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -1268,8 +1261,7 @@ export default PricingCard;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            Many times it is seen that only the bottom of the bar does not come
-            from all sides, that is the tab of the bottom bar.
+            This is a pricing card with check and cross icons for feature comparison. Easily assess options with clear indicators.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

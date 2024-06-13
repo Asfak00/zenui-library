@@ -235,7 +235,7 @@ const index = ({ startContent, setStartContent }) => {
               }   border-l border-[#9caebc]`}
               onClick={() => setStartContent(14)}
             >
-              According
+              Accordion
             </Link>
             <Link
               to={"/components/appbar"}

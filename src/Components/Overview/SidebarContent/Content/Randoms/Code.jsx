@@ -37,7 +37,7 @@ const Code = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6">
+      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
         <div>
           <ContentHeader text={"Code"} id={"code"} />
 
@@ -47,44 +47,47 @@ const Code = () => {
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${codePreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  codePreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleCodePreview}
+                  className={`${
+                      codePreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleCodePreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  codeCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleCodeCode}
+                  className={`${
+                      codeCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleCodeCode}
               >
                 Code
               </button>
             </div>
             {codePreview && (
-              <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <div className="bg-[#d1d1d180] text-[#000000] rounded-md py-1 px-4 tracking-wider font-mono font-[500]">
-                  npm i @zenui
+                <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
+                  <div
+                      className="bg-[#d1d1d180] text-[#000000] rounded-md py-1 px-4 tracking-wider font-mono font-[500]">
+                    npm i @zenui
+                  </div>
                 </div>
-              </div>
             )}
 
             {codeCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 <div className="bg-[#d1d1d180] text-[#000000] rounded-md py-1 px-4 tracking-wider font-sans font-[600]">
      npm i @zenui
 </div>
                 '
-              />
+                />
             )}
           </div>
 
-          <OverviewFooter />
+          <OverviewFooter/>
         </div>
 
         <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
@@ -92,11 +95,11 @@ const Code = () => {
             CONTENTS
           </h2>
           <a
-            href="#code"
-            className={`${
-              contentActiveTab === 1 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(1)}
+              href="#code"
+              className={`${
+                  contentActiveTab === 1 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(1)}
           >
             Code
           </a>

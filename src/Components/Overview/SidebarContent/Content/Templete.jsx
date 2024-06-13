@@ -14,7 +14,7 @@ const Templete = () => {
   return (
     <aside className="dark:text-[#D9EEFF] pt-[4.5rem] pl-[5rem] ">
       <h1 className="font-[600] text-[#0471d6] dark:text-[#D9EEFF] text-[3rem] capitalize">
-        React Templates
+        ZenUI Free Templates
       </h1>
       <p className="w-[70%] text-text text-[1rem] dark:text-[#D9EEFF]">
         Browse our collection of free React templates to get started building

@@ -144,8 +144,7 @@ const FileInput = () => {
           <ContentHeader text={"upload with icon"} id={"upload_with_icon"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a file upload with icon component. Upload files easily using intuitive icons for guidance.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -272,8 +271,7 @@ export default FileUpload;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a file upload with button component. Easily upload files with a simple click of a button.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -411,8 +409,7 @@ export default Inputs;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a file upload with heading text component. Upload files accompanied by clear heading instructions.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -550,8 +547,7 @@ export default Inputs;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a profile upload component. Easily update your profile picture with a simple upload feature.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

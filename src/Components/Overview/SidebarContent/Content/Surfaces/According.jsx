@@ -105,8 +105,7 @@ const According = () => {
           <ContentHeader id="default_open" text={"default open"} />
 
           <p className=" text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a default opened accordion component. Explore content with immediate visibility upon access.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -254,12 +253,11 @@ export default BorderAccording;
           </div>
 
           <div className="mt-8">
-            <ContentHeader id="border_according" text={"Border According"}/>
+            <ContentHeader id="border_according" text={"Border Accordion"}/>
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a border accordion with toggle component. Expand and collapse sections with distinct border styling for clarity.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -412,13 +410,12 @@ export default BorderAccording;
           <div className="mt-8">
             <ContentHeader
                 id="background_according"
-                text={"background According"}
+                text={"background Accordion"}
             />
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a background color accordion with toggle component. Expand and collapse sections with distinct background colors for visual differentiation.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -618,7 +615,7 @@ export default BackgroundAccording;
               } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
               onClick={() => setContentActiveTab(2)}
           >
-            Border According
+            Border Accordion
           </a>
           <a
               href="#background_according"
@@ -627,7 +624,7 @@ export default BackgroundAccording;
             } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
             onClick={() => setContentActiveTab(3)}
           >
-            Background According
+            Background Accordion
           </a>
         </div>
       </aside>

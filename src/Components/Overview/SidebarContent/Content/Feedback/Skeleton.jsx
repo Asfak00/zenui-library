@@ -69,7 +69,7 @@ const Skeleton = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6">
+      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
         <div className="w-[80%]">
           <ContentHeader text={"Card Skeleton"} id={"card_skeleton"} />
 
@@ -79,59 +79,62 @@ const Skeleton = () => {
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${cardSkeletonPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  cardSkeletonPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleCardSkeletonPreview}
+                  className={`${
+                      cardSkeletonPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleCardSkeletonPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  cardSkeletonCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleCardSkeletonCode}
+                  className={`${
+                      cardSkeletonCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleCardSkeletonCode}
               >
                 Code
               </button>
             </div>
             {cardSkeletonPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className="w-[400px] border border-[#00000017] animate-pulse rounded-md">
-                  <div className="w-full bg-border h-[130px] relative">
-                    <img className="w-[120px] h-[120px] rounded-full bg-[#cecece] absolute bottom-[-40%] right-[35%]" />
-                  </div>
-
-                  <div className="flex flex-col gap-3 items-center justify-center w-full py-8 mt-12">
-                    <h1 className="w-[70%] h-[35px] bg-border"></h1>
-                    <p className="w-[50%] h-[20px] bg-border"></p>
-                  </div>
-
-                  <div className=" border-t p-4 w-full flex items-center justify-between">
-                    <div className="w-[30%] flex flex-col gap-2">
-                      <h1 className=" h-[35px] bg-border"></h1>
-                      <p className="h-[20px] bg-border"></p>
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-[400px] border border-[#00000017] animate-pulse rounded-md">
+                    <div className="w-full bg-border h-[130px] relative">
+                      <img
+                          className="w-[120px] h-[120px] rounded-full bg-[#cecece] absolute bottom-[-40%] right-[35%]"/>
                     </div>
 
-                    <div className="w-[30%] flex flex-col gap-2">
-                      <h1 className="h-[35px] bg-border"></h1>
-                      <p className="h-[20px] bg-border"></p>
+                    <div className="flex flex-col gap-3 items-center justify-center w-full py-8 mt-12">
+                      <h1 className="w-[70%] h-[35px] bg-border"></h1>
+                      <p className="w-[50%] h-[20px] bg-border"></p>
                     </div>
 
-                    <div className=" w-[30%] flex flex-col gap-2">
-                      <h1 className="h-[35px] bg-border"></h1>
-                      <p className="h-[20px] bg-border"></p>
+                    <div className=" border-t p-4 w-full flex items-center justify-between">
+                      <div className="w-[30%] flex flex-col gap-2">
+                        <h1 className=" h-[35px] bg-border"></h1>
+                        <p className="h-[20px] bg-border"></p>
+                      </div>
+
+                      <div className="w-[30%] flex flex-col gap-2">
+                        <h1 className="h-[35px] bg-border"></h1>
+                        <p className="h-[20px] bg-border"></p>
+                      </div>
+
+                      <div className=" w-[30%] flex flex-col gap-2">
+                        <h1 className="h-[35px] bg-border"></h1>
+                        <p className="h-[20px] bg-border"></p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
             )}
 
             {cardSkeletonCode && (
-              <Showcode
-                code="
+                <Showcode
+                    code="
 import React from 'react';
 
 const CardSkeleton = () => {
@@ -172,14 +175,14 @@ const CardSkeleton = () => {
 
 export default CardSkeleton;
               "
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
             <ContentHeader
-              text={"image gallery skeleton"}
-              id={"image_gallery_skeleton"}
+                text={"image gallery skeleton"}
+                id={"image_gallery_skeleton"}
             />
           </div>
 
@@ -189,45 +192,47 @@ export default CardSkeleton;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${imageGellaryPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  imageGellaryPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleImageGellaryPreview}
+                  className={`${
+                      imageGellaryPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleImageGellaryPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  imageGellaryCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleImageGellaryCode}
+                  className={`${
+                      imageGellaryCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleImageGellaryCode}
               >
                 Code
               </button>
             </div>
             {imageGellaryPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className=" animate-pulse">
-                  <div className="flex gap-5">
-                    <img className="w-[200px] h-[300px] bg-border" />
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className=" animate-pulse">
+                    <div className="flex gap-5">
+                      <img className="w-[200px] h-[300px] bg-border"/>
 
-                    <div className="flex flex-col gap-5">
-                      <img className="w-[200px] h-[140px] bg-border" />
+                      <div className="flex flex-col gap-5">
+                        <img className="w-[200px] h-[140px] bg-border"/>
 
-                      <img className="w-[200px] h-[140px] bg-border" />
+                        <img className="w-[200px] h-[140px] bg-border"/>
+                      </div>
                     </div>
-                  </div>
 
-                  <img className="w-full h-[150px] mt-5 bg-border" />
+                    <img className="w-full h-[150px] mt-5 bg-border"/>
+                  </div>
                 </div>
-              </div>
             )}
 
             {imageGellaryCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 import React from "react";
 
 const ImageGallery = () => {
@@ -253,14 +258,14 @@ const ImageGallery = () => {
 export default ImageGallery;
 
               '
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
             <ContentHeader
-              text={"social post skeleton"}
-              id={"social_post_skeleton"}
+                text={"social post skeleton"}
+                id={"social_post_skeleton"}
             />
           </div>
 
@@ -270,49 +275,51 @@ export default ImageGallery;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${socialPostPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  socialPostPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleSocialPostPreview}
+                  className={`${
+                      socialPostPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleSocialPostPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  socialPostCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleSocialPostCode}
+                  className={`${
+                      socialPostCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleSocialPostCode}
               >
                 Code
               </button>
             </div>
             {socialPostPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className="w-[450px] bg-secondary p-6 border border-border rounded animate-pulse">
-                  <div className="flex items-center">
-                    <div className="w-[20%]">
-                      <img className="w-[60px] h-[60px] rounded-full bg-border" />
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="w-[450px] bg-secondary p-6 border border-border rounded animate-pulse">
+                    <div className="flex items-center">
+                      <div className="w-[20%]">
+                        <img className="w-[60px] h-[60px] rounded-full bg-border"/>
+                      </div>
+
+                      <div className="flex flex-col gap-3 w-[80%]">
+                        <h1 className="w-[60%] h-[25px] bg-border"></h1>
+                        <p className="w-[80%] h-[15px] bg-border"></p>
+                      </div>
                     </div>
 
-                    <div className="flex flex-col gap-3 w-[80%]">
-                      <h1 className="w-[60%] h-[25px] bg-border"></h1>
+                    <div className="mt-10 flex flex-col gap-3">
+                      <p className="w-[90%] h-[15px] bg-border"></p>
                       <p className="w-[80%] h-[15px] bg-border"></p>
                     </div>
                   </div>
-
-                  <div className="mt-10 flex flex-col gap-3">
-                    <p className="w-[90%] h-[15px] bg-border"></p>
-                    <p className="w-[80%] h-[15px] bg-border"></p>
-                  </div>
                 </div>
-              </div>
             )}
 
             {socialPostCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 import React from "react";
 
 const SocialPostSkeleton = () => {
@@ -339,14 +346,14 @@ const SocialPostSkeleton = () => {
 
 export default SocialPostSkeleton;
         '
-              />
+                />
             )}
           </div>
 
           <div className="mt-8">
             <ContentHeader
-              text={"product details skeleton"}
-              id={"product_details_skeleton"}
+                text={"product details skeleton"}
+                id={"product_details_skeleton"}
             />
           </div>
 
@@ -357,53 +364,55 @@ export default SocialPostSkeleton;
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
-            <div className="">
+            <div className="relative">
+              <div
+                  className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${productDetailsPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
-                className={`${
-                  productDetailsPreview && "bg-border"
-                } px-6 py-2 border-r border-b roudned border-border`}
-                onClick={handleProductDetailsPreview}
+                  className={`${
+                      productDetailsPreview && "text-tabTextColor"
+                  } px-6 py-2 border-b z-[2] relative text-text border-border`}
+                  onClick={handleProductDetailsPreview}
               >
                 Preview
               </button>
               <button
-                className={`${
-                  productDetailsCode && "bg-border"
-                } px-6 py-2 border-r border-b rounded border-border`}
-                onClick={handleProductDetailsCode}
+                  className={`${
+                      productDetailsCode && "text-tabTextColor"
+                  } px-6 py-2 border-r z-[2] relative text-text border-b rounded-br border-border`}
+                  onClick={handleProductDetailsCode}
               >
                 Code
               </button>
             </div>
             {productDetailsPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                <div className="flex gap-6 w-full animate-pulse">
-                  <div>
-                    <img className="w-[450px] h-[300px] bg-border" />
-                    <div className="flex gap-3 mt-3">
-                      <img className="w-[130px] h-[100px] bg-border" />
-                      <img className="w-[130px] h-[100px] bg-border" />
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col gap-4 w-full">
-                    <h2 className="w-[100%] h-[35px] bg-border"></h2>
-                    <p className="w-[100%] h-[200px] bg-border"></p>
-                    <span className="w-[30%] h-[30px] bg-border"></span>
-                    <div className="flex items-center justify-between w-full">
-                      <button className="w-[30%] h-[40px] bg-border"></button>
-                      <i className="w-[40px] h-[40px] rounded-full bg-border"></i>
+                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="flex gap-6 w-full animate-pulse">
+                    <div>
+                      <img className="w-[450px] h-[300px] bg-border"/>
+                      <div className="flex gap-3 mt-3">
+                        <img className="w-[130px] h-[100px] bg-border"/>
+                        <img className="w-[130px] h-[100px] bg-border"/>
+                      </div>
                     </div>
 
-                    <button className="w-[35%] h-[40px] bg-border"></button>
+                    <div className="flex flex-col gap-4 w-full">
+                      <h2 className="w-[100%] h-[35px] bg-border"></h2>
+                      <p className="w-[100%] h-[200px] bg-border"></p>
+                      <span className="w-[30%] h-[30px] bg-border"></span>
+                      <div className="flex items-center justify-between w-full">
+                        <button className="w-[30%] h-[40px] bg-border"></button>
+                        <i className="w-[40px] h-[40px] rounded-full bg-border"></i>
+                      </div>
+
+                      <button className="w-[35%] h-[40px] bg-border"></button>
+                    </div>
                   </div>
                 </div>
-              </div>
             )}
 
             {productDetailsCode && (
-              <Showcode
-                code='
+                <Showcode
+                    code='
 import React from "react";
 
 const ProductDetailsSkeleton = () => {
@@ -441,32 +450,32 @@ const ProductDetailsSkeleton = () => {
 export default ProductDetailsSkeleton;
 
               '
-              />
+                />
             )}
           </div>
 
-          <OverviewFooter />
+          <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
+        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[37%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>
           <a
-            href="#card_skeleton"
-            className={`${
-              contentActiveTab === 1 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(1)}
+              href="#card_skeleton"
+              className={`${
+                  contentActiveTab === 1 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(1)}
           >
             Card Skeleton
           </a>
           <a
-            href="#image_gallery_skeleton"
-            className={`${
-              contentActiveTab === 2 && "!text-primary !border-primary"
-            } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
-            onClick={() => setContentActiveTab(2)}
+              href="#image_gallery_skeleton"
+              className={`${
+                  contentActiveTab === 2 && "!text-primary !border-primary"
+              } text-[0.9rem] text-[#5c5c5c] border-l border-transparent pl-4`}
+              onClick={() => setContentActiveTab(2)}
           >
             Image Gallery Skeleton
           </a>

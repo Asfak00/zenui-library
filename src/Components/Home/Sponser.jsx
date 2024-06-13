@@ -39,7 +39,7 @@ const Sponser = () => {
 
                 <div className='flex items-start gap-8 mt-6 w-[60%]'>
                     <div data-aos="fade-right" data-aos-duration="1500"
-                         className='flex flex-col items-center justify-center backdrop-blur-md sponsorCard px-8 pb-5 rounded-md'>
+                         className='flex flex-col items-center max-w-[430px] justify-center backdrop-blur-md sponsorCard px-8 pb-5 rounded-md'>
                         <img src='/golden.png' alt='zenui golden sponser' className='w-[140px] pt-[1rem]'/>
                         <h2 className='font-[900] flex items-center gap-5 text-[1.5rem] text-[#dcb867] pt-[1rem]'>Golden Sponsor</h2>
                         <p className='text-[1rem] text-[#9caebc] mt-6'>
@@ -48,12 +48,12 @@ const Sponser = () => {
                         <button className={`${utils.buttonPrimary} mt-5`}><a href='mailto:zenuilibrary@gmail.com'>Contribute</a></button>
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1500"
-                         className='flex flex-col items-center mt-[12rem] justify-center backdrop-blur-md px-8 pb-5 rounded-md sponsorCard'>
+                         className='flex flex-col items-center max-w-[430px] mt-[12rem] justify-center backdrop-blur-md px-8 pb-5 rounded-md sponsorCard'>
                         <img src='/silver.png' alt='zenui golden sponser' className='w-[160px] pt-[0.5rem]'/>
                         <h2 className='font-[900] flex items-center gap-5 text-[1.5rem] text-[#9caebc] pt-[0rem]'>Silver
                             Sponsor</h2>
                         <p className='text-[1rem] text-[#9caebc] mt-6'>
-                            As a Silver Sponsor, we will proudly display your <span className='text-[#9caebc] font-extrabold capitalize'>company's name</span> on our ZenUI website. This
+                            As a Silver Sponsor, we will proudly display your <span className='text-[#9caebc] font-extrabold capitalize'>company's name and logo</span> on our ZenUI website. This
                             recognition highlights your support and contribution to our project, helping us continue to
                             develop and refine our UI component library. Your sponsorship plays a crucial role in
                             empowering developers worldwide with the tools they need to create exceptional web

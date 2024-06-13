@@ -56,8 +56,7 @@ const AnimatedButton = () => {
         <ContentHeader text={"click animation"} id={"click_animation"} />
 
         <p className="w-[80%] text-text text-[1rem]">
-          Buttons like this are used a lot on our websites and are very easy to
-          create but you can copy the codes from here to save your time.
+          This is an animated button on click component. Enjoy dynamic responses with captivating animations upon clicking.
         </p>
 
         <div className="w-[80%] border border-border rounded mt-8">
@@ -114,8 +113,7 @@ const AnimatedButton = () => {
         </div>
 
         <p className="w-[80%] text-text text-[1rem]">
-          Here we are animating from bottom, right and left over the button's
-          background color via position.
+          This is a border hover animated button component. Experience dynamic border animations on hover for engaging interaction.
         </p>
 
         <div className="w-[80%] border border-border rounded mt-8">

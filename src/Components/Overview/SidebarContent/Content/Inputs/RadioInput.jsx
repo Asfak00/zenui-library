@@ -52,8 +52,7 @@ const RadioInput = () => {
           <ContentHeader text={"circle radio"} id={"circle_radio"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a circle radio button component. Select options with a click on the elegant circular design.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -129,8 +128,7 @@ export default InputRadio;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a square radio button component. Choose options by clicking on the modern, square design.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

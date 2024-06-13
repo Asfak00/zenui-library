@@ -39,7 +39,6 @@ const Navbar = () => {
   }, [toggle]);
 
   const getTheRouteName = () => {
-    console.log(window.location.pathname)
     return window.location.pathname
   }
 
