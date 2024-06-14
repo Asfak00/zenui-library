@@ -82,8 +82,7 @@ const Chip = () => {
           <ContentHeader text={"Primary Chip"} id={"primary_chip"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a basic chip component. Use it to display concise information or tags in a compact form.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -150,8 +149,8 @@ const Chip = () => {
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a chip component with multiple variants like bordered and background
+            color options for versatile styling.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -214,8 +213,7 @@ const Chip = () => {
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a chip with icon component. Display concise information or tags enhanced with an icon for clarity.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -313,8 +311,7 @@ export default Chip;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an avatar chip component. Display user information with a compact avatar for a visual touch.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -417,7 +414,7 @@ export default Chip;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
+        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

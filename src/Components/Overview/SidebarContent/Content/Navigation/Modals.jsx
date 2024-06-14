@@ -140,8 +140,7 @@ const Modals = () => {
           <ContentHeader id="alert_modal" text={"alert modal"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            We see navigation tabs with borders on all sides like this on almost
-            all websites. They are very simple.
+            This is an animated alert modal component. Notify with style using engaging animations for impact.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -277,8 +276,7 @@ export default Modal;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            Many times it is seen that only the bottom of the bar does not come
-            from all sides, that is the tab of the bottom bar.
+            This is a success modal with animation component. Celebrate achievements with stylish animated feedback.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -399,8 +397,7 @@ export default Modal;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            Many times it is seen that only the bottom of the bar does not come
-            from all sides, that is the tab of the bottom bar.
+            This is an info modal with animation component. Present information dynamically with engaging animations for clarity.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -548,8 +545,7 @@ export default DropDown;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            Many times it is seen that only the bottom of the bar does not come
-            from all sides, that is the tab of the bottom bar.
+            This is a permission modal with animation component. Manage permissions dynamically with engaging animations for clarity.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -729,8 +725,7 @@ export default DropDown;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            Many times it is seen that only the bottom of the bar does not come
-            from all sides, that is the tab of the bottom bar.
+            This is a form modal with animated input fields component. Complete forms dynamically with engaging animations for user interaction.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -984,8 +979,7 @@ export default DropDown;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            Many times it is seen that only the bottom of the bar does not come
-            from all sides, that is the tab of the bottom bar.
+            This is a cookie consent modal for accepting cookies upon initial browser visit.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -1134,8 +1128,7 @@ export default DropDown;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            Many times it is seen that only the bottom of the bar does not come
-            from all sides, that is the tab of the bottom bar.
+            This is a full-screen modal with animation for immersive user interaction.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

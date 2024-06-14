@@ -46,8 +46,7 @@ const Pagination = () => {
           />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a pagination component. Navigate through multiple pages efficiently with simple controls.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

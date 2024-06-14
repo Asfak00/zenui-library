@@ -63,8 +63,7 @@ const DropDown = () => {
           <ContentHeader text={"list dropdown"} id={"list_dropdown"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            We see navigation tabs with borders on all sides like this on almost
-            all websites. They are very simple.
+            This is a list dropdown component. Select items from a neatly organized and easily accessible list.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -177,8 +176,7 @@ export default DropDown;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            Many times it is seen that only the bottom of the bar does not come
-            from all sides, that is the tab of the bottom bar.
+            This is a grid list dropdown component. Choose items from a visually organized grid layout.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -316,8 +314,7 @@ export default DropDown;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            Many times it is seen that only the bottom of the bar does not come
-            from all sides, that is the tab of the bottom bar.
+            This is a dropdown megamenu with picture component. Browse categories with visual thumbnails for enhanced navigation.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
