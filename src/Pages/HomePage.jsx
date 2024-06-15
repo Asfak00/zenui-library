@@ -34,10 +34,12 @@ const HomePage = () => {
                     showSystemCursor={getTheRouteName() === '/' ? false : true}
                     hasBlendMode={true}
                     innerStyle={{
-                        backgroundColor: '#1c8aaa'
+                        backgroundColor: '#1c8aaa',
+                        zIndex: '20000'
                     }}
                     outerStyle={{
-                        border: '3px solid #1c8aaa'
+                        border: '3px solid #1c8aaa',
+                        zIndex: '20000'
                     }}
                 />
             )

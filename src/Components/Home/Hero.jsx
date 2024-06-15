@@ -135,20 +135,20 @@ const Hero = () => {
           </div>
         </div>
 
-        {/*  all components  */}
-        <div className='px-10 pb-20 overflow-hidden w-full flex items-center gap-[10px] buttonSlidingAnimation'>
-          {
-            allComponents?.map((component) => (
-                <div className="logos flex items-center gap-[10px]">
-                  <div className="logos-slide backdrop-blur-md py-3 px-8 rounded-md text-primary shadow-[0px_0px_10px_0px_rgba(0,0,0,0.05),0px_0px_6px_0px_rgba(0,0,0,0.15)] w-full">
-                    <a href='' className='capitalize' style={{width: "max-content"}}>{component.title}</a>
-                  </div>
-                </div>
-  )
-)
-}
+{/*        /!*  all components  *!/*/}
+{/*        <div className='px-10 pb-20 overflow-hidden w-full flex items-center gap-[10px] buttonSlidingAnimation'>*/}
+{/*          {*/}
+{/*            allComponents?.map((component) => (*/}
+{/*                <div className="logos flex items-center gap-[10px]">*/}
+{/*                  <div className="logos-slide backdrop-blur-md py-3 px-8 rounded-md text-primary shadow-[0px_0px_10px_0px_rgba(0,0,0,0.05),0px_0px_6px_0px_rgba(0,0,0,0.15)] w-full">*/}
+{/*                    <a href='' className='capitalize' style={{width: "max-content"}}>{component.title}</a>*/}
+{/*                  </div>*/}
+{/*                </div>*/}
+{/*  )*/}
+{/*)*/}
+{/*}*/}
 
-</div>
+{/*</div>*/}
 </main>
 )
   ;

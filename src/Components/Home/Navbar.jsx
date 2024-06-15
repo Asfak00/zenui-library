@@ -42,6 +42,20 @@ const Navbar = () => {
     return window.location.pathname
   }
 
+  document.addEventListener('click', (event)=>{
+    if(!event.target.closest('.zenuiSearchComponent') && !event.target.closest('.zenuiSearchInput')){
+      setIsSearchOpen(false)
+    }
+  })
+
+  document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'z') {
+      setIsSearchOpen(true)
+    }else if (event.key === 'Escape') {
+      setIsSearchOpen(false)
+    }
+  });
+
   return (
     <>
       <nav className="flex items-center justify-between w-full px-10 backdrop-blur-md dark:bg-[#060024]  py-3 shadow-sm dark:shadow-[#9a9ea1] fixed shadow-shadowColor top-0 left-0 z-50">
@@ -78,17 +92,18 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <div className=" relative" onClick={handleSearchClick}>
-            <IoIosSearch className=" absolute left-3 top-[0.6rem] text-primary text-[1.5rem]" />
+          <div className="zenuiSearchInput relative" onClick={handleSearchClick}>
+            <IoIosSearch className={`${getTheRouteName() === '/' ? 'text-primary ':'text-text' } absolute left-3 top-[0.6rem] text-[1.5rem]`} />
             <input
               type="search"
               name=""
               id=""
+              readOnly={true}
               placeholder="Search..."
               className={`${getTheRouteName() === '/' ? 'placeholder:text-[#024C92] border-[#024C92] bg-[#0471d6] text-[#024C92]' : 'placeholder:text-text border-[#c7d0dd] bg-border text-[#024C92]' } py-2 px-10 border dark:bg-[#1c173bfb] dark:border-[#9a9ea1] rounded-full focus:outline-none`}
             />
             <span className={`${getTheRouteName() === '/' ? 'border-[#024C92] bg-[#024C92] text-primary' : 'text-text border-[#c7d0dd] bg-secondary' } px-2 py-1 text-[0.9rem] font-[500] rounded-full absolute right-1.5 border dark:bg-[#353058fb] dark:text-[#D9EEFF] dark:border-none top-[0.350rem]`}>
-              Ctrl + S
+              Ctrl + Z
             </span>
           </div>
           <div className='flex items-center gap-2'>
@@ -109,7 +124,9 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {isSearchOpen && <Search />}
+      <div className={`${isSearchOpen ? 'visible z-[100]' : 'invisible z-[-1]'} transition-all duration-500`}>
+        <Search isSearchOpen={isSearchOpen}/>
+      </div>
     </>
   );
 };

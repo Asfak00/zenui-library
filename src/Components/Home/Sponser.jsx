@@ -45,7 +45,7 @@ const Sponser = () => {
                         <p className='text-[1rem] text-[#9caebc] mt-6'>
                             As a Golden Sponsor, your <span className='text-[#dcb867] capitalize'>company's name</span> and <span className='text-[#dcb867] capitalize'>logo</span> will be prominently featured on our ZenUI website and all social platforms. This premium visibility highlights your commitment to supporting cutting-edge web development tools. Your sponsorship directly contributes to the growth and enhancement of ZenUI, ensuring we continue to provide top-quality UI components to developers worldwide.
                         </p>
-                        <button className={`${utils.buttonPrimary} mt-5`}><a href='mailto:zenuilibrary@gmail.com'>Contribute</a></button>
+                        <button className={`${utils.buttonPrimary} mt-5`}><a href='mailto:zenuilibrary@gmail.com'>Become A Sponsor</a></button>
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1500"
                          className='flex flex-col items-center max-w-[430px] mt-[12rem] justify-center backdrop-blur-md px-8 pb-5 rounded-md sponsorCard'>
@@ -59,7 +59,7 @@ const Sponser = () => {
                             empowering developers worldwide with the tools they need to create exceptional web
                             applications.
                         </p>
-                        <button className={`${utils.buttonPrimary} mt-5`}><a href='mailto:zenuilibrary@gmail.com'>Contribute</a></button>
+                        <button className={`${utils.buttonPrimary} mt-5`}><a href='mailto:zenuilibrary@gmail.com'>Become A Sponsor</a></button>
 
                     </div>
                 </div>
