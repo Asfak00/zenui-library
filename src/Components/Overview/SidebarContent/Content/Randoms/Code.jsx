@@ -42,8 +42,7 @@ const Code = () => {
           <ContentHeader text={"Code"} id={"code"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a code display component. Showcase code snippets with clarity and formatting.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

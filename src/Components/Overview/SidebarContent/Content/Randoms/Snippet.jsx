@@ -95,8 +95,7 @@ const Snippet = () => {
           <ContentHeader text={"primary Snippet"} id={"primary_snippet"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a primary code snippet component with a copy button for easy code duplication.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -189,8 +188,7 @@ export default Snippet;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a primary code snippet with background color and a copy button for convenient code sharing.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -286,8 +284,7 @@ export default Snippet;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a primary code snippet with border color and a copy button for efficient code sharing and reuse.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -418,8 +415,7 @@ export default Snippet;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a primary code snippet with a gray background for clear code display without a copy button.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

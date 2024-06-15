@@ -50,8 +50,7 @@ const Badge = () => {
           <ContentHeader text={"message badge"} id={"message_badge"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a message badge component. Display notifications or messages with a sleek and visible badge.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -133,8 +132,7 @@ export default MessageBadge;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a cart badge component. Show cart items or notifications with a stylish and visible badge.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

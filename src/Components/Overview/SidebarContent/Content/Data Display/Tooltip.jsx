@@ -60,8 +60,7 @@ const Tooltip = () => {
           <ContentHeader text={"rounded tooltip"} id={"rounded_tooltip"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a tooltip component. Provide contextual information with a brief, hover-triggered tooltip.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -134,8 +133,7 @@ export default RoundedTooltip;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a tooltip component with an arrow indicator for clear element association on hover.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

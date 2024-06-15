@@ -119,8 +119,7 @@ const Testimonial = () => {
           <ContentHeader text={"testimonial 1"} id={"testimonial_1"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -236,8 +235,7 @@ export default Testimonial;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -344,8 +342,7 @@ export default Testimonial;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -442,8 +439,7 @@ export default Testimonial;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -558,8 +554,7 @@ export default Testimonial;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -664,8 +659,7 @@ export default Testimonial;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -766,8 +760,7 @@ export default Testimonial;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

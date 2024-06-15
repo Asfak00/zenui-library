@@ -47,8 +47,7 @@ const Dialog = () => {
           <ContentHeader text={"basic dialog"} id={"basic_dialog"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a dialog component. Display important messages, prompts, or actions in a focused modal window.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

@@ -78,8 +78,7 @@ const Loader = () => {
           <ContentHeader id={"circle_loader"} text={"circle loader"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a circle loader component. Indicate loading status with a sleek, circular animation.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -144,8 +143,7 @@ export default Loader;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a dashed loader component. Show loading progress with a dynamic, dashed-line animation.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -189,8 +187,7 @@ export default Loader;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an opacity loader component. Display loading status with a subtle opacity animation for sleek transitions.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -241,8 +238,7 @@ export default Loader;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a text loader component. Display loading status with animated placeholder text for dynamic feedback.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

@@ -74,8 +74,7 @@ const Skeleton = () => {
           <ContentHeader text={"Card Skeleton"} id={"card_skeleton"} />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a card skeleton component. Display placeholder content while the actual content is loading.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -187,8 +186,7 @@ export default CardSkeleton;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the image gallery skeleton. Here the skeleton is created for
-            the image, similar to the grid layout.
+            This is a grid image gallery skeleton component. Display placeholders for images while loading content.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -270,8 +268,7 @@ export default ImageGallery;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the skeleton of a social post, and you can also use it as a
-            card. Here is image, name, bio and post details.
+            This is a social card skeleton component. Show placeholders for social media content while it loads.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

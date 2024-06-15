@@ -94,8 +94,7 @@ const Notification = () => {
           />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a border notification component. Highlight important messages with distinct border styling for visibility.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -173,8 +172,7 @@ export default Notification;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a notification with a close icon for easy dismissal on user interaction.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -348,8 +346,7 @@ export default Notification;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is a notification with a close icon. Customize its position for optimal visibility and user interaction.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

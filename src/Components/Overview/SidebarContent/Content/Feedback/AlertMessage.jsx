@@ -87,8 +87,7 @@ const AlertMessage = () => {
           />
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the card skeleton. The skeleton provided here basically
-            shows the information of an account.
+            This is an alert message with background colors matched to different error types for clear visibility.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -202,8 +201,7 @@ export default AlertMessageWithBackground;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the image gallery skeleton. Here the skeleton is created for
-            the image, similar to the grid layout.
+            This is an alert message with a title and background colors matched to different error types for clear identification.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -353,8 +351,7 @@ export default AlertMessageWithTitle;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the skeleton of a social post, and you can also use it as a
-            card. Here is image, name, bio and post details.
+            This is an alert message with a title and border colors matched to different error types for clear identification.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">
@@ -468,9 +465,7 @@ export default AlertMessageWithBorder;
           </div>
 
           <p className="w-[80%] text-text text-[1rem]">
-            This is the skeleton of the product details page. You can use this
-            skeleton on the product details page of any of your e-commerce
-            websites. Each section is marked with comments within the code.
+            This is an alert message with a title, border colors for error types, and a cross icon for dismissal.
           </p>
 
           <div className="w-[80%] border border-border rounded mt-8">

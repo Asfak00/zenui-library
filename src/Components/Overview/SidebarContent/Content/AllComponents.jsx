@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 // card component
-import ComponentCardTemplete from "../../../../Shared/ComponentCardTemplete";
 import OverviewFooter from "../../../../Shared/OverviewFooter";
 import { Helmet } from "react-helmet";
 import { allComponents } from "../../../../Utils/AllComponents";
