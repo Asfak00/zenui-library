@@ -36,7 +36,7 @@ const Footer = () => {
             >
               Your Email
             </label>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 mt-1">
               <input
                 type="email"
                 name=""
@@ -51,7 +51,7 @@ const Footer = () => {
           </form>
         </div>
 
-        <div className=" flex gap-32">
+        <div className=" flex gap-20">
           <div className="flex gap-2 flex-col mt-4">
             <h3 className="font-[600] dark:text-[#0471d6] text-[#0471d6] text-[20px] capitalize">
               resources
@@ -59,46 +59,38 @@ const Footer = () => {
             <ul className="footer font-[400] text-[#9caebc] text-[0.9rem] flex flex-col gap-2">
               <li>
                 <p>Free templates</p>
-                <span>Free templates</span>
+                <span><a href='/getting-started/templates'>Free templates</a></span>
               </li>
               <li>
                 <p>Components</p>
-                <span>Components</span>
-              </li>
-              <li>
-                <p>Customization</p>
-                <span>Customization</span>
-              </li>
-              <li>
-                <p>Theming</p>
-                <span>Theming</span>
+                <span><a href='/components/all-components'>Components</a></span>
               </li>
             </ul>
           </div>
 
-          <div className="flex gap-2 flex-col mt-4">
-            <h3 className="font-[600]  dark:text-[#0471d6] text-[#0471d6] text-[20px] capitalize">
-              Explore
-            </h3>
-            <ul className="footer font-[400] text-[0.9rem] text-[#9caebc] flex flex-col gap-2">
-              <li>
-                <p>Documentation</p>
-                <span>Documentation</span>
-              </li>
-              <li>
-                <p>Store</p>
-                <span>Store</span>
-              </li>
-              <li>
-                <p>Blog</p>
-                <span>Blog</span>
-              </li>
-              <li>
-                <p>Showcase</p>
-                <span>Showcase</span>
-              </li>
-            </ul>
-          </div>
+          {/*<div className="flex gap-2 flex-col mt-4">*/}
+          {/*  <h3 className="font-[600]  dark:text-[#0471d6] text-[#0471d6] text-[20px] capitalize">*/}
+          {/*    Explore*/}
+          {/*  </h3>*/}
+          {/*  <ul className="footer font-[400] text-[0.9rem] text-[#9caebc] flex flex-col gap-2">*/}
+          {/*    <li>*/}
+          {/*      <p>Documentation</p>*/}
+          {/*      <span>Documentation</span>*/}
+          {/*    </li>*/}
+          {/*    <li>*/}
+          {/*      <p>Store</p>*/}
+          {/*      <span>Store</span>*/}
+          {/*    </li>*/}
+          {/*    <li>*/}
+          {/*      <p>Blog</p>*/}
+          {/*      <span>Blog</span>*/}
+          {/*    </li>*/}
+          {/*    <li>*/}
+          {/*      <p>Showcase</p>*/}
+          {/*      <span>Showcase</span>*/}
+          {/*    </li>*/}
+          {/*  </ul>*/}
+          {/*</div>*/}
 
           <div className="flex gap-2 flex-col mt-4">
             <h3 className="font-[600] dark:text-[#0471d6] text-[#0471d6] text-[20px] capitalize">
@@ -106,24 +98,16 @@ const Footer = () => {
             </h3>
             <ul className="footer font-[400] text-[0.9rem] text-[#9caebc] flex flex-col gap-2">
               <li>
-                <p>About</p>
-                <span>About</span>
+                <p>About Us</p>
+                <span><a href='/about-us'>About Us</a></span>
               </li>
+              {/*<li>*/}
+              {/*  <p>Support</p>*/}
+              {/*  <span>Support</span>*/}
+              {/*</li>*/}
               <li>
-                <p>Support</p>
-                <span>Support</span>
-              </li>
-              <li>
-                <p>Privacy</p>
-                <span>Privacy</span>
-              </li>
-              <li>
-                <p>policy</p>
-                <span>policy</span>
-              </li>
-              <li>
-                <p>Contact us</p>
-                <span>Contact us</span>
+                <p>Privacy policy</p>
+                <span><a href='/privacy-policy'>Privacy policy</a></span>
               </li>
             </ul>
           </div>
@@ -135,24 +119,24 @@ const Footer = () => {
           Copyright &copy; 2024 by ZenUI Library.
         </p>
         <div className="flex items-center gap-4">
-          <a href="">
-            <FaGithub className="text-[#9caebc] text-[1.5rem]" />
+          {/*<a href="">*/}
+          {/*  <FaGithub className="text-[#9caebc] text-[1.5rem]" />*/}
+          {/*</a>*/}
+
+          <a href="https://web.facebook.com/zenuilibrary" target='_blank'>
+            <FaFacebook className="text-[#9caebc] text-[1.4rem] hover:text-primary transition-colors duration-300" />
           </a>
 
-          <a href="">
-            <FaFacebook className="text-[#9caebc] text-[1.4rem]" />
+          <a href="https://www.linkedin.com/company/zenui/" target='_blank'>
+            <FaLinkedin className="text-[#9caebc] text-[1.4rem] hover:text-primary transition-colors duration-300" />
           </a>
 
-          <a href="">
-            <FaLinkedin className="text-[#9caebc] text-[1.4rem]" />
+          <a href="https://x.com/zenuilibrary" target='_blank'>
+            <FaXTwitter className="text-[#9caebc] text-[1.4rem] hover:text-primary transition-colors duration-300" />
           </a>
 
-          <a href="">
-            <FaXTwitter className="text-[#9caebc] text-[1.4rem]" />
-          </a>
-
-          <a href="mailto:asfakahmed680@gmail.com">
-            <SiGmail className="text-[#9caebc] text-[1.4rem]" />
+          <a href="mailto:zenuilibrary@gmail.com" >
+            <SiGmail className="text-[#9caebc] text-[1.4rem] hover:text-primary transition-colors duration-300" />
           </a>
         </div>
       </div>

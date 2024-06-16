@@ -7,6 +7,9 @@ import { FaEye } from "react-icons/fa";
 import utils from "../../../../Utils";
 import { Helmet } from "react-helmet";
 
+// animation tilt
+import Tilt from 'react-parallax-tilt';
+
 // templates data
 import { templatesData } from "../../../../Utils/TemplatesData";
 
@@ -24,50 +27,53 @@ const Templete = () => {
 
       <div className="grid grid-cols-3 w-[950px] mt-12 gap-5">
         {templatesData?.map((template, index) => (
-          <div
-            key={index}
-            className=" bg-[#2d81ff13] rounded-md border border-[#2d81ff13]"
-          >
-            <div className=" relative mb-2 group cursor-pointer">
-              <img
-                src={template.image}
-                alt={template.title}
-                className="w-full h-[120px] rounded-t-md object-cover "
-              />
+            <Tilt>
+                <div
+                    key={index}
+                    className=" bg-[#2d81ff13] h-full rounded-md border border-[#2d81ff13]"
+                >
+                    <div className=" relative mb-2 group cursor-pointer">
+                        <img
+                            src={template.image}
+                            alt={template.title}
+                            className="w-full h-[120px] rounded-t-md object-cover "
+                        />
 
-              <div className="w-full absolute hidden top-0 left-0 h-full gap-3 flex-col  group-hover:flex items-center backdrop-blur-sm justify-center">
-                <FaEye className="text-primary text-[1.5rem]" />
-                <h4 className=" capitalize underline text-text">
-                  <a href={template.liveLink} target="_blank">
-                    view live preview
-                  </a>
-                </h4>
-              </div>
-            </div>
+                        <div
+                            className="w-full absolute hidden top-0 left-0 h-full gap-3 flex-col  group-hover:flex items-center backdrop-blur-sm justify-center">
+                            <FaEye className="text-primary text-[1.5rem]"/>
+                            <h4 className=" capitalize underline text-text">
+                                <a href={template.liveLink} target="_blank">
+                                    view live preview
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
 
-            <div className="p-4 w-full">
-              <h1 className="font-[600] dark:text-[#D9EEFF] text-text capitalize text-[1.2rem]">
-                {template.title}
-              </h1>
-              <p className="text-text text-[0.9rem] mt-2 dark:text-[#D9EEFF]">
-                {template.description}
-              </p>
+                    <div className="p-4 w-full">
+                        <h1 className="font-[600] dark:text-[#D9EEFF] text-text capitalize text-[1.2rem]">
+                            {template.title}
+                        </h1>
+                        <p className="text-text text-[0.9rem] mt-2 dark:text-[#D9EEFF]">
+                            {template.description}
+                        </p>
 
-              <button
-                className={`${utils.buttonSecondary} !w-full flex items-center justify-center mx-auto mt-3 !py-1.5`}
-              >
-                <a href={template.githubLink} target="_blank">
-                  source code
-                </a>
-              </button>
-            </div>
-          </div>
+                        <button
+                            className={`${utils.buttonSecondary} !w-full flex items-center justify-center mx-auto mt-3 !py-1.5`}
+                        >
+                            <a href={template.githubLink} target="_blank">
+                                source code
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </Tilt>
         ))}
       </div>
 
-      <Helmet>
-        <title>Get-Started - Templete</title>
-      </Helmet>
+        <Helmet>
+            <title>Get-Started - Templete</title>
+        </Helmet>
     </aside>
   );
 };

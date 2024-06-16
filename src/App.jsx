@@ -58,6 +58,8 @@ import AppbarPage from "./Pages/Components/Surfaces/AppbarPage";
 // randoms
 import CodeSnippetPage from "./Pages/Components/Randoms/CodeSnippetPage";
 import SnippetPage from "./Pages/Components/Randoms/SnippetPage";
+import AboutUsPage from "./Pages/AboutUsPage.jsx";
+import PrivacyPolicyPage from "./Pages/PrivacyPolicyPage.jsx";
 
 const App = () => {
   return (
@@ -65,6 +67,8 @@ const App = () => {
       {/* all routes */}
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
 
         {/* documentation */}
         <Route path="/getting-started" element={<ComponentsPage />} />
