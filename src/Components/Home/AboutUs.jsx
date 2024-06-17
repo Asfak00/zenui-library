@@ -60,16 +60,11 @@ const Hero = () => {
                     <h4 className='text-[1rem] text-primary mt-2 text-right'>ZenUI Template Designer</h4>
 
                     <p className='text-[#dbdde0] text-[1rem] mt-5 text-right'>
-                        It is a long established fact that a reader will be distracted by the readable content of a page
-                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
-                        distribution of letters, as opposed to using 'Content here, content here', making it look like
-                        readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
-                        their default model text, and a search for 'lorem ipsum' will uncover many web sites still in
-                        their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on
-                        purpose (injected humour and the like).Many desktop publishing packages and web page editors now
-                        use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many
-                        web sites still in their infancy. Various versions have evolved over the years, sometimes by
-                        accident, sometimes on purpose (injected humour and the like).
+                        Meet Pritue Mondal, the artistic soul behind the captivating designs within the ZenUI Library. With an innate passion for harmonizing aesthetics and functionality, Pritue weaves digital magic into every pixel, crafting templates that are not just visually stunning but also intuitively user-friendly.
+
+                        Drawing inspiration from the dynamic interplay of modern trends and timeless elegance, Pritue's designs breathe life into websites and applications alike. Each template in the ZenUI Library reflects Pritue's meticulous attention to detail and dedication to creating experiences that resonate seamlessly with users across the globe.
+
+                        Whether you're seeking sleek minimalism, bold expressions of creativity, or sophisticated simplicity, Pritue Mondal's designs offer a versatile spectrum to suit every project's needs. From vibrant color palettes that evoke emotion to layouts that effortlessly guide user journeys, Pritue ensures that every component serves a purpose and tells a story.
                     </p>
                 </div>
 

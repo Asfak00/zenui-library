@@ -1,39 +1,77 @@
-import React from "react";
+import React, { useState } from "react";
+import {FaChevronLeft, FaChevronRight} from "react-icons/fa";
 
-const Loader = () => {
+const pagination = () => {
+    const [paginationNum, setPaginationNum] = useState(0);
+    const totalPageNumber = 5;
+    const updatePageNumber = (num) => {
+        if (num > totalPageNumber - 1 || 0 > num) {
+            return setPaginationNum(0);
+        }
+        setPaginationNum(num);
+    };
 
-    const items = Array.from({ length: 9 });
+    // second pagination
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalPages = 5;
 
-  return (
-      <div className="grid grid-cols-3 grid-rows-3 w-[67.2px] h-[67.2px]">
-          {items.map((_, index) => (
-              <div
-                  key={index}
-                  className="bg-primary"
-                  style={{
-                      animation: `flipping-18i5bq 1.5s ${index * 0.1}s infinite backwards`
-                  }}
-              ></div>
-          ))}
-          <style>
-              {`
-          @keyframes flipping-18i5bq {
-            0% {
-              transform: perspective(67.2px) rotateX(-90deg);
-            }
-            50%, 75% {
-              transform: perspective(67.2px) rotateX(0);
-            }
-            100% {
-              opacity: 0;
-              transform: perspective(67.2px) rotateX(0);
-            }
-          }
-        `}
-          </style>
-      </div>
-  )
-      ;
+    const handlePrevious = () => {
+        if (currentPage > 1) {
+            setCurrentPage(currentPage - 1);
+        }
+    };
+
+    const handleNext = () => {
+        if (currentPage < totalPages) {
+            setCurrentPage(currentPage + 1);
+        }
+    };
+
+    const handlePageClick = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    };
+
+    const renderPageNumbers = () => {
+        const pageNumbers = [];
+
+        for (let i = 1; i <= totalPages; i++) {
+            pageNumbers.push(
+                <button
+                    key={i}
+                    onClick={() => handlePageClick(i)}
+                    className={`mx-1 px-4 py-2 rounded-full transform transition-all duration-300 ${
+                        currentPage === i
+                            ? 'bg-primary text-white scale-110 shadow-md'
+                            : 'bg-transparent text-blue-600 hover:bg-blue-100'
+                    }`}
+                >
+                    {i}
+                </button>
+            );
+        }
+
+        return pageNumbers;
+    };
+
+    return (
+        <div className="flex items-center justify-center mt-8 space-x-2">
+            <button
+                onClick={handlePrevious}
+                disabled={currentPage === 1}
+                className="mx-1 px-3.5 py-3.5 rounded-full bg-white text-blue-600 hover:bg-blue-100 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+            >
+                <FaChevronLeft/>
+            </button>
+            {renderPageNumbers()}
+            <button
+                onClick={handleNext}
+                disabled={currentPage === totalPages}
+                className="mx-1 px-3.5 py-3.5 rounded-full bg-white text-blue-600 hover:bg-blue-100 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+            >
+                <FaChevronRight/>
+            </button>
+        </div>
+    );
 };
 
-export default Loader;
+export default pagination;

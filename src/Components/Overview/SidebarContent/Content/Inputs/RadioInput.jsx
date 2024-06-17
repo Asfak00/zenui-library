@@ -78,17 +78,20 @@ const RadioInput = () => {
             </div>
             {circlePreview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <div
-                      className={` w-[35px] h-[35px] border border-primary  rounded-full flex items-center justify-center cursor-pointer `}
-                      onClick={() => setSquareToggle(!squareToggle)}
-                  >
+                  <div className='flex items-center gap-[10px]'>
                     <div
-                        className={`${
-                            squareToggle
-                                ? "bg-primary scale-[1]"
-                                : "bg-transparent scale-[0.8]"
-                        } w-[21px] h-[21px] transition-all duration-500 rounded-full`}
-                    ></div>
+                        className={` w-[35px] h-[35px] border border-primary  rounded-full flex items-center justify-center cursor-pointer `}
+                        onClick={() => setSquareToggle(!squareToggle)}
+                    >
+                      <div
+                          className={`${
+                              squareToggle
+                                  ? "bg-primary scale-[1]"
+                                  : "bg-transparent scale-[0.7]"
+                          } w-[25px] h-[25px] transition-all duration-200 rounded-full`}
+                      ></div>
+                    </div>
+                    <p className='text-[1.2rem] font-bold text-text cursor-pointer' onClick={() => setSquareToggle(!squareToggle)}>Toggle</p>
                   </div>
                 </div>
             )}
@@ -103,15 +106,14 @@ const InputRadio = () => {
 
   return (
     <>
-      <div
-        className={` w-[35px] h-[35px] border border-[#3B9DF8]  rounded-full flex items-center justify-center cursor-pointer `}
-        onClick={() => setToggle(!toggle)}
-      >
-        <div
-          className={`${
-            toggle ? "bg-[#3B9DF8] scale-[1]" : "bg-transparent scale-[0.8]"
-          } w-[21px] h-[21px] transition-all duration-500 rounded-full`}
-        ></div>
+      <div className="flex items-center gap-[10px]">
+          <div className={` w-[35px] h-[35px] border border-[#3B9DF8]  rounded-full flex items-center justify-center cursor-pointer `}
+           onClick={() => setToggle(!toggle)}>
+            <div className={`${
+            toggle ? "bg-[#3B9DF8] scale-[1]" : "bg-transparent scale-[0.7]"} w-[21px] h-[21px] transition-all duration-200 rounded-full`}></div>
+            </div>
+
+            <p className="text-[1.2rem] font-bold text-text cursor-pointer" onClick={() => setToggle(!toggle)}>Toggle</p>
       </div>
     </>
   );
@@ -154,17 +156,22 @@ export default InputRadio;
             </div>
             {squarePreview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <div
-                      className={` w-[35px] h-[35px] border border-primary  rounded-md flex items-center justify-center cursor-pointer `}
-                      onClick={() => setToggle(!toggle)}
-                  >
+                  <div className='flex items-center gap-[10px]'>
                     <div
-                        className={`${
-                            toggle
-                                ? "bg-primary scale-[1]"
-                                : "bg-transparent scale-[0.8]"
-                        } w-[21px] h-[21px] transition-all duration-500 rounded-md`}
-                    ></div>
+                        className={` w-[32px] h-[32px] border border-primary  rounded-md flex items-center justify-center cursor-pointer `}
+                        onClick={() => setToggle(!toggle)}
+                    >
+                      <div
+                          className={`${
+                              toggle
+                                  ? "bg-primary scale-[1]"
+                                  : "bg-transparent scale-[0.7]"
+                          } w-[25px] h-[25px] transition-all duration-200 rounded-md`}
+                      ></div>
+                    </div>
+
+                    <p className='text-[1.2rem] font-bold text-text cursor-pointer'
+                       onClick={() => setToggle(!toggle)}>Toggle</p>
                   </div>
                 </div>
             )}
@@ -172,26 +179,33 @@ export default InputRadio;
             {squareCode && (
                 <Showcode
                     code='
-import { useState } from "react";
+import React, { useState } from "react";
 
 const InputRadio = () => {
-  const [toggle, setToggle] = useState(false);
+    const [toggle, setToggle] = useState(false);
 
-  return (
-    <>
-      <div
-        className={` w-[35px] h-[35px] border border-[#3B9DF8]  rounded-md flex items-center justify-center cursor-pointer `}
-        onClick={() => setToggle(!toggle)}
-      >
-        <div
-          className={`${
-            toggle ? "bg-[#3B9DF8] scale-[1]" : "bg-transparent scale-[0.8]"
-          } w-[21px] h-[21px] transition-all duration-500 rounded-md`}
-        ></div>
-      </div>
-    </>
-  );
-};
+    return (
+        <>
+            <div className="flex items-center gap-[10px]">
+              <div
+              className={` w-[32px] h-[32px] border border-primary  rounded-md flex items-center justify-center cursor-pointer `}
+              onClick={() => setToggle(!toggle)}
+              >
+              <div
+              className={`${
+              toggle
+              ? "bg-primary scale-[1]"
+              : "bg-transparent scale-[0.7]"
+            } w-[25px] h-[25px] transition-all duration-200 rounded-md`}
+              ></div>
+              </div>
+
+              <p className="text-[1.2rem] font-bold text-text cursor-pointer"
+              onClick={() => setToggle(!toggle)}>Toggle</p>
+        </div>
+      </>
+      );
+      };
 
 export default InputRadio;
                 '
