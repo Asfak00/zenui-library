@@ -9,17 +9,17 @@ import { Helmet } from "react-helmet";
 
 const Overview = () => {
   return (
-    <aside className='w-full pl-[5rem]'>
-      <h1 className="font-[600] pt-[4.5rem] text-[#0471d6] text-[3rem] uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#0471d6] to-[#1A1674]">
+    <aside className='w-full pl-0 1024px:pl-[5rem] !px-5 425px:!px-10'>
+      <h1 className="font-[600] pt-[9.5rem] 1024px:pt-[4.5rem] text-[#0471d6] text-[2.5rem] 1024px:text-[3rem] uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#0471d6] to-[#1A1674]">
 
         ZenUI Library
       </h1>
-      <p className="w-[70%] text-text text-[1rem]">
+      <p className="w-full 1024px:w-[70%] text-text text-[1rem]">
         ZenUI is a free platform where you get all the components and designs
         you need to use. So find your favorite design or component.
       </p>
 
-      <div className="mt-8 w-[80%] text-text">
+      <div className="mt-8 w-full 1024px:w-[80%] text-text">
         <ContentHeader text={"Introduction"} />
         <p className="mt-3">
           ZenUI is a developer friendly UI website. There are 100+ components,
@@ -35,7 +35,7 @@ const Overview = () => {
         </p>
       </div>
 
-      <div className="mt-8 w-[80%] text-text">
+      <div className="mt-8 w-full 1024px:w-[80%] text-text">
         <ContentHeader text={"Advantages of ZenUI Library"} />
         <ul className="flex flex-col gap-3 list-disc pl-4 mt-3">
           <li className="p-0 hover:bg-transparent border-none hover:border-none hover:font-[400] hover:bg-secondary">

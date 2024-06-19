@@ -38,30 +38,30 @@ const Hero = () => {
   return (
       <main className="w-full min-h-screen" style={containerStyle}>
         <div className="flex justify-center items-center text-center gap-12 ">
-          <div className="w-[55%] pl-10 mt-[12rem] relative">
+          <div className="1024px:w-[55%] w-full 640px:pl-10 mt-[10rem] 425px:mt-[12rem] relative">
             <h1 data-aos="zoom-in"
-                className="heroText font-[900] text-[4.5rem] leading-[6rem] uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#064168] to-[#25A5C3]">
+                className="heroText font-[900] text-[2rem] 425px:text-[3rem] 640px:text-[4.5rem] leading-[3rem] 425px:leading-[4.5rem] 640px:leading-[6rem] uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#064168] to-[#25A5C3]">
               ZenUI Library
             </h1>
-            <h3 data-aos="zoom-in" className="text-[1.680rem] dark:text-[#D9EEFF] capitalize font-[500] text-[#9caebc]">
+            <h3 data-aos="zoom-in" className="text-[0.75rem] 425px:text-[1.120rem] 640px:text-[1.680rem] dark:text-[#D9EEFF] capitalize font-[500] text-[#9caebc]">
               Free platform, use your favorite components and designs
             </h3>
             <p data-aos="zoom-in"
-               className=" text-[#9caebc] w-[91%] mx-auto font-[400] dark:text-[#D9EEFF] text-[0.9rem] mt-3">
+               className=" text-[#9caebc] w-[82%] 425px:w-[80%] 640px:w-[91%] mx-auto font-[400] dark:text-[#D9EEFF] text-[0.9rem] mt-3">
               ZenUI is a free platform where you get all the
               components and designs you need to use. So find your favorite design
               or component.
             </p>
 
             {/* react icon */}
-            <div data-aos="fade-left" className="absolute top-[-70px] right-[-90px]">
+            <div data-aos="fade-left" className="absolute top-[-50px] 425px:top-[-70px] right-[-10px] 425px:right-[10px] 640px:right-[40px] 1024px:right-[-90px]">
               <img src='https://i.ibb.co/vw8FWDF/Untitled-design-5.png'
-                   className='w-[80px] animate-[spin_10s_linear_infinite] duration-1000'/>
+                   className='w-[60px] 425px:w-[80px] animate-[spin_10s_linear_infinite] duration-1000'/>
             </div>
 
             {/* tailwind css icon */}
-            <div data-aos="fade-right" className="absolute bottom-[0px] left-[-20px]">
-              <img src='https://i.ibb.co/VLCjn0q/Untitled-design-6.png' className='w-[80px] animate-pulse'/>
+            <div data-aos="fade-right" className="absolute bottom-[50px] 425px:bottom-[20px] 640px:bottom-[0px] left-[-10px] 425px:left-[10px] 640px:left-[40px] 1024px:left-[-20px]">
+              <img src='https://i.ibb.co/VLCjn0q/Untitled-design-6.png' className='w-[60px] 425px:w-[80px] animate-pulse'/>
             </div>
 
             <div data-aos="fade-up"
@@ -80,7 +80,7 @@ const Hero = () => {
         </div>
 
         {/* services */}
-        <div className="grid grid-cols-4 gap-5 px-10 pt-[9rem] pb-20">
+        <div className="grid grid-cols-1 425px:grid-cols-2 1024px:grid-cols-4 gap-5 px-5 425px:px-10 pt-[5rem] 425px:pt-[9rem] pb-10 425px:pb-20">
           <div data-aos="fade-up" data-aos-duration="700" className="p-4 serviceCard rounded-md backdrop-blur-sm">
             <div className="flex items-center gap-3 mb-3">
               <MdDashboardCustomize className=" text-primary text-[2.5rem] rounded-full bg-[#3b9df827] p-2"/>

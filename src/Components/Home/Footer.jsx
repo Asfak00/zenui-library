@@ -20,9 +20,9 @@ const Footer = () => {
 
   return (
     <footer className="w-full px-10 py-8 dark:bg-[#060024] dark:text-[#D9EEFF] bg-secondary shadow-shadowColor" style={containerStyle}>
-      <div className="w-full flex justify-between items-start">
+      <div className="w-full flex 640px:flex-row flex-col 640px:gap-0 gap-8 justify-between items-start">
         <div className="w-[33%]">
-          <img src="/darklogo.png" alt="logo" className="w-[80px] my-3" />
+          <img src="/footer_logo.png" alt="logo" className="w-[200px] my-3" />
 
           <p className="text-[#9caebc] text-[1rem] dark:text-[#D9EEFF]">
             Keep up to date Join our newsletter for regular updates. No spam
@@ -41,17 +41,17 @@ const Footer = () => {
                 type="email"
                 name=""
                 id=""
-                placeholder="example@gmail.com"
+                placeholder="zenuilibrary@gmail.com"
                 className="py-2 px-3 border bg-[#0471d6] rounded border-[#024C92] text-[#024C92] placeholder:text-[#024C92] focus:outline-none"
               />
-              <button type="submit" className={utils.buttonSecondary}>
+              <button type="submit" className={`${utils.buttonSecondary} min-w-[100px] pl-3.5`}>
                 Subscribe
               </button>
             </div>
           </form>
         </div>
 
-        <div className=" flex gap-20">
+        <div className=" flex 640px:flex-row flex-col gap-8 640px:gap-20">
           <div className="flex gap-2 flex-col mt-4">
             <h3 className="font-[600] dark:text-[#0471d6] text-[#0471d6] text-[20px] capitalize">
               resources
@@ -114,7 +114,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full border-t border-[#9caebc] flex items-center justify-between mt-12 pt-6">
+      <div className="w-full border-t border-[#9caebc] flex items-center 425px:flex-row flex-col 425px:gap-0 gap-5 justify-between mt-12 pt-6">
         <p className="text-[#9caebc] dark:text-[#D9EEFF] text-[0.9rem]">
           Copyright &copy; 2024 by ZenUI Library.
         </p>

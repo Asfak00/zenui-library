@@ -15,17 +15,17 @@ import { templatesData } from "../../../../Utils/TemplatesData";
 
 const Templete = () => {
   return (
-    <aside className="dark:text-[#D9EEFF] pt-[4.5rem] pl-[5rem] ">
-      <h1 className="font-[600] text-[#0471d6] dark:text-[#D9EEFF] text-[3rem] capitalize">
+    <aside className="dark:text-[#D9EEFF] pt-[9.5rem] 1024px:pt-[4.5rem] pl-[5rem] !px-5 425px:!px-10">
+      <h1 className="font-[600] text-[#0471d6] dark:text-[#D9EEFF] text-[2rem] 425px:text-[2.5rem] 1024px:text-[3rem] capitalize">
         ZenUI Free Templates
       </h1>
-      <p className="w-[70%] text-text text-[1rem] dark:text-[#D9EEFF]">
+      <p className="w-full 425px:w-[70%] text-text text-[1rem] dark:text-[#D9EEFF]">
         Browse our collection of free React templates to get started building
         your app with ZenUI, including a React home page, React landing page,
         and more.
       </p>
 
-      <div className="grid grid-cols-3 w-[950px] mt-12 gap-5">
+      <div className="grid grid-cols-1 425px:grid-cols-2 640px:grid-cols-3 1024px:w-[950px] mt-12 gap-5">
         {templatesData?.map((template, index) => (
             <Tilt>
                 <div
@@ -59,7 +59,7 @@ const Templete = () => {
                         </p>
 
                         <button
-                            className={`${utils.buttonSecondary} !w-full flex items-center justify-center mx-auto mt-3 !py-1.5`}
+                            className={`${utils.buttonPrimary} !w-full flex items-center justify-center mx-auto mt-3 !py-1.5`}
                         >
                             <a href={template.githubLink} target="_blank">
                                 source code

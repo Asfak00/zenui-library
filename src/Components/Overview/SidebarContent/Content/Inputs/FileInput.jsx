@@ -139,15 +139,15 @@ const FileInput = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem] ">
+      <aside className="flex items-start justify-between pt-[9.5rem] !px-5 425px:!px-10 gap-6 1024px:pl-[5rem] 1024px:pt-[4.5rem] ">
         <div>
           <ContentHeader text={"upload with icon"} id={"upload_with_icon"} />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a file upload with icon component. Upload files easily using intuitive icons for guidance.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${iconUploadPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -179,14 +179,14 @@ const FileInput = () => {
                   />
                   {imageUploaded === "" ? (
                       <div
-                          className="w-[90%] flex items-center justify-center flex-col gap-4 border-border border rounded-md py-6 cursor-pointer"
+                          className="w-full 1024px:w-[90%] flex items-center justify-center flex-col gap-4 border-border border rounded-md py-6 cursor-pointer"
                           onClick={handleUploadImageClick}
                       >
                         <FiUpload className="text-[2rem] text-[#777777]"/>
                         <p className="text-[#777777]">Browse to upload you file</p>
                       </div>
                   ) : (
-                      <div className="relative w-[80%] h-[300px]">
+                      <div className="relative w-full 1024px:w-[80%] h-[300px]">
                         <img
                             src={imageUploaded}
                             alt="image"
@@ -270,11 +270,11 @@ export default FileUpload;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a file upload with button component. Easily upload files with a simple click of a button.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${buttonUploadPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -306,7 +306,7 @@ export default FileUpload;
                   />
                   {imageUploaded2 === "" ? (
                       <div
-                          className="w-[90%] flex items-center justify-center flex-col bg-white border border-dashed border-primary rounded-md py-6 ">
+                          className="w-full 1024px:w-[90%] flex items-center justify-center flex-col bg-white border border-dashed border-primary rounded-md py-6 ">
                         <IoMdCloudUpload className="text-[3rem] text-primary"/>
                         <p className="mt-2 text-text">Drag and drop here</p>
                         <p className=" text-text">or</p>
@@ -319,7 +319,7 @@ export default FileUpload;
                         </button>
                       </div>
                   ) : (
-                      <div className="relative w-[80%] h-[200px]">
+                      <div className="relative w-full 1024px:w-[80%] h-[200px]">
                         <img
                             src={imageUploaded2}
                             alt="image"
@@ -408,11 +408,11 @@ export default Inputs;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a file upload with heading text component. Upload files accompanied by clear heading instructions.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${headingUploadPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -436,7 +436,7 @@ export default Inputs;
             {headingUploadPreview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
                   {imageUploaded3 === "" ? (
-                      <div className="text-center w-[90%]">
+                      <div className="text-center w-full 1024px:w-[90%]">
                         <input
                             type="file"
                             name="image"
@@ -452,14 +452,14 @@ export default Inputs;
                         </p>
 
                         <div
-                            className="mt-5 w-[70%] mx-auto flex items-center justify-center flex-col bg-white border-[2px] border-dashed border-primary rounded-md py-10 cursor-pointer"
+                            className="mt-5 w-full 1024px:w-[70%] mx-auto flex items-center justify-center flex-col bg-white border-[2px] border-dashed border-primary rounded-md py-10 cursor-pointer"
                             onClick={handleThirdImageClick}
                         >
                           <PiFilesThin className="text-[4rem] text-text"/>
                         </div>
                       </div>
                   ) : (
-                      <div className="relative w-[80%] h-[200px]">
+                      <div className="relative w-full 1024px:w-[80%] h-[200px]">
                         <img
                             src={imageUploaded3}
                             alt="image"
@@ -546,11 +546,11 @@ export default Inputs;
             <ContentHeader text={"profile upload"} id={"profile_upload"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a profile upload component. Easily update your profile picture with a simple upload feature.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${profileUploadPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -666,7 +666,7 @@ export default Inputs;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[20%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

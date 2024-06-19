@@ -42,8 +42,8 @@ const AllComponents = () => {
 
   return (
     <>
-      <aside className="w-[80%] pl-[5rem] pt-[4.5rem] ">
-        <h2 className="font-[600] text-[#0471d6] uppercase text-[2.5rem]">
+      <aside className="w-full 1024px:w-[80%] 1024px:pl-[5rem] pt-[9.5rem] 1024px:pt-[4.5rem] !px-5 425px:!px-10">
+        <h2 className="font-[600] text-[#0471d6] uppercase text-[2rem] 425px:text-[2.5rem]">
           ZenUI Library
         </h2>
         <p className="text-text text-[0.9rem]">
@@ -60,7 +60,7 @@ const AllComponents = () => {
         </p>
 
         <h2 className="mt-12 font-[600] text-[1.5rem] text-[#0471d6]">input</h2>
-        <div className="grid grid-cols-3 mt-4 gap-8">
+        <div className="grid grid-cols-2 425px:grid-cols-3 mt-4 gap-8">
           {inputsData?.map((button, index) => (
             <a href={button.url} className="border border-border rounded" key={index}>
               <img
@@ -78,7 +78,7 @@ const AllComponents = () => {
         </div>
 
         <h2 className="mt-12 font-[600] text-[1.5rem] text-[#0471d6]">Navigation</h2>
-        <div className="grid grid-cols-3 mt-4 gap-8">
+        <div className="grid grid-cols-2 425px:grid-cols-3 mt-4 gap-8">
           {navigationsData?.map((button, index) => (
             <a href={button.url} className="border border-border rounded" key={index}>
               <img
@@ -96,7 +96,7 @@ const AllComponents = () => {
         </div>
 
         <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-[#0471d6]">Buttons</h2>
-        <div className="grid grid-cols-3  gap-8">
+        <div className="grid grid-cols-2 425px:grid-cols-3 gap-8">
           {buttonsData?.map((button, index) => (
             <a href={button.url} className="border border-border rounded" key={index}>
               <img
@@ -114,7 +114,7 @@ const AllComponents = () => {
         </div>
 
         <h2 className="mt-12 font-[600] text-[1.5rem] text-[#0471d6]">Feedback</h2>
-        <div className="grid grid-cols-3 mt-4 gap-8">
+        <div className="grid grid-cols-2 425px:grid-cols-3 mt-4 gap-8">
           {feedbackData?.map((button, index) => (
             <a href={button.url} className="border border-border rounded" key={index}>
               <img
@@ -132,7 +132,7 @@ const AllComponents = () => {
         </div>
 
         <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-[#0471d6]">Surface</h2>
-        <div className="grid grid-cols-3  gap-8">
+        <div className="grid grid-cols-2 425px:grid-cols-3 gap-8">
           {surfaceData?.map((button, index) => (
             <a href={button.url} className="border border-border rounded" key={index}>
               <img
@@ -150,7 +150,7 @@ const AllComponents = () => {
         </div>
 
         <h2 className="mt-12 font-[600] text-[1.5rem] mb-3 text-[#0471d6] ">Data Display</h2>
-        <div className="grid grid-cols-3  gap-8">
+        <div className="grid grid-cols-2 425px:grid-cols-3 gap-8">
           {displayData?.map((button, index) => (
             <a href={button.url} className="border border-border rounded" key={index}>
               <img
@@ -168,7 +168,7 @@ const AllComponents = () => {
         </div>
       </aside>
 
-      <div className='pl-[5rem]'>
+      <div className='1024px:pl-[5rem] px-5 425px:px-10'>
         <OverviewFooter />
       </div>
       <Helmet>

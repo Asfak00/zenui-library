@@ -23,16 +23,16 @@ const OverviewFooter = () => {
   };
 
   return (
-    <footer className="w-[80%] mt-8">
-      <div className="flex items-center justify-between w-full pb-5">
+    <footer className="w-full 1024px:w-[80%] mt-8">
+      <div className="flex flex-col 425px:flex-row 425px:items-center justify-between w-full pb-5">
         <button
-          className={`${utils.buttonSecondary} flex items-center gap-2 !px-2 !py-1 text-[0.9rem]`}
+          className={`${utils.buttonSecondary} flex items-center gap-2 !px-2 !py-1 text-[0.9rem] min-w-[110px] mr-3 max-w-[110px]`}
         >
           <FaGithub />
           Give a star
         </button>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center justify-between w-full gap-4">
           <span className='text-[#0471d6]'>Was this page helpful?</span>
           <div className="flex items-center gap-3">
             <BiSolidLike
@@ -122,8 +122,8 @@ const OverviewFooter = () => {
         </form>
       )}
 
-      <div className="flex items-center justify-between w-full border-t border-border pt-5">
-        <img src="/darklogo.png" alt="logo-image" className="w-[50px]" />
+      <div className="flex items-center gap-5 justify-between w-full border-t border-border pt-5">
+        <img src="/footer_logo.png" alt="logo-image" className="w-[120px]" />
 
         <div className="flex items-center gap-3">
           <p className=" font-[600] text-[1rem] text-text">Support:</p>

@@ -57,7 +57,7 @@ const TextareaInput = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem] ">
+      <aside className="flex items-start justify-between gap-6 1024px:pl-[5rem] pt-[9.5rem] 1024px:pt-[4.5rem] !px-5 425px:!px-10 ">
         <div>
           <ContentHeader text={"required textarea"} id={"required_textarea"} />
 
@@ -65,7 +65,7 @@ const TextareaInput = () => {
             This is a required textarea component. Please enter your text here; this field cannot be left empty.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${primaryInputPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -88,7 +88,7 @@ const TextareaInput = () => {
             </div>
             {primaryInputPreview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <div className="w-[80%]">
+                  <div className="w-full 1024px:w-[80%]">
                     <label
                         htmlFor="description"
                     className="font-[400] text-[15px] text-text"
@@ -139,11 +139,11 @@ export default Textarea;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a textarea input with a background color. Enter your text here for a more visually appealing experience.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${bottomBorderPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -166,7 +166,7 @@ export default Textarea;
             </div>
             {bottomBorderPreview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <div className="w-[80%]">
+                  <div className="w-full 1024px:w-[80%]">
                     <label
                         htmlFor="description"
                         className="font-[400] text-[15px] text-text"
@@ -217,11 +217,11 @@ export default Textarea;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a textarea input with an animated label. Enter your text here; the label animates accordingly for clarity.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${animateLabelPreiview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -244,7 +244,7 @@ export default Textarea;
             </div>
             {animateLabelPreiview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <label className="relative w-[80%]">
+                  <label className="relative w-full 1024px:w-[80%]">
       <textarea
           name="name"
           id="name"
@@ -285,7 +285,7 @@ export default Textarea;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[20%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

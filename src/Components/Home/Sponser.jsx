@@ -26,20 +26,20 @@ const Sponser = () => {
 
     return (
         <>
-            <section className="flex justify-between px-10 py-20 gap-[4rem]" style={containerStyle}>
-                <div className='w-[30%]'>
-                    <h1 data-aos="zoom-in" className="font-[900] flex items-center gap-5 text-[3rem] text-[#0471d6]">
+            <section className="flex 1024px:flex-row flex-col justify-between px-5 425px:px-10 py-10 425px:py-20 gap-[4rem]" style={containerStyle}>
+                <div className='w-full 1024px:w-[30%]'>
+                    <h1 data-aos="zoom-in" className="font-[900] flex items-center gap-5 text-[1.9rem] 425px:text-[3rem] text-[#0471d6]">
                         Support ZenUI <FaHeart className='text-red-600 heartIcon'/>
                     </h1>
                     <p data-aos="zoom-in" data-aos-duration="1300"
-                       className=" text-[#9caebc] mx-auto font-[400] dark:text-[#D9EEFF] text-[0.9rem] mt-1 capitalize">
+                       className=" text-[#9caebc] mx-auto font-[400] dark:text-[#D9EEFF] text-[0.8rem] 425px:text-[0.9rem] mt-1 capitalize">
                         Your sponsorship helps us maintain and expand ZenUI, ensuring it remains a cutting-edge UI component library. By supporting ZenUI, you contribute to the development of innovative features, improved performance, and comprehensive documentation, empowering developers worldwide to create exceptional user experiences. Join us in fostering a vibrant community and advancing the future of web development.
                     </p>
                 </div>
 
-                <div className='flex items-start gap-8 mt-6 w-[60%]'>
+                <div className='flex 640px:flex-row flex-col items-start gap-8 mt-3 425px:mt-6  w-full 1024px:w-[60%]'>
                     <div data-aos="fade-right" data-aos-duration="1500"
-                         className='flex flex-col items-center max-w-[430px] justify-center backdrop-blur-md sponsorCard px-8 pb-5 rounded-md'>
+                         className='flex flex-col items-center mx-auto max-w-[430px] justify-center backdrop-blur-md sponsorCard px-8 pb-5 rounded-md'>
                         <img src='/golden.png' alt='zenui golden sponser' className='w-[140px] pt-[1rem]'/>
                         <h2 className='font-[900] flex items-center gap-5 text-[1.5rem] text-[#dcb867] pt-[1rem]'>Golden Sponsor</h2>
                         <p className='text-[1rem] text-[#9caebc] mt-6'>
@@ -48,7 +48,7 @@ const Sponser = () => {
                         <button className={`${utils.buttonPrimary} mt-5`}><a href='mailto:zenuilibrary@gmail.com'>Become A Sponsor</a></button>
                     </div>
                     <div data-aos="fade-left" data-aos-duration="1500"
-                         className='flex flex-col items-center max-w-[430px] mt-[12rem] justify-center backdrop-blur-md px-8 pb-5 rounded-md sponsorCard'>
+                         className='flex flex-col items-center mx-auto max-w-[430px] mt-[2rem] 640px:mt-[12rem] justify-center backdrop-blur-md px-8 pb-5 rounded-md sponsorCard'>
                         <img src='/silver.png' alt='zenui golden sponser' className='w-[160px] pt-[0.5rem]'/>
                         <h2 className='font-[900] flex items-center gap-5 text-[1.5rem] text-[#9caebc] pt-[0rem]'>Silver
                             Sponsor</h2>

@@ -8,6 +8,7 @@ import Sponser from "../Components/Home/Sponser.jsx";
 
 
 import AnimatedCursor from "react-animated-cursor";
+import MobileNavbar from "../Components/Home/MobileNavbar.jsx";
 
 
 const HomePage = () => {
@@ -19,6 +20,7 @@ const HomePage = () => {
   return (
     <div className='overflow-x-hidden'>
       <Navbar />
+        <MobileNavbar/>
       <Hero />
         <Sponser/>
       <Footer />

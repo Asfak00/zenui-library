@@ -22,7 +22,7 @@ const Search = ({isSearchOpen}) => {
 
   return (
     <main className="w-full h-screen fixed top-0 left-0 bg-[#00000057] !z-[1000] flex items-center justify-center">
-      <div className={`${isSearchOpen ? 'scale-[1] opacity-100 z-[100]' : 'scale-[0.7] opacity-0 z-[-1]'} transition-all duration-500 zenuiSearchComponent bg-secondary w-[40%] max-h-[60vh] p-6 rounded-md overflow-y-scroll`}>
+      <div className={`${isSearchOpen ? 'scale-[1] opacity-100 z-[100]' : 'scale-[0.7] opacity-0 z-[-1]'} transition-all duration-500 zenuiSearchComponent bg-secondary w-[90%] 425px:w-[70%] 1024px:w-[40%] max-h-[60vh] p-6 rounded-md overflow-y-scroll`}>
         <div className='relative'>
             <CiSearch className='absolute top-1/2 transform -translate-y-1/2 left-4 text-[1.5rem] text-[#9da4b0]'/>
             <input maxLength='30' onInput={(e)=> setInputText(e.target.value)} className='px-4 pl-12 py-3 w-full border rounded-md border-[#abb0ba] focus:border-primary text-text focus:outline-none' placeholder='Search Component' type='text'/>

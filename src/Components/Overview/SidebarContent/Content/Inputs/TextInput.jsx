@@ -93,15 +93,15 @@ const TextInput = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem] ">
+      <aside className="flex items-start justify-between gap-6 1024px:pl-[5rem] 1024px:pt-[4.5rem] pt-[9.5rem] !px-5 425px:!px-10">
         <div>
           <ContentHeader text={"required input"} id={"primary_input"} />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an input text field. Use it to enter your information, which will be processed accordingly.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${primaryInputPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
               <button
@@ -123,7 +123,7 @@ const TextInput = () => {
             </div>
             {primaryInputPreview && (
               <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                <div className="w-[80%]">
+                <div className="w-full 1024px:w-[80%]">
                   <label htmlFor="name" className="text-[15px] text-text font-[400]">
                     Name <span className="text-red-500">*</span>
                   </label>
@@ -171,11 +171,11 @@ export default Textarea;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a bottom-bordered input text field. Enter your information here for it to be processed accordingly.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${bottomBorderPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -201,7 +201,7 @@ export default Textarea;
                   <input type="text" name="name"
                   id="name"
                   placeholder="Your name"
-                  className="border-border border-b outline-none px-4 w-[80%] py-3 focus:border-primary transition-colors duration-300"
+                  className="border-border border-b outline-none px-4 w-full 1024px:w-[80%] py-3 focus:border-primary transition-colors duration-300"
                 />
               </div>
             )}
@@ -223,11 +223,11 @@ export default Textarea;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an animated label text input field. Enter your data here, and the label will animate accordingly.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${animateLabelPreiview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -250,7 +250,7 @@ export default Textarea;
             </div>
             {animateLabelPreiview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <label className="relative w-[80%]">
+                  <label className="relative w-full 1024px:w-[80%]">
                     <input
                         type="text"
                     name="name"
@@ -283,11 +283,11 @@ export default Textarea;
             <ContentHeader text={"input with icon"} id={"input_with_icon"} />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an input field with an icon. Enter your information here and use the icon for additional actions.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${iconInputPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -310,7 +310,7 @@ export default Textarea;
             </div>
             {iconInputPreview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <div className="w-[80%] relative">
+                  <div className="w-full 1024px:w-[80%] relative">
                     <RiAccountCircleLine className=" absolute top-3.5 left-3 text-[1.5rem] text-[#777777]" />
                   <input
                     type="text"
@@ -321,7 +321,7 @@ export default Textarea;
                   />
                 </div>
 
-                <div className="w-[80%] relative">
+                <div className="w-full 1024px:w-[80%] relative">
                   <RiLockPasswordLine className=" absolute top-3.5 left-3 text-[1.5rem] text-[#777777]" />
                   <input
                     type="password"
@@ -332,7 +332,7 @@ export default Textarea;
                   />
                 </div>
 
-                <div className="w-[80%] relative">
+                <div className="w-full 1024px:w-[80%] relative">
                   <MdOutlineMail className=" absolute top-3.5 left-3 text-[1.5rem] text-[#777777]" />
                   <input
                     type="email"
@@ -404,11 +404,11 @@ export default Inputs;
             <ContentHeader text={"password input"} id={"password_input"} />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a password input field with show/hide functionality. Enter your password and toggle visibility as needed.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${passwordInputPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -431,7 +431,7 @@ export default Inputs;
             </div>
             {passwordInputPreview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <div className="w-[80%]">
+                  <div className="w-full 1024px:w-[80%]">
                     <label htmlFor="password" className="text-[15px] text-text font-[400]">
                     Password
                   </label>
@@ -501,7 +501,7 @@ export default Textarea;
           <OverviewFooter />
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[20%]">
+        <div className="1024px:flex flex-col gap-4 sticky top-20 right-0 w-[20%] hidden">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>
