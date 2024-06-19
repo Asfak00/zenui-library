@@ -93,7 +93,7 @@ const TextInput = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 1024px:pl-[5rem] 1024px:pt-[4.5rem] pt-[9.5rem] !px-5 425px:!px-10">
+      <aside className="flex items-start justify-between gap-6 1024px:!pl-[5rem] 1024px:pt-[4.5rem] pt-[9.5rem] !px-5 425px:!px-10">
         <div>
           <ContentHeader text={"required input"} id={"primary_input"} />
 
@@ -501,7 +501,7 @@ export default Textarea;
           <OverviewFooter />
         </div>
 
-        <div className="1024px:flex flex-col gap-4 sticky top-20 right-0 w-[20%] hidden">
+        <div className="1024px:flex flex-col gap-4 sticky top-20 right-0 w-[40%] hidden">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

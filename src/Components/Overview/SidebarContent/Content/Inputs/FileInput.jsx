@@ -139,7 +139,7 @@ const FileInput = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between pt-[9.5rem] !px-5 425px:!px-10 gap-6 1024px:pl-[5rem] 1024px:pt-[4.5rem] ">
+      <aside className="flex items-start justify-between pt-[9.5rem] !px-5 425px:!px-10 gap-6 1024px:!pl-[5rem] 1024px:pt-[4.5rem] ">
         <div>
           <ContentHeader text={"upload with icon"} id={"upload_with_icon"} />
 
@@ -666,7 +666,7 @@ export default Inputs;
           <OverviewFooter/>
         </div>
 
-        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[20%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

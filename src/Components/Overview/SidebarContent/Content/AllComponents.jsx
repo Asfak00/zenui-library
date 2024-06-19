@@ -42,7 +42,7 @@ const AllComponents = () => {
 
   return (
     <>
-      <aside className="w-full 1024px:w-[80%] 1024px:pl-[5rem] pt-[9.5rem] 1024px:pt-[4.5rem] !px-5 425px:!px-10">
+      <aside className="w-full 1024px:w-[80%] 1024px:!pl-[5rem] pt-[9.5rem] 1024px:pt-[4.5rem] !px-5 425px:!px-10">
         <h2 className="font-[600] text-[#0471d6] uppercase text-[2rem] 425px:text-[2.5rem]">
           ZenUI Library
         </h2>

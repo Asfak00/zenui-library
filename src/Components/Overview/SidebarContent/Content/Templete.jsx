@@ -15,7 +15,7 @@ import { templatesData } from "../../../../Utils/TemplatesData";
 
 const Templete = () => {
   return (
-    <aside className="dark:text-[#D9EEFF] pt-[9.5rem] 1024px:pt-[4.5rem] pl-[5rem] !px-5 425px:!px-10">
+    <aside className="dark:text-[#D9EEFF] pt-[9.5rem] 1024px:pt-[4.5rem] 1024px:!pl-[5rem] !px-5 425px:!px-10">
       <h1 className="font-[600] text-[#0471d6] dark:text-[#D9EEFF] text-[2rem] 425px:text-[2.5rem] 1024px:text-[3rem] capitalize">
         ZenUI Free Templates
       </h1>

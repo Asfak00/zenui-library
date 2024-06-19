@@ -9,7 +9,7 @@ import { Helmet } from "react-helmet";
 
 const Overview = () => {
   return (
-    <aside className='w-full pl-0 1024px:pl-[5rem] !px-5 425px:!px-10'>
+    <aside className='w-full pl-0 1024px:!pl-[5rem] !px-5 425px:!px-10'>
       <h1 className="font-[600] pt-[9.5rem] 1024px:pt-[4.5rem] text-[#0471d6] text-[2.5rem] 1024px:text-[3rem] uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#0471d6] to-[#1A1674]">
 
         ZenUI Library
