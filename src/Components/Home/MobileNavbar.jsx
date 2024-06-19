@@ -122,7 +122,7 @@ const MobileNavbar = () => {
 
             {/*  sidebar  */}
             <aside
-                className={`${sidebarOpen ? 'translate-x-0 opacity-100 z-50' : 'translate-x-[200px] opacity-0 z-[-1]'} fixed top-[78px] mobileSidebar right-0 py-5 px-[2.3rem] w-[80%] 425px:w-[50%] h-screen transition-all duration-500 ${getTheRouteName() === '/' ? 'bg-[#0b183e]' : 'bg-secondary'}`}>
+                className={`${sidebarOpen ? 'translate-x-0 opacity-100 z-50' : 'translate-x-[200px] opacity-0 z-[-1]'} fixed top-[77px] mobileSidebar right-0 py-5 px-[2.3rem] w-[80%] 425px:w-[50%] h-screen transition-all duration-500 ${getTheRouteName() === '/' ? 'bg-[#0b183e]' : 'bg-secondary'}`}>
                 <div className="zenuiSearchInput relative 425px:hidden block" onClick={handleSearchClick}>
                     <IoIosSearch
                         className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-primary ' : 'text-text'} absolute left-3 top-[0.6rem] text-[1.5rem]`}/>
@@ -132,7 +132,7 @@ const MobileNavbar = () => {
                         id=""
                         readOnly={true}
                         placeholder="Search..."
-                        className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'placeholder:text-[#024C92] border-[#024C92] bg-[#0471d6] text-[#024C92]' : 'placeholder:text-text border-[#c7d0dd] bg-border text-[#024C92]'} py-2 px-10 border dark:bg-[#1c173bfb] dark:border-[#9a9ea1] rounded-full focus:outline-none`}
+                        className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'placeholder:text-[#024C92] border-[#024C92] bg-[#0471d6] text-[#024C92]' : 'placeholder:text-text border-[#c7d0dd] bg-border text-[#024C92]'} py-2 px-10 border dark:bg-[#1c173bfb] dark:border-[#9a9ea1] w-full rounded-full focus:outline-none`}
                     />
                     <span
                         className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'border-[#024C92] bg-[#024C92] text-primary' : 'text-text border-[#c7d0dd] bg-secondary'} px-2 py-1 text-[0.9rem] font-[500] rounded-full absolute right-1.5 border dark:bg-[#353058fb] dark:text-[#D9EEFF] dark:border-none top-[0.350rem]`}>

@@ -4,6 +4,7 @@ import Navbar from "../../../Components/Home/Navbar";
 import Sidebar from "../../../Components/Overview/Sidebar";
 import Normal from "../../../Components/Overview/SidebarContent/Content/Buttons/Normal";
 import MobileNavbar from "../../../Components/Home/MobileNavbar.jsx";
+import MobileSidebar from "../../../Components/Overview/Sidebar/MobileSidebar.jsx";
 
 const NormalPage = () => {
   return (
@@ -15,7 +16,8 @@ const NormalPage = () => {
           <Sidebar startContent={10} />
         </div>
 
-        <div className="w-full p-12 min-h-screen">
+        <div className="w-full 1024px:p-12 min-h-screen">
+            <MobileSidebar startContent={10}/>
           <Normal />
         </div>
       </div>

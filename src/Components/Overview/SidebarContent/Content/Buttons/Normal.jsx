@@ -38,16 +38,16 @@ const Normal = () => {
   };
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
+      <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:pl-[5rem] 1024px:pt-[4.5rem]">
         <div>
           <ContentHeader text={"normal button"} id={"normal_button"} />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             Buttons like this are used a lot on our websites and are very easy
             to create but you can copy the codes from here to save your time.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${isPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -69,7 +69,7 @@ const Normal = () => {
               </button>
             </div>
             {isPreview && (
-                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                <div className="p-8 mb-4 flex items-center flex-wrap gap-5 justify-center">
                   <button
                       className="px-6 py-2 border border-primary bg-primary text-secondary hover:bg-secondary hover:text-primary transition duration-300 rounded ">
                     Button 1
@@ -105,12 +105,12 @@ hover:text-[#ffffff]  transition duration-300 rounded "> Button
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             Here we are animating from bottom, right and left over the button's
             background color via position.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${bgAnimatedPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -132,7 +132,7 @@ hover:text-[#ffffff]  transition duration-300 rounded "> Button
               </button>
             </div>
             {bgAnimatedPreview && (
-                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                <div className="p-8 mb-4 flex items-center flex-wrap gap-5 justify-center">
                   <button
                       className="px-6 py-2 border border-primary relative before:absolute overflow-hidden before:translate-x-[-200px] hover:before:translate-x-0 before:z-[-1] before:transition before:duration-300 hover:text-secondary  before:w-full before:h-full before:bg-primary before:top-0 before:left-0">
                     Left
@@ -192,7 +192,7 @@ before:h-full before:bg-primary before:top-0 before:left-0"> Bottom
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

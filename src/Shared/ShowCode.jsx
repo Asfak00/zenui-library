@@ -20,7 +20,7 @@ const ShowCode = ({ code }) => {
     }, 1000);
   };
   return (
-    <div className=" codeContainer transition-all duration-300 ease-in-out relative overflow-x-scroll max-w-[380px] 425px:max-w-[600px]">
+    <div className=" codeContainer transition-all duration-300 ease-in-out relative overflow-x-scroll 400px:max-w-[380px] 425px:max-w-[600px] max-w-[320px]">
       <div className="w-[40px] h-[40px] flex items-center justify-center bg-[#000000d7] absolute right-0 top-3 cursor-pointer">
         {isCopy ? (
           <MdOutlineDone className="text-[1.3rem] text-primary" />

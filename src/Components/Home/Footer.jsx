@@ -19,7 +19,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full px-10 py-8 dark:bg-[#060024] dark:text-[#D9EEFF] bg-secondary shadow-shadowColor" style={containerStyle}>
+    <footer className="w-full px-5 425px:px-10 py-8 dark:bg-[#060024] dark:text-[#D9EEFF] bg-secondary shadow-shadowColor" style={containerStyle}>
       <div className="w-full flex 640px:flex-row flex-col 640px:gap-0 gap-8 justify-between items-start">
         <div className="w-[33%]">
           <img src="/footer_logo.png" alt="logo" className="w-[200px] my-3" />
@@ -44,7 +44,7 @@ const Footer = () => {
                 placeholder="zenuilibrary@gmail.com"
                 className="py-2 px-3 border bg-[#0471d6] rounded border-[#024C92] text-[#024C92] placeholder:text-[#024C92] focus:outline-none"
               />
-              <button type="submit" className={`${utils.buttonSecondary} min-w-[100px] pl-3.5`}>
+              <button type="submit" className={`${utils.buttonSecondary} px-20 425px:min-w-[100px] pl-3.5`}>
                 Subscribe
               </button>
             </div>

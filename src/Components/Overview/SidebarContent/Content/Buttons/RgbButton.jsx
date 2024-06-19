@@ -51,15 +51,15 @@ const RgbButton = () => {
     setAnimationBorderPreview(false);
   };
   return (
-    <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
+    <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:pl-[5rem] 1024px:pt-[4.5rem]">
       <div>
         <ContentHeader text={"RGB border"} id={"rgb_border"} />
 
-        <p className="w-[80%] text-text text-[1rem]">
+        <p className="w-full 425px:w-[80%] text-text text-[1rem]">
           This is an RGB bordered button component. Click to engage with vibrant, customizable borders for stylish interaction.
         </p>
 
-        <div className="w-[80%] border border-border rounded mt-8">
+        <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
           <div className="relative">
             <div
                 className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${rgbBorderPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -134,11 +134,11 @@ const RgbButton = () => {
           />
         </div>
 
-        <p className="w-[80%] text-text text-[1rem]">
+        <p className="w-full 425px:w-[80%] text-text text-[1rem]">
           This is a hover animated button component. Experience dynamic interaction with engaging animations on hover.
         </p>
 
-        <div className="w-[80%] border border-border rounded mt-8">
+        <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
           <div className="relative">
             <div
                 className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${animatedBorderPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -160,7 +160,7 @@ const RgbButton = () => {
             </button>
           </div>
           {animatedBorderPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+              <div className="p-8 mb-4 flex items-center gap-5 flex-wrap justify-center">
                 <button
                     className="px-8 py-3 relative shadow-lg before:absolute before:top-0 before:left-0 before:w-0 before:h-0 before:border-l-[4px] before:border-t-[4px] before:border-transparent hover:before:w-full hover:before:h-full hover:before:border-primary hover:before:transition-all hover:before:duration-500 after:border-r-[4px] after:border-b-[4px] after:border-transparent hover:after:border-primary after:absolute after:bottom-0 after:right-0 after:w-0 after:h-0 hover:after:w-full hover:after:h-full hover:after:transition-all hover:after:duration-500">
                   Animate 1
@@ -202,7 +202,7 @@ after:-z-40 bg-secondary relative "> Animate 2
         <OverviewFooter/>
       </div>
 
-      <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
+      <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
         <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
           CONTENTS
         </h2>

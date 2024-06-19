@@ -51,15 +51,15 @@ const AnimatedButton = () => {
     setAnimationBorderPreview(false);
   };
   return (
-    <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
+    <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:pl-[5rem] 1024px:pt-[4.5rem]">
       <div>
         <ContentHeader text={"click animation"} id={"click_animation"} />
 
-        <p className="w-[80%] text-text text-[1rem]">
+        <p className="w-full 425px:w-[80%] text-text text-[1rem]">
           This is an animated button on click component. Enjoy dynamic responses with captivating animations upon clicking.
         </p>
 
-        <div className="w-[80%] border border-border rounded mt-8">
+        <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
           <div className="relative">
             <div
                 className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${rgbBorderPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -81,7 +81,7 @@ const AnimatedButton = () => {
             </button>
           </div>
           {rgbBorderPreview && (
-              <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+              <div className="p-8 mb-4 flex flex-wrap items-center gap-5 justify-center">
                 <button
                     className="px-6 py-3 bg-primary border-none outline-none text-secondary text-[1rem] rounded active:scale-[0.9] transition-all duration-300">
                   Click Me
@@ -112,11 +112,11 @@ const AnimatedButton = () => {
           />
         </div>
 
-        <p className="w-[80%] text-text text-[1rem]">
+        <p className="w-full 425px:w-[80%] text-text text-[1rem]">
           This is a border hover animated button component. Experience dynamic border animations on hover for engaging interaction.
         </p>
 
-        <div className="w-[80%] border border-border rounded mt-8">
+        <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
           <div className="">
             <button
                 className={`${
@@ -145,7 +145,7 @@ const AnimatedButton = () => {
         <OverviewFooter />
       </div>
 
-      <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
+      <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
         <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
           CONTENTS
         </h2>
