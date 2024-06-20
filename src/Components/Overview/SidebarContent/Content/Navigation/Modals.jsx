@@ -122,9 +122,9 @@ const Modals = () => {
 
   return (
     <>
-      <aside className="flex items-start gap-6 justify-between pl-[5rem] pt-[4.5rem]">
+      <aside className="flex items-start gap-6 justify-between pt-[9.5rem] !px-5 425px:!px-10 1024px:pl-[5rem] 1024px:pt-[4.5rem]">
         <div>
-          <div className="p-4 flex gap-2 w-[80%] bg-[#d18f0011] border border-[#d18e00]  rounded mb-8">
+          <div className="p-4 flex gap-2 w-full 425px:w-[80%] bg-[#d18f0011] border border-[#d18e00]  rounded mb-8">
             <p>
               <SlInfo className="text-[#d17d00] text-[1.2rem]" />
             </p>
@@ -139,11 +139,11 @@ const Modals = () => {
 
           <ContentHeader id="alert_modal" text={"alert modal"} />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an animated alert modal component. Notify with style using engaging animations for impact.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${alertModalPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -181,7 +181,7 @@ const Modals = () => {
                               : " scale-[0] opacity-0"
                       } w-full h-screen fixed top-0 left-0 z-50 bg-[#0000002a] flex items-center justify-center transition-all duration-300`}
                   >
-                    <div className={` w-[40%] bg-secondary rounded-lg p-4 `}>
+                    <div className={`w-[90%] 1024px:w-[40%] bg-secondary rounded-lg p-4 `}>
                       <div className="w-full flex items-end justify-end">
                         <RxCross1
                             className="p-2 text-[2.5rem] hover:bg-[#e7e7e7] rounded-full transition-all duration-300 cursor-pointer"
@@ -189,7 +189,7 @@ const Modals = () => {
                         />
                       </div>
 
-                      <div className="w-full pl-8">
+                      <div className="w-full pl-3 1024px:pl-8">
                         <h2 className="text-[1.7rem] font-[500] text-[#202020]">
                           Are you sure about it?
                         </h2>
@@ -197,7 +197,7 @@ const Modals = () => {
                           you can't undo this action
                         </p>
                       </div>
-                      <div className="flex items-center gap-5 w-full justify-end mt-6">
+                      <div className="flex items-center gap-3 1024px:gap-5 w-full justify-end mt-6">
                         <button
                             className="px-4 py-2 border border-[#a8a8a8] rounded-lg text-[#585858]"
                             onClick={() => setModal1Open(false)}
@@ -231,7 +231,7 @@ const Modal = () => {
         className={`${
           modalOpen ? " scale-[1] opacity-100" : " scale-[0] opacity-0"
         } w-full h-screen fixed top-0 left-0 z-50 bg-[#0000002a] flex items-center justify-center transition-all duration-300 `}>
-        <div className=" w-[40%] bg-[#ffffff] rounded-lg p-4 ">
+        <div className="w-[90%] lg:w-[40%] bg-[#ffffff] rounded-lg p-4 ">
           <div className="w-full flex items-end justify-end">
             <RxCross1
               className="p-2 text-[2.5rem] hover:bg-[#e7e7e7] rounded-full transition-all duration-300 cursor-pointer"
@@ -239,7 +239,7 @@ const Modal = () => {
             />
           </div>
 
-          <div className="w-full pl-8">
+          <div className="w-full pl-3 lg:pl-8">
             <h2 className="text-[1.7rem] font-[500] text-[#202020]">
               Are you sure about it?
             </h2>
@@ -247,7 +247,7 @@ const Modal = () => {
               you cant undo this action
             </p>
           </div>
-          <div className="flex items-center gap-5 w-full justify-end mt-6">
+          <div className="flex items-center gap-3 lg:gap-5 w-full justify-end mt-6">
             <button
               className="px-4 py-2 border border-[#a8a8a8] rounded-lg text-[#585858]"
               onClick={() => setModalOpen(false)}>
@@ -275,11 +275,11 @@ export default Modal;
             <ContentHeader id="success_modal" text={"success modal"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a success modal with animation component. Celebrate achievements with stylish animated feedback.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${successModalPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -320,7 +320,7 @@ export default Modal;
                             modal2Open
                                 ? " scale-[1] opacity-100"
                                 : " scale-[0] opacity-0"
-                        } w-[30%] bg-secondary rounded-lg p-4 transition-all duration-300`}
+                        } w-[90%] 640px:w-[80%] 1024px:w-[30%] bg-secondary rounded-lg p-4 transition-all duration-300`}
                     >
                       <div className="w-full flex items-end justify-end">
                         <RxCross1
@@ -363,7 +363,7 @@ const Modal = () => {
         <div
           className={`${
             modalOpen ? " scale-[1] opacity-100" : " scale-[0] opacity-0"
-          } w-[30%] bg-[#ffffff] rounded-lg p-4 transition-all duration-300`}>
+          } w-[90%] md:w-[70%] lg:w-[30%] bg-[#ffffff] rounded-lg p-4 transition-all duration-300`}>
           <div className="w-full flex items-end justify-end">
             <RxCross1
               className="p-2 text-[2.5rem] hover:bg-[#e7e7e7] rounded-full transition-all duration-300 cursor-pointer"
@@ -396,11 +396,11 @@ export default Modal;
             <ContentHeader id="Info_modal" text={"Info modal"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an info modal with animation component. Present information dynamically with engaging animations for clarity.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${infoModalPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -441,7 +441,7 @@ export default Modal;
                             modal3Open
                                 ? " translate-y-[0px] opacity-100"
                                 : " translate-y-[-200px] opacity-0"
-                        } w-[40%] bg-secondary rounded-lg transition-all duration-300 mx-auto mt-8`}
+                        } w-[80%] 640px:w-[90%] 1024px:w-[40%] bg-secondary rounded-lg transition-all duration-300 mx-auto mt-8`}
                     >
                       <div className="w-full flex items-end p-4 justify-between border-b border-[#d1d1d1]">
                         <h1 className="text-[1.5rem] font-bold">Modal Header</h1>
@@ -498,7 +498,7 @@ const DropDown = () => {
             isModalOpen
               ? " translate-y-[0px] opacity-100"
               : " translate-y-[-200px] opacity-0"
-          } w-[40%] bg-[#ffffff] rounded-lg transition-all duration-300 mx-auto mt-8`}
+          } w-[90%] md:w-[80%] lg:w-[40%] bg-[#ffffff] rounded-lg transition-all duration-300 mx-auto mt-8`}
         >
           <div className="w-full flex items-end p-4 justify-between border-b border-[#d1d1d1]">
             <h1 className="text-[1.5rem] font-bold">Modal Header</h1>
@@ -544,11 +544,11 @@ export default DropDown;
             <ContentHeader id="Permission_modal" text={"Permission modal"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a permission modal with animation component. Manage permissions dynamically with engaging animations for clarity.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${permissionModalPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -589,7 +589,7 @@ export default DropDown;
                             modal4Open
                                 ? " scale-[1] opacity-100"
                                 : " scale-[0] opacity-0"
-                        } w-[60%] bg-secondary rounded-lg transition-all duration-300 mx-auto mt-8`}
+                        } w-[90%] 640px:w-[80%] 1024px:w-[60%] bg-secondary rounded-lg transition-all duration-300 mx-auto mt-8`}
                     >
                       <div className="w-full flex items-end p-4 justify-between border-b border-[#d1d1d1]">
                         <h1 className="text-[1.5rem] font-bold">
@@ -667,7 +667,7 @@ const DropDown = () => {
           <div
             className={`${
               isModalOpen ? " scale-[1] opacity-100" : " scale-[0] opacity-0"
-            } w-[60%] bg-[#fff] rounded-lg transition-all duration-300 mx-auto mt-8`}
+            } w-[90%] md:w-[80%] lg:w-[60%] bg-[#fff] rounded-lg transition-all duration-300 mx-auto mt-8`}
           >
             <div className="w-full flex items-end p-4 justify-between border-b border-[#d1d1d1]">
               <h1 className="text-[1.5rem] font-bold">Terms of Service</h1>
@@ -724,11 +724,11 @@ export default DropDown;
             <ContentHeader id="Form_modal" text={"Form modal"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a form modal with animated input fields component. Complete forms dynamically with engaging animations for user interaction.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
 
             <div className="relative">
               <div
@@ -770,7 +770,7 @@ export default DropDown;
                             modal5Open
                                 ? " scale-[1] opacity-100"
                                 : " scale-[0] opacity-0"
-                        } w-[35%] bg-secondary rounded-lg transition-all duration-300 mx-auto mt-8`}
+                        } w-[90%] 640px:w-[80%] 1024px:w-[35%] bg-secondary rounded-lg transition-all duration-300 mx-auto mt-8`}
                     >
                       <div className="w-full flex items-end p-4 justify-between border-b border-[#d1d1d1]">
                         <h1 className="text-[1.5rem] font-bold">
@@ -884,7 +884,7 @@ const DropDown = () => {
           <div
             className={`${
               isModalOpen ? " scale-[1] opacity-100" : " scale-[0] opacity-0"
-            } w-[35%] bg-[#fff] rounded-lg transition-all duration-300 mx-auto mt-8`}
+            } w-[90%] md:w-[80%] lg:w-[35%] bg-[#fff] rounded-lg transition-all duration-300 mx-auto mt-8`}
           >
             <div className="w-full flex items-end p-4 justify-between border-b border-[#d1d1d1]">
               <h1 className="text-[1.5rem] font-bold">
@@ -978,11 +978,11 @@ export default DropDown;
             <ContentHeader id="Cookie_modal" text={"Cookie modal"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a cookie consent modal for accepting cookies upon initial browser visit.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
 
             <div className="relative">
               <div
@@ -1026,8 +1026,8 @@ export default DropDown;
                                 : " translate-y-[200px] opacity-0"
                         } w-full  bg-secondary rounded-lg transition-all shadow-primary duration-300 mx-auto mt-8`}
                     >
-                      <div className="flex justify-between w-full ga-5 px-8 py-12">
-                        <p className="text-[1.2rem] text-text w-[70%]">
+                      <div className="flex 640px::flex-row flex-col justify-between w-full gap-5 px-8 py-12">
+                        <p className="text-[1.2rem] text-text w-full 640px:w-[70%]">
                           This site uses cookies and related technologies, as
                           described in our privacy policy, for purposes that may
                           include site operation, analytics, enhanced user
@@ -1036,7 +1036,7 @@ export default DropDown;
                           preferences.
                         </p>
 
-                        <div className="flex items-end justify-end gap-4 flex-col w-[20%]">
+                        <div className="flex items-end justify-end gap-4 flex-col w-full 640px:w-[20%]">
                           <button
                               className="py-2 w-full px-4 border border-[#d1d1d1] rounded-md outline-none bg-primary text-[#fff]"
                               onClick={() => setModal6Open(false)}
@@ -1086,8 +1086,8 @@ const DropDown = () => {
                 : " translate-y-[200px] opacity-0"
             } w-full  bg-[#fff] rounded-lg transition-all shadow-primary duration-300 mx-auto mt-8`}
           >
-            <div className="flex justify-between w-full ga-5 px-8 py-12">
-              <p className="text-[1.2rem] text-[#424242] w-[70%]">
+            <div className="flex justify-between md:flex-row flex-col w-full gap-5 px-8 py-12">
+              <p className="text-[1.2rem] text-[#424242] w-full md:w-[70%]">
                 This site uses cookies and related technologies, as described in
                 our privacy policy, for purposes that may include site
                 operation, analytics, enhanced user experience, or advertising.
@@ -1095,7 +1095,7 @@ const DropDown = () => {
                 manage your own preferences.
               </p>
 
-              <div className="flex items-end justify-end gap-4 flex-col w-[20%]">
+              <div className="flex items-end justify-end gap-4 flex-col w-full md:w-[20%]">
                 <button
                   className="py-2 w-full px-4 border border-[#d1d1d1] rounded-md outline-none bg-[#3B9DF8] text-[#fff]"
                   onClick={() => setisModalOpen(false)}
@@ -1127,11 +1127,11 @@ export default DropDown;
             <ContentHeader id="full_screen_modal" text={"full screen modal"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a full-screen modal with animation for immersive user interaction.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${fullScreenModalPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -1172,7 +1172,7 @@ export default DropDown;
                             modal7Open
                                 ? " translate-y-[0px] opacity-100"
                                 : " translate-y-[200px] opacity-0"
-                        } w-full h-full bg-[#eceef6] rounded-lg transition-all shadow-primary duration-300 mx-auto mt-8`}
+                        } overflow-y-scroll w-full h-full bg-[#eceef6] rounded-lg transition-all shadow-primary duration-300 mx-auto mt-8`}
                     >
                       <div className="w-full flex items-end p-4 justify-end">
                         <RxCross1
@@ -1181,10 +1181,10 @@ export default DropDown;
                         />
                       </div>
 
-                      <div className="flex items-start justify-between gap-8">
-                        <div className="bg-[#fff] min-h-screen rounded-md p-6 w-[70%]">
+                      <div className="flex items-start 1024px:flex-row flex-col justify-between gap-8">
+                        <div className="bg-[#fff] min-h-screen rounded-md p-6 w-full 1024px:w-[70%]">
                           {/* steps */}
-                          <div className="flex items-center justify-between w-full border-b border-[#d1d1d1]">
+                          <div className="flex items-center 1024px:flex-row flex-col justify-between w-full border-b border-[#d1d1d1]">
                             <div className="flex items-center gap-5">
                             <span className="text-[1rem] font-[500] text-primary border-b border-primary pb-3">
                               1.Cart
@@ -1286,7 +1286,7 @@ export default DropDown;
                           </div>
                         </div>
 
-                        <div className="w-[30%] mr-8">
+                        <div className="w-full 1024px:w-[30%] mr-8">
                           <div className="bg-[#fff] rounded-md p-6 ">
                             <h3 className="text-[1rem] text-primary font-[500] border-b border-[#d1d1d1] pb-4 text-center">
                               Order Summary
@@ -1364,7 +1364,7 @@ const DropDown = () => {
         <div
           className={`${
             isModalOpen ? " visible" : " invisible"
-          } w-full h-screen fixed flex items-end justify-end top-0 left-0 z-50   transition-all duration-300`}
+          } overflow-y-scroll w-full h-screen fixed flex items-end justify-end top-0 left-0 z-50   transition-all duration-300`}
         >
           <div
             className={`${
@@ -1381,9 +1381,9 @@ const DropDown = () => {
             </div>
 
             <div className="flex items-start justify-between gap-8">
-              <div className="bg-[#fff] min-h-screen rounded-md p-6 w-[70%]">
+              <div className="bg-[#fff] min-h-screen rounded-md p-6 w-full lg:w-[70%]">
                 {/* steps */}
-                <div className="flex items-center justify-between w-full border-b border-[#d1d1d1]">
+                <div className="flex items-center lg:flex-row flex-col justify-between w-full border-b border-[#d1d1d1]">
                   <div className="flex items-center gap-5">
                     <span className="text-[1rem] font-[500] text-[#3B9DF8] border-b border-[#3B9DF8] pb-3">
                       1.Cart
@@ -1485,7 +1485,7 @@ const DropDown = () => {
                 </div>
               </div>
 
-              <div className="w-[30%] mr-8">
+              <div className="w-full lg:w-[30%] mr-8">
                 <div className="bg-[#fff] rounded-md p-6 ">
                   <h3 className="text-[1rem] text-[#3B9DF8] font-[500] border-b border-[#d1d1d1] pb-4 text-center">
                     Order Summary
@@ -1542,7 +1542,7 @@ export default DropDown;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[70%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[70%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

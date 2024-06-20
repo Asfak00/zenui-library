@@ -5,6 +5,7 @@ import Navbar from "../../../Components/Home/Navbar";
 import Sidebar from "../../../Components/Overview/Sidebar";
 import Card from "../../../Components/Overview/SidebarContent/Content/Surfaces/Card";
 import MobileNavbar from "../../../Components/Home/MobileNavbar.jsx";
+import MobileSidebar from "../../../Components/Overview/Sidebar/MobileSidebar.jsx";
 
 const CardPage = () => {
   return (
@@ -16,7 +17,8 @@ const CardPage = () => {
           <Sidebar startContent={13} />
         </div>
 
-        <div className="w-full p-12 min-h-screen">
+        <div className="w-full 1024px:p-12 min-h-screen">
+            <MobileSidebar startContent={13}/>
           <Card />
         </div>
       </div>

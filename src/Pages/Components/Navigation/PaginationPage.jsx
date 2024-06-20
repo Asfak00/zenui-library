@@ -5,6 +5,7 @@ import Navbar from "../../../Components/Home/Navbar";
 import Sidebar from "../../../Components/Overview/Sidebar";
 import Pagination from "../../../Components/Overview/SidebarContent/Content/Navigation/Pagination";
 import MobileNavbar from "../../../Components/Home/MobileNavbar.jsx";
+import MobileSidebar from "../../../Components/Overview/Sidebar/MobileSidebar.jsx";
 
 const PaginationPage = () => {
   return (
@@ -16,7 +17,8 @@ const PaginationPage = () => {
           <Sidebar startContent={17} />
         </div>
 
-        <div className="w-full p-12 min-h-screen">
+        <div className="w-full 1024px:p-12 min-h-screen">
+            <MobileSidebar startContent={17}/>
           <Pagination />
         </div>
       </div>

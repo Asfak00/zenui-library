@@ -65,7 +65,7 @@ const Hero = () => {
             </div>
 
             <div data-aos="fade-up"
-                 data-aos-anchor-placement="bottom-bottom" className="flex items-center justify-center gap-6 mt-12">
+                 data-aos-anchor-placement="bottom-bottom" className="flex items-center justify-center gap-3 425px:gap-6 mt-12">
               <button
                   className={utils.buttonPrimary}
                   onClick={() => navigate("/getting-started/overview")}

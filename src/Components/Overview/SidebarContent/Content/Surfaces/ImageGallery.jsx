@@ -101,15 +101,15 @@ const ImageGallery = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
-        <div className="w-[80%]">
+      <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:!pl-[5rem] 1024px:pt-[4.5rem]">
+        <div className="w-full 425px:w-[80%]">
           <ContentHeader text={"image Gallery 1"} id={"image_gallery_1"} />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an image gallery with a simple layout for easy browsing and viewing.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${imageGallery1Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -207,11 +207,11 @@ export default ImageGallery;
             <ContentHeader text={"image Gallery 2"} id={"image_gallery_2"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an image gallery with a complex layout for detailed and organized viewing.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${imageGallery2Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -311,11 +311,11 @@ export default ImageGallery;
             <ContentHeader text={"image Gallery 3"} id={"image_gallery_3"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an image gallery with a sleek layout for stylish and organized viewing.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${imageGallery3Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -405,11 +405,11 @@ export default ImageGallery;
             <ContentHeader text={"image Gallery 4"} id={"image_gallery_4"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an image gallery with a robust layout for structured and efficient viewing.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${imageGallery4Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -551,11 +551,11 @@ export default ImageGallery;
             <ContentHeader text={"image Gallery 5"} id={"image_gallery_5"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an image gallery with a complex layout for detailed and organized viewing.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${imageGallery5Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -688,11 +688,11 @@ export default ImageGallery;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an image gallery with a stylish layout featuring title text and icons for enhanced visual appeal.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${titleImageGalleryPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -715,7 +715,7 @@ export default ImageGallery;
             </div>
             {titleImageGalleryPreview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <div className="grid grid-cols-3 gap-2">
+                  <div className="grid grid-cols-2 640px:grid-cols-3 gap-2">
                     <div className="relative">
                       <img
                           src="https://img.freepik.com/free-photo/waterfall-nature-thailand_335224-989.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.2.71340048.1688965399&semt=sph"
@@ -946,7 +946,7 @@ export default ImageGallery;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

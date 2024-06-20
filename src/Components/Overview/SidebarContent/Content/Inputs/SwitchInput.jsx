@@ -77,7 +77,7 @@ const SwitchInput = () => {
               </button>
             </div>
             {circlePreview && (
-                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                <div className="p-8 mb-4 flex flex-wrap items-center gap-5 justify-center">
                   <div
                       className={`${
                           squareToggle ? " bg-primary" : "bg-[#f0f0f0]"
@@ -246,7 +246,7 @@ export default InputSwitch;
               </button>
             </div>
             {squarePreview && (
-                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                <div className="p-8 mb-4 flex flex-wrap items-center gap-5 justify-center">
                   <div
                       className={`${
                           toggle ? " bg-primary" : "bg-[#f0f0f0]"

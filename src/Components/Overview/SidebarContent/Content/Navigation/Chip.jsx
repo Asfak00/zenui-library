@@ -77,15 +77,15 @@ const Chip = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
+      <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:pl-[5rem] 1024px:pt-[4.5rem]">
         <div>
           <ContentHeader text={"Primary Chip"} id={"primary_chip"} />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a basic chip component. Use it to display concise information or tags in a compact form.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${primaryChipPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -107,7 +107,7 @@ const Chip = () => {
               </button>
             </div>
             {primaryChipPreview && (
-                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                <div className="p-8 mb-4 flex flex-wrap items-center gap-5 justify-center">
                   <div className="px-4 py-1 bg-[#d1d1d180] rounded-full text-[0.9rem] font-[500]">
                     ZenUI
                   </div>
@@ -148,12 +148,12 @@ const Chip = () => {
             <ContentHeader text={"Chip variants"} id={"chip_variant"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a chip component with multiple variants like bordered and background
             color options for versatile styling.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${chipVariantPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -175,7 +175,7 @@ const Chip = () => {
               </button>
             </div>
             {chipVariantPreview && (
-                <div className="p-8 mb-4 flex items-start flex-wrap gap-5 justify-center">
+                <div className="p-8 mb-4 flex flex-wrap items-start flex-wrap gap-5 justify-center">
                   <div className="px-6 py-1 bg-[#3B9DF8] text-[#fff] rounded-full text-[0.9rem] font-[500]">
                     ZenUI
                   </div>
@@ -212,11 +212,11 @@ const Chip = () => {
             <ContentHeader text={"Icon Chip"} id={"icon_chip"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a chip with icon component. Display concise information or tags enhanced with an icon for clarity.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${iconChipPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -238,7 +238,7 @@ const Chip = () => {
               </button>
             </div>
             {iconChipPreview && (
-                <div className="p-8 mb-4 flex items-start flex-wrap gap-5 justify-center">
+                <div className="p-8 mb-4 flex flex-wrap items-start flex-wrap gap-5 justify-center">
                   <div
                       className="px-4 py-1.5 bg-[#ececec80] border border-[#d1d1d180] text-[#18c964] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
                     <MdDone className="p-0.5 text-[1.1rem] rounded-full bg-[#18c964] text-[#fff]"/>
@@ -310,11 +310,11 @@ export default Chip;
             <ContentHeader text={"avatar Chip"} id={"avatar_chip"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an avatar chip component. Display user information with a compact avatar for a visual touch.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${avatarChipPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -336,7 +336,7 @@ export default Chip;
               </button>
             </div>
             {avatarChipPreview && (
-                <div className="p-8 mb-4 flex items-center flex-wrap gap-5 justify-center">
+                <div className="p-8 mb-4 flex flex-wrap items-center flex-wrap gap-5 justify-center">
                   <div
                       className="pl-2 pr-4 py-1 bg-[#ececec80] border border-[#d1d1d180] text-[#18c964] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
                     <img
@@ -414,7 +414,7 @@ export default Chip;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

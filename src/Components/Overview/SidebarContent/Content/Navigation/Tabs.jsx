@@ -124,19 +124,19 @@ const Tabs = () => {
 
     return (
         <>
-            <aside className="flex items-start gap-6 justify-between pl-[5rem] pt-[4.5rem]">
+            <aside className="flex items-start gap-6 justify-between pt-[9.5rem] !px-5 425px:!px-10 1024px:pl-[5rem] 1024px:pt-[4.5rem]">
                 <div>
                     <ContentHeader
                         id="Border_navigation"
                         text={"Border navigation tab"}
                     />
 
-                    <p className="w-[80%] text-text text-[1rem]">
+                    <p className="w-full 425px:w-[80%] text-text text-[1rem]">
                         We see navigation tabs with borders on all sides like this on almost
                         all websites. They are very simple.
                     </p>
 
-                    <div className="w-[80%] border border-border rounded mt-8">
+                    <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
                         <div className="relative">
                             <div
                                 className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${fullBorderTabPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -231,11 +231,11 @@ export default BorderTab;
                         <ContentHeader id="animated_tab" text={"animated tab"}/>
                     </div>
 
-                    <p className="w-[80%] text-text text-[1rem]">
+                    <p className="w-full 425px:w-[80%] text-text text-[1rem]">
                         This is navigation tabs with sliding animation for smooth and interactive navigation.
                     </p>
 
-                    <div className="w-[80%] border border-border rounded mt-8">
+                    <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
                         <div className="relative">
                             <div
                                 className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${animatedTabPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -371,11 +371,11 @@ export default AnimatedTab;
                         />
                     </div>
 
-                    <p className="w-[80%] text-text text-[1rem]">
+                    <p className="w-full 425px:w-[80%] text-text text-[1rem]">
                         This is navigation tabs with active tab indication using bottom borders for clarity.
                     </p>
 
-                    <div className="w-[80%] border border-border rounded mt-8">
+                    <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
                         <div className="relative">
                             <div
                                 className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${bottomBorderPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -398,7 +398,7 @@ export default AnimatedTab;
                         </div>
                         {bottomBorderPreview && (
                             <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                                <ul className="flex items-center gap-5">
+                                <ul className="flex flex-wrap items-center gap-5">
                                     <li
                                         className={`${
                                             bottomBorderActive === 1 &&
@@ -475,11 +475,11 @@ export default BottomBorderTab; "
                         />
                     </div>
 
-                    <p className="w-[80%] text-text text-[1rem]">
+                    <p className="w-full 425px:w-[80%] text-text text-[1rem]">
                         This is navigation tabs with active tab indication using top borders for clarity and focus.
                     </p>
 
-                    <div className="w-[80%] border border-border rounded mt-8">
+                    <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
                         <div className="relative">
                             <div
                                 className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${topBorderButtonPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -502,7 +502,7 @@ export default BottomBorderTab; "
                         </div>
                         {topBorderButtonPreview && (
                             <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                                <ul className="flex items-center">
+                                <ul className="flex flex-wrap items-center">
                                     <li
                                         className={`${
                                             topBorderButtonActive === 1 &&
@@ -609,12 +609,12 @@ export default DropDown;
                         />
                     </div>
 
-                    <p className="w-[80%] text-text text-[1rem]">
+                    <p className="w-full 425px:w-[80%] text-text text-[1rem]">
                         This is navigation tabs with active tab indication using square borders for clear active state
                         visibility.
                     </p>
 
-                    <div className="w-[80%] border border-border rounded mt-8">
+                    <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
                         <div className="relative">
                             <div
                                 className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${roundedBorderButtonPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -637,7 +637,7 @@ export default DropDown;
                         </div>
                         {roundedBorderButtonPreview && (
                             <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                                <ul className="flex items-center">
+                                <ul className="flex flex-wrap items-center">
                                     <li
                                         className={`${
                                             roundedBorderButtonAcitve === 1 &&
@@ -742,13 +742,13 @@ export default DropDown;
                         <ContentHeader id="box_navigation" text={"box navigation tab"}/>
                     </div>
 
-                    <p className="w-[80%] text-text text-[1rem]">
+                    <p className="w-full 425px:w-[80%] text-text text-[1rem]">
                         This is navigation tabs with active tab indication using rounded background color for clear
                         active state
                         visibility.
                     </p>
 
-                    <div className="w-[80%] border border-border rounded mt-8">
+                    <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
                         <div className="relative">
                             <div
                                 className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${boxButtonPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -771,7 +771,7 @@ export default DropDown;
                         </div>
                         {boxButtonPreview && (
                             <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                                <ul className="flex items-center bg-[#59bdf738] rounded-full p-1">
+                                <ul className="flex flex-wrap items-center bg-[#59bdf738] rounded-full p-1">
                                     <li
                                         className={`${
                                             boxButtonActive === 1 && "!bg-primary !text-[#fff]"
@@ -868,13 +868,13 @@ export default DropDown;
                         <ContentHeader id="toggle_button" text={"Toggle tab"}/>
                     </div>
 
-                    <p className="w-[80%] text-text text-[1rem]">
+                    <p className="w-full 425px:w-[80%] text-text text-[1rem]">
                         This is navigation tabs with active tab indication using rounded background color for clear
                         active state
                         visibility.
                     </p>
 
-                    <div className="w-[80%] border border-border rounded mt-8">
+                    <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
                         <div className="relative">
                             <div
                                 className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${toggleButtonPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -897,7 +897,7 @@ export default DropDown;
                         </div>
                         {toggleButtonPreview && (
                             <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                                <div class="flex flex-col items-center justify-center">
+                                <div class="flex flex-wrap flex-col items-center justify-center">
                                     <div class="z-10 w-full">
                                         <div class="mx-auto mt-6 flex items-center justify-center gap-4">
 
@@ -1066,7 +1066,7 @@ export default ToggleTab;
                     <OverviewFooter/>
                 </div>
 
-                <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
+                <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
                     <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
                         CONTENTS
                     </h2>

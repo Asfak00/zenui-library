@@ -63,18 +63,18 @@ const Appbar = () => {
 
   return (
     <>
-      <aside className="flex items-start gap-6 justify-between pl-[5rem] pt-[4.5rem]">
-        <div className="w-[80%]">
+      <aside className="flex items-start gap-6 justify-between pt-[9.5rem] !px-5 425px:!px-10 1024px:!pl-[5rem] 1024px:pt-[4.5rem]">
+        <div className="w-full 425px:w-[80%]">
           <ContentHeader
             id="app_bar_with_manu_&__profile"
             text={"app bar with manu & profile"}
           />
 
-          <p className=" w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an app bar with profile login/logout component. Manage user sessions seamlessly with profile access.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${basicAppPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -183,11 +183,11 @@ export default AppbarWithUsericon;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an app bar with menu and search bar for intuitive navigation and quick access.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${appBarWithSearchPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -220,7 +220,7 @@ export default AppbarWithUsericon;
                     <div className="relative">
                       <input
                           type="search"
-                          className="pl-10 py-2 bg-[#104c853d] border-none outline-none text-secondary placeholder:text-[#ffffffa8] "
+                          className="pl-10 py-2 bg-[#104c853d] w-full border-none outline-none text-secondary placeholder:text-[#ffffffa8] "
                           placeholder="Search..."
                       />
                       <CiSearch className=" absolute top-2 left-3 text-secondary text-[1.4rem]"/>
@@ -274,11 +274,11 @@ export default AppbarWithSearchbar;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is an app bar with menu, cart, notification icons, and search bar for comprehensive navigation and interaction.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${appbarWithIconsPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -301,7 +301,7 @@ export default AppbarWithSearchbar;
             </div>
             {appbarWithIconsPreview && (
                 <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="px-4 py-2 bg-primary w-full gap-2 flex items-center justify-between">
+                  <div className="px-4 py-2 bg-primary w-full gap-2 flex-wrap flex items-center justify-between">
                     <div className="flex items-center gap-5">
                       <div className="flex items-center gap-4">
                         <FiMenu className="text-secondary text-[1.7rem] cursor-pointer"/>
@@ -312,7 +312,7 @@ export default AppbarWithSearchbar;
                       <div className="relative">
                         <input
                             type="search"
-                            className="pl-10 py-2 bg-[#104c853d] border-none outline-none text-secondary placeholder:text-[#ffffffa8] "
+                            className="pl-10 py-2 bg-[#104c853d] w-full border-none outline-none text-secondary placeholder:text-[#ffffffa8] "
                             placeholder="Search..."
                         />
                         <CiSearch className=" absolute top-2 left-3 text-secondary text-[1.4rem]"/>
@@ -411,7 +411,7 @@ export default AppbarWithIcons;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

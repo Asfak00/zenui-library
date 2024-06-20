@@ -141,15 +141,15 @@ const Card = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
-        <div className="w-[80%]">
+      <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:!pl-[5rem] 1024px:pt-[4.5rem]">
+        <div className="w-full 425px:w-[80%]">
           <ContentHeader id="Blog_Card" text={"Blog Card"} />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a blog card with icon and dropdown component. Explore content with icons and interactive dropdowns for seamless navigation.
           </p>
 
-          <div className="w-[80%] border border-border rounded my-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded my-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${blogCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -172,7 +172,7 @@ const Card = () => {
             </div>
             {blogCardPreview && (
                 <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="w-[70%] shadow-lg bg-secondary rounded">
+                  <div className="w-full 1024px:w-[70%] shadow-lg bg-secondary rounded">
                     <div className="flex w-full justify-between items-center p-4">
                       <div className="flex items-center gap-4">
                         <div
@@ -388,10 +388,10 @@ export default BlogCard;
               text={"Product Card"}
           />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a product card with icon and add to cart button. Browse products and add them to your cart effortlessly.
           </p>
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${productCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -414,7 +414,7 @@ export default BlogCard;
             </div>
             {productCardPreview && (
                 <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="w-[70%] shadow-lg bg-secondary rounded">
+                  <div className="w-full 1024px:w-[70%] shadow-lg bg-secondary rounded">
                     <img
                         src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHNob2VzfGVufDB8fDB8fHww"
                         alt=""
@@ -553,11 +553,11 @@ export default SimpleProfileCard;
               />
             </div>
 
-            <p className="w-[80%] text-text text-[1rem]">
+            <p className="w-full 425px:w-[80%] text-text text-[1rem]">
               This is a music card component. Explore tracks, albums, and artists with ease and convenience.
             </p>
 
-            <div className="w-[80%] border border-border rounded mt-8">
+            <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
               <div className="relative">
                 <div
                     className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${musicCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -580,7 +580,7 @@ export default SimpleProfileCard;
               </div>
               {musicCardPreview && (
                   <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                    <div className="w-[100%] lg:w-[80%] shadow-lg bg-secondary rounded">
+                    <div className="w-full 1024px:w-[80%] shadow-lg bg-secondary rounded">
                       <div className="grid grid-cols-12 w-full  items-center bg-black text-white ">
                         <div className="grid col-span-5 justify-center gap-3 ">
                           <div>
@@ -684,11 +684,11 @@ export default SimpleProfileCard;
           <div className="mt-8">
             <ContentHeader id={"profile_card_2"} text={"Simple profile card"}/>
 
-            <p className="w-[80%] text-text text-[1rem]">
+            <p className="w-full 425px:w-[80%] text-text text-[1rem]">
               This is a profile card with statistics component. View detailed insights and information about profiles seamlessly.
             </p>
 
-            <div className="w-[80%] border border-border rounded mt-3">
+            <div className="w-full 425px:w-[80%] border border-border rounded mt-3">
               <div className="relative">
                 <div
                     className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${simpleProfileCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -711,7 +711,7 @@ export default SimpleProfileCard;
               </div>
               {simpleProfileCardPreview && (
                   <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                    <div className="w-[60%] shadow-lg rounded flex flex-col">
+                    <div className="w-full 1024px:w-[60%] mt-16 1024px:mt-0 shadow-lg rounded flex flex-col">
                       <div className="w-full  flex justify-center items-center  ">
                         <img
                             src="https://images.pexels.com/photos/3772623/pexels-photo-3772623.jpeg"
@@ -807,11 +807,11 @@ export default SimpleProfileCard;
             <ContentHeader id="profile_card" text={"profile card"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a profile card displaying followers, posts, and likes. Explore engagement metrics effortlessly.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${profileCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -834,7 +834,7 @@ export default SimpleProfileCard;
             </div>
             {profileCardPreview && (
                 <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="w-[60%] shadow-lg rounded">
+                  <div className="w-full 1024px:w-[60%] shadow-lg rounded">
                     <div
                         className="w-full h-[150px] relative bg-[url('https://img.freepik.com/premium-vector/content-writer-vector-colored-round-line-illustration_104589-2571.jpg')] bg-center">
                       <img
@@ -923,11 +923,11 @@ export default profileCard;
             <ContentHeader id="Team_card" text={"Team card"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a team member card with elegant alignment. View team details with stylish presentation.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${teamCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -950,7 +950,7 @@ export default profileCard;
             </div>
             {teamCardPreview && (
                 <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="w-[60%] rounded shadow-lg p-4">
+                  <div className="w-full 1024px:w-[60%] rounded shadow-lg p-4">
                     <div className="w-full flex items-center justify-between mb-4">
                       <div className="flex items-center gap-2">
                         <RiTeamFill
@@ -1106,11 +1106,11 @@ export default TeamCard;
             <ContentHeader id="Pricing_card_1" text={"Pricing card 1"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a pricing card with highlighted points. Compare plans with clear, marked features for easy selection.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${pricingCardPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -1133,7 +1133,7 @@ export default TeamCard;
             </div>
             {pricingCardPreview && (
                 <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="w-[80%] border border-border p-2 rounded-2xl">
+                  <div className="w-full 1024px:w-[80%] border border-border p-2 rounded-2xl">
                     <div className="w-full bg-primary rounded-2xl p-4">
                       <div className="flex items-center justify-between w-full mb-5">
                         <IoIosRocket className="text-secondary text-[3.5rem]"/>
@@ -1260,11 +1260,11 @@ export default PricingCard;
             <ContentHeader id="Pricing_card_2" text={"Pricing card 2"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a pricing card with check and cross icons for feature comparison. Easily assess options with clear indicators.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${pricingCard2Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -1287,7 +1287,7 @@ export default PricingCard;
             </div>
             {pricingCard2Preview && (
                 <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="w-[80%] border border-border shadow-lg">
+                  <div className="w-full 1024px:w-[80%] border border-border shadow-lg">
                     <div className="w-full flex items-center justify-center flex-col p-6">
                       <h2 className="text-[1.5rem] text-primary font-[600]">
                         Standard
@@ -1411,7 +1411,7 @@ export default PricingCard;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

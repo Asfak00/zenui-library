@@ -70,14 +70,14 @@ const MobileNavbar = () => {
                         <img
                             src="/darklogo.png"
                             alt="logo"
-                            className="w-[70px] cursor-pointer"
+                            className="w-[60px] 1024px:w-[70px] cursor-pointer"
                             onClick={() => navigate("/")}
                         />
                     ) : (
                         <img
                             src="/darklogo.png"
                             alt="logo"
-                            className="w-[70px] cursor-pointer"
+                            className="w-[60px] 1024px:w-[70px] cursor-pointer"
                             onClick={() => navigate("/")}
                         />
                     )}
@@ -122,7 +122,7 @@ const MobileNavbar = () => {
 
             {/*  sidebar  */}
             <aside
-                className={`${sidebarOpen ? 'translate-x-0 opacity-100 z-50' : 'translate-x-[200px] opacity-0 z-[-1]'} fixed top-[77px] mobileSidebar right-0 py-5 px-[2.3rem] w-[80%] 425px:w-[50%] h-screen transition-all duration-500 ${getTheRouteName() === '/' ? 'bg-[#0b183e]' : 'bg-secondary'}`}>
+                className={`${sidebarOpen ? 'translate-x-0 opacity-100 z-50' : 'translate-x-[200px] opacity-0 z-[-1]'} fixed top-[69px] mobileSidebar right-0 py-5 px-[2.3rem] w-[80%] 425px:w-[50%] h-screen transition-all duration-500 ${getTheRouteName() === '/' ? 'bg-[#0b183e]' : 'bg-secondary'}`}>
                 <div className="zenuiSearchInput relative 425px:hidden block" onClick={handleSearchClick}>
                     <IoIosSearch
                         className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-primary ' : 'text-text'} absolute left-3 top-[0.6rem] text-[1.5rem]`}/>

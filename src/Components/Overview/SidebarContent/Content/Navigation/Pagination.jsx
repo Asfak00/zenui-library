@@ -93,7 +93,7 @@ const Pagination = () => {
           <button
               key={i}
               onClick={() => handlePageClick(i)}
-              className={`mx-1 px-3 py-1 rounded ${
+              className={`mx-1 px-3 py-1 text-[0.9rem] 640px:text-[1rem] rounded ${
                   currentPage === i ? 'bg-primary text-white' : 'bg-gray-200 text-gray-700'
               }`}
           >
@@ -113,7 +113,7 @@ const Pagination = () => {
           <button
               key={i}
               onClick={() => handlePageClick(i)}
-              className={`mx-1 px-4 py-2 rounded-full transform transition-all duration-300 ${
+              className={`mx-1 px-4 py-2 text-[0.9rem] 640px:text-[1rem] rounded-full transform transition-all duration-300 ${
                   currentPage === i
                       ? 'bg-primary text-white scale-110 shadow-md'
                       : 'bg-transparent text-blue-600 hover:bg-blue-100'
@@ -135,8 +135,8 @@ const Pagination = () => {
           <button
               key={i}
               onClick={() => handlePageClick(i)}
-              className={`mx-1 px-3 py-1 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all duration-300 transform hover:scale-105 ${
-                  currentPage === i ? 'bg-blue-500 text-white shadow-lg' : ''
+              className={`mx-1 px-3 py-1 text-[0.9rem] 640px:text-[1rem] rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all duration-300 transform hover:scale-105 ${
+                  currentPage === i ? 'bg-primary text-white shadow-lg' : ''
               }`}
           >
             {i}
@@ -149,18 +149,18 @@ const Pagination = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
+      <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:!pl-[5rem] 1024px:pt-[4.5rem]">
         <div>
           <ContentHeader
             text={"animated pagination"}
             id={"animated_pagination"}
           />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             An animated pagination component that seamlessly guides users through content with fluid transitions and intuitive design.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${animatedPaginationPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -182,8 +182,8 @@ const Pagination = () => {
               </button>
             </div>
             {animatedPaginationPreview && (
-                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="flex items-center justify-center mt-8 space-x-2">
+                <div className="640px:p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="flex items-center flex-wrap justify-center mt-8 space-x-1 640px:space-x-2">
                     <button
                         onClick={handlePrevious}
                         disabled={currentPage === 1}
@@ -297,11 +297,11 @@ export default pagination;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             Pagination featuring user-friendly buttons for effortless navigation through content, enhancing accessibility and interaction.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${paginationWithButtonPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -323,12 +323,12 @@ export default pagination;
               </button>
             </div>
             {paginationWithButtonPreview && (
-                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
+                <div className="640px:p-8 mb-4 flex items-center gap-5 justify-center">
                   <div className="flex items-center flex-wrap justify-center mt-4">
                     <button
                         onClick={handlePrevious}
                         disabled={currentPage === 1}
-                        className="mx-1 px-3 py-1 rounded bg-gray-200 text-text disabled:opacity-50"
+                        className="mx-1 px-3 py-1  text-[0.9rem] 640px:text-[1rem] rounded bg-gray-200 text-text disabled:opacity-50"
                     >
                       Previous
                     </button>
@@ -336,7 +336,7 @@ export default pagination;
                     <button
                         onClick={handleNext}
                         disabled={currentPage === totalPages}
-                        className="mx-1 px-3 py-1 rounded bg-gray-200 text-text disabled:opacity-50"
+                        className="mx-1 px-3 py-1 text-[0.9rem] 640px:text-[1rem] rounded bg-gray-200 text-text disabled:opacity-50"
                     >
                       Next
                     </button>
@@ -433,11 +433,11 @@ export default pagination;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             Pagination with rounded buttons offering smooth navigation through content, enhancing both aesthetics and usability.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${roundedButtonPaginationPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -459,8 +459,8 @@ export default pagination;
               </button>
             </div>
             {roundedButtonPaginationPreview && (
-                <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="flex items-center justify-center mt-8 space-x-4">
+                <div className="640px:p-8 mb-4 flex items-center gap-5 justify-center">
+                  <div className="flex items-center flex-wrap justify-center mt-8 space-x-4">
                     <button
                         onClick={handlePrevious}
                         disabled={currentPage === 1}
@@ -577,7 +577,7 @@ export default pagination;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

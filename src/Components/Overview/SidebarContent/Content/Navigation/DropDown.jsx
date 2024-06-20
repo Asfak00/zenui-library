@@ -58,15 +58,15 @@ const DropDown = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
+      <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:pl-[5rem] 1024px:pt-[4.5rem]">
         <div>
           <ContentHeader text={"list dropdown"} id={"list_dropdown"} />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a list dropdown component. Select items from a neatly organized and easily accessible list.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${listDropdownPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -175,11 +175,11 @@ export default DropDown;
             <ContentHeader text={"grid item dropdown"} id={"grid_dropdown"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a grid list dropdown component. Choose items from a visually organized grid layout.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${gridDropdownPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -213,8 +213,8 @@ export default DropDown;
                         <MdKeyboardArrowDown
                             className="text-[1.5rem] group-hover:rotate-[180deg] transition-all duration-300"/>
                         <div
-                            className=" hidden group-hover:block absolute top-[100%] left-[30%] bg-secondary shadow-2xl p-4">
-                          <div className="text-[#000] grid grid-cols-2 gap-5">
+                            className=" hidden group-hover:block absolute top-[100%] z-20 left-[30%] bg-secondary shadow-2xl p-4">
+                          <div className="text-[#000] grid grid-cols-1 640px:grid-cols-2 gap-5">
                             <div>
                               <h3 className="font-[600] text-[1.2rem]">Dress</h3>
                               <p>Formal Dresses</p>
@@ -313,11 +313,11 @@ export default DropDown;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a dropdown megamenu with picture component. Browse categories with visual thumbnails for enhanced navigation.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${dropdownWithPicturePreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -352,7 +352,7 @@ export default DropDown;
                             className="text-[1.5rem] group-hover:rotate-[180deg] transition-all duration-300"/>
                         <div
                             className=" hidden group-hover:block absolute top-[100%] left-[0%] right-0 bg-secondary shadow-2xl p-4 z-50">
-                          <div className="text-[#000] flex justify-between w-full">
+                          <div className="text-[#000] flex 1024px:flex-row flex-col gap-5 justify-between w-full">
                             <div className="flex flex-wrap gap-5 ">
                               <div>
                                 <h3 className="font-[600] text-[1.2rem]">
@@ -417,7 +417,7 @@ const DropDown = () => {
             Categories
             <MdKeyboardArrowDown className="text-[1.5rem] group-hover:rotate-[180deg] transition-all duration-300" />
             <div className=" hidden group-hover:block absolute top-[100%] left-[0%] right-0 bg-[#ffffff] shadow-2xl p-4 z-50">
-              <div className="text-[#000] flex justify-between w-full">
+              <div className="text-[#000] lg:flex-row flex-col gap-5 flex justify-between w-full">
                 <div className="flex flex-wrap gap-5 ">
                   <div>
                     <h3 className="font-[600] text-[1.2rem]">Dress</h3>
@@ -469,7 +469,7 @@ export default DropDown;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>
