@@ -110,6 +110,7 @@ const Navbar = () => {
             <a href='https://discord.gg/qbwytm4WUG' target='_blank'>
               <FaDiscord className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-[#131558] bg-primary' : 'text-text bg-border'} text-[1.8rem] dark:text-[#D9EEFF] rounded-full p-1 cursor-pointer`} />
             </a>
+            
             <TbBrandGithubFilled className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-[#131558] bg-primary' : 'text-text bg-border'} text-[1.8rem] dark:text-[#D9EEFF] rounded-full p-1 cursor-pointer`} />
           </div>
           {/*{toggle ? (*/}
