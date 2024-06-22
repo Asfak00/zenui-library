@@ -124,7 +124,7 @@ const Tabs = () => {
 
     return (
         <>
-            <aside className="flex items-start gap-6 justify-between pt-[9.5rem] !px-5 425px:!px-10 1024px:pl-[5rem] 1024px:pt-[4.5rem]">
+            <aside className="flex items-start gap-6 justify-between pt-[9.5rem] !px-5 425px:!px-10 1024px:!pl-[5rem] 1024px:pt-[4.5rem]">
                 <div>
                     <ContentHeader
                         id="Border_navigation"
@@ -179,7 +179,7 @@ const Tabs = () => {
                                     <li
                                         className={`${
                                             isActive === 3 && "bg-primary text-secondary"
-                                        } px-6 py-2 border text-primary transition duration-300 border-primary cursor-pointer`}
+                                        } px-6 py-2 border hidden 425px:block text-primary transition duration-300 border-primary cursor-pointer`}
                                         onClick={() => setIsActive(3)}
                                     >
                                         Support
@@ -263,7 +263,7 @@ export default BorderTab;
                                         className={`${
                                             (boxButtonActive === 1 && "translate-x-[0px]") ||
                                             (boxButtonActive === 2 && "translate-x-[90px]") ||
-                                            (boxButtonActive === 3 && "translate-x-[186px]") ||
+                                            (boxButtonActive === 3 && "translate-x-[179px] !w-[108px] 425px:!w-[95px] 425px:translate-x-[186px]") ||
                                             (boxButtonActive === 4 &&
                                                 "!w-[100px] translate-x-[290px]")
                                         } !bg-primary absolute !text-[#fff] h-[85%] w-[95px] transition duration-700 rounded-full border-transparent cursor-pointer`}
@@ -295,7 +295,7 @@ export default BorderTab;
                                     <li
                                         className={`${
                                             boxButtonActive === 4 && " !text-[#fff]"
-                                        } px-6 py-2  text-text z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
+                                        } px-6 py-2 hidden 425px:block text-text z-20 transition duration-300 rounded-full border-transparent cursor-pointer`}
                                         onClick={() => setBoxButtonActive(4)}
                                     >
                                         Contact
@@ -421,7 +421,7 @@ export default AnimatedTab;
                                         className={`${
                                             bottomBorderActive === 3 &&
                                             "!border-primary !text-primary"
-                                        } px-6 py-2 border-b  text-text transition duration-300 border-transparent cursor-pointer`}
+                                        } px-6 py-2 border-b hidden 425px:block text-text transition duration-300 border-transparent cursor-pointer`}
                                         onClick={() => setBottomBorderActive(3)}
                                     >
                                         Support
@@ -534,7 +534,7 @@ export default BottomBorderTab; "
                                         className={`${
                                             topBorderButtonActive === 4 &&
                                             "!border-primary !text-primary !bg-transparent"
-                                        } px-6 py-2 border-t bg-[#d1d1d1]  text-text transition duration-300 border-transparent cursor-pointer`}
+                                        } px-6 py-2 border-t bg-[#d1d1d1] hidden 425px:block text-text transition duration-300 border-transparent cursor-pointer`}
                                         onClick={() => setTopBorderButtonActive(4)}
                                     >
                                         Contact
@@ -669,7 +669,7 @@ export default DropDown;
                                         className={`${
                                             roundedBorderButtonAcitve === 4 &&
                                             " !border-[#d1d1d1] !border-t !border-l !border-r !border-b-transparent rounded-tr rounded-tl"
-                                        } px-6 py-2 !border-[#d1d1d1] border-b  text-text transition duration-300 border-transparent cursor-pointer`}
+                                        } px-6 py-2 !border-[#d1d1d1] border-b hidden 425px:block text-text transition duration-300 border-transparent cursor-pointer`}
                                         onClick={() => setRoundedBorderButtonActive(4)}
                                     >
                                         Contact
@@ -799,7 +799,7 @@ export default DropDown;
                                     <li
                                         className={`${
                                             boxButtonActive === 4 && "!bg-primary !text-[#fff]"
-                                        } px-6 py-2  text-text transition duration-300 rounded-full border-transparent cursor-pointer`}
+                                        } px-6 py-2  text-text hidden 425px:block transition duration-300 rounded-full border-transparent cursor-pointer`}
                                         onClick={() => setBoxButtonActive(4)}
                                     >
                                         Contact

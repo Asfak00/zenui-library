@@ -114,15 +114,15 @@ const Testimonial = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
-        <div className="w-[80%]">
+      <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:!pl-[5rem] 1024px:pt-[4.5rem]">
+        <div className="w-full 425px:w-[80%]">
           <ContentHeader text={"testimonial 1"} id={"testimonial_1"} />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${testimonial1Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -145,7 +145,7 @@ const Testimonial = () => {
             </div>
             {testimonial1Preview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <div className="w-[70%] p-4 bg-secondary shadow-2xl rounded-lg relative">
+                  <div className="w-full 1024px:w-[70%] mt-8 1024px:mt-0 p-4 bg-secondary shadow-2xl rounded-lg relative">
                     <FaQuoteLeft className=" absolute -top-2 left-[5%] text-[1.3rem] text-[#727272]"/>
                     <img
                         src="https://img.freepik.com/free-photo/confident-attractive-caucasian-guy-beige-pullon-smiling-broadly-while-standing-against-gray_176420-44508.jpg?size=626&ext=jpg&ga=GA1.1.71340048.1688965399&semt=sph"
@@ -234,11 +234,11 @@ export default Testimonial;
             <ContentHeader text={"testimonial 2"} id={"testimonial_2"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${testimonial2Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -262,8 +262,8 @@ export default Testimonial;
             {testimonial2Preview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
                   <div
-                      className="w-full p-4 bg-secondary shadow-2xl rounded-lg relative flex items-start justify-between gap-6">
-                    <div className="relative w-[50%]">
+                      className="w-full p-4 bg-secondary shadow-2xl rounded-lg relative flex flex-col 1024px:flex-row items-start justify-between gap-6">
+                    <div className="relative w-full 1024px:w-[50%]">
                       <img
                           src="https://img.freepik.com/free-photo/front-view-smiley-man-holding-laptop_23-2148946208.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.1.71340048.1688965399&semt=ais"
                           alt="demo/image"
@@ -272,7 +272,7 @@ export default Testimonial;
                       <FaQuoteRight
                           className=" absolute -top-5 right-[-5%] text-[3rem] text-[#ffffff] bg-primary p-3 rounded-full"/>
                     </div>
-                    <div className="w-[45%]">
+                    <div className="w-full 1024px:w-[45%]">
                       <h3 className="text-[1.5rem] font-[500] capitalize">
                         help us improve our productivity
                       </h3>
@@ -302,8 +302,8 @@ import React from "react";
 const Testimonial = () => {
   return (
     <>
-      <div className="w-full p-4 bg-secondary shadow-2xl rounded-lg relative flex items-start justify-between gap-6">
-        <div className="relative w-[50%]">
+      <div className="w-full p-4 bg-secondary shadow-2xl rounded-lg relative flex flex-col lg:flex-row items-start justify-between gap-6">
+        <div className="relative w-full lg:w-[50%]">
           <img
             src="https://img.freepik.com/free-photo/front-view-smiley-man-holding-laptop_23-2148946208.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.1.71340048.1688965399&semt=ais"
             alt="demo/image"
@@ -311,7 +311,7 @@ const Testimonial = () => {
           />
           <FaQuoteRight className=" absolute -top-5 right-[-5%] text-[3rem] text-[#ffffff] bg-primary p-3 rounded-full" />
         </div>
-        <div className="w-[45%]">
+        <div className="w-full lg:w-[45%]">
           <h3 className="text-[1.5rem] font-[500] capitalize">
             help us improve our productivity
           </h3>
@@ -341,11 +341,11 @@ export default Testimonial;
             <ContentHeader text={"testimonial 3"} id={"testimonial_3"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${testimonial3Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -368,7 +368,7 @@ export default Testimonial;
             </div>
             {testimonial3Preview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <div className="w-[55%] bg-secondary shadow-2xl rounded-lg p-6">
+                  <div className="w-full 1024px:w-[55%] bg-secondary shadow-2xl rounded-lg p-6">
                     <h3 className="text-[1.5rem] font-[500] capitalize">
                       help us improve our productivity
                     </h3>
@@ -438,11 +438,11 @@ export default Testimonial;
             <ContentHeader text={"testimonial 4"} id={"testimonial_4"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${testimonial4Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -466,7 +466,7 @@ export default Testimonial;
             {testimonial4Preview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
                   <div
-                      className="w-[70%] bg-secondary shadow-2xl rounded-lg p-6 flex items-center justify-center flex-col">
+                      className="w-full 1024px:w-[70%] bg-secondary shadow-2xl rounded-lg p-6 flex items-center justify-center flex-col">
                     <img
                         src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.1.71340048.1688965399&semt=sph"
                         alt="demo/image"
@@ -553,11 +553,11 @@ export default Testimonial;
             <ContentHeader text={"testimonial 5"} id={"testimonial_5"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${testimonial5Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -580,7 +580,7 @@ export default Testimonial;
             </div>
             {testimonial5Preview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <div className="w-[75%] bg-primary text-secondary shadow-2xl rounded-lg p-6 relative">
+                  <div className="w-full 1024px:w-[75%] bg-primary text-secondary shadow-2xl rounded-lg p-6 relative">
                     <FaQuoteRight className="text-[4rem] text-[#e9e9e959] absolute top-[10%] right-[10%] "/>
                     <div className="flex items-center gap-4 mt-4">
                       <img
@@ -658,11 +658,11 @@ export default Testimonial;
             <ContentHeader text={"testimonial 6"} id={"testimonial_6"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${testimonial6Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -685,7 +685,7 @@ export default Testimonial;
             </div>
             {testimonial6Preview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
-                  <div className="w-[70%] bg-secondary shadow-2xl rounded-lg ">
+                  <div className="w-full 1024px:w-[70%] bg-secondary shadow-2xl rounded-lg ">
                     <div className="relative">
                       <img
                           src="https://img.freepik.com/free-photo/indoor-picture-cheerful-handsome-young-man-having-folded-hands-looking-directly-smiling-sincerely-wearing-casual-clothes_176532-10257.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.1.71340048.1688965399&semt=sph"
@@ -759,11 +759,11 @@ export default Testimonial;
             <ContentHeader text={"testimonial 7"} id={"testimonial_7"}/>
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a testimonial component. Showcase user feedback and reviews with a stylish, engaging layout.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${testimonial7Preview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -787,16 +787,16 @@ export default Testimonial;
             {testimonial7Preview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center">
                   <div
-                      className="w-full border border-primary shadow-2xl rounded-lg flex items-center justify-between gap-6 px-6 py-16">
+                      className="w-full border border-primary shadow-2xl rounded-lg flex flex-col 1024px:flex-row items-center justify-between gap-6 px-6 py-16">
                     <img
                         src="https://img.freepik.com/free-photo/curly-man-with-broad-smile-shows-perfect-teeth-being-amused-by-interesting-talk-has-bushy-curly-dark-hair-stands-indoor-against-white-blank-wall_273609-17092.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.1.71340048.1688965399&semt=sph"
                         alt="demo/image"
                         className="w-[180px] h-[180px] object-cover rounded-full"
                     />
 
-                    <div className="w-[65%] relative">
-                      <div className="flex items-center justify-between relative">
-                        <FaQuoteRight className=" absolute top-[-150%] left-[0%] text-[2rem] text-primary"/>
+                    <div className="w-full 1024px:w-[65%] relative">
+                      <div className="flex flex-col 1024px:flex-row items-center justify-between relative">
+                        <FaQuoteRight className=" absolute top-[-550%] 1024px:top-[-150%] left-[0%] text-[2rem] text-primary"/>
                         <div className="flex items-center gap-2">
                           <h2 className="text-[1rem] font-[500]">
                             Jhone Dehon -
@@ -838,17 +838,17 @@ import { FaQuoteLeft, FaRegStar, FaStar, FaQuoteRight } from "react-icons/fa";
 const Testimonial = () => {
   return (
     <>
-      <div className="w-full border border-primary shadow-2xl rounded-lg flex items-center justify-between gap-6 px-6 py-16">
+      <div className="w-full border border-primary shadow-2xl rounded-lg flex flex-col lg:flex-row items-center justify-between gap-6 px-6 py-16">
         <img
           src="https://img.freepik.com/free-photo/curly-man-with-broad-smile-shows-perfect-teeth-being-amused-by-interesting-talk-has-bushy-curly-dark-hair-stands-indoor-against-white-blank-wall_273609-17092.jpg?size=626&ext=jpg&uid=R134535407&ga=GA1.1.71340048.1688965399&semt=sph"
           alt="demo/image"
           className="w-[180px] h-[180px] object-cover rounded-full"
         />
 
-        <div className="w-[65%] relative">
+        <div className="w-full lg:w-[65%] relative">
           <div className="flex items-center justify-between relative">
-            <FaQuoteRight className=" absolute top-[-150%] left-[0%] text-[2rem] text-primary" />
-            <div className="flex items-center gap-2">
+            <FaQuoteRight className=" absolute top-[-550%] lg:top-[-150%] left-[0%] text-[2rem] text-primary" />
+            <div className="flex flex-col lg:flex-row items-center gap-2">
               <h2 className="text-[1rem] font-[500]">Jhone Dehon -</h2>
               <p className="text-[0.9rem] text-[#9c9c9c]">CEO of Miracle</p>
             </div>
@@ -885,7 +885,7 @@ export default Testimonial;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

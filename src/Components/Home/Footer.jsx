@@ -19,12 +19,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full px-5 425px:px-10 py-8 dark:bg-[#060024] dark:text-[#D9EEFF] bg-secondary shadow-shadowColor" style={containerStyle}>
+    <footer className="w-full px-5 425px:px-10 py-8 bg-secondary shadow-shadowColor" style={containerStyle}>
       <div className="w-full flex 640px:flex-row flex-col 640px:gap-0 gap-8 justify-between items-start">
         <div className="w-full 640px:w-[33%]">
           <img src="/footer_logo.png" alt="logo" className="w-[150px] 640px:w-[200px] my-3" />
 
-          <p className="text-[#9caebc] text-[1rem] dark:text-[#D9EEFF]">
+          <p className="text-[#9caebc] text-[1rem]">
             Keep up to date Join our newsletter for regular updates. No spam
             ever.
           </p>
@@ -32,7 +32,7 @@ const Footer = () => {
           <form className="mt-4">
             <label
               htmlFor="email"
-              className="text-[#9caebc] dark:text-[#D9EEFF] text-[0.9rem] mb-2"
+              className="text-[#9caebc] text-[0.9rem] mb-2"
             >
               Your Email
             </label>
@@ -53,7 +53,7 @@ const Footer = () => {
 
         <div className=" flex 640px:flex-row flex-col gap-8 640px:gap-20">
           <div className="flex gap-2 flex-col mt-4">
-            <h3 className="font-[600] dark:text-[#0471d6] text-[#0471d6] text-[20px] capitalize">
+            <h3 className="font-[600] text-[#0471d6] text-[20px] capitalize">
               resources
             </h3>
             <ul className="footer font-[400] text-[#9caebc] text-[0.9rem] flex flex-col gap-2">
@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
 
           {/*<div className="flex gap-2 flex-col mt-4">*/}
-          {/*  <h3 className="font-[600]  dark:text-[#0471d6] text-[#0471d6] text-[20px] capitalize">*/}
+          {/*  <h3 className="font-[600]  text-[#0471d6] text-[20px] capitalize">*/}
           {/*    Explore*/}
           {/*  </h3>*/}
           {/*  <ul className="footer font-[400] text-[0.9rem] text-[#9caebc] flex flex-col gap-2">*/}
@@ -93,7 +93,7 @@ const Footer = () => {
           {/*</div>*/}
 
           <div className="flex gap-2 flex-col mt-4">
-            <h3 className="font-[600] dark:text-[#0471d6] text-[#0471d6] text-[20px] capitalize">
+            <h3 className="font-[600] text-[#0471d6] text-[20px] capitalize">
               Company
             </h3>
             <ul className="footer font-[400] text-[0.9rem] text-[#9caebc] flex flex-col gap-2">
@@ -115,7 +115,7 @@ const Footer = () => {
       </div>
 
       <div className="w-full border-t border-[#9caebc] flex items-center 425px:flex-row flex-col 425px:gap-0 gap-5 justify-between mt-12 pt-6">
-        <p className="text-[#9caebc] dark:text-[#D9EEFF] text-[0.9rem]">
+        <p className="text-[#9caebc] text-[0.9rem]">
           Copyright &copy; 2024 by ZenUI Library.
         </p>
         <div className="flex items-center gap-4">

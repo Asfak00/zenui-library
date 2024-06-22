@@ -69,15 +69,15 @@ const Skeleton = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
-        <div className="w-[80%]">
+      <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:!pl-[5rem] 1024px:pt-[4.5rem]">
+        <div className="w-full 425px:w-[80%]">
           <ContentHeader text={"Card Skeleton"} id={"card_skeleton"} />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a card skeleton component. Display placeholder content while the actual content is loading.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${cardSkeletonPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -100,10 +100,10 @@ const Skeleton = () => {
             </div>
             {cardSkeletonPreview && (
                 <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="w-[400px] border border-[#00000017] animate-pulse rounded-md">
+                  <div className="w-full 425px:w-[400px] border border-[#00000017] animate-pulse rounded-md">
                     <div className="w-full bg-border h-[130px] relative">
                       <img
-                          className="w-[120px] h-[120px] rounded-full bg-[#cecece] absolute bottom-[-40%] right-[35%]"/>
+                          className="w-[120px] h-[120px] rounded-full bg-[#cecece] absolute bottom-[-40%] right-1/2 transform translate-x-1/2"/>
                     </div>
 
                     <div className="flex flex-col gap-3 items-center justify-center w-full py-8 mt-12">
@@ -142,7 +142,7 @@ const CardSkeleton = () => {
 
     // Background image & profile image
       <div className='w-full bg-[#e5eaf2] h-[130px] relative'>
-        <img className='w-[120px] h-[120px] rounded-full bg-[#cecece] absolute bottom-[-40%] right-[35%]' />
+        <img className='w-[120px] h-[120px] rounded-full bg-[#cecece] absolute bottom-[-40%] right-1/2 transform translate-x-1/2' />
       </div>
 
       // Name & Bio
@@ -185,11 +185,11 @@ export default CardSkeleton;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a grid image gallery skeleton component. Display placeholders for images while loading content.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${imageGellaryPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -212,7 +212,7 @@ export default CardSkeleton;
             </div>
             {imageGellaryPreview && (
                 <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className=" animate-pulse">
+                  <div className="animate-pulse">
                     <div className="flex gap-5">
                       <img className="w-[200px] h-[300px] bg-border"/>
 
@@ -267,11 +267,11 @@ export default ImageGallery;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a social card skeleton component. Show placeholders for social media content while it loads.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${socialPostPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -294,9 +294,9 @@ export default ImageGallery;
             </div>
             {socialPostPreview && (
                 <div className="p-8 mb-4 flex items-center gap-5 justify-center">
-                  <div className="w-[450px] bg-secondary p-6 border border-border rounded animate-pulse">
+                  <div className="w-full 425px:w-[450px] bg-secondary p-6 border border-border rounded animate-pulse">
                     <div className="flex items-center">
-                      <div className="w-[20%]">
+                      <div className="w-[40%] 425px:w-[20%]">
                         <img className="w-[60px] h-[60px] rounded-full bg-border"/>
                       </div>
 
@@ -354,13 +354,13 @@ export default SocialPostSkeleton;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is the skeleton of the product details page. You can use this
             skeleton on the product details page of any of your e-commerce
             websites. Each section is marked with comments within the code.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${productDetailsPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -454,7 +454,7 @@ export default ProductDetailsSkeleton;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[37%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[37%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>

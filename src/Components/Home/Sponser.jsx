@@ -32,7 +32,7 @@ const Sponser = () => {
                         Support ZenUI <FaHeart className='text-red-600 heartIcon'/>
                     </h1>
                     <p data-aos="zoom-in" data-aos-duration="1300"
-                       className=" text-[#9caebc] mx-auto font-[400] dark:text-[#D9EEFF] text-[0.8rem] 425px:text-[0.9rem] mt-1 capitalize">
+                       className=" text-[#9caebc] mx-auto font-[400] text-[0.8rem] 425px:text-[0.9rem] mt-1 capitalize">
                         Your sponsorship helps us maintain and expand ZenUI, ensuring it remains a cutting-edge UI component library. By supporting ZenUI, you contribute to the development of innovative features, improved performance, and comprehensive documentation, empowering developers worldwide to create exceptional user experiences. Join us in fostering a vibrant community and advancing the future of web development.
                     </p>
                 </div>

@@ -5,6 +5,7 @@ import Navbar from "../../../Components/Home/Navbar";
 import Sidebar from "../../../Components/Overview/Sidebar";
 import Tooltip from "../../../Components/Overview/SidebarContent/Content/Data Display/Tooltip";
 import MobileNavbar from "../../../Components/Home/MobileNavbar.jsx";
+import MobileSidebar from "../../../Components/Overview/Sidebar/MobileSidebar.jsx";
 
 const TooltipPage = () => {
   return (
@@ -16,7 +17,8 @@ const TooltipPage = () => {
           <Sidebar startContent={29} />
         </div>
 
-        <div className="w-full p-12 min-h-screen">
+        <div className="w-full 1024px:p-12 min-h-screen">
+            <MobileSidebar startContent={29}/>
           <Tooltip />
         </div>
       </div>

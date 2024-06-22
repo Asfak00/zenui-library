@@ -77,7 +77,7 @@ const Chip = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:pl-[5rem] 1024px:pt-[4.5rem]">
+      <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:!pl-[5rem] 1024px:pt-[4.5rem]">
         <div>
           <ContentHeader text={"Primary Chip"} id={"primary_chip"} />
 

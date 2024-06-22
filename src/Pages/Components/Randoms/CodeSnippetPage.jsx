@@ -5,6 +5,7 @@ import Navbar from "../../../Components/Home/Navbar";
 import Sidebar from "../../../Components/Overview/Sidebar";
 import Code from "../../../Components/Overview/SidebarContent/Content/Randoms/Code";
 import MobileNavbar from "../../../Components/Home/MobileNavbar.jsx";
+import MobileSidebar from "../../../Components/Overview/Sidebar/MobileSidebar.jsx";
 
 const CodeSnippetPage = () => {
   return (
@@ -16,7 +17,8 @@ const CodeSnippetPage = () => {
           <Sidebar startContent={30} />
         </div>
 
-        <div className="w-full p-12 min-h-screen">
+        <div className="w-full 1024px:p-12 min-h-screen">
+            <MobileSidebar startContent={30}/>
           <Code />
         </div>
       </div>

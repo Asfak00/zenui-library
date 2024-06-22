@@ -23,10 +23,10 @@ const MobileSidebar = ({ startContent, setStartContent }) => {
             <div className='w-full 1024px:hidden bg-border mt-[4.9rem] 425px:mt-[4.3rem] py-3 fixed 425px:top-0 top-[-10px] px-5 425px:px-10 z-30'>
                 <CiMenuFries className='text-[1.7rem] rotate-[180deg] text-text mobilesidebarIcon' onClick={()=>setSidebarOpen(true)}/>
             </div>
-            <aside className={` ${sidebarOpen ? 'translate-x-0 opacity-100 z-40' : 'translate-x-[-200px] opacity-0 z-[-1]'} py-6 pt-[6rem] px-10 border-r h-[100vh] border-border flex-col gap-4 overflow-y-scroll fixed top-18 left-0 w-[320px] dark:bg-[#060024] bg-secondary z-20 flex mobileSidebar transition-all duration-500`}>
+            <aside className={` ${sidebarOpen ? 'translate-x-0 opacity-100 z-40' : 'translate-x-[-200px] opacity-0 z-[-1]'} py-6 pt-[6rem] px-10 border-r h-[100vh] border-border flex-col gap-4 overflow-y-scroll fixed top-18 left-0 w-[320px] bg-secondary z-20 flex mobileSidebar transition-all duration-500`}>
                 <div>
                     <h3
-                        className="flex items-center gap-1 text-[1rem] text-[#0471d6] font-[500] capitalize cursor-pointer dark:text-[#D9EEFF]"
+                        className="flex items-center gap-1 text-[1rem] text-[#0471d6] font-[500] capitalize cursor-pointer"
                         onClick={() => setStart(!start)}
                     >
                         <MdKeyboardArrowRight
@@ -42,7 +42,7 @@ const MobileSidebar = ({ startContent, setStartContent }) => {
                         }`}
                     >
                         <ul
-                            className={`flex flex-col ml-2 mt-3 overflow-hidden pl-4 dark:text-[#D9EEFF] `}
+                            className={`flex flex-col ml-2 mt-3 overflow-hidden pl-4`}
                         >
                             <Link
                                 to="/getting-started/overview"
@@ -58,7 +58,7 @@ const MobileSidebar = ({ startContent, setStartContent }) => {
                                 to="/getting-started/templates"
                                 className={`${
                                     startContent === 1 &&
-                                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] !text-secondary dark:bg-[#1c173bfb] font-[500]"
+                                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] !text-secondary font-[500]"
                                 }   border-l text-text border-[#9caebc] flex items-center gap-3`}
                                 onClick={() => setStartContent(1)}
                             >
@@ -85,7 +85,7 @@ const MobileSidebar = ({ startContent, setStartContent }) => {
 
                 <div>
                     <h3
-                        className="flex items-center gap-1 text-[1rem] text-[#0471d6] font-[500] capitalize cursor-pointer dark:text-[#D9EEFF]"
+                        className="flex items-center gap-1 text-[1rem] text-[#0471d6] font-[500] capitalize cursor-pointer"
                         onClick={() => setComponents(!components)}
                     >
                         <MdKeyboardArrowRight
@@ -102,7 +102,7 @@ const MobileSidebar = ({ startContent, setStartContent }) => {
                         }`}
                     >
                         <ul
-                            className={`flex flex-col ml-2 text-text mt-3 overflow-hidden pl-4 dark:text-[#D9EEFF]`}
+                            className={`flex flex-col ml-2 text-text mt-3 overflow-hidden pl-4 `}
                         >
                             <Link
                                 to={"/components/all-components"}

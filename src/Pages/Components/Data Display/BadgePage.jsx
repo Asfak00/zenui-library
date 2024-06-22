@@ -5,6 +5,7 @@ import Navbar from "../../../Components/Home/Navbar";
 import Sidebar from "../../../Components/Overview/Sidebar";
 import Badge from "../../../Components/Overview/SidebarContent/Content/Data Display/Badge";
 import MobileNavbar from "../../../Components/Home/MobileNavbar.jsx";
+import MobileSidebar from "../../../Components/Overview/Sidebar/MobileSidebar.jsx";
 
 const BadgePage = () => {
   return (
@@ -16,7 +17,8 @@ const BadgePage = () => {
           <Sidebar startContent={28} />
         </div>
 
-        <div className="w-full p-12 min-h-screen">
+        <div className="w-full 1024px:p-12 min-h-screen">
+            <MobileSidebar startContent={28}/>
           <Badge />
         </div>
       </div>

@@ -43,11 +43,11 @@ const Hero = () => {
                 className="heroText font-[900] text-[2rem] 425px:text-[3rem] 640px:text-[4.5rem] leading-[3rem] 425px:leading-[4.5rem] 640px:leading-[6rem] uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#064168] to-[#25A5C3]">
               ZenUI Library
             </h1>
-            <h3 data-aos="zoom-in" className="text-[0.75rem] 425px:text-[1.120rem] 640px:text-[1.680rem] dark:text-[#D9EEFF] capitalize font-[500] text-[#9caebc]">
+            <h3 data-aos="zoom-in" className="text-[0.75rem] 425px:text-[1.120rem] 640px:text-[1.680rem] capitalize font-[500] text-[#9caebc]">
               Free platform, use your favorite components and designs
             </h3>
             <p data-aos="zoom-in"
-               className=" text-[#9caebc] w-[82%] 425px:w-[80%] 640px:w-[91%] mx-auto font-[400] dark:text-[#D9EEFF] text-[0.9rem] mt-3">
+               className=" text-[#9caebc] w-[82%] 425px:w-[80%] 640px:w-[91%] mx-auto font-[400] text-[0.9rem] mt-3">
               ZenUI is a free platform where you get all the
               components and designs you need to use. So find your favorite design
               or component.

@@ -15,11 +15,11 @@ import { templatesData } from "../../../../Utils/TemplatesData";
 
 const Templete = () => {
   return (
-    <aside className="dark:text-[#D9EEFF] pt-[9.5rem] 1024px:pt-[4.5rem] 1024px:!pl-[5rem] !px-5 425px:!px-10">
-      <h1 className="font-[600] text-[#0471d6] dark:text-[#D9EEFF] text-[2rem] 425px:text-[2.5rem] 1024px:text-[3rem] capitalize">
+    <aside className="pt-[9.5rem] 1024px:pt-[4.5rem] 1024px:!pl-[5rem] !px-5 425px:!px-10">
+      <h1 className="font-[600] text-[#0471d6] text-[2rem] 425px:text-[2.5rem] 1024px:text-[3rem] capitalize">
         ZenUI Free Templates
       </h1>
-      <p className="w-full 425px:w-[70%] text-text text-[1rem] dark:text-[#D9EEFF]">
+      <p className="w-full 425px:w-[70%] text-text text-[1rem]">
         Browse our collection of free React templates to get started building
         your app with ZenUI, including a React home page, React landing page,
         and more.
@@ -51,10 +51,10 @@ const Templete = () => {
                     </div>
 
                     <div className="p-4 w-full">
-                        <h1 className="font-[600] dark:text-[#D9EEFF] text-text capitalize text-[1.2rem]">
+                        <h1 className="font-[600] text-text capitalize text-[1.2rem]">
                             {template.title}
                         </h1>
-                        <p className="text-text text-[0.9rem] mt-2 dark:text-[#D9EEFF]">
+                        <p className="text-text text-[0.9rem] mt-2 ">
                             {template.description}
                         </p>
 

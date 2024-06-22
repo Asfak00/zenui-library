@@ -73,9 +73,9 @@ const Notification = () => {
 
   return (
     <>
-      <aside className="flex items-start justify-between gap-6 pl-[5rem] pt-[4.5rem]">
-        <div className="w-[80%]">
-          <div className="p-4 flex gap-2 w-[80%] bg-[#d18f0011] border border-[#d18e00]  rounded mb-8">
+      <aside className="flex items-start justify-between gap-6 pt-[9.5rem] !px-5 425px:!px-10 1024px:!pl-[5rem] 1024px:pt-[4.5rem]">
+        <div className="w-full 425px:w-[80%]">
+          <div className="p-4 flex gap-2 w-full 425px:w-[80%] bg-[#d18f0011] border border-[#d18e00]  rounded mb-8">
             <p>
               <SlInfo className="text-[#d17d00] text-[1.2rem]" />
             </p>
@@ -93,11 +93,11 @@ const Notification = () => {
             id={"border_notification"}
           />
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a border notification component. Highlight important messages with distinct border styling for visibility.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${borderNotificationPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -171,11 +171,11 @@ export default Notification;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a notification with a close icon for easy dismissal on user interaction.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${iconNotificationPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -199,27 +199,27 @@ export default Notification;
             {iconNotificationPreview && (
                 <div className="p-8 mb-4 flex items-center flex-col gap-5 justify-center ">
                   <div className="overflow-hidden relative w-full text-center">
-                    <div className="flex items-center gap-3 w-full justify-center">
+                    <div className="flex items-center flex-wrap gap-3 w-full justify-center mt-24 1024px:mt-0">
                       <button
-                          className="px-4 py-2 bg-primary text-secondary rounded mt-24"
+                          className="px-4 py-2 bg-primary text-secondary rounded 1024px:mt-24"
                           onClick={() => setIsError(true)}
                       >
                         Error
                       </button>
                       <button
-                          className="px-4 py-2 bg-primary text-secondary rounded mt-24"
+                          className="px-4 py-2 bg-primary text-secondary rounded 1024px:mt-24"
                           onClick={() => setIsInfo(true)}
                       >
                         Info
                       </button>
                       <button
-                          className="px-4 py-2 bg-primary text-secondary rounded mt-24"
+                          className="px-4 py-2 bg-primary text-secondary rounded 1024px:mt-24"
                           onClick={() => setIsWarning(true)}
                       >
                         Warning
                       </button>
                       <button
-                          className="px-4 py-2 bg-primary text-secondary rounded mt-24"
+                          className="px-4 py-2 bg-primary text-secondary rounded 1024px:mt-24"
                           onClick={() => setIsSuccess(true)}
                       >
                         Success
@@ -345,11 +345,11 @@ export default Notification;
             />
           </div>
 
-          <p className="w-[80%] text-text text-[1rem]">
+          <p className="w-full 425px:w-[80%] text-text text-[1rem]">
             This is a notification with a close icon. Customize its position for optimal visibility and user interaction.
           </p>
 
-          <div className="w-[80%] border border-border rounded mt-8">
+          <div className="w-full 425px:w-[80%] border border-border rounded mt-8">
             <div className="relative">
               <div
                   className={`absolute top-0 left-0 w-[90px] h-[40px] z-[1] bg-border transition-all duration-500 ${customPositionPreview ? 'translate-x-[0px] !w-[100px]' : 'translate-x-[100px] rounded-br'}`}></div>
@@ -515,7 +515,7 @@ export default Notification;
           <OverviewFooter/>
         </div>
 
-        <div className="flex flex-col gap-4 sticky top-20 right-0 w-[40%]">
+        <div className="1024px:flex hidden flex-col gap-4 sticky top-20 right-0 w-[40%]">
           <h2 className="text-[0.9rem] font-[600] text-text tracking-widest">
             CONTENTS
           </h2>
