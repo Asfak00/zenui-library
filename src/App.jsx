@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 // react router dom
 import { Route, Router, Routes } from "react-router-dom";
@@ -60,8 +60,10 @@ import CodeSnippetPage from "./Pages/Components/Randoms/CodeSnippetPage";
 import SnippetPage from "./Pages/Components/Randoms/SnippetPage";
 import AboutUsPage from "./Pages/AboutUsPage.jsx";
 import PrivacyPolicyPage from "./Pages/PrivacyPolicyPage.jsx";
+import CookieModal from "./Shared/CookieModal.jsx";
 
 const App = () => {
+  const [isCookie, setIsCookie] = useState(false)
   return (
     <>
       {/* all routes */}
@@ -137,6 +139,8 @@ const App = () => {
         <Route path="/components/code" element={<CodeSnippetPage />} />
         <Route path="/components/snippet" element={<SnippetPage />} />
       </Routes>
+
+      <CookieModal isModalOpen={isCookie} setisModalOpen={setIsCookie}/>
     </>
   );
 };
