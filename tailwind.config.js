@@ -30,8 +30,8 @@ export default {
     },
 
     animation: {
-      'infinite-scroll': 'infinite-scroll 25s linear infinite',
-      'infinite-second-scroll': 'infinite-second-scroll 25s linear infinite',
+      'infinite-scroll': 'infinite-scroll 20s linear infinite',
+      'infinite-second-scroll': 'infinite-second-scroll 20s linear infinite',
     },
     keyframes: {
       'infinite-scroll': {

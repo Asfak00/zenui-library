@@ -155,7 +155,7 @@ const Hero = () => {
             className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-5"
         >
           <ul x-ref="logos"
-              className="flex items-center gap-5 w-[50%] mx-auto justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+              className="flex items-center gap-5 w-[50%] 1404px:w-[20%] mx-auto justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
             {
               allComponents?.map((item, index) => (
                   <a href={item.url}
@@ -177,7 +177,7 @@ const Hero = () => {
             className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-10 640px:mb-20"
         >
           <ul x-ref="logos"
-              className="flex items-center gap-5 w-[50%] mx-auto justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-second-scroll">
+              className="flex items-center gap-5 w-[50%] 1404px:w-[20%] mx-auto justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-second-scroll">
             {
               allComponents?.map((item, index) => (
                   <a href={item.url}
