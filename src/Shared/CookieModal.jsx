@@ -39,7 +39,7 @@ const CookieModal = ({isModalOpen, setisModalOpen}) => {
                                 : " translate-y-[200px] opacity-0"
                         } w-full ${getTheRouteName() === '/' || getTheRouteName() === '/about-us' ? 'bg-[#0b0842]' : 'bg-[#fff]'} transition-all shadow-primary duration-300 mx-auto mt-8`}
                     >
-                        <div className="flex justify-between 1024px:flex-row flex-col w-full gap-5 px-8 py-12">
+                        <div className="flex justify-between 1024px:flex-row flex-col w-full gap-5 px-5 1024px:px-8 1024px:py-12 py-5">
                             <p className={`text-[1.2rem] ${getTheRouteName() === '/' || getTheRouteName() === '/about-us' ? ' text-[#9caebc]' : ' text-text'} 1024px:w-[70%]`}>
                                 We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept", you consent to our use of cookies. To learn more about how we use cookies and your options, please visit our <a href="/privacy-policy" className='text-blue-600 underline'>Privacy Policy</a>.
                             </p>

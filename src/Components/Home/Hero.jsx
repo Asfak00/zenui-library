@@ -43,7 +43,8 @@ const Hero = () => {
                 className="heroText font-[900] text-[2rem] 425px:text-[3rem] 640px:text-[4.5rem] leading-[3rem] 425px:leading-[4.5rem] 640px:leading-[6rem] uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#064168] to-[#25A5C3]">
               ZenUI Library
             </h1>
-            <h3 data-aos="zoom-in" className="text-[0.75rem] 425px:text-[1.120rem] 640px:text-[1.680rem] capitalize font-[500] text-[#9caebc]">
+            <h3 data-aos="zoom-in"
+                className="text-[0.75rem] 425px:text-[1.120rem] 640px:text-[1.680rem] capitalize font-[500] text-[#9caebc]">
               Free platform, use your favorite components and designs
             </h3>
             <p data-aos="zoom-in"
@@ -54,18 +55,22 @@ const Hero = () => {
             </p>
 
             {/* react icon */}
-            <div data-aos="fade-left" className="absolute top-[-50px] 425px:top-[-70px] right-[-10px] 425px:right-[10px] 640px:right-[40px] 1024px:right-[-90px]">
+            <div data-aos="fade-left"
+                 className="absolute top-[-50px] 425px:top-[-70px] right-[-10px] 425px:right-[10px] 640px:right-[40px] 1024px:right-[-90px]">
               <img src='https://i.ibb.co/vw8FWDF/Untitled-design-5.png'
                    className='w-[60px] 425px:w-[80px] animate-[spin_10s_linear_infinite] duration-1000'/>
             </div>
 
             {/* tailwind css icon */}
-            <div data-aos="fade-right" className="absolute bottom-[50px] 425px:bottom-[20px] 640px:bottom-[0px] left-[-10px] 425px:left-[10px] 640px:left-[40px] 1024px:left-[-20px]">
-              <img src='https://i.ibb.co/VLCjn0q/Untitled-design-6.png' className='w-[60px] 425px:w-[80px] animate-pulse'/>
+            <div data-aos="fade-right"
+                 className="absolute bottom-[50px] 425px:bottom-[20px] 640px:bottom-[0px] left-[-10px] 425px:left-[10px] 640px:left-[40px] 1024px:left-[-20px]">
+              <img src='https://i.ibb.co/VLCjn0q/Untitled-design-6.png'
+                   className='w-[60px] 425px:w-[80px] animate-pulse'/>
             </div>
 
             <div data-aos="fade-up"
-                 data-aos-anchor-placement="bottom-bottom" className="flex items-center justify-center gap-3 425px:gap-6 mt-12">
+                 data-aos-anchor-placement="bottom-bottom"
+                 className="flex items-center justify-center gap-3 425px:gap-6 mt-12">
               <button
                   className={utils.buttonPrimary}
                   onClick={() => navigate("/getting-started/overview")}
@@ -80,7 +85,8 @@ const Hero = () => {
         </div>
 
         {/* services */}
-        <div className="grid grid-cols-1 425px:grid-cols-2 1024px:grid-cols-4 gap-5 px-5 425px:px-10 pt-[5rem] 425px:pt-[9rem] pb-10 425px:pb-20">
+        <div
+            className="grid grid-cols-1 425px:grid-cols-2 1024px:grid-cols-4 gap-5 px-5 425px:px-10 pt-[5rem] 425px:pt-[9rem] pb-10 425px:pb-20">
           <div data-aos="fade-up" data-aos-duration="700" className="p-4 serviceCard rounded-md backdrop-blur-sm">
             <div className="flex items-center gap-3 mb-3">
               <MdDashboardCustomize className=" text-primary text-[2.5rem] rounded-full bg-[#3b9df827] p-2"/>
@@ -135,23 +141,32 @@ const Hero = () => {
           </div>
         </div>
 
-{/*        /!*  all components  *!/*/}
-{/*        <div className='px-10 pb-20 overflow-hidden w-full flex items-center gap-[10px] buttonSlidingAnimation'>*/}
-{/*          {*/}
-{/*            allComponents?.map((component) => (*/}
-{/*                <div className="logos flex items-center gap-[10px]">*/}
-{/*                  <div className="logos-slide backdrop-blur-md py-3 px-8 rounded-md text-primary shadow-[0px_0px_10px_0px_rgba(0,0,0,0.05),0px_0px_6px_0px_rgba(0,0,0,0.15)] w-full">*/}
-{/*                    <a href='' className='capitalize' style={{width: "max-content"}}>{component.title}</a>*/}
-{/*                  </div>*/}
-{/*                </div>*/}
-{/*  )*/}
-{/*)*/}
-{/*}*/}
+        <div className='w-full items-center justify-center text-center mb-4 640px:mb-8'>
+          <h1 className='font-[900] text-[1.5rem] 425px:text-[2.5rem] text-[#9caebc]'>ZenUI All Components</h1>
+        </div>
 
-{/*</div>*/}
-</main>
-)
-  ;
+        <div
+            x-data="{}"
+            x-init="$nextTick(() => {
+                        let ul = $refs.logos;
+                        ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                        ul.nextSibling.setAttribute('aria-hidden', 'true');
+                    })"
+            className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-10 640px:mb-20"
+        >
+          <ul x-ref="logos"
+              className="flex items-center gap-5 w-[50%] mx-auto justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+            {
+              allComponents?.map((item, index) => (
+                  <a href={item.url} className={`py-2 px-6 bg-[#0b1a43] border border-[#0b1a43] text-[#9caebc] rounded font-[500] min-w-fit`} key={index}>{item.title}</a>
+              ))
+            }
+
+          </ul>
+        </div>
+      </main>
+  )
+      ;
 };
 
 export default Hero;
