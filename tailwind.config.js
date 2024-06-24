@@ -31,11 +31,16 @@ export default {
 
     animation: {
       'infinite-scroll': 'infinite-scroll 25s linear infinite',
+      'infinite-second-scroll': 'infinite-second-scroll 25s linear infinite',
     },
     keyframes: {
       'infinite-scroll': {
         from: { transform: 'translateX(0)' },
         to: { transform: 'translateX(-100%)' },
+      },
+      'infinite-second-scroll': {
+        from: { transform: 'translateX(0)' },
+        to: { transform: 'translateX(100%)' },
       }
     }
   },

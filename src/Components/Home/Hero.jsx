@@ -152,13 +152,37 @@ const Hero = () => {
                         ul.insertAdjacentHTML('afterend', ul.outerHTML);
                         ul.nextSibling.setAttribute('aria-hidden', 'true');
                     })"
-            className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-10 640px:mb-20"
+            className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-5"
         >
           <ul x-ref="logos"
               className="flex items-center gap-5 w-[50%] mx-auto justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
             {
               allComponents?.map((item, index) => (
-                  <a href={item.url} className={`py-2 px-6 bg-[#0b1a43] border border-[#0b1a43] text-[#9caebc] rounded font-[500] min-w-fit`} key={index}>{item.title}</a>
+                  <a href={item.url}
+                     className={`py-2 px-6 bg-[#0b1a43] border border-[#0b1a43] text-[#9caebc] rounded font-[500] min-w-fit`}
+                     key={index}>{item.title}</a>
+              ))
+            }
+
+          </ul>
+        </div>
+
+        <div
+            x-data="{}"
+            x-init="$nextTick(() => {
+                        let ul = $refs.logos;
+                        ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                        ul.nextSibling.setAttribute('aria-hidden', 'true');
+                    })"
+            className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-10 640px:mb-20"
+        >
+          <ul x-ref="logos"
+              className="flex items-center gap-5 w-[50%] mx-auto justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-second-scroll">
+            {
+              allComponents?.map((item, index) => (
+                  <a href={item.url}
+                     className={`py-2 px-6 bg-[#0b1a43] border border-[#0b1a43] text-[#9caebc] rounded font-[500] min-w-fit`}
+                     key={index}>{item.title}</a>
               ))
             }
 
