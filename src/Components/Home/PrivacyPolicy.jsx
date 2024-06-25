@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
 
 
     return (
-        <section className="w-full px-12 pt-[8rem] pb-[4rem] mx-auto p-6 min-h-screen" style={containerStyle}>
+        <section className="w-full 640px:px-10 px-5 1024px:px-12 pt-[8rem] pb-[4rem] mx-auto p-6 min-h-screen" style={containerStyle}>
             <div className='max-w-[800px] text-border'>
                 <h1 className="text-3xl font-bold mb-4">Privacy Policy for Zenui Library</h1>
                 <p className="mb-4 !text-[#9caebc]">Effective Date: January 1, 2024</p>

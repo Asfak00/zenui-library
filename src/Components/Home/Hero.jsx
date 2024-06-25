@@ -159,7 +159,7 @@ const Hero = () => {
             {
               allComponents?.map((item, index) => (
                   <a href={item.url}
-                     className={`py-2 px-6 bg-[#0b1a43] border border-[#0b1a43] text-[#9caebc] rounded font-[500] min-w-fit`}
+                     className={`py-2 px-6 bg-[#0b1a43] capitalize border border-[#0b1a43] text-[#9caebc] rounded font-[500] min-w-fit`}
                      key={index}>{item.title}</a>
               ))
             }
@@ -181,7 +181,7 @@ const Hero = () => {
             {
               allComponents?.map((item, index) => (
                   <a href={item.url}
-                     className={`py-2 px-6 bg-[#0b1a43] border border-[#0b1a43] text-[#9caebc] rounded font-[500] min-w-fit`}
+                     className={`py-2 px-6 bg-[#0b1a43] capitalize border border-[#0b1a43] text-[#9caebc] rounded font-[500] min-w-fit`}
                      key={index}>{item.title}</a>
               ))
             }
