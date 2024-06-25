@@ -56,16 +56,16 @@ const Hero = () => {
 
             {/* react icon */}
             <div data-aos="fade-left"
-                 className="absolute top-[-50px] 425px:top-[-70px] right-[-10px] 425px:right-[10px] 640px:right-[40px] 1024px:right-[-90px]">
+                 className="absolute top-[-50px] 425px:top-[-70px] right-[-10px] 425px:right-[10px] 640px:right-[40px] 1024px:right-[-60px]">
               <img src='https://i.ibb.co/vw8FWDF/Untitled-design-5.png'
-                   className='w-[60px] 425px:w-[80px] animate-[spin_10s_linear_infinite] duration-1000'/>
+                   className='w-[60px] 425px:w-[80px] animate-customSpin duration-1000'/>
             </div>
 
             {/* tailwind css icon */}
             <div data-aos="fade-right"
-                 className="absolute bottom-[50px] 425px:bottom-[20px] 640px:bottom-[0px] left-[-10px] 425px:left-[10px] 640px:left-[40px] 1024px:left-[-20px]">
+                 className="absolute bottom-[50px] 425px:bottom-[20px] 640px:bottom-[0px] left-[-10px] 425px:left-[10px] 640px:left-[40px] 1024px:left-[-0px]">
               <img src='https://i.ibb.co/VLCjn0q/Untitled-design-6.png'
-                   className='w-[60px] 425px:w-[80px] animate-pulse'/>
+                   className='w-[60px] 425px:w-[80px] animate-customPulse'/>
             </div>
 
             <div data-aos="fade-up"
