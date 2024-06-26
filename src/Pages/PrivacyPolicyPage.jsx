@@ -24,29 +24,6 @@ const AboutUsPage = () => {
             <MobileNavbar/>
             <PrivacyPolicy/>
             <Footer/>
-
-            {
-                getTheRouteName() === '/privacy-policy' && (
-                    <AnimatedCursor
-                        innerSize={8}
-                        outerSize={35}
-                        innerScale={1}
-                        outerScale={2}
-                        outerAlpha={0}
-                        showSystemCursor={getTheRouteName() === '/privacy-policy' ? false : true}
-                        hasBlendMode={true}
-                        innerStyle={{
-                            backgroundColor: '#1c8aaa',
-                            zIndex: '20000'
-                        }}
-                        outerStyle={{
-                            border: '3px solid #1c8aaa',
-                            zIndex: '20000'
-                        }}
-                    />
-                )
-            }
-
         </div>
     );
 };

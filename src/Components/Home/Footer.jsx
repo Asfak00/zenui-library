@@ -58,11 +58,11 @@ const Footer = () => {
             </h3>
             <ul className="footer font-[400] text-[#9caebc] text-[0.9rem] flex flex-col gap-2">
               <li>
-                <p>Free templates</p>
+                <p><a href='/getting-started/templates'>Free templates</a></p>
                 <span><a href='/getting-started/templates'>Free templates</a></span>
               </li>
               <li>
-                <p>Components</p>
+                <p><a href='/components/all-components'>Components</a></p>
                 <span><a href='/components/all-components'>Components</a></span>
               </li>
             </ul>
@@ -98,7 +98,7 @@ const Footer = () => {
             </h3>
             <ul className="footer font-[400] text-[0.9rem] text-[#9caebc] flex flex-col gap-2">
               <li>
-                <p>About Us</p>
+                <p><a href='/about-us'>About Us</a></p>
                 <span><a href='/about-us'>About Us</a></span>
               </li>
               {/*<li>*/}
@@ -106,7 +106,7 @@ const Footer = () => {
               {/*  <span>Support</span>*/}
               {/*</li>*/}
               <li>
-                <p>Privacy policy</p>
+                <p><a href='/privacy-policy'>Privacy policy</a></p>
                 <span><a href='/privacy-policy'>Privacy policy</a></span>
               </li>
             </ul>

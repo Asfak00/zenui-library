@@ -23,29 +23,6 @@ const AboutUsPage = () => {
             <MobileNavbar/>
             <AboutUs/>
             <Footer/>
-
-            {
-                getTheRouteName() === '/about-us' && (
-                    <AnimatedCursor
-                        innerSize={8}
-                        outerSize={35}
-                        innerScale={1}
-                        outerScale={2}
-                        outerAlpha={0}
-                        showSystemCursor={getTheRouteName() === '/about-us' ? false : true}
-                        hasBlendMode={true}
-                        innerStyle={{
-                            backgroundColor: '#1c8aaa',
-                            zIndex: '20000'
-                        }}
-                        outerStyle={{
-                            border: '3px solid #1c8aaa',
-                            zIndex: '20000'
-                        }}
-                    />
-                )
-            }
-
         </div>
     );
 };

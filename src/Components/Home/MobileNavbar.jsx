@@ -145,11 +145,12 @@ const MobileNavbar = () => {
                     {/*  <span>docs</span>*/}
                     {/*</li>*/}
                     <li>
-                        <p className={getTheRouteName() === '/about-us' && '!text-primary'}>About us</p>
+                        <p className={getTheRouteName() === '/about-us' && '!text-primary'}><Link to='/about-us'>About us</Link> </p>
                         <span><Link to='/about-us'>About us</Link> </span>
                     </li>
                     <li>
-                        <p className={getTheRouteName() === '/getting-started/templates' && '!text-primary'}>Templates</p>
+                        <p className={getTheRouteName() === '/getting-started/templates' && '!text-primary'}><a
+                            href='/getting-started/templates'>Templates</a></p>
                         <span><a href='/getting-started/templates'>Templates</a></span>
                     </li>
                 </ul>
