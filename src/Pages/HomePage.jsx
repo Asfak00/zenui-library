@@ -5,9 +5,6 @@ import Navbar from "../Components/Home/Navbar";
 import Hero from "../Components/Home/Hero";
 import Footer from "../Components/Home/Footer";
 import Sponser from "../Components/Home/Sponser.jsx";
-
-
-import AnimatedCursor from "react-animated-cursor";
 import MobileNavbar from "../Components/Home/MobileNavbar.jsx";
 
 

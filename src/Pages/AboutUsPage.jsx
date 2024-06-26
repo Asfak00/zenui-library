@@ -2,8 +2,6 @@ import React from "react";
 
 // components
 import AboutUs from "../Components/Home/AboutUs.jsx";
-
-import AnimatedCursor from "react-animated-cursor";
 import Navbar from "../Components/Home/Navbar.jsx";
 import Footer from "../Components/Home/Footer.jsx";
 import MobileNavbar from "../Components/Home/MobileNavbar.jsx";
