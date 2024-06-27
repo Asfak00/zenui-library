@@ -8,7 +8,7 @@ import AOS from "aos";
 import Tilt from 'react-parallax-tilt';
 
 // react router dom
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; 
 
 const Hero = () => {
 
