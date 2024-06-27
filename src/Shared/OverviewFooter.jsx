@@ -13,6 +13,7 @@ const OverviewFooter = () => {
   const [isDisLiked, setIsDisLiked] = useState(false);
   const [feedbackValue, setFeedbackValue] = useState('');
   const [reportValue, setReportValue] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleLikeBtn = () => {
     setIsLiked(!isLiked);
@@ -49,6 +50,10 @@ const OverviewFooter = () => {
           if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
           }
+          setSuccessMessage('Thank You for Your Feedback!')
+          setTimeout(()=>{
+            setSuccessMessage('')
+          }, 3000)
           return response.text();
         })
         .then(data => {
@@ -84,6 +89,10 @@ const OverviewFooter = () => {
           if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
           }
+          setSuccessMessage('Thank You for Reporting an Issue on Our Website!')
+          setTimeout(()=>{
+            setSuccessMessage('')
+          }, 3000)
           return response.text();
         })
         .then(data => {
@@ -124,36 +133,39 @@ const OverviewFooter = () => {
       </div>
 
       {isLiked && (
-        <form action="#" className="w-full mb-5" onSubmit={handleFeedback}>
-          <label htmlFor="message" className=''>What did you like about this page?</label>
-          <br />
-          <textarea
-            name="message"
-            id="message"
-            onChange={(e)=> setFeedbackValue(e.target.value)}
-            placeholder='Give feedback'
-            className="w-full h-[130px] bg-border outline-none rounded p-4 mt-1"
-          ></textarea>
-          <div className="w-full flex items-center mt-2 justify-end gap-3">
-            <button
-              type="button"
-              onClick={handleLikeBtn}
-              className={`${utils.buttonSecondary} !py-1 !px-3`}
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              className={`${utils.buttonPrimary} !py-1 !px-3`}
-            >
-              Submit
-            </button>
-          </div>
-        </form>
+          <form action="#" className="w-full mb-5" onSubmit={handleFeedback}>
+            <label htmlFor="message" className=''>What did you like about this page?</label>
+            <br/>
+            <textarea
+                name="message"
+                id="message"
+                onChange={(e) => setFeedbackValue(e.target.value)}
+                placeholder='Give feedback'
+                className="w-full h-[130px] bg-border outline-none rounded p-4 mt-1"
+            ></textarea>
+
+            <p className='text-[1rem]  text-primary mt-[0.2rem]'>{successMessage}</p>
+
+            <div className="w-full flex items-center mt-2 justify-end gap-3">
+              <button
+                  type="button"
+                  onClick={handleLikeBtn}
+                  className={`${utils.buttonSecondary} !py-1 !px-3`}
+              >
+                Cancel
+              </button>
+              <button
+                  type="submit"
+                  className={`${utils.buttonPrimary} !py-1 !px-3`}
+              >
+                Submit
+              </button>
+            </div>
+          </form>
       )}
 
       {isDisLiked && (
-        <form action="#" className="w-full mb-5" onSubmit={handleReport}>
+          <form action="#" className="w-full mb-5" onSubmit={handleReport}>
           <label htmlFor="message" className=''>How can we improve this page?</label>
           <br />
           <textarea
@@ -163,6 +175,8 @@ const OverviewFooter = () => {
             onChange={(e)=> setReportValue(e.target.value)}
             className="w-full h-[130px] bg-border outline-none rounded p-4 mt-1"
           ></textarea>
+
+          <p className='text-[1rem]  text-primary mt-[0.2rem]'>{successMessage}</p>
 
           <div className="w-full border border-[#ffa90a] rounded p-3 flex gap-4 items-start my-4 bg-[#ffa90a21]">
             <p>
