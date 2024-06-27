@@ -112,7 +112,9 @@ const Navbar = () => {
               <FaDiscord className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-[#131558] bg-primary' : 'text-text bg-border'} text-[1.8rem] rounded-full p-1 cursor-pointer`} />
             </a>
             
-            <TbBrandGithubFilled className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-[#131558] bg-primary' : 'text-text bg-border'} text-[1.8rem] rounded-full p-1 cursor-pointer`} />
+            <a href='https://github.com/Asfak00/zenui-library' target='_blank'>
+              <TbBrandGithubFilled className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-[#131558] bg-primary' : 'text-text bg-border'} text-[1.8rem] rounded-full p-1 cursor-pointer`} />
+            </a>
           </div>
           {/*{toggle ? (*/}
           {/*  <BsSunFill*/}

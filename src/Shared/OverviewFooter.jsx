@@ -11,6 +11,8 @@ import utils from "../Utils";
 const OverviewFooter = () => {
   const [isLiked, setIsLiked] = useState(false);
   const [isDisLiked, setIsDisLiked] = useState(false);
+  const [feedbackValue, setFeedbackValue] = useState('');
+  const [reportValue, setReportValue] = useState('');
 
   const handleLikeBtn = () => {
     setIsLiked(!isLiked);
@@ -22,15 +24,85 @@ const OverviewFooter = () => {
     setIsLiked(false);
   };
 
+  // handle feedback message
+  const handleFeedback = (e) => {
+    e.preventDefault()
+    const url = 'https://devlab-black-email.friendsclub.workers.dev/';
+    const data = {
+      email: 'mlFZBnbf1PocWSlou6+x9sgm+gK6+FM8Pl6pgDQSUUozmLt4eV6SsUgFfylGhIX/U5O+wLSwqbjwnGDZxETjNhhnZrTpKiT3swy17v6xLxH0ZFBndt8uA2d2ymAop+gi',
+      form: {
+        title: 'Form Name',
+        data: [
+          ['textarea', feedbackValue]
+        ]
+      }
+    };
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.text();
+        })
+        .then(data => {
+          console.log('Success:', data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+}
+
+  // handle report message
+  const handleReport = (e) => {
+    e.preventDefault()
+    const url = 'https://devlab-black-email.friendsclub.workers.dev/';
+    const data = {
+      email: 'mlFZBnbf1PocWSlou6+x9sgm+gK6+FM8Pl6pgDQSUUozmLt4eV6SsUgFfylGhIX/U5O+wLSwqbjwnGDZxETjNhhnZrTpKiT3swy17v6xLxH0ZFBndt8uA2d2ymAop+gi',
+      form: {
+        title: 'Form Name',
+        data: [
+          ['textarea', reportValue]
+        ]
+      }
+    };
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.text();
+        })
+        .then(data => {
+          console.log('Success:', data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+}
+
   return (
     <footer className="w-full 1024px:w-[80%] mt-8">
       <div className="flex flex-col 425px:flex-row 425px:items-center justify-between w-full pb-5">
-        <button
+        <a href='https://github.com/Asfak00/zenui-library' target='_blank'
           className={`${utils.buttonSecondary} flex items-center gap-2 !px-2 !py-1 text-[0.9rem] min-w-[110px] mr-3 max-w-[110px]`}
         >
           <FaGithub />
           Give a star
-        </button>
+        </a>
 
         <div className="flex items-center justify-between w-full gap-4">
           <span className='text-[#0471d6]'>Was this page helpful?</span>
@@ -52,12 +124,13 @@ const OverviewFooter = () => {
       </div>
 
       {isLiked && (
-        <form action="#" className="w-full mb-5">
+        <form action="#" className="w-full mb-5" onSubmit={handleFeedback}>
           <label htmlFor="message" className=''>What did you like about this page?</label>
           <br />
           <textarea
             name="message"
             id="message"
+            onChange={(e)=> setFeedbackValue(e.target.value)}
             placeholder='Give feedback'
             className="w-full h-[130px] bg-border outline-none rounded p-4 mt-1"
           ></textarea>
@@ -80,13 +153,14 @@ const OverviewFooter = () => {
       )}
 
       {isDisLiked && (
-        <form action="#" className="w-full mb-5">
+        <form action="#" className="w-full mb-5" onSubmit={handleReport}>
           <label htmlFor="message" className=''>How can we improve this page?</label>
           <br />
           <textarea
             name="message"
             id="message"
             placeholder='Report summary'
+            onChange={(e)=> setReportValue(e.target.value)}
             className="w-full h-[130px] bg-border outline-none rounded p-4 mt-1"
           ></textarea>
 
@@ -97,7 +171,7 @@ const OverviewFooter = () => {
             <p className="text-[1rem] text-text">
               If something is broken or if you need a reply to a problem you've
               encountered, please{" "}
-              <a href="" className=" text-primary font-[500] underline">
+              <a href="https://github.com/Asfak00/zenui-library/issues/new" target='_blank' className=" text-primary font-[500] underline">
                 open an issue instead
               </a>
               . Otherwise, the team won't be able to answer back or ask for more
