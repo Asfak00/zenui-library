@@ -29,17 +29,17 @@ const Hero = () => {
     const navigate = useNavigate();
     return (
         <>
-        <section className='w-full min-h-screen pt-[10rem] pb-[5rem] px-10' style={containerStyle}>
-            <article className='max-w-[1200px] w-full mx-auto flex gap-[60px]'>
+        <section className='w-full min-h-screen pt-[7rem] 1024px:pt-[10rem] pb-[5rem] px-5 640px:px-10' style={containerStyle}>
+            <article className='max-w-[1200px] w-full mx-auto flex 1024px:flex-row flex-col gap-[30px] 1024px:flex-row-[60px]'>
                 <Tilt>
-                    <div data-aos="fade-right" className='w-[350px] relative'>
+                    <div data-aos="fade-right" className='1024px:w-[350px] w-full relative'>
                         <img src='/asfak_ahmed_ceo_of_zenui.jpg' className='w-full rounded-[12px]' alt='Asfak Ahmed'/>
                         {/*<img src='/zenui_founder_blur.png' alt='blur image' className='absolute bottom-[-30px] w-full left-0 right-0'/>*/}
                     </div>
                 </Tilt>
 
-                <div data-aos="fade-left" className='w-[70%]'>
-                    <h1 className='font-bold text-border text-[3rem] leading-[40px]'>Asfak Ahmed</h1>
+                <div data-aos="fade-left" className='1024px:w-[70%] w-full'>
+                    <h1 className='font-bold text-border text-[2.3rem] 1024px:text-[3rem] leading-[40px]'>Asfak Ahmed</h1>
                     <h4 className='text-[1rem] text-primary mt-2'>Founder & CEO</h4>
 
                     <p className='text-[#dbdde0] text-[1rem] mt-5'>
@@ -53,13 +53,13 @@ const Hero = () => {
                     </p>
                 </div>
             </article>
-            <article className='max-w-[1200px] w-full mx-auto flex gap-[60px] mt-32'>
+            <article className='max-w-[1200px] w-full mx-auto flex 1024px:flex-row flex-col-reverse gap-[30px] 1024px:gap-[60px] mt-16 1024px:mt-32'>
 
-                <div data-aos="fade-right" className='w-[70%]'>
-                    <h1 className='font-bold text-border text-[3rem] leading-[40px] text-right'>Pritue Mondal</h1>
-                    <h4 className='text-[1rem] text-primary mt-2 text-right'>ZenUI Template Designer</h4>
+                <div data-aos="fade-right" className='1024px:w-[70%] w-full'>
+                    <h1 className='font-bold text-border text-[2.3rem] 1024px:flex-rowtext-[3rem] leading-[40px] 1024px:text-right'>Pritue Mondal</h1>
+                    <h4 className='text-[1rem] text-primary mt-2 1024px:text-right'>ZenUI Template Designer</h4>
 
-                    <p className='text-[#dbdde0] text-[1rem] mt-5 text-right'>
+                    <p className='text-[#dbdde0] text-[1rem] mt-5 1024px:text-right'>
                         Meet Pritue Mondal, the artistic soul behind the captivating designs within the ZenUI Library. With an innate passion for harmonizing aesthetics and functionality, Pritue weaves digital magic into every pixel, crafting templates that are not just visually stunning but also intuitively user-friendly.
 
                         Drawing inspiration from the dynamic interplay of modern trends and timeless elegance, Pritue's designs breathe life into websites and applications alike. Each template in the ZenUI Library reflects Pritue's meticulous attention to detail and dedication to creating experiences that resonate seamlessly with users across the globe.
@@ -69,7 +69,7 @@ const Hero = () => {
                 </div>
 
                 <Tilt>
-                    <div data-aos="fade-left" className='w-[350px] relative'>
+                    <div data-aos="fade-left" className='1024px:w-[350px] w-full relative'>
                         <img src='/zenui_designer.jpg' className='w-full h-full rounded-[12px]' alt='Pritue Mondal'/>
                         {/*<img src='/zenui_designer_blur.png' alt='blur image' className='absolute bottom-[-30px] w-full left-0 right-0'/>*/}
                     </div>
