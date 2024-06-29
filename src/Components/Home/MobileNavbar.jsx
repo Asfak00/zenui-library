@@ -102,7 +102,9 @@ const MobileNavbar = () => {
                         <a href='https://discord.gg/qbwytm4WUG' target='_blank'>
                             <FaDiscord className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-[#131558] bg-primary' : 'text-text bg-border'} text-[1.8rem] rounded-full p-1 cursor-pointer`} />
                         </a>
-                        <TbBrandGithubFilled className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-[#131558] bg-primary' : 'text-text bg-border'} text-[1.8rem] rounded-full p-1 cursor-pointer`} />
+                        <a href='https://github.com/Asfak00/zenui-library' target='_blank'>
+                            <TbBrandGithubFilled className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-[#131558] bg-primary' : 'text-text bg-border'} text-[1.8rem] rounded-full p-1 cursor-pointer`} />
+                        </a>
 
                         <CiMenuFries className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-primary' : 'text-text'} text-[1.7rem] rounded-full ml-3 cursor-pointer mobileSidebarButton`}  onClick={()=> setSidebarOpen(!sidebarOpen)}/>
                     </div>
