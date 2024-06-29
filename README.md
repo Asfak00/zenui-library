@@ -17,6 +17,11 @@ ZenUI is a React and Tailwind CSS UI components library offering pre-built websi
 
 <br/>
 
+## Upvote ZenUI In Product Hunt
+<a href="https://www.producthunt.com/posts/zenui-library?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-zenui&#0045;library" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=465509&theme=light" alt="ZENUI&#0032;LIBRARY - Free&#0032;Templates&#0032;&#0038;&#0032;Components&#0032;Library | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+
+<br/>
+
 ## Connect With ZenUI
 
 <p align="left">
