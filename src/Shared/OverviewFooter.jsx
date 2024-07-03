@@ -103,6 +103,14 @@ const OverviewFooter = () => {
         });
 }
 
+const handleFeedbackInput = (e)=> {
+    setFeedbackValue(e.target.value)
+}
+
+const handleReportInput = (e) => {
+    setReportValue(e.target.value)
+}
+
   return (
     <footer className="w-full 1024px:w-[80%] mt-8">
       <div className="flex flex-col 425px:flex-row 425px:items-center justify-between w-full pb-5">
@@ -139,7 +147,7 @@ const OverviewFooter = () => {
             <textarea
                 name="message"
                 id="message"
-                onChange={(e) => setFeedbackValue(e.target.value)}
+                onChange={handleFeedbackInput}
                 placeholder='Give feedback'
                 className="w-full h-[130px] bg-border outline-none rounded p-4 mt-1"
             ></textarea>
@@ -155,8 +163,9 @@ const OverviewFooter = () => {
                 Cancel
               </button>
               <button
+                  disabled={feedbackValue === ''}
                   type="submit"
-                  className={`${utils.buttonPrimary} !py-1 !px-3`}
+                  className={`${utils.buttonPrimary} !py-1 !px-3 ${feedbackValue === '' ? 'bg-[#b2cfe8] border-[#b2cfe8] cursor-not-allowed' : 'bg-primary border-primary cursor-pointer'}`}
               >
                 Submit
               </button>
@@ -172,7 +181,7 @@ const OverviewFooter = () => {
             name="message"
             id="message"
             placeholder='Report summary'
-            onChange={(e)=> setReportValue(e.target.value)}
+            onChange={handleReportInput}
             className="w-full h-[130px] bg-border outline-none rounded p-4 mt-1"
           ></textarea>
 
@@ -201,8 +210,9 @@ const OverviewFooter = () => {
               Cancel
             </button>
             <button
+                disabled={reportValue === ''}
               type="submit"
-              className={`${utils.buttonPrimary} !py-1 !px-3`}
+              className={`${utils.buttonPrimary} !py-1 !px-3 ${reportValue === '' ? 'bg-[#b2cfe8] border-[#b2cfe8] cursor-not-allowed' : 'bg-primary border-primary cursor-pointer'}`}
             >
               Submit
             </button>

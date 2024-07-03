@@ -42,7 +42,7 @@ const Footer = () => {
                 name=""
                 id=""
                 placeholder="zenuilibrary@gmail.com"
-                className="py-2 px-3 border bg-[#0471d6] rounded border-[#024C92] text-[#024C92] placeholder:text-[#024C92] focus:outline-none"
+                className="py-2 px-3 border bg-[#0471d6] w-[60%] 640px:w-auto rounded border-[#024C92] text-[#024C92] placeholder:text-[#024C92] focus:outline-none"
               />
               <button type="submit" className={`${utils.buttonSecondary} !px-5 425px:px-20 425px:min-w-[100px] pl-3.5`}>
                 Subscribe
