@@ -245,3 +245,31 @@ aside ul a:hover {
     transform: scale(1, 1);
   }
 }
+
+
+/* all components section sliding animation */
+.allComponentSliderLeft {
+  animation: animationSliderLeft 20s linear infinite;
+}
+
+@keyframes animationSliderLeft {
+  from {
+    transform: translateX(0)
+  }
+  to {
+    transform: translateX(-100%)
+  }
+}
+
+.allComponentSliderRight {
+  animation: animationSliderRight 20s linear infinite;
+}
+
+@keyframes animationSliderRight {
+  from {
+    transform: translateX(0)
+  }
+  to {
+    transform: translateX(100%)
+  }
+}

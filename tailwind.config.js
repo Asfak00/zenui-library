@@ -28,31 +28,6 @@ export default {
       '1404px': '1404px',
       '2000px': '2000px',
     },
-
-    animation: {
-      'infinite-scroll': 'infinite-scroll 20s linear infinite',
-      'infinite-second-scroll': 'infinite-second-scroll 20s linear infinite',
-      'customSpin': 'animate-spin 10s linear infinite',
-      'customPulse': 'animate-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;'
-    },
-    keyframes: {
-      'infinite-scroll': {
-        from: { transform: 'translateX(0)' },
-        to: { transform: 'translateX(-100%)' },
-      },
-      'infinite-second-scroll': {
-        from: { transform: 'translateX(0)' },
-        to: { transform: 'translateX(100%)' },
-      },
-      'animate-spin':{
-        from: { transform: 'rotate(0deg)' },
-        to: { transform: 'rotate(360deg)' },
-      },
-      'animate-pulse':{
-        '0%, 100%': { opacity: '1' },
-        '50%': { opacity: '.5' },
-      }
-    }
   },
   plugins: [],
 };

@@ -58,14 +58,14 @@ const Hero = () => {
             <div data-aos="fade-left"
                  className="absolute top-[-50px] 425px:top-[-70px] right-[-10px] 425px:right-[10px] 640px:right-[40px] 1024px:right-[-60px]">
               <img src='https://i.ibb.co/vw8FWDF/Untitled-design-5.png'
-                   className='w-[60px] 425px:w-[80px] animate-customSpin duration-1000'/>
+                   className='w-[60px] 425px:w-[80px] animate-[spin_10s_linear_infinite] duration-1000'/>
             </div>
 
             {/* tailwind css icon */}
             <div data-aos="fade-right"
                  className="absolute bottom-[50px] 425px:bottom-[20px] 640px:bottom-[0px] left-[-10px] 425px:left-[10px] 640px:left-[40px] 1024px:left-[-0px]">
               <img src='https://i.ibb.co/VLCjn0q/Untitled-design-6.png'
-                   className='w-[60px] 425px:w-[80px] animate-customPulse'/>
+                   className='w-[60px] 425px:w-[80px] animate-pulse'/>
             </div>
 
             <div data-aos="fade-up"
@@ -155,7 +155,7 @@ const Hero = () => {
             className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-5"
         >
           <ul x-ref="logos"
-              className="flex items-center gap-5 w-[50%] 1404px:w-[20%] mx-auto justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+              className="flex items-center gap-5 w-[50%] 1404px:w-[20%] mx-auto justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none allComponentSliderLeft">
             {
               allComponents?.map((item, index) => (
                   <a href={item.url}
@@ -177,7 +177,7 @@ const Hero = () => {
             className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mb-10 640px:mb-20"
         >
           <ul x-ref="logos"
-              className="flex items-center gap-5 w-[50%] 1404px:w-[20%] mx-auto justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-second-scroll">
+              className="flex items-center gap-5 w-[50%] 1404px:w-[20%] mx-auto justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none allComponentSliderRight">
             {
               allComponents?.map((item, index) => (
                   <a href={item.url}
