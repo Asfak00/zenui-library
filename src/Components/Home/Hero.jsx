@@ -47,8 +47,8 @@ const Hero = () => {
                  data-aos-delay="800"
                  data-aos-offset="0">
               <div
-                  className="px-4 w-fit mx-auto py-1.5 backdrop-blur-md serviceCard text-[#9caebc] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
-                <FaFire className="text-[1.3rem] text-red-500"/>
+                  className="px-4 w-fit mx-auto text-[0.6rem] 1024px:py-1.5 backdrop-blur-md serviceCard text-[#9caebc] rounded-full 1024px:text-[0.9rem] font-[500] flex items-center gap-2">
+                <FaFire className="text-[0.8rem] 1024px:text-[1.3rem] text-red-500"/>
                 ZenUI 2.0 is upcoming
               </div>
             </div>
