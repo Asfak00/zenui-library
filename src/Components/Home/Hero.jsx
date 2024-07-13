@@ -8,6 +8,7 @@ import { MdDashboardCustomize } from "react-icons/md";
 import { CgIfDesign } from "react-icons/cg";
 import { FaCubesStacked } from "react-icons/fa6";
 import { MdVerifiedUser } from "react-icons/md";
+import { FaFire } from "react-icons/fa";
 
 // import aos animation
 import "aos/dist/aos.css";
@@ -17,6 +18,7 @@ import AOS from "aos";
 import { Link, useNavigate } from "react-router-dom";
 
 import {allComponents} from "../../Utils/AllComponents.js";
+import {IoMdNotifications} from "react-icons/io";
 
 const Hero = () => {
 
@@ -39,9 +41,21 @@ const Hero = () => {
       <main className="w-full min-h-screen" style={containerStyle}>
         <div className="flex justify-center items-center text-center gap-12 ">
           <div className="1024px:w-[55%] w-full 640px:pl-10 mt-[10rem] 425px:mt-[12rem] relative">
+
+            <div className="gradient-border" data-aos="fade-zoom-in"
+                 data-aos-easing="ease-in-back"
+                 data-aos-delay="800"
+                 data-aos-offset="0">
+              <div
+                  className="px-4 w-fit mx-auto py-1.5 backdrop-blur-md serviceCard text-[#9caebc] rounded-full text-[0.9rem] font-[500] flex items-center gap-2">
+                <FaFire className="text-[1.3rem] text-red-500"/>
+                ZenUI 2.0 is upcoming
+              </div>
+            </div>
+
             <h1 data-aos="zoom-in"
                 className="heroText font-[900] text-[2rem] 425px:text-[3rem] 640px:text-[4.5rem] leading-[3rem] 425px:leading-[4.5rem] 640px:leading-[6rem] uppercase bg-clip-text text-transparent bg-gradient-to-r from-[#064168] to-[#25A5C3]">
-              ZenUI Library
+            ZenUI Library
             </h1>
             <h3 data-aos="zoom-in"
                 className="text-[0.75rem] 425px:text-[1.120rem] 640px:text-[1.680rem] capitalize font-[500] text-[#9caebc]">
