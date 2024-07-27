@@ -58,7 +58,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="1024px:flex items-center justify-between w-full px-10 backdrop-blur-md  py-3 shadow-sm fixed shadow-shadowColor top-0 left-0 z-50 hidden ">
+      <nav className="1024px:flex items-center justify-between w-full px-10 backdrop-blur-md  shadow-sm fixed shadow-shadowColor top-0 left-0 z-50 hidden py-3">
         <div className="flex items-center gap-8">
           {toggle ? (
             <img
@@ -80,14 +80,24 @@ const Navbar = () => {
             {/*  <p>docs</p>*/}
             {/*  <span>docs</span>*/}
             {/*</li>*/}
-            <li>
+            <li className=''>
               <p className={getTheRouteName() === '/about-us' && '!text-primary'}><Link to='/about-us'>About us</Link> </p>
               <span><Link to='/about-us'>About us</Link> </span>
             </li>
-            <li>
+            <li className=''>
               <p className={getTheRouteName() === '/getting-started/templates' && '!text-primary'}><a
                   href='/getting-started/templates'>Templates</a></p>
               <span><a href='/getting-started/templates'>Templates</a></span>
+            </li>
+            <li className='relative pr-[45px]'>
+              <div className='bg-red-600 rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
+                NEW
+
+                <div className='w-[8px] h-[8px] bg-red-600 rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
+              </div>
+              <p className={getTheRouteName() === '/components/all-blocks' && '!text-primary'}><a
+                  href='/components/all-blocks'>Blocks</a></p>
+              <span><a href='/components/all-blocks'>Blocks</a></span>
             </li>
           </ul>
         </div>

@@ -226,6 +226,10 @@ aside ul a:hover {
 .serviceCard {
   box-shadow: 0px 0px 20px 0px rgb(0, 0, 0, 0.3);
 }
+
+.boxShadow {
+  box-shadow: 0px 0px 10px 0px rgb(0, 0, 0, 0.1);
+}
 .sponsorCard {
   box-shadow: 0px 0px 20px 0px rgb(0, 0, 0, 0.2);
 }
@@ -282,6 +286,7 @@ aside ul a:hover {
   border-radius: 9999px;
   display: inline-block;
   overflow: hidden;
+  color: rgba(117, 18, 1, 0.13);
 }
 
 .gradient-border > div {

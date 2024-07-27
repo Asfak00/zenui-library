@@ -61,9 +61,31 @@ import SnippetPage from "./Pages/Components/Randoms/SnippetPage";
 import AboutUsPage from "./Pages/AboutUsPage.jsx";
 import PrivacyPolicyPage from "./Pages/PrivacyPolicyPage.jsx";
 import CookieModal from "./Shared/CookieModal.jsx";
+import DropdownButtonPage from "./Pages/Components/Buttons/DropdownButtonPage.jsx";
+import ResizableDivPage from "./Pages/Components/Surfaces/ResizableDivPage.jsx";
+import OtpInputPage from "./Pages/Components/Inputs/OtpInputPage.jsx";
+
+// blocks
+import ResponsiveNavbarPage from "./Pages/Blocks/Sections/ResponsiveNavbarPage.jsx";
+import AllBlocksPage from "./Pages/Blocks/AllBlocksPage.jsx";
+import HeroSectionPage from "./Pages/Blocks/Sections/HeroSectionPage.jsx";
+import ProgressBarPage from "./Pages/Components/Navigation/ProgressBarPage.jsx";
+import ContactFormPage from "./Pages/Blocks/Randoms/ContactFormPage.jsx";
+import ResponsiveSearchbarPage from "./Pages/Blocks/Randoms/ResponsiveSearchbarPage.jsx";
+import BreadcrumbPage from "./Pages/Components/Navigation/BreadcrumbPage.jsx";
 
 const App = () => {
   const [isCookie, setIsCookie] = useState(false)
+
+  let Title = document.title;
+  window.addEventListener('blur', ()=> {
+    document.title = 'Get your components 😍';
+  })
+
+  window.addEventListener('focus', () => {
+    document.title = Title;
+  })
+
   return (
     <>
       {/* all routes */}
@@ -92,6 +114,7 @@ const App = () => {
           element={<InputTextareaPage />}
         />
         <Route path="/components/input-switch" element={<InputSwitchPage />} />
+        <Route path="/components/otp-input" element={<OtpInputPage />} />
         <Route path="/components/input-select" element={<InputSelectPage />} />
         <Route path="/components/input-radio" element={<InputRadioPage />} />
         <Route path="/components/input-file" element={<InputFilePage />} />
@@ -99,6 +122,7 @@ const App = () => {
         {/* buttons */}
         <Route path="/components/normal-button" element={<NormalPage />} />
         <Route path="/components/rgb-border" element={<RgbButtonPage />} />
+        <Route path="/components/dropdown-button" element={<DropdownButtonPage />} />
         <Route
           path="/components/animated-button"
           element={<AnimatedButtonPage />}
@@ -109,7 +133,9 @@ const App = () => {
         <Route path="/components/dropdown" element={<DropDownPage />} />
         <Route path="/components/tabs" element={<TabsPage />} />
         <Route path="/components/modal" element={<ModalPage />} />
+        <Route path="/components/progress-bar" element={<ProgressBarPage />} />
         <Route path="/components/chip" element={<ChipPage />} />
+        <Route path="/components/breadcrumb" element={<BreadcrumbPage />} />
 
         {/* feedback */}
         <Route path="/components/skeleton" element={<SkeletonPage />} />
@@ -130,6 +156,7 @@ const App = () => {
         />
         <Route path="/components/according" element={<AccordingPage />} />
         <Route path="/components/appbar" element={<AppbarPage />} />
+        <Route path="/components/resizable-card" element={<ResizableDivPage />} />
 
         {/* data display */}
         <Route path="/components/badge" element={<BadgePage />} />
@@ -138,6 +165,15 @@ const App = () => {
         {/* randoms */}
         <Route path="/components/code" element={<CodeSnippetPage />} />
         <Route path="/components/snippet" element={<SnippetPage />} />
+
+
+      {/*  all blocks route  */}
+        <Route path="/components/all-blocks" element={<AllBlocksPage />} />
+        <Route path="/components/responsive-navbar" element={<ResponsiveNavbarPage />} />
+        <Route path="/components/hero-section" element={<HeroSectionPage />} />
+        <Route path="/components/contact-form" element={<ContactFormPage />} />
+        <Route path="/components/responsive-search-bar" element={<ResponsiveSearchbarPage />} />
+
       </Routes>
 
       <CookieModal isModalOpen={isCookie} setisModalOpen={setIsCookie}/>

@@ -1,77 +1,46 @@
 import React, { useState } from "react";
-import {FaChevronLeft, FaChevronRight} from "react-icons/fa";
 
-const pagination = () => {
-    const [paginationNum, setPaginationNum] = useState(0);
-    const totalPageNumber = 5;
-    const updatePageNumber = (num) => {
-        if (num > totalPageNumber - 1 || 0 > num) {
-            return setPaginationNum(0);
-        }
-        setPaginationNum(num);
-    };
+// react icon
+import {RxCross1} from "react-icons/rx";
 
-    // second pagination
-    const [currentPage, setCurrentPage] = useState(1);
-    const totalPages = 5;
+const PushNotification = () => {
 
-    const handlePrevious = () => {
-        if (currentPage > 1) {
-            setCurrentPage(currentPage - 1);
-        }
-    };
-
-    const handleNext = () => {
-        if (currentPage < totalPages) {
-            setCurrentPage(currentPage + 1);
-        }
-    };
-
-    const handlePageClick = (pageNumber) => {
-        setCurrentPage(pageNumber);
-    };
-
-    const renderPageNumbers = () => {
-        const pageNumbers = [];
-
-        for (let i = 1; i <= totalPages; i++) {
-            pageNumbers.push(
-                <button
-                    key={i}
-                    onClick={() => handlePageClick(i)}
-                    className={`mx-1 px-4 py-2 rounded-full transform transition-all duration-300 ${
-                        currentPage === i
-                            ? 'bg-primary text-white scale-110 shadow-md'
-                            : 'bg-transparent text-blue-600 hover:bg-blue-100'
-                    }`}
-                >
-                    {i}
-                </button>
-            );
-        }
-
-        return pageNumbers;
-    };
 
     return (
-        <div className="flex items-center justify-center mt-8 space-x-2">
-            <button
-                onClick={handlePrevious}
-                disabled={currentPage === 1}
-                className="mx-1 px-3.5 py-3.5 rounded-full bg-white text-blue-600 hover:bg-blue-100 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-            >
-                <FaChevronLeft/>
-            </button>
-            {renderPageNumbers()}
-            <button
-                onClick={handleNext}
-                disabled={currentPage === totalPages}
-                className="mx-1 px-3.5 py-3.5 rounded-full bg-white text-blue-600 hover:bg-blue-100 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-            >
-                <FaChevronRight/>
-            </button>
-        </div>
+        <>
+            <div className=" w-full text-center flex justify-center gap-[20px]">
+                <button
+                    className="px-4 py-2 bg-primary text-secondary rounded"
+                    onClick={handleAutoClose}
+                >
+                    Auto Close
+                </button>
+
+                <button
+                    className="px-4 py-2 bg-primary text-secondary rounded"
+                    onClick={handleCloseWithIcon}
+                >
+                    Close With Click
+                </button>
+            </div>
+
+            <div
+                className={` ${autoClose ? "translate-y-0" : "translate-y-[100px]"} transition-all duration-300 px-8 py-4 rounded-md bg-primary fixed bottom-[20px] right-[20px] z-30 text-white`}>
+                ZenUI Push Notification
+            </div>
+
+            <div
+                className={` ${closeWithIcon ? "translate-y-0" : "translate-y-[100px]"} transition-all duration-300  rounded-md bg-primary fixed bottom-[20px] right-[20px] z-30 text-white flex items-center justify-between px-5 py-4 gap-[10px]`}>
+
+                <p className="">
+                    ZenUI Push Notification
+                </p>
+
+                <RxCross1 className='text-[1.4rem] cursor-pointer rounded-full text-[#fc1900] bg-[#75120120] p-[5px]'
+                          onClick={() => setCloseWithIcon(false)}/>
+            </div>
+        </>
     );
 };
 
-export default pagination;
+export default PushNotification;
