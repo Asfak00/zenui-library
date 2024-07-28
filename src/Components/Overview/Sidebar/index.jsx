@@ -388,10 +388,12 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 26 &&
                 "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-              }   border-l border-[#9caebc] `}
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
               onClick={() => setStartContent(26)}
             >
               Chip
+
+              <UpdateBadge/>
             </Link>
             <Link
               to={"/components/breadcrumb"}
@@ -418,14 +420,14 @@ const index = ({ startContent, setStartContent }) => {
               <NewBadge/>
             </Link>
             <Link
-                to={"/components/shadow-scroll"}
+                to={"/components/steps"}
                 className={`${
                     startContent === 28 &&
                     "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
                 }   border-l border-[#9caebc] flex items-center gap-[10px]`}
                 onClick={() => setStartContent(28)}
             >
-              Shadow Scroll
+              Steps
 
               <NewBadge/>
             </Link>
@@ -552,6 +554,18 @@ const index = ({ startContent, setStartContent }) => {
               tooltip
 
               <UpdateBadge/>
+            </Link>
+            <Link
+              to={"/components/timeline"}
+              className={`${
+                startContent === 53 &&
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
+              onClick={() => setStartContent(53)}
+            >
+              timeline
+
+              <NewBadge/>
             </Link>
 
             {/* Randoms */}
@@ -708,6 +722,16 @@ const index = ({ startContent, setStartContent }) => {
                 onClick={() => setStartContent(48)}
             >
               Contact Form
+            </Link>
+            <Link
+                to={"/components/404-page"}
+                className={`${
+                    startContent === 52 &&
+                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+                }   border-l border-[#9caebc]`}
+                onClick={() => setStartContent(52)}
+            >
+              404 page
             </Link>
             <Link
                 to={"/components/responsive-search-bar"}
