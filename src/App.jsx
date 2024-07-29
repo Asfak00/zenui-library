@@ -73,6 +73,8 @@ import ProgressBarPage from "./Pages/Components/Navigation/ProgressBarPage.jsx";
 import ContactFormPage from "./Pages/Blocks/Randoms/ContactFormPage.jsx";
 import ResponsiveSearchbarPage from "./Pages/Blocks/Randoms/ResponsiveSearchbarPage.jsx";
 import BreadcrumbPage from "./Pages/Components/Navigation/BreadcrumbPage.jsx";
+import RatingPage from "./Pages/Components/Navigation/RatingPage.jsx";
+import TimelinePage from "./Pages/Components/Data Display/TimelinePage.jsx";
 
 const App = () => {
   const [isCookie, setIsCookie] = useState(false)
@@ -136,6 +138,7 @@ const App = () => {
         <Route path="/components/progress-bar" element={<ProgressBarPage />} />
         <Route path="/components/chip" element={<ChipPage />} />
         <Route path="/components/breadcrumb" element={<BreadcrumbPage />} />
+        <Route path="/components/rating" element={<RatingPage />} />
 
         {/* feedback */}
         <Route path="/components/skeleton" element={<SkeletonPage />} />
@@ -161,6 +164,7 @@ const App = () => {
         {/* data display */}
         <Route path="/components/badge" element={<BadgePage />} />
         <Route path="/components/tooltip" element={<TooltipPage />} />
+        <Route path="/components/timeline" element={<TimelinePage />} />
 
         {/* randoms */}
         <Route path="/components/code" element={<CodeSnippetPage />} />
