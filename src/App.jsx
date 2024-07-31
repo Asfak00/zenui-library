@@ -76,6 +76,7 @@ import BreadcrumbPage from "./Pages/Components/Navigation/BreadcrumbPage.jsx";
 import RatingPage from "./Pages/Components/Navigation/RatingPage.jsx";
 import TimelinePage from "./Pages/Components/Data Display/TimelinePage.jsx";
 import NumberInputPage from "./Pages/Components/Inputs/NumberInputPage.jsx";
+import StrongPasswordPage from "./Pages/Components/Inputs/StrongPasswordPage.jsx";
 
 const App = () => {
   const [isCookie, setIsCookie] = useState(false)
@@ -122,6 +123,7 @@ const App = () => {
         <Route path="/components/input-radio" element={<InputRadioPage />} />
         <Route path="/components/input-file" element={<InputFilePage />} />
         <Route path="/components/input-number" element={<NumberInputPage />} />
+        <Route path="/components/strong-password" element={<StrongPasswordPage />} />
 
         {/* buttons */}
         <Route path="/components/normal-button" element={<NormalPage />} />
