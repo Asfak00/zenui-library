@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 // utils styles
 import utils from "../../Utils";
@@ -18,6 +18,38 @@ const Footer = () => {
     height: '100%',
   };
 
+  const [result, setResult] = useState("");
+  const [inputValue, setInputValue] = useState("");
+
+  const onSubmitSubscribe = async (event)=> {
+    event.preventDefault()
+    setResult("Submitting....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "e8029480-bb2e-4808-b81f-7625dcd2c250");
+
+
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    console.log(data)
+
+    if (data.success) {
+      data.data = {
+        email: inputValue
+      }
+      setResult("Thank you for subscribing!");
+      event.target.reset();
+    } else {
+      setResult(data.message);
+    }
+  }
+
   return (
     <footer className="w-full px-5 425px:px-10 py-8 bg-secondary shadow-shadowColor" style={containerStyle}>
       <div className="w-full flex 640px:flex-row flex-col 640px:gap-0 gap-8 justify-between items-start">
@@ -29,20 +61,22 @@ const Footer = () => {
             ever.
           </p>
 
-          <form className="mt-4">
+          <form className="mt-4" onSubmit={onSubmitSubscribe}>
             <label
-              htmlFor="email"
-              className="text-[#9caebc] text-[0.9rem] mb-2"
+                htmlFor="email"
+                className="text-[#9caebc] text-[0.9rem] mb-2"
             >
               Your Email
             </label>
+            <input type="hidden" name="access_key" value="e8029480-bb2e-4808-b81f-7625dcd2c250"/>
             <div className="flex items-center gap-3 mt-1">
               <input
-                type="email"
-                name=""
-                id=""
-                placeholder="zenuilibrary@gmail.com"
-                className="py-2 px-3 border bg-[#0471d6] w-[60%] 640px:w-auto rounded border-[#024C92] text-[#024C92] placeholder:text-[#024C92] focus:outline-none"
+                  type="email"
+                  name=""
+                  id=""
+                  onChange={(e)=> setInputValue(e.target.value)}
+                  placeholder="zenuilibrary@gmail.com"
+                  className="py-2 px-3 border bg-[#0471d6] w-[60%] 640px:w-auto rounded border-[#024C92] text-[#024C92] placeholder:text-[#024C92] focus:outline-none"
               />
               <button type="submit" className={`${utils.buttonSecondary} !px-5 425px:px-20 425px:min-w-[100px] pl-3.5`}>
                 Subscribe
@@ -64,6 +98,14 @@ const Footer = () => {
               <li>
                 <p><a href='/components/all-components'>Components</a></p>
                 <span><a href='/components/all-components'>Components</a></span>
+              </li>
+              <li>
+                <p><a href='/components/blocks'>Blocks</a></p>
+                <span><a href='/components/blocks'>Blocks</a></span>
+              </li>
+              <li>
+                <p><a href='/icons'>Icons</a></p>
+                <span><a href='/icons'>Icons</a></span>
               </li>
             </ul>
           </div>

@@ -142,6 +142,18 @@ const index = ({ startContent, setStartContent }) => {
               Textarea
             </Link>
             <Link
+              to={"/components/input-number"}
+              className={`${
+                startContent === 56 &&
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
+              onClick={() => setStartContent(56)}
+            >
+              Number
+
+              <NewBadge/>
+            </Link>
+            <Link
               to={"/components/input-checkbox"}
               className={`${
                 startContent === 6 &&
@@ -162,6 +174,18 @@ const index = ({ startContent, setStartContent }) => {
               onClick={() => setStartContent(7)}
             >
               Switch
+            </Link>
+            <Link
+              to={"/components/strong-password"}
+              className={`${
+                startContent === 60 &&
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
+              onClick={() => setStartContent(60)}
+            >
+              Strong Password
+
+              <NewBadge/>
             </Link>
             <Link
               to={"/components/input-select"}
@@ -276,10 +300,12 @@ const index = ({ startContent, setStartContent }) => {
                 className={`${
                     startContent === 17 &&
                 "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-              }   border-l border-[#9caebc]`}
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
               onClick={() => setStartContent(17)}
             >
               animated button
+
+              <UpdateBadge/>
             </Link>
 
             {/* SURFACES */}
@@ -294,10 +320,12 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 18 &&
                 "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-              }   border-l border-[#9caebc]`}
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
               onClick={() => setStartContent(18)}
             >
               Cards
+
+              <UpdateBadge/>
             </Link>
             <Link
               to={"/components/according"}
@@ -372,16 +400,6 @@ const index = ({ startContent, setStartContent }) => {
               Progress Bar
 
               <NewBadge/>
-            </Link>
-            <Link
-              to={"/components/dropdown"}
-              className={`${
-                startContent === 25 &&
-                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-              }   border-l border-[#9caebc] `}
-              onClick={() => setStartContent(25)}
-            >
-              dropdown menu
             </Link>
             <Link
               to={"/components/chip"}
@@ -466,10 +484,12 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 31 &&
                 "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-              }   border-l border-[#9caebc] `}
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
               onClick={() => setStartContent(31)}
             >
               skeleton
+
+              <UpdateBadge/>
             </Link>
             <Link
               to={"/components/alert-message"}
@@ -627,7 +647,7 @@ const index = ({ startContent, setStartContent }) => {
               className={`flex flex-col ml-2 text-text mt-3 overflow-hidden pl-4`}
           >
             <Link
-                to={"/components/all-blocks"}
+                to={"/blocks/all-blocks"}
                 className={`${
                     startContent === 41 &&
                     "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
@@ -646,7 +666,7 @@ const index = ({ startContent, setStartContent }) => {
             </Link>
 
             <Link
-                to={"/components/responsive-navbar"}
+                to={"/blocks/responsive-navbar"}
                 className={`${
                     startContent === 42 &&
                     "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
@@ -656,7 +676,7 @@ const index = ({ startContent, setStartContent }) => {
               Responsive Navbar
             </Link>
             <Link
-                to={"/components/hero-section"}
+                to={"/blocks/hero-section"}
                 className={`${
                     startContent === 43 &&
                     "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
@@ -666,7 +686,7 @@ const index = ({ startContent, setStartContent }) => {
               Hero Section
             </Link>
             <Link
-                to={"/components/pricing-section"}
+                to={"/blocks/pricing-section"}
                 className={`${
                     startContent === 44 &&
                     "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
@@ -676,7 +696,7 @@ const index = ({ startContent, setStartContent }) => {
               Pricing Section
             </Link>
             <Link
-                to={"/components/responsive-footer"}
+                to={"/blocks/responsive-footer"}
                 className={`${
                     startContent === 45 &&
                     "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
@@ -686,7 +706,7 @@ const index = ({ startContent, setStartContent }) => {
               Responsive Footer
             </Link>
             <Link
-                to={"/components/review-section"}
+                to={"/blocks/review-section"}
                 className={`${
                     startContent === 46 &&
                     "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
@@ -694,6 +714,84 @@ const index = ({ startContent, setStartContent }) => {
                 onClick={() => setStartContent(46)}
             >
               Review Section
+            </Link>
+
+            {/* Forms */}
+            <Link
+                to={""}
+                className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
+            >
+              Forms
+            </Link>
+
+            <Link
+                to={"/blocks/contact-form"}
+                className={`${
+                    startContent === 42 &&
+                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+                }   border-l border-[#9caebc] flex items-center gap-[10px]`}
+                onClick={() => setStartContent(42)}
+            >
+              Contact Form
+            </Link>
+            <Link
+                to={"/blocks/form-validation"}
+                className={`${
+                    startContent === 43 &&
+                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+                }   border-l border-[#9caebc]`}
+                onClick={() => setStartContent(43)}
+            >
+              Form Validation
+            </Link>
+            <Link
+                to={"/blocks/multi-step-form"}
+                className={`${
+                    startContent === 47 &&
+                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+                }   border-l border-[#9caebc]`}
+                onClick={() => setStartContent(47)}
+            >
+              Multi-Step Form
+            </Link>
+            <Link
+                to={"/blocks/newsletter-form"}
+                className={`${
+                    startContent === 44 &&
+                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+                }   border-l border-[#9caebc]`}
+                onClick={() => setStartContent(44)}
+            >
+              Newsletter Form
+            </Link>
+
+            {/* empty pages */}
+            <Link
+                to={""}
+                className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
+            >
+              Empty Pages
+            </Link>
+
+            <Link
+                to={"/blocks/404-page"}
+                className={`${
+                    startContent === 42 &&
+                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+                }   border-l border-[#9caebc] flex items-center gap-[10px]`}
+                onClick={() => setStartContent(42)}
+            >
+              404 Page
+            </Link>
+            <Link
+                to={"/blocks/empty-page"}
+                className={`${
+                    startContent === 43 &&
+                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+                }   border-l border-[#9caebc]`}
+                onClick={() => setStartContent(43)}
+            >
+              Empty Page
             </Link>
 
             {/* Randoms */}
@@ -704,37 +802,7 @@ const index = ({ startContent, setStartContent }) => {
               random
             </Link>
             <Link
-                to={"/components/multi-step-form"}
-                className={`${
-                    startContent === 47 &&
-                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-                }   border-l border-[#9caebc]`}
-                onClick={() => setStartContent(47)}
-            >
-              Multi-Step Form
-            </Link>
-            <Link
-                to={"/components/contact-form"}
-                className={`${
-                    startContent === 48 &&
-                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-                }   border-l border-[#9caebc]`}
-                onClick={() => setStartContent(48)}
-            >
-              Contact Form
-            </Link>
-            <Link
-                to={"/components/404-page"}
-                className={`${
-                    startContent === 52 &&
-                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-                }   border-l border-[#9caebc]`}
-                onClick={() => setStartContent(52)}
-            >
-              404 page
-            </Link>
-            <Link
-                to={"/components/responsive-search-bar"}
+                to={"/blocks/responsive-search-bar"}
                 className={`${
                     startContent === 49 &&
                     "border-l rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
@@ -744,7 +812,7 @@ const index = ({ startContent, setStartContent }) => {
               Responsive Search Bar
             </Link>
             <Link
-                to={"/components/responsive-sidebar"}
+                to={"/blocks/responsive-sidebar"}
                 className={`${
                     startContent === 50 &&
                     "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"

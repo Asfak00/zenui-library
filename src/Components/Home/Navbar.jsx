@@ -99,6 +99,17 @@ const Navbar = () => {
                   href='/components/all-blocks'>Blocks</a></p>
               <span><a href='/components/all-blocks'>Blocks</a></span>
             </li>
+
+            <li className='relative pr-[45px]'>
+              <div className='bg-red-600 rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
+                NEW
+
+                <div className='w-[8px] h-[8px] bg-red-600 rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
+              </div>
+              <p className={getTheRouteName() === '/icons' && '!text-primary'}><a
+                  href='/icons'>Icons</a></p>
+              <span><a href='/icons'>Icons</a></span>
+            </li>
           </ul>
         </div>
 

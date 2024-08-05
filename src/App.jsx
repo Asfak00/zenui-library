@@ -31,7 +31,6 @@ import AnimatedButtonPage from "./Pages/Components/Buttons/AnimatedButtonPage";
 import AllComponentsPage from "./Pages/Components/AllComponentsPage";
 
 // navigation pages
-import DropDownPage from "./Pages/Components/Navigation/DropDownPage";
 import PaginationPage from "./Pages/Components/Navigation/PaginationPage";
 import TabsPage from "./Pages/Components/Navigation/TabsPage";
 import ModalPage from "./Pages/Components/Navigation/ModalPage";
@@ -70,13 +69,20 @@ import ResponsiveNavbarPage from "./Pages/Blocks/Sections/ResponsiveNavbarPage.j
 import AllBlocksPage from "./Pages/Blocks/AllBlocksPage.jsx";
 import HeroSectionPage from "./Pages/Blocks/Sections/HeroSectionPage.jsx";
 import ProgressBarPage from "./Pages/Components/Navigation/ProgressBarPage.jsx";
-import ContactFormPage from "./Pages/Blocks/Randoms/ContactFormPage.jsx";
+import ContactFormPage from "./Pages/Blocks/Forms/ContactFormPage.jsx";
 import ResponsiveSearchbarPage from "./Pages/Blocks/Randoms/ResponsiveSearchbarPage.jsx";
 import BreadcrumbPage from "./Pages/Components/Navigation/BreadcrumbPage.jsx";
 import RatingPage from "./Pages/Components/Navigation/RatingPage.jsx";
 import TimelinePage from "./Pages/Components/Data Display/TimelinePage.jsx";
 import NumberInputPage from "./Pages/Components/Inputs/NumberInputPage.jsx";
 import StrongPasswordPage from "./Pages/Components/Inputs/StrongPasswordPage.jsx";
+import CheckboxInputPage from "./Pages/Components/Inputs/CheckboxInputPage.jsx";
+import EmptyPage from "./Pages/EmptyPage.jsx"
+import StepsPage from "./Pages/Components/Navigation/StepsPage.jsx";
+
+// icons page
+import IconsPage from './Pages/IconsPages/IconsPage.jsx'
+import ResponsiveFooterPage from "./Pages/Blocks/Randoms/ResponsiveFooterPage.jsx";
 
 const App = () => {
   const [isCookie, setIsCookie] = useState(false)
@@ -124,6 +130,7 @@ const App = () => {
         <Route path="/components/input-file" element={<InputFilePage />} />
         <Route path="/components/input-number" element={<NumberInputPage />} />
         <Route path="/components/strong-password" element={<StrongPasswordPage />} />
+        <Route path="/components/input-checkbox" element={<CheckboxInputPage />} />
 
         {/* buttons */}
         <Route path="/components/normal-button" element={<NormalPage />} />
@@ -136,13 +143,13 @@ const App = () => {
 
         {/* navigation */}
         <Route path="/components/pagination" element={<PaginationPage />} />
-        <Route path="/components/dropdown" element={<DropDownPage />} />
         <Route path="/components/tabs" element={<TabsPage />} />
         <Route path="/components/modal" element={<ModalPage />} />
         <Route path="/components/progress-bar" element={<ProgressBarPage />} />
         <Route path="/components/chip" element={<ChipPage />} />
         <Route path="/components/breadcrumb" element={<BreadcrumbPage />} />
         <Route path="/components/rating" element={<RatingPage />} />
+        <Route path="/components/steps" element={<StepsPage />} />
 
         {/* feedback */}
         <Route path="/components/skeleton" element={<SkeletonPage />} />
@@ -176,11 +183,19 @@ const App = () => {
 
 
       {/*  all blocks route  */}
-        <Route path="/components/all-blocks" element={<AllBlocksPage />} />
-        <Route path="/components/responsive-navbar" element={<ResponsiveNavbarPage />} />
-        <Route path="/components/hero-section" element={<HeroSectionPage />} />
-        <Route path="/components/contact-form" element={<ContactFormPage />} />
-        <Route path="/components/responsive-search-bar" element={<ResponsiveSearchbarPage />} />
+        <Route path="/blocks/all-blocks" element={<AllBlocksPage />} />
+        <Route path="/blocks/responsive-navbar" element={<ResponsiveNavbarPage />} />
+        <Route path="/blocks/hero-section" element={<HeroSectionPage />} />
+        <Route path="/blocks/contact-form" element={<ContactFormPage />} />
+        <Route path="/blocks/responsive-search-bar" element={<ResponsiveSearchbarPage />} />
+        <Route path="/blocks/responsive-footer" element={<ResponsiveFooterPage />} />
+
+
+        {/*  icon route  */}
+        <Route path="/icons" element={<IconsPage />} />
+
+        {/*  empty route  */}
+        <Route path="*" element={<EmptyPage />} />
 
       </Routes>
 
