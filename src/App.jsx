@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 // react router dom
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 // home page
 import HomePage from "./Pages/HomePage";
@@ -24,7 +24,6 @@ import InputFilePage from "./Pages/Components/Inputs/InputFilePage";
 
 // buttons pages
 import NormalPage from "./Pages/Components/Buttons/NormalPage";
-import RgbButtonPage from "./Pages/Components/Buttons/RgbButtonPage";
 import AnimatedButtonPage from "./Pages/Components/Buttons/AnimatedButtonPage";
 
 // all components
@@ -83,6 +82,7 @@ import StepsPage from "./Pages/Components/Navigation/StepsPage.jsx";
 // icons page
 import IconsPage from './Pages/IconsPages/IconsPage.jsx'
 import ResponsiveFooterPage from "./Pages/Blocks/Randoms/ResponsiveFooterPage.jsx";
+import AuthButtonPage from "./Pages/Components/Buttons/AuthButtonPage.jsx";
 
 const App = () => {
   const [isCookie, setIsCookie] = useState(false)
@@ -134,7 +134,7 @@ const App = () => {
 
         {/* buttons */}
         <Route path="/components/normal-button" element={<NormalPage />} />
-        <Route path="/components/rgb-border" element={<RgbButtonPage />} />
+        <Route path="/components/auth-buttons" element={<AuthButtonPage />} />
         <Route path="/components/dropdown-button" element={<DropdownButtonPage />} />
         <Route
           path="/components/animated-button"

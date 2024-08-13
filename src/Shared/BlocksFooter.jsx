@@ -8,7 +8,7 @@ import { FaHand } from "react-icons/fa6";
 // utils style
 import utils from "../Utils";
 
-const OverviewFooter = () => {
+const OverviewFooter = ({width = '820px'}) => {
     const [isLiked, setIsLiked] = useState(false);
     const [isDisLiked, setIsDisLiked] = useState(false);
     const [feedbackValue, setFeedbackValue] = useState('');
@@ -112,7 +112,7 @@ const OverviewFooter = () => {
     }
 
     return (
-        <footer className="w-full max-w-[820px] mt-8">
+        <footer className={`w-full max-w-[${width}] mt-8`}>
             <div className="flex flex-col 425px:flex-row 425px:items-center justify-between w-full pb-5">
                 <a href='https://github.com/Asfak00/zenui-library' target='_blank'
                    className={`${utils.buttonSecondary} flex items-center gap-2 !px-2 !py-1 text-[0.9rem] min-w-[110px] mr-3 max-w-[110px]`}

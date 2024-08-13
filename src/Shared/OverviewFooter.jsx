@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useRef} from "react";
 
 // icons
 import { FaGithub } from "react-icons/fa";
@@ -7,6 +7,8 @@ import { FaHand } from "react-icons/fa6";
 
 // utils style
 import utils from "../Utils";
+
+import emailjs from '@emailjs/browser';
 
 const OverviewFooter = () => {
   const [isLiked, setIsLiked] = useState(false);
@@ -25,43 +27,22 @@ const OverviewFooter = () => {
     setIsLiked(false);
   };
 
+    const form = useRef();
+
   // handle feedback message
   const handleFeedback = (e) => {
     e.preventDefault()
-    const url = 'https://devlab-black-email.friendsclub.workers.dev/';
-    const data = {
-      email: 'mlFZBnbf1PocWSlou6+x9sgm+gK6+FM8Pl6pgDQSUUozmLt4eV6SsUgFfylGhIX/U5O+wLSwqbjwnGDZxETjNhhnZrTpKiT3swy17v6xLxH0ZFBndt8uA2d2ymAop+gi',
-      form: {
-        title: 'Form Name',
-        data: [
-          ['textarea', feedbackValue]
-        ]
-      }
-    };
-
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-          }
-          setSuccessMessage('Thank You for Your Feedback!')
-          setTimeout(()=>{
-            setSuccessMessage('')
-          }, 3000)
-          return response.text();
-        })
-        .then(data => {
-          console.log('Success:', data);
-        })
-        .catch(error => {
-          console.error('Error:', error);
-        });
+      emailjs.sendForm('service_gbzs6tw', 'template_vjladol', form.current, {
+              publicKey: 'LvMxwenvn470Il3am',
+          })
+          .then(
+              () => {
+                  console.log('SUCCESS!');
+              },
+              (error) => {
+                  console.log('FAILED...', error);
+              },
+          );
 }
 
   // handle report message
@@ -141,7 +122,7 @@ const handleReportInput = (e) => {
       </div>
 
       {isLiked && (
-          <form action="#" className="w-full mb-5" onSubmit={handleFeedback}>
+          <form ref={form} action="#" className="w-full mb-5" onSubmit={handleFeedback}>
             <label htmlFor="message" className=''>What did you like about this page?</label>
             <br/>
             <textarea

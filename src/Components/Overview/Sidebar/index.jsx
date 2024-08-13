@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
 
 // react router dom
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NewBadge from "../../../Shared/NewBadge.jsx";
 import UpdateBadge from "../../../Shared/UpdateBadge.jsx";
 
@@ -19,15 +19,16 @@ const index = ({ startContent, setStartContent }) => {
       {/*  get starts  */}
       <div>
         <h3
-          className="flex items-center gap-1 text-[1rem] text-[#0471d6] font-[500] capitalize cursor-pointer "
+          className={`${start ? 'text-[#0471d6]' : 'text-gray-500'} flex items-center justify-between gap-1 text-[1rem] font-[500] capitalize cursor-pointer `}
           onClick={() => setStart(!start)}
         >
-          <MdKeyboardArrowRight
-            className={`${
-              start && "rotate-[90deg]"
-            } text-[1.5rem] text-[#0471d6] transition-all duration-300`}
-          />
           getting-started
+
+          <MdKeyboardArrowRight
+              className={`${
+                  start && "rotate-[90deg] !text-[#0471d6]"
+              } text-[1.5rem] text-gray-500 transition-all duration-300`}
+          />
         </h3>
         <div
           className={`grid overflow-hidden transition-all duration-500 ${
@@ -81,15 +82,16 @@ const index = ({ startContent, setStartContent }) => {
       {/*  components  */}
       <div>
         <h3
-          className="flex items-center gap-1 text-[1rem] text-[#0471d6] font-[500] capitalize cursor-pointer"
+          className={`${components ? 'text-[#0471d6]' : 'text-gray-500'} flex items-center justify-between gap-1 text-[1rem]  font-[500] capitalize cursor-pointer`}
           onClick={() => setComponents(!components)}
         >
-          <MdKeyboardArrowRight
-            className={`${
-              components && "rotate-[90deg]"
-            } text-[1.5rem] text-[#0471d6] transition-all duration-300`}
-          />
           Components
+
+          <MdKeyboardArrowRight
+              className={`${
+                  components && "rotate-[90deg] !text-[#0471d6]"
+              } text-[1.5rem] text-gray-500 text-[#0471d6] transition-all duration-300`}
+          />
         </h3>
 
         <div
@@ -170,10 +172,11 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 7 &&
                 "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-              }   border-l border-[#9caebc]`}
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
               onClick={() => setStartContent(7)}
             >
               Switch
+              <UpdateBadge/>
             </Link>
             <Link
               to={"/components/strong-password"}
@@ -268,20 +271,24 @@ const index = ({ startContent, setStartContent }) => {
               className={`${
                 startContent === 14 &&
                 "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-              }   border-l border-[#9caebc]`}
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
               onClick={() => setStartContent(14)}
             >
               normal button
+
+              <UpdateBadge/>
             </Link>
             <Link
-              to={"/components/rgb-border"}
+              to={"/components/auth-buttons"}
               className={`${
                 startContent === 15 &&
                 "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-              }   border-l border-[#9caebc]`}
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
               onClick={() => setStartContent(15)}
             >
-              RGB border
+              Auth Button
+
+              <NewBadge/>
             </Link>
             <Link
                 to={"/components/dropdown-button"}
@@ -337,18 +344,18 @@ const index = ({ startContent, setStartContent }) => {
             >
               Accordion
             </Link>
-            <Link
-                to={"/components/resizable-card"}
-                className={`${
-                    startContent === 20 &&
-                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-                }   border-l border-[#9caebc] flex items-center gap-[10px]`}
-                onClick={() => setStartContent(20)}
-            >
-              Resizable Card
+            {/*<Link*/}
+            {/*    to={"/components/resizable-card"}*/}
+            {/*    className={`${*/}
+            {/*        startContent === 20 &&*/}
+            {/*        "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"*/}
+            {/*    }   border-l border-[#9caebc] flex items-center gap-[10px]`}*/}
+            {/*    onClick={() => setStartContent(20)}*/}
+            {/*>*/}
+            {/*  Resizable Card*/}
 
-              <NewBadge/>
-            </Link>
+            {/*  <NewBadge/>*/}
+            {/*</Link>*/}
             <Link
               to={"/components/appbar"}
               className={`${
@@ -575,6 +582,18 @@ const index = ({ startContent, setStartContent }) => {
 
               <UpdateBadge/>
             </Link>
+            {/*<Link*/}
+            {/*  to={"/components/chart"}*/}
+            {/*  className={`${*/}
+            {/*    startContent === 38 &&*/}
+            {/*    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"*/}
+            {/*  }   border-l border-[#9caebc] flex items-center gap-[10px]`}*/}
+            {/*  onClick={() => setStartContent(38)}*/}
+            {/*>*/}
+            {/*  Pie Chart*/}
+
+            {/*  <NewBadge/>*/}
+            {/*</Link>*/}
             <Link
               to={"/components/timeline"}
               className={`${
@@ -623,19 +642,19 @@ const index = ({ startContent, setStartContent }) => {
       {/*  blocks  */}
       <div>
         <h3
-            className="flex items-center gap-1 text-[1rem] text-[#0471d6] font-[500] capitalize cursor-pointer"
+            className={`${blocks ? 'text-[#0471d6]' : 'text-gray-500'} flex items-center justify-between gap-1 text-[1rem] font-[500] capitalize cursor-pointer`}
             onClick={() => setBlocks(!blocks)}
         >
-          <MdKeyboardArrowRight
-              className={`${
-                  blocks && "rotate-[90deg]"
-              } text-[1.5rem] text-[#0471d6] transition-all duration-300`}
-          />
-          Blocks
-
-          <div className='ml-[5px]'>
+          <div className='flex items-center gap-[10px]'>
+            Blocks
             <NewBadge/>
           </div>
+
+          <MdKeyboardArrowRight
+              className={`${
+                  blocks && "rotate-[90deg] !text-[#0471d6]"
+              } text-[1.5rem] text-gray-500 transition-all duration-300`}
+          />
         </h3>
 
         <div
