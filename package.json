@@ -19,6 +19,7 @@
     "react-parallax-tilt": "^1.7.228",
     "react-router-dom": "^6.21.1",
     "react-syntax-highlighter": "^15.5.0",
+    "tinycolor2": "^1.6.0",
     "uuid": "^10.0.0"
   },
   "devDependencies": {

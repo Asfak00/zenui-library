@@ -84,6 +84,8 @@ import IconsPage from './Pages/IconsPages/IconsPage.jsx'
 import ResponsiveFooterPage from "./Pages/Blocks/Randoms/ResponsiveFooterPage.jsx";
 import AuthButtonPage from "./Pages/Components/Buttons/AuthButtonPage.jsx";
 
+import OpacityPalettePage from "./Pages/OpacityPalettePage.jsx"
+
 const App = () => {
   const [isCookie, setIsCookie] = useState(false)
 
@@ -193,6 +195,9 @@ const App = () => {
 
         {/*  icon route  */}
         <Route path="/icons" element={<IconsPage />} />
+
+        {/* opacity palette */}
+        <Route path='/opacity-palette' element={<OpacityPalettePage/>}/>
 
         {/*  empty route  */}
         <Route path="*" element={<EmptyPage />} />

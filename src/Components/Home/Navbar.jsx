@@ -81,7 +81,8 @@ const Navbar = () => {
             {/*  <span>docs</span>*/}
             {/*</li>*/}
             <li className=''>
-              <p className={getTheRouteName() === '/about-us' && '!text-primary'}><Link to='/about-us'>About us</Link> </p>
+              <p className={getTheRouteName() === '/about-us' && '!text-primary'}><Link to='/about-us'>About us</Link>
+              </p>
               <span><Link to='/about-us'>About us</Link> </span>
             </li>
             <li className=''>
@@ -90,7 +91,8 @@ const Navbar = () => {
               <span><a href='/getting-started/templates'>Templates</a></span>
             </li>
             <li className='relative pr-[45px]'>
-              <div className='bg-red-600 rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
+              <div
+                  className='bg-red-600 rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
                 NEW
 
                 <div className='w-[8px] h-[8px] bg-red-600 rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
@@ -101,7 +103,8 @@ const Navbar = () => {
             </li>
 
             <li className='relative pr-[45px]'>
-              <div className='bg-red-600 rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
+              <div
+                  className='bg-red-600 rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
                 NEW
 
                 <div className='w-[8px] h-[8px] bg-red-600 rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
@@ -110,19 +113,32 @@ const Navbar = () => {
                   href='/icons'>Icons</a></p>
               <span><a href='/icons'>Icons</a></span>
             </li>
+
+            <li className='relative pr-[45px]'>
+              <div
+                  className='bg-red-600 rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
+                NEW
+
+                <div className='w-[8px] h-[8px] bg-red-600 rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
+              </div>
+              <p className={getTheRouteName() === '/opacity-palette' && '!text-primary'}><a
+                  href='/opacity-palette'>Opacity Palette</a></p>
+              <span><a href='/opacity-palette'>Opacity Palette</a></span>
+            </li>
           </ul>
         </div>
 
         <div className="flex items-center gap-4">
           <div className="zenuiSearchInput relative" onClick={handleSearchClick}>
-            <IoIosSearch className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-primary ':'text-text' } absolute left-3 top-[0.6rem] text-[1.5rem]`} />
+            <IoIosSearch
+                className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-primary ' : 'text-text'} absolute left-3 top-[0.6rem] text-[1.5rem]`}/>
             <input
-              type="search"
-              name=""
-              id=""
-              readOnly={true}
-              placeholder="Search..."
-              className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'placeholder:text-[#024C92] border-[#024C92] bg-[#0471d6] text-[#024C92]' : 'placeholder:text-text border-[#c7d0dd] bg-border text-[#024C92]' } py-2 px-10 border rounded-full focus:outline-none`}
+                type="search"
+                name=""
+                id=""
+                readOnly={true}
+                placeholder="Search..."
+                className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'placeholder:text-[#024C92] border-[#024C92] bg-[#0471d6] text-[#024C92]' : 'placeholder:text-text border-[#c7d0dd] bg-border text-[#024C92]' } py-2 px-10 border rounded-full focus:outline-none`}
             />
             <span className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'border-[#024C92] bg-[#024C92] text-primary' : 'text-text border-[#c7d0dd] bg-secondary' } px-2 py-1 text-[0.9rem] font-[500] rounded-full absolute right-1.5 border top-[0.350rem]`}>
               Ctrl + Z
