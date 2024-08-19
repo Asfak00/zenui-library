@@ -724,16 +724,16 @@ const index = ({ startContent, setStartContent }) => {
             >
               Responsive Footer
             </Link>
-            <Link
-                to={"/blocks/review-section"}
-                className={`${
-                    startContent === 46 &&
-                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-                }   border-l border-[#9caebc]`}
-                onClick={() => setStartContent(46)}
-            >
-              Review Section
-            </Link>
+            {/*<Link*/}
+            {/*    to={"/blocks/testimonial-section"}*/}
+            {/*    className={`${*/}
+            {/*        startContent === 46 &&*/}
+            {/*        "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"*/}
+            {/*    }   border-l border-[#9caebc]`}*/}
+            {/*    onClick={() => setStartContent(46)}*/}
+            {/*>*/}
+            {/*  Testimonial Section*/}
+            {/*</Link>*/}
 
             {/* Forms */}
             <Link

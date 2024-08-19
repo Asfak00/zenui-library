@@ -65,6 +65,7 @@ import OtpInputPage from "./Pages/Components/Inputs/OtpInputPage.jsx";
 
 // blocks
 import ResponsiveNavbarPage from "./Pages/Blocks/Sections/ResponsiveNavbarPage.jsx";
+import EmptyMessagePage from "./Pages/Blocks/EmptyPages/EmptyPage.jsx"
 import AllBlocksPage from "./Pages/Blocks/AllBlocksPage.jsx";
 import HeroSectionPage from "./Pages/Blocks/Sections/HeroSectionPage.jsx";
 import ProgressBarPage from "./Pages/Components/Navigation/ProgressBarPage.jsx";
@@ -85,6 +86,11 @@ import ResponsiveFooterPage from "./Pages/Blocks/Randoms/ResponsiveFooterPage.js
 import AuthButtonPage from "./Pages/Components/Buttons/AuthButtonPage.jsx";
 
 import OpacityPalettePage from "./Pages/OpacityPalettePage.jsx"
+import WrongUrlErrorPage from "./Pages/Blocks/EmptyPages/WrongRoutePage.jsx";
+import WrongRoutePage from "./Pages/Blocks/EmptyPages/WrongRoutePage.jsx";
+import PricingSectionPage from "./Pages/Blocks/Sections/PricingSectionPage.jsx";
+import TestimonialFeedbackPage from "./Pages/Blocks/Sections/TestimonialFeedbackPage.jsx";
+import NewsletterSectionPage from "./Pages/Blocks/Forms/NewsletterSectionPage.jsx";
 
 const App = () => {
   const [isCookie, setIsCookie] = useState(false)
@@ -161,7 +167,7 @@ const App = () => {
         />
         <Route path="/components/dialog-message" element={<DialogPage />} />
         <Route path="/components/loader" element={<LoaderPage />} />
-        <Route path="/components/testimonials" element={<TestimonialPage />} />
+        <Route path="/components/testimonials" element={<TestimonialFeedbackPage />} />
         <Route path="/components/notification" element={<NotificationPage />} />
 
         {/* surface */}
@@ -191,6 +197,10 @@ const App = () => {
         <Route path="/blocks/contact-form" element={<ContactFormPage />} />
         <Route path="/blocks/responsive-search-bar" element={<ResponsiveSearchbarPage />} />
         <Route path="/blocks/responsive-footer" element={<ResponsiveFooterPage />} />
+        <Route path="/blocks/404-page" element={<WrongRoutePage />} />
+        <Route path="/blocks/pricing-section" element={<PricingSectionPage />} />
+        <Route path="/blocks/newsletter-form" element={<NewsletterSectionPage />} />
+        <Route path="/blocks/empty-page" element={<WrongUrlErrorPage />} />
 
 
         {/*  icon route  */}
