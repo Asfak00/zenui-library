@@ -1,5 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,8 +10,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
+}
+
+.codeSnippet {
+  font-family: "Inconsolata", monospace;
 }
 
 *::selection {
@@ -49,6 +54,10 @@
   height: 100%;
   content: "";
   z-index: 2;
+}
+
+.card-gradient {
+  background: linear-gradient(to top right, white 30%, rgba(15, 171, 202, 0.33) 100%);
 }
 
 /*.logos:before {*/
@@ -121,7 +130,7 @@
 .navUl li:hover span {
   opacity: 1;
   transform: translateY(0px);
-  color: #3b9df8;
+  color: #0FABCA;
 }
 
 /* button hover effect */
@@ -178,7 +187,7 @@
 .footer li:hover span {
   opacity: 1;
   transform: translateY(0px);
-  color: #3b9df8;
+  color: #0FABCA;
 }
 
 /* sidebar hover effect */
@@ -289,7 +298,7 @@ aside ul a:hover {
 .gradient-border {
   position: relative;
   padding: 2px;
-  background: linear-gradient(90deg, rgba(255,0,150,1) 0%, rgba(0,204,255,1) 100%);
+  background: linear-gradient(90deg, #DB06F9 0%, rgba(0,204,255,1) 100%);
   border-radius: 9999px;
   display: inline-block;
   overflow: hidden;
@@ -297,7 +306,7 @@ aside ul a:hover {
 }
 
 .gradient-border > div {
-  background: #0e2154;
+  background: #fff;
   border-radius: 9999px;
   padding: 0.3rem 1rem;
   display: flex;
@@ -320,4 +329,18 @@ input[type="number"] {
 .iconContainer svg {
   width: 26px;
   height: 26px;
+}
+
+/* bouncing animation*/
+.animation-bounce {
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }

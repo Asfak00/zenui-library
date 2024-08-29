@@ -1,46 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
 
 // react icon
-import {RxCross1} from "react-icons/rx";
+import {IoSearch} from "react-icons/io5";
 
-const PushNotification = () => {
-
+const SearchInput = () => {
 
     return (
         <>
-            <div className=" w-full text-center flex justify-center gap-[20px]">
-                <button
-                    className="px-4 py-2 bg-primary text-secondary rounded"
-                    onClick={handleAutoClose}
-                >
-                    Auto Close
-                </button>
+            {/* 1st search input */}
+            <div className="w-full 1024px:w-[80%] relative">
+                <input type='text' placeholder='Search...'
+                       className='border border-border py-3 pl-4 pr-[65px] outline-none w-full rounded-md'/>
 
-                <button
-                    className="px-4 py-2 bg-primary text-secondary rounded"
-                    onClick={handleCloseWithIcon}
-                >
-                    Close With Click
-                </button>
+                <span
+                    className='bg-gray-300 text-gray-500 absolute top-0 right-0 h-full px-5 flex items-center justify-center rounded-r-md cursor-pointer hover:bg-gray-400 group'><IoSearch
+                    className='text-[1.3rem]  group-hover:text-gray-200'/></span>
             </div>
 
-            <div
-                className={` ${autoClose ? "translate-y-0" : "translate-y-[100px]"} transition-all duration-300 px-8 py-4 rounded-md bg-primary fixed bottom-[20px] right-[20px] z-30 text-white`}>
-                ZenUI Push Notification
+            {/* 2nd search input */}
+            <div className="w-full 1024px:w-[80%] relative">
+                <input type='text' placeholder='Search...'
+                       className='border border-border py-3 pl-4 pr-[65px] outline-none w-full rounded-md'/>
+
+                <span
+                    className='bg-gray-300 text-gray-500 absolute top-0 right-0 h-full px-5 flex items-center justify-center rounded-r-md cursor-pointer hover:bg-gray-400 hover:text-gray-200'>Search</span>
             </div>
 
+            {/* 3rd search input */}
             <div
-                className={` ${closeWithIcon ? "translate-y-0" : "translate-y-[100px]"} transition-all duration-300  rounded-md bg-primary fixed bottom-[20px] right-[20px] z-30 text-white flex items-center justify-between px-5 py-4 gap-[10px]`}>
+                className='bg-primary py-4 w-full 1024px:w-[80%] px-5 flex items-center justify-center rounded-full cursor-pointer relative'>
+                <IoSearch className='text-[1.3rem] text-white ml-auto'/>
 
-                <p className="">
-                    ZenUI Push Notification
-                </p>
-
-                <RxCross1 className='text-[1.4rem] cursor-pointer rounded-full text-[#fc1900] bg-[#75120120] p-[5px]'
-                          onClick={() => setCloseWithIcon(false)}/>
+                <input type='text' placeholder='Search...'
+                       className='border border-border absolute top-[2px] left-[3px] h-[90%] w-[85%] py-3 px-4 outline-none rounded-full'/>
             </div>
         </>
     );
 };
 
-export default PushNotification;
+export default SearchInput;

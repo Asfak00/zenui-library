@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 
 // react router dom
 import { Route, Routes } from "react-router-dom";
@@ -91,6 +91,10 @@ import WrongRoutePage from "./Pages/Blocks/EmptyPages/WrongRoutePage.jsx";
 import PricingSectionPage from "./Pages/Blocks/Sections/PricingSectionPage.jsx";
 import TestimonialFeedbackPage from "./Pages/Blocks/Sections/TestimonialFeedbackPage.jsx";
 import NewsletterSectionPage from "./Pages/Blocks/Forms/NewsletterSectionPage.jsx";
+import MultipageFormPage from "./Pages/Blocks/Forms/MultipageFormPage.jsx";
+import ResponsiveSidebarPage from "./Pages/Blocks/Randoms/ResponsiveSidebarPage.jsx";
+import InputSliderPage from "./Pages/Components/Inputs/InputSliderPage.jsx";
+
 
 const App = () => {
   const [isCookie, setIsCookie] = useState(false)
@@ -103,6 +107,20 @@ const App = () => {
   window.addEventListener('focus', () => {
     document.title = Title;
   })
+
+  // useEffect(() => {
+  //   const handleRightClick = (event) => {
+  //     event.preventDefault();
+  //     const audio = new Audio('/rightclickmeme.mp3');
+  //     audio.play();
+  //   };
+  //
+  //   document.addEventListener('contextmenu', handleRightClick);
+  //
+  //   return () => {
+  //     document.removeEventListener('contextmenu', handleRightClick);
+  //   };
+  // }, []);
 
   return (
     <>
@@ -139,6 +157,7 @@ const App = () => {
         <Route path="/components/input-number" element={<NumberInputPage />} />
         <Route path="/components/strong-password" element={<StrongPasswordPage />} />
         <Route path="/components/input-checkbox" element={<CheckboxInputPage />} />
+        <Route path="/components/input-range" element={<InputSliderPage />} />
 
         {/* buttons */}
         <Route path="/components/normal-button" element={<NormalPage />} />
@@ -157,7 +176,7 @@ const App = () => {
         <Route path="/components/chip" element={<ChipPage />} />
         <Route path="/components/breadcrumb" element={<BreadcrumbPage />} />
         <Route path="/components/rating" element={<RatingPage />} />
-        <Route path="/components/steps" element={<StepsPage />} />
+        <Route path="/components/stepper" element={<StepsPage />} />
 
         {/* feedback */}
         <Route path="/components/skeleton" element={<SkeletonPage />} />
@@ -200,6 +219,8 @@ const App = () => {
         <Route path="/blocks/404-page" element={<WrongRoutePage />} />
         <Route path="/blocks/pricing-section" element={<PricingSectionPage />} />
         <Route path="/blocks/newsletter-form" element={<NewsletterSectionPage />} />
+        <Route path="/blocks/multi-step-form" element={<MultipageFormPage />} />
+        <Route path="/blocks/responsive-sidebar" element={<ResponsiveSidebarPage />} />
         <Route path="/blocks/empty-page" element={<WrongUrlErrorPage />} />
 
 

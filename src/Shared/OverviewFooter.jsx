@@ -96,7 +96,7 @@ const handleReportInput = (e) => {
     <footer className="w-full 1024px:w-[80%] mt-8">
       <div className="flex flex-col 425px:flex-row 425px:items-center justify-between w-full pb-5">
         <a href='https://github.com/Asfak00/zenui-library' target='_blank'
-          className={`${utils.buttonSecondary} flex items-center gap-2 !px-2 !py-1 text-[0.9rem] min-w-[110px] mr-3 max-w-[110px]`}
+          className={`${utils.buttonSecondary} flex items-center min-w-fit gap-2 !px-2 !py-1 text-[0.9rem] min-w-[110px] mr-3 max-w-[110px]`}
         >
           <FaGithub />
           Give a star

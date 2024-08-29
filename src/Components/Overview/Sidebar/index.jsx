@@ -224,18 +224,18 @@ const index = ({ startContent, setStartContent }) => {
 
               <NewBadge/>
             </Link>
-            <Link
-              to={"/components/input-radio-group"}
-              className={`${
-                startContent === 11 &&
-                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
-              onClick={() => setStartContent(11)}
-            >
-              Radio Group
+            {/*<Link*/}
+            {/*  to={"/components/input-radio-group"}*/}
+            {/*  className={`${*/}
+            {/*    startContent === 11 &&*/}
+            {/*    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"*/}
+            {/*  }   border-l border-[#9caebc] flex items-center gap-[10px]`}*/}
+            {/*  onClick={() => setStartContent(11)}*/}
+            {/*>*/}
+            {/*  Radio Group*/}
 
-              <NewBadge/>
-            </Link>
+            {/*  <NewBadge/>*/}
+            {/*</Link>*/}
             <Link
               to={"/components/input-file"}
               className={`${
@@ -445,14 +445,14 @@ const index = ({ startContent, setStartContent }) => {
               <NewBadge/>
             </Link>
             <Link
-                to={"/components/steps"}
+                to={"/components/stepper"}
                 className={`${
                     startContent === 28 &&
                     "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
                 }   border-l border-[#9caebc] flex items-center gap-[10px]`}
                 onClick={() => setStartContent(28)}
             >
-              Steps
+              Stepper
 
               <NewBadge/>
             </Link>
@@ -753,16 +753,16 @@ const index = ({ startContent, setStartContent }) => {
             >
               Contact Form
             </Link>
-            <Link
-                to={"/blocks/form-validation"}
-                className={`${
-                    startContent === 43 &&
-                    "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
-                }   border-l border-[#9caebc]`}
-                onClick={() => setStartContent(43)}
-            >
-              Form Validation
-            </Link>
+            {/*<Link*/}
+            {/*    to={"/blocks/form-validation"}*/}
+            {/*    className={`${*/}
+            {/*        startContent === 43 &&*/}
+            {/*        "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"*/}
+            {/*    }   border-l border-[#9caebc]`}*/}
+            {/*    onClick={() => setStartContent(43)}*/}
+            {/*>*/}
+            {/*  Form Validation*/}
+            {/*</Link>*/}
             <Link
                 to={"/blocks/multi-step-form"}
                 className={`${

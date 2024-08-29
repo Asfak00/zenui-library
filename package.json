@@ -12,7 +12,9 @@
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "aos": "^2.3.4",
+    "framer-motion": "^11.3.30",
     "react": "^18.2.0",
+    "react-countup": "^6.5.3",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.12.0",

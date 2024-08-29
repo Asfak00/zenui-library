@@ -24,6 +24,36 @@ export const allComponents = [
     groupName: "input",
   },
   {
+    title: "Number Input",
+    image: "https://i.ibb.co/kGh9ppd/Name-21.png",
+    url: "/components/input-number",
+    groupName: "input",
+  },
+  {
+    title: "Checkbox",
+    image: "https://i.ibb.co/kGh9ppd/Name-21.png",
+    url: "/components/input-checkbox",
+    groupName: "input",
+  },
+  {
+    title: "Strong Password",
+    image: "https://i.ibb.co/kGh9ppd/Name-21.png",
+    url: "/components/strong-password",
+    groupName: "input",
+  },
+  {
+    title: "Input Range",
+    image: "https://i.ibb.co/kGh9ppd/Name-21.png",
+    url: "/components/input-range",
+    groupName: "input",
+  },
+  {
+    title: "OTP Input",
+    image: "https://i.ibb.co/kGh9ppd/Name-21.png",
+    url: "/components/otp-input",
+    groupName: "input",
+  },
+  {
     title: "file upload",
     image: "https://i.ibb.co/gmTJPyf/Name-23.png",
     url: "/components/input-file",
@@ -42,6 +72,18 @@ export const allComponents = [
     groupName: "button",
   },
   {
+    title: "Auth Button",
+    image: "https://i.ibb.co/ZBQb1PC/Name-16.png",
+    url: "/components/auth-buttons",
+    groupName: "button",
+  },
+  {
+    title: "Dropdown Button",
+    image: "https://i.ibb.co/ZBQb1PC/Name-16.png",
+    url: "/components/dropdown-button",
+    groupName: "button",
+  },
+  {
     title: "animated button",
     image: "https://i.ibb.co/6R0WRr5/Name-4.png",
     url: "/components/animated-button",
@@ -57,6 +99,30 @@ export const allComponents = [
     title: "dropdown",
     image: "https://i.ibb.co/HYK8SPV/Name-24.png",
     url: "/components/dropdown",
+    groupName: "navigation",
+  },
+  {
+    title: "Progress Bar",
+    image: "https://i.ibb.co/HYK8SPV/Name-24.png",
+    url: "/components/progress-bar",
+    groupName: "navigation",
+  },
+  {
+    title: "breadcrumb",
+    image: "https://i.ibb.co/HYK8SPV/Name-24.png",
+    url: "/components/breadcrumb",
+    groupName: "navigation",
+  },
+  {
+    title: "Rating",
+    image: "https://i.ibb.co/HYK8SPV/Name-24.png",
+    url: "/components/rating",
+    groupName: "navigation",
+  },
+  {
+    title: "stepper",
+    image: "https://i.ibb.co/HYK8SPV/Name-24.png",
+    url: "/components/stepper",
     groupName: "navigation",
   },
   {
@@ -87,6 +153,12 @@ export const allComponents = [
     title: "badge",
     image: "https://i.ibb.co/HgvLrtK/Name-6.png",
     url: "/components/badge",
+    groupName: "data_display",
+  },
+  {
+    title: "Timeline",
+    image: "https://i.ibb.co/HgvLrtK/Name-6.png",
+    url: "/components/timeline",
     groupName: "data_display",
   },
   {

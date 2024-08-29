@@ -8,12 +8,13 @@ import { TbBrandGithubFilled } from "react-icons/tb";
 // react router dom
 import {Link, useNavigate} from "react-router-dom";
 import Search from "./Search";
+import {FiGithub} from "react-icons/fi";
+import {RxDiscordLogo} from "react-icons/rx";
 
 const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [hasShadow, setHasShadow] = useState(false);
   const navigate = useNavigate();
-
-  const onKeyboardPress = () => {};
 
   const handleSearchClick = () => {
     setIsSearchOpen(true);
@@ -56,9 +57,24 @@ const Navbar = () => {
     }
   });
 
+  const handleScroll = () => {
+    if (window.scrollY > 10) {
+      setHasShadow(true);
+    } else {
+      setHasShadow(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="1024px:flex items-center justify-between w-full px-10 backdrop-blur-md  shadow-sm fixed shadow-shadowColor top-0 left-0 z-50 hidden py-3">
+      <nav className={`shadow-sm shadow-gray-200 1024px:flex items-center justify-between w-full px-10 backdrop-blur-md fixed  top-0 left-0 z-50 hidden py-3`}>
         <div className="flex items-center gap-8">
           {toggle ? (
             <img
@@ -75,7 +91,7 @@ const Navbar = () => {
               onClick={() => navigate("/")}
             />
           )}
-          <ul className={`${getTheRouteName() !== '/' || getTheRouteName() !== '/about-us' || getTheRouteName() !== '/privacy-policy' && '!text-text'} navUl flex items-center gap-8 !text-[#9caebc] font-[500] capitalize text-[1.2rem]`}>
+          <ul className={`text-gray-600 navUl flex items-center gap-8 font-[500] capitalize text-[1.2rem]`}>
             {/*<li>*/}
             {/*  <p>docs</p>*/}
             {/*  <span>docs</span>*/}
@@ -92,22 +108,22 @@ const Navbar = () => {
             </li>
             <li className='relative pr-[45px]'>
               <div
-                  className='bg-red-600 rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
+                  className='bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
                 NEW
 
-                <div className='w-[8px] h-[8px] bg-red-600 rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
+                <div className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
               </div>
               <p className={getTheRouteName() === '/components/all-blocks' && '!text-primary'}><a
-                  href='/components/all-blocks'>Blocks</a></p>
-              <span><a href='/components/all-blocks'>Blocks</a></span>
+                  href='/blocks/all-blocks'>Blocks</a></p>
+              <span><a href='/blocks/all-blocks'>Blocks</a></span>
             </li>
 
             <li className='relative pr-[45px]'>
               <div
-                  className='bg-red-600 rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
+                  className='bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
                 NEW
 
-                <div className='w-[8px] h-[8px] bg-red-600 rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
+                <div className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
               </div>
               <p className={getTheRouteName() === '/icons' && '!text-primary'}><a
                   href='/icons'>Icons</a></p>
@@ -116,10 +132,10 @@ const Navbar = () => {
 
             <li className='relative pr-[45px]'>
               <div
-                  className='bg-red-600 rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
+                  className='bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
                 NEW
 
-                <div className='w-[8px] h-[8px] bg-red-600 rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
+                <div className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
               </div>
               <p className={getTheRouteName() === '/opacity-palette' && '!text-primary'}><a
                   href='/opacity-palette'>Opacity Palette</a></p>
@@ -128,29 +144,29 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="flex items-center gap-4">
-          <div className="zenuiSearchInput relative" onClick={handleSearchClick}>
+        <div className="flex items-center gap-4 w-[30%]">
+          <div className="zenuiSearchInput relative w-full" onClick={handleSearchClick}>
             <IoIosSearch
-                className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-primary ' : 'text-text'} absolute left-3 top-[0.6rem] text-[1.5rem]`}/>
+                className={`text-gray-400 absolute left-3 top-[0.8rem] text-[1.5rem]`}/>
             <input
                 type="search"
                 name=""
                 id=""
                 readOnly={true}
                 placeholder="Search..."
-                className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'placeholder:text-[#024C92] border-[#024C92] bg-[#0471d6] text-[#024C92]' : 'placeholder:text-text border-[#c7d0dd] bg-border text-[#024C92]' } py-2 px-10 border rounded-full focus:outline-none`}
+                className={`py-3 pl-10 border w-full bg-transparent border-gray-200 rounded-md focus:ring-0 outline-none`}
             />
-            <span className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'border-[#024C92] bg-[#024C92] text-primary' : 'text-text border-[#c7d0dd] bg-secondary' } px-2 py-1 text-[0.9rem] font-[500] rounded-full absolute right-1.5 border top-[0.350rem]`}>
-              Ctrl + Z
+            <span className={`text-gray-500 bg-gray-50 border-gray-200 px-2 py-1 text-[0.9rem] font-[500] rounded-md h-[75%] absolute right-1.5 border top-[0.4rem] flex items-center justify-center`}>
+              Ctrl + S
             </span>
           </div>
           <div className='flex items-center gap-2'>
             <a href='https://discord.gg/qbwytm4WUG' target='_blank'>
-              <FaDiscord className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-[#131558] bg-primary' : 'text-text bg-border'} text-[1.8rem] rounded-full p-1 cursor-pointer`} />
+              <RxDiscordLogo className={`text-[2.7rem] text-gray-400 rounded-md p-[6px] border border-gray-200 cursor-pointer`} />
             </a>
             
             <a href='https://github.com/Asfak00/zenui-library' target='_blank'>
-              <TbBrandGithubFilled className={`${getTheRouteName() === '/' || getTheRouteName() === '/about-us' || getTheRouteName() === '/privacy-policy' ? 'text-[#131558] bg-primary' : 'text-text bg-border'} text-[1.8rem] rounded-full p-1 cursor-pointer`} />
+              <FiGithub className={`text-[2.7rem] text-gray-400 rounded-md p-[6px] border border-gray-200 cursor-pointer`} />
             </a>
           </div>
           {/*{toggle ? (*/}

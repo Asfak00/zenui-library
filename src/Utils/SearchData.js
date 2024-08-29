@@ -143,5 +143,65 @@ export const searchData = [
         title: 'Snippet',
         subTitle: 'A small, reusable piece of code or text.',
         url: '/components/snippet'
-    }
+    },
+    {
+        title: 'Number Input',
+        subTitle: 'Easily input numerical values with precision, ideal for forms, calculations, and data entry.',
+        url: '/components/input-number'
+    },
+    {
+        title: 'Checkbox Input',
+        subTitle: 'Allow users to select multiple options, perfect for surveys, preference settings, and more.',
+        url: '/components/input-checkbox'
+    },
+    {
+        title: 'Strong Password',
+        subTitle: 'Ensure your accounts remain secure with password strength indicators and validation.',
+        url: '/components/strong-password'
+    },
+    {
+        title: 'Range Input',
+        subTitle: 'Adjust values seamlessly within a predefined range, ideal for sliders and filters.',
+        url: '/components/input-range'
+    },
+    {
+        title: 'OTP Input',
+        subTitle: 'Securely enter one-time passwords for quick and safe verification processes.',
+        url: '/components/otp-input'
+    },
+    {
+        title: 'Auth Button',
+        subTitle: 'Trigger authentication actions with a single click, enhancing security and user experience.',
+        url: '/components/auth-buttons'
+    },
+    {
+        title: 'Dropdown Button',
+        subTitle: 'Reveal additional options or actions in a compact menu, keeping interfaces clean and organized.',
+        url: '/components/dropdown-button'
+    },
+    {
+        title: 'Progress Bar',
+        subTitle: 'Visually track and display the completion status of tasks, processes, or uploads.',
+        url: '/components/progress-bar'
+    },
+    {
+        title: 'Breadcrumb',
+        subTitle: 'Navigate back to previous pages effortlessly with a clear and concise breadcrumb trail.',
+        url: '/components/breadcrumb'
+    },
+    {
+        title: 'Rating',
+        subTitle: 'Allow users to provide feedback with star ratings or other symbols, offering insights on quality.',
+        url: '/components/rating'
+    },
+    {
+        title: 'Stepper',
+        subTitle: 'Guide users through complex workflows or multi-step processes with an intuitive step-by-step interface.',
+        url: '/components/stepper'
+    },
+    {
+        title: 'Timeline',
+        subTitle: 'Showcase events, milestones, or progress over time with a visually appealing timeline.',
+        url: '/components/timeline'
+    },
 ]
