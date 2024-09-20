@@ -1,19 +1,52 @@
 
-# Welcome To ZENUI LIBRARY
+# ZENUI LIBRARY
+ZenUI is a React and Tailwind CSS UI components library offering pre-built website templates, Icons, Color Palatte & Website Blocks. Simplify your development process and create beautiful, responsive websites effortlessly with ZenUI.
 
-ZenUI is a React and Tailwind CSS UI components library offering pre-built website templates. Simplify your development process and create beautiful, responsive websites effortlessly with ZenUI.
-
-<img width="1600" alt="Frame" src="https://github.com/Asfak00/zenui-library/assets/108581106/91f2fbfb-b601-4be6-8e3d-8c4faa5c0864">
+[![Take a tour - How to make a website under 5 minutes](https://i.ibb.co.com/tcn1mzf/youtube-thumbnail.png)](https://www.youtube.com/watch?v=wPopdyqpxHQ&autoplay=1)
 
 <br/>
 
 ## Features
 
-- Free Website Templates
-- Responsive UI Design
-- Easy To Customize
-- Reusable
-- 150+ UI Components
+- Customizable 500+ Icons
+- 600 + Components
+- color Opacity Palette
+- Extract Color From Uploaded Image (Color Picker)
+- Website Templates
+- Website Blocks
+- Copy the Code And Use It On Your Project
+
+<br/>
+
+## FAQ
+
+#### Can I contribute to ZenUI Library?
+
+Yes, contributions are welcome! If you’re a designer or developer who wants to contribute to the ZenUI Library, you can submit your components or templates. Your contributions will be credited on the website's 'About Us' section.
+
+#### What is the difference between ZenUI and other UI libraries?
+
+ZenUI Library stands out for its focus on simplicity and ease of use. It’s designed to be lightweight, customizable, and accessible, making it ideal for developers who need quick, high-quality solutions without the bloat of larger libraries. Additionally, unlike many other UI libraries, you don't need to install ZenUI Library in your project—just copy the code and use it without any dependencies. This makes integration fast and hassle-free.
+
+#### Is there any documentation available for ZenUI Library?
+
+Yes, ZenUI Library provides detailed documentation for each component and template. The documentation includes usage instructions, code examples, and customization tips to help you get started quickly.
+
+#### Can I customize the components in ZenUI Library?
+
+Absolutely! All components in the ZenUI Library are fully customizable. You can modify them to fit your project's design requirements using your preferred CSS framework or custom styles.
+
+#### Do I need to attribute ZenUI Library when using it in my projects?
+
+Attribution is appreciated but not required. You're free to use ZenUI Library in your projects without needing to give credit, although a mention would help support the project.
+
+#### How often is ZenUI Library updated?
+
+ZenUI Library is regularly updated with new components, templates, and features. The team behind ZenUI is committed to keeping the library fresh and relevant to current design trends.
+
+#### Is ZenUI Library free to use?
+
+Yes, ZenUI Library is completely free to use. It provides high-quality UI components and templates at no cost, making it accessible to everyone.
 
 <br/>
 
