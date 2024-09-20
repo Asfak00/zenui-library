@@ -1,11 +1,7 @@
 
 # ZENUI LIBRARY
 ZenUI is a React and Tailwind CSS UI components library offering pre-built website templates, Icons, Color Palatte & Website Blocks. Simplify your development process and create beautiful, responsive websites effortlessly with ZenUI.
-
 [![Take a tour - How to make a website under 5 minutes](https://i.ibb.co.com/tcn1mzf/youtube-thumbnail.png)](https://www.youtube.com/watch?v=wPopdyqpxHQ&autoplay=1)
-
-<br/>
-
 ## Features
 
 - Customizable 500+ Icons
