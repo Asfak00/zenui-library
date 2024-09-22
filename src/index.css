@@ -243,6 +243,7 @@ aside ul a:hover {
 .toastshadow {
   box-shadow: 0px 0px 3px 0px rgb(0, 0, 0, 0.1);
 }
+
 .notificationShadow {
   box-shadow: 0px 0px 7px 0px #f2f2f2;
 }
@@ -343,4 +344,15 @@ input[type="number"] {
   50% {
     transform: translateY(-10px);
   }
+}
+
+#bmc-wbtn {
+  background-color: #2a8bff !important;
+  width: 58px !important;
+  height: 58px !important;
+}
+
+#bmc-iframe {
+  right: 80px !important;
+  bottom: 87px !important;
 }

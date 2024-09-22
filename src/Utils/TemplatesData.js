@@ -1,8 +1,16 @@
 export const templatesData = [
   {
+    title: "Multi-Page Media Website",
+    description: "Transforming the region’s media landscape",
+    image: "https://i.ibb.co.com/7bq0vH5/anax-multi-page-website.png",
+    githubLink:
+        "https://github.com/ZenUI-Templates/anax-media",
+    liveLink: "https://anaxmedia.netlify.app/",
+  },
+  {
     title: "welearn e-learning platform",
     description: "This is the future of learning. Learn right & Grow!",
-    image: "https://i.ibb.co/wNgTGrT/Untitled-design-10.png",
+    image: "https://i.ibb.co.com/fnJRTQ8/welearn-website-banner.png",
     githubLink:
       "https://github.com/ZenUI-Templates/welearn-e-learning-platform",
     liveLink: "https://zenui-welearn.netlify.app/",
@@ -11,7 +19,7 @@ export const templatesData = [
     title: "Ecstasy outfit",
     description:
       "With so much demand for a style of board where every aspect of it flews, we created a new series",
-    image: "https://i.ibb.co/mTHK1dZ/Untitled-design-11.png",
+    image: "https://i.ibb.co.com/fnqJqhZ/ecstasy-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/Ecstasy-outfit",
     liveLink: "https://rtui-ecstasy-outfit.netlify.app/",
   },
@@ -19,7 +27,7 @@ export const templatesData = [
     title: "Furniture UI",
     description:
       "Your Home Should Tell The Story of Who you are & be a collection of what you love.",
-    image: "https://i.ibb.co/NSBjd1h/Untitled-design-12.png",
+    image: "https://i.ibb.co.com/bbByp6C/furni-dream-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/Furniture_UI",
     liveLink: "https://furniture-ui-clone.vercel.app/",
   },
@@ -27,7 +35,7 @@ export const templatesData = [
     title: "Home land",
     description:
       "The Real state is where you can find a dream home of your choice without stress",
-    image: "https://i.ibb.co/3p001Vj/Capture.png",
+    image: "https://i.ibb.co.com/NS8F16Q/home-land-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/Homeland",
     liveLink: "https://rtui-homeland.netlify.app/",
   },
@@ -35,7 +43,7 @@ export const templatesData = [
     title: "Jewelery Shop",
     description:
       "This bracelet features a 5MM Stainless Steel chain with Nylon cord braiding. Each bracelet includes a polishing pad and a cotton jewelry pouch. Proudly made by hand in Atlanta, GA.",
-    image: "https://i.ibb.co/LRJxpxX/Untitled-design-13.png",
+    image: "https://i.ibb.co.com/XYp97zV/j-shop-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/J-shop",
     liveLink: "https://rtui-j-shop.netlify.app/",
   },
@@ -43,7 +51,7 @@ export const templatesData = [
     title: "real ai",
     description:
       "Make studio-quality voice overs in minutes. Use Murf’s lifelike AI voices for podcasts, videos, and all your professional presentations",
-    image: "https://i.ibb.co/tPN28tV/Untitled-design-14.png",
+    image: "https://i.ibb.co.com/Ld93Vdh/real-ai-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/real-Ai",
     liveLink: "https://real-ai-kopil.vercel.app/",
   },
@@ -51,7 +59,7 @@ export const templatesData = [
     title: "furni dream co.",
     description:
       "Your Home Should Tell The Story of Who you are & be a collection of what you love.Your Home Should Tell The Story of Who you are & be a collection of what you love.",
-    image: "https://i.ibb.co/BZV2p8S/Untitled-design-15.png",
+    image: "https://i.ibb.co.com/h2zbyg2/furni-dream-2-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/furniture-rtui",
     liveLink: "https://rtui-furniture.netlify.app/",
   },
@@ -59,7 +67,7 @@ export const templatesData = [
     title: "Crypto Marketplace",
     description:
       "Crypto Binance owns the worlds leading digital asset trading platform, meet your trading needs.",
-    image: "https://i.ibb.co/xg9W89g/Untitled-design-16.png",
+    image: "https://i.ibb.co.com/phW2dcm/nft-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/NFT",
     liveLink: "https://nft-zen-ui.vercel.app/",
   },
@@ -67,7 +75,7 @@ export const templatesData = [
     title: "Property Fox",
     description:
       "Property Fox empowers advisors with the expertise to seamlessly transition their clients between mortgage products as circumstances and opportunities evolve.",
-    image: "https://i.ibb.co/dWnBTSV/Untitled-design-17.png",
+    image: "https://i.ibb.co.com/nPzXN2s/property-fox-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/Property_Fox_template",
     liveLink: "https://rtui-propertyfox.netlify.app/",
   },
@@ -75,7 +83,7 @@ export const templatesData = [
     title: "Plumb tech",
     description:
       "Welcome to our innovative online banking platform, where convenience meets security. With our cutting-edge technology and user-friendly interface, managing your finances has never been easier. Whether checking your balance, transferring funds, or paying bills,",
-    image: "https://i.ibb.co/c8JQWL0/Untitled-design-18.png",
+    image: "https://i.ibb.co.com/JcgKV6g/plamb-tech-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/rtui-plumb-tech",
     liveLink: "https://rtui-plumb-services.netlify.app/",
   },
@@ -83,7 +91,7 @@ export const templatesData = [
     title: "Sass landing page",
     description:
       "End-to-end payments and financial management in a single solution. Meet the right platform to help realize.",
-    image: "https://i.ibb.co/9GSrHt4/Untitled-design-19.png",
+    image: "https://i.ibb.co.com/PmhDWWS/ar-shakir-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/saas-landing-page-01",
     liveLink: "https://saas-landing-page-zenui.netlify.app/",
   },
@@ -91,7 +99,7 @@ export const templatesData = [
     title: "sunny cosmetics",
     description:
       "Maybelline’s #1 foundation perfect for oily skin. No stickiness, no shine.",
-    image: "https://i.ibb.co/wWgfMmJ/Untitled-design-20.png",
+    image: "https://i.ibb.co.com/DRBTv19/sunny-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/sunny-cosmetics",
     liveLink: "https://rtui-sunny-cosmetics.netlify.app/",
   },
@@ -99,7 +107,7 @@ export const templatesData = [
     title: "LOGIS platform",
     description:
       "Never at water me might. On formed merits hunted unable merely by mr whence or. Possession the unpleasing simplicity her uncommonly.",
-    image: "https://i.ibb.co/DWJ6hv5/Capture.png",
+    image: "https://i.ibb.co.com/cTtGVDm/ar-sakir-2-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/logis-sass-platform",
     liveLink: "https://rtui-logis-sass-platform.netlify.app/",
   },
@@ -107,7 +115,7 @@ export const templatesData = [
     title: "Business RUI",
     description:
       "Relation so in confined smallest children unpacked delicate. Why sir end believe uncivil respect. Always get adieus nature day course for common. My little garret repair to desire he esteem.",
-    image: "https://i.ibb.co/tD8TMzB/Untitled-design-22.png",
+    image: "https://i.ibb.co.com/1G8BgjC/digi-business-website-banner.png",
     githubLink: "https://github.com/ZenUI-Templates/Business_RUI",
     liveLink: "https://business-rui.vercel.app/",
   },

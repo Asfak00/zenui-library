@@ -83,10 +83,10 @@ const Faq = () => {
     return (
         <>
             <div data-aos="fade-zoom-in" className='flex items-center justify-center flex-col mt-6 mb-12'>
-                <h1 className='text-[1.5rem] 425px:text-[2.2rem] text-text font-[600]'>Frequently Asked Questions</h1>
-                <p className='text-[1.1rem] text-gray-500 w-[35%] text-center mx-auto'>Find quick answers to common queries</p>
+                <h1 className='text-[1.4rem] 425px:text-[2.2rem] text-text font-[600] px-8'>Frequently Asked Questions</h1>
+                <p className='text-[0.9rem] 640px:text-[1.1rem] text-gray-500 px-8 w-full 640px:w-[35%] text-center mx-auto'>Find quick answers to common queries</p>
             </div>
-            <section data-aos="fade-up" className='px-10 mb-16 grid grid-cols-2 gap-[15px]'>
+            <section data-aos="fade-up" className='px-8 640px:px-10 mb-16 grid grid-cols-1 640px:grid-cols-2 gap-[15px]'>
                 <div className='flex-col flex gap-[15px]'>
                     {accordingData1?.map((according, index) => (
                         <article key={index} className="border border-gray-200 rounded p-5">

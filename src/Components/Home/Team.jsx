@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaBehance, FaDribbble} from "react-icons/fa";
+import {FaBehance} from "react-icons/fa";
 import {FaXTwitter} from "react-icons/fa6";
 import {FiFigma, FiLinkedin} from "react-icons/fi";
 import {TeamData} from "../../Utils/TeamData.js";
@@ -7,9 +7,9 @@ import {TeamData} from "../../Utils/TeamData.js";
 const Team = () => {
     return (
         <section>
-            <div className='flex flex-col items-center justify-center mt-24'>
-                <h3 className='text-[2.4rem] font-[600] text-gray-800'><span className='text-[#9A04F5]'>Design</span> Credits Goes</h3>
-                <p className='w-[60%] mx-auto text-center text-[1rem] text-gray-600'>Our design contributors provide the creative foundation for our components and blocks, helping us innovate and expand ZenUI’s offerings with their unique insights and designs.</p>
+            <div className='flex flex-col items-center justify-center mt-16 640px:mt-24'>
+                <h3 className='text-[2rem] 640px:text-[2.4rem] font-[600] text-gray-800'><span className='text-[#9A04F5]'>Design</span> Credits Goes</h3>
+                <p className='w-full 1404px:w-[60%] mx-auto 640px:text-center text-[1rem] text-gray-600'>Our design contributors provide the creative foundation for our components and blocks, helping us innovate and expand ZenUI’s offerings with their unique insights and designs.</p>
             </div>
 
             <div className='mt-16 flex flex-wrap gap-[40px] justify-center'>

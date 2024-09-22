@@ -1,7 +1,5 @@
 import React, {useEffect} from 'react';
-import {allComponents} from "../../Utils/AllComponents.js";
-import {templatesData} from "../../Utils/TemplatesData.js";
-import {FaEye, FaRegEye} from "react-icons/fa";
+import {FaRegEye} from "react-icons/fa";
 import {HiOutlineTemplate} from "react-icons/hi";
 import {HomeTemplatesData1, HomeTemplatesData2} from "../../Utils/HomeTemplatesData.js";
 
@@ -17,16 +15,9 @@ const TemplatesSlider = () => {
         });
     }, []);
 
-    function truncateText(text, maxLength) {
-        if (text.length <= maxLength) {
-            return text;
-        }
-        return text.slice(0, maxLength) + '...';
-    }
-
     return (
         <>
-            <div data-aos="fade-zoom-in" className='w-full items-center justify-center text-center mb-4 640px:mb-[4rem] mt-24'>
+            <div data-aos="fade-zoom-in" className='w-full items-center justify-center text-center mb-4 640px:mb-[4rem] 640px:mt-20 mt-12 1024px:mt-24'>
 
                 <div className='gradient-border !rounded-md hover:rotate-0 transition-all duration-300 rotate-[10deg]'>
                     <div className='bg-white h-full !rounded-md'>
@@ -35,7 +26,7 @@ const TemplatesSlider = () => {
                 </div>
 
                 <h1 className='text-[1.5rem] 425px:text-[2.2rem] text-text font-[600]'>Templates</h1>
-                <p className='text-[1.1rem] text-gray-500 w-[35%] mx-auto'>Free, ready-to-use templates to build your projects at lightning speed, perfect for anyone looking to save time without sacrificing quality.</p>
+                <p className='text-[0.9rem] px-8 640px:text-[1.1rem] text-gray-500 w-full 640px:w-[80%] 1024px:w-[35%] mx-auto'>Free, ready-to-use templates to build your projects at lightning speed, perfect for anyone looking to save time without sacrificing quality.</p>
             </div>
 
             <div
@@ -58,7 +49,7 @@ const TemplatesSlider = () => {
                                <img
                                    src={template.image}
                                    alt={template.title}
-                                   className="w-[400px] h-[250px] rounded-md object-cover "
+                                   className="w-[400px] h-[230px] rounded-md object-fill "
                                  />
 
                                 <div className='translate-y-[300px] opacity-0 z-[-1] group-hover:translate-y-0 group-hover:opacity-100 group-hover:z-20 transition-all duration-300 cursor-pointer bg-gradient-to-b absolute flex items-end justify-center top-0 left-0  from-transparent to-[#0FABCA] w-full h-full pb-[40px] gap-[10px]'>
@@ -94,7 +85,7 @@ const TemplatesSlider = () => {
                                 <img
                                     src={template.image}
                                     alt={template.title}
-                                    className="w-[400px] h-[250px] rounded-md object-cover "
+                                    className="w-[400px] h-[230px] rounded-md object-fill"
                                 />
 
                                 <div

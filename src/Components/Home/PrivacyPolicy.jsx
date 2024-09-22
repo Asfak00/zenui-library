@@ -3,9 +3,9 @@ import React from 'react';
 const PrivacyPolicy = () => {
 
     return (
-        <section className="w-full 640px:px-10 px-5 1024px:px-12 pt-[8rem] pb-[4rem] mx-auto p-6 min-h-screen relative">
+        <section className="w-full 640px:px-10 px-5 1024px:px-12 pt-[2.5rem] pb-[4rem] mx-auto p-6 min-h-screen relative">
 
-            <div className='w-[50px] bg-[#96E8F8] h-[600px] absolute top-[-100px] right-[300px] rotate-[70deg] blur-[60px]'></div>
+            <div className='w-[50px] bg-[#96E8F8] h-[600px] absolute top-[-100px] opacity-50 640px:opacity-100 640px:top-[-150px] right-[250px] rotate-[70deg] blur-[60px]'></div>
 
             <div className='max-w-[800px] text-gray-800'>
                 <h1 className="text-3xl font-bold mb-4 text-[#0FABCA]">Privacy Policy for Zenui Library</h1>

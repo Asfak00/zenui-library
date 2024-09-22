@@ -27,7 +27,7 @@ const Hero = () => {
     const navigate = useNavigate();
     return (
         <>
-        <section className='w-full min-h-screen pt-[7rem] 1024px:pt-[10rem] pb-[5rem] px-5 640px:px-10'>
+        <section className='w-full min-h-screen pt-[2rem] 1024px:pt-[4rem] pb-[5rem] px-8 640px:px-10'>
             <article className='max-w-[1300px] w-full mx-auto flex 1024px:flex-row flex-col gap-[30px] 1024px:flex-row-[60px]'>
                 <Tilt>
                     <div data-aos="fade-right" className='1024px:w-[500px] w-full relative'>

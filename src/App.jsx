@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 // react router dom
-import { Route, Routes } from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 
 // home page
 import HomePage from "./Pages/HomePage";
@@ -87,9 +87,8 @@ import AuthButtonPage from "./Pages/Components/Buttons/AuthButtonPage.jsx";
 
 import OpacityPalettePage from "./Pages/OpacityPalettePage.jsx"
 import WrongUrlErrorPage from "./Pages/Blocks/EmptyPages/WrongRoutePage.jsx";
-import WrongRoutePage from "./Pages/Blocks/EmptyPages/WrongRoutePage.jsx";
+import WrongRoutePage from "./Pages/Blocks/EmptyPages/EmptyPage.jsx";
 import PricingSectionPage from "./Pages/Blocks/Sections/PricingSectionPage.jsx";
-import TestimonialFeedbackPage from "./Pages/Blocks/Sections/TestimonialFeedbackPage.jsx";
 import NewsletterSectionPage from "./Pages/Blocks/Forms/NewsletterSectionPage.jsx";
 import MultipageFormPage from "./Pages/Blocks/Forms/MultipageFormPage.jsx";
 import ResponsiveSidebarPage from "./Pages/Blocks/Randoms/ResponsiveSidebarPage.jsx";
@@ -97,147 +96,170 @@ import InputSliderPage from "./Pages/Components/Inputs/InputSliderPage.jsx";
 
 
 const App = () => {
-  const [isCookie, setIsCookie] = useState(false)
+    const [isCookie, setIsCookie] = useState(false)
+    const [cursorPosition, setCursorPosition] = useState({x: 0, y: 0});
+    const [isMemeVisible, setIsMemeVisible] = useState(false)
 
-  let Title = document.title;
-  window.addEventListener('blur', ()=> {
-    document.title = 'Get your components 😍';
-  })
+    let Title = document.title;
+    window.addEventListener('blur', () => {
+        document.title = 'Get your components 😍';
+    })
 
-  window.addEventListener('focus', () => {
-    document.title = Title;
-  })
+    window.addEventListener('focus', () => {
+        document.title = Title;
+    })
 
-  // useEffect(() => {
-  //   const handleRightClick = (event) => {
-  //     event.preventDefault();
-  //     const audio = new Audio('/rightclickmeme.mp3');
-  //     audio.play();
-  //   };
-  //
-  //   document.addEventListener('contextmenu', handleRightClick);
-  //
-  //   return () => {
-  //     document.removeEventListener('contextmenu', handleRightClick);
-  //   };
-  // }, []);
+    // useEffect(() => {
+    //     const handleRightClick = (event) => {
+    //         event.preventDefault();
+    //         setIsMemeVisible(true)
+    //         const audio = new Audio('/rightclickmeme.mp3');
+    //         audio.play();
+    //         setTimeout(() => {
+    //             setIsMemeVisible(false)
+    //         }, 3500)
+    //     };
+    //
+    //     document.addEventListener('contextmenu', handleRightClick);
+    //
+    //     return () => {
+    //         document.removeEventListener('contextmenu', handleRightClick);
+    //     };
+    // }, []);
+    //
+    // document.addEventListener('mousemove', (event) => {
+    //     setCursorPosition({
+    //         x: event.clientX + 90,
+    //         y: event.clientY + window.scrollY
+    //     });
+    // });
 
-  return (
-    <>
-      {/* all routes */}
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about-us" element={<AboutUsPage />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+    return (
+        <div className='w-full max-w-[1615px] mx-auto'>
 
-        {/* documentation */}
-        <Route path="/getting-started" element={<ComponentsPage />} />
-        <Route path="/getting-started/overview" element={<OverviewPage />} />
-        <Route path="/getting-started/faq" element={<FaqPage />} />
-        <Route path="/getting-started/templates" element={<TempletePage />} />
-
-        {/* components */}
-
-        <Route
-          path="/components/all-components"
-          element={<AllComponentsPage />}
-        />
-
-        {/* inputs */}
-        <Route path="/components/input-text" element={<InputTextPage />} />
-        <Route
-          path="/components/input-textarea"
-          element={<InputTextareaPage />}
-        />
-        <Route path="/components/input-switch" element={<InputSwitchPage />} />
-        <Route path="/components/otp-input" element={<OtpInputPage />} />
-        <Route path="/components/input-select" element={<InputSelectPage />} />
-        <Route path="/components/input-radio" element={<InputRadioPage />} />
-        <Route path="/components/input-file" element={<InputFilePage />} />
-        <Route path="/components/input-number" element={<NumberInputPage />} />
-        <Route path="/components/strong-password" element={<StrongPasswordPage />} />
-        <Route path="/components/input-checkbox" element={<CheckboxInputPage />} />
-        <Route path="/components/input-range" element={<InputSliderPage />} />
-
-        {/* buttons */}
-        <Route path="/components/normal-button" element={<NormalPage />} />
-        <Route path="/components/auth-buttons" element={<AuthButtonPage />} />
-        <Route path="/components/dropdown-button" element={<DropdownButtonPage />} />
-        <Route
-          path="/components/animated-button"
-          element={<AnimatedButtonPage />}
-        />
-
-        {/* navigation */}
-        <Route path="/components/pagination" element={<PaginationPage />} />
-        <Route path="/components/tabs" element={<TabsPage />} />
-        <Route path="/components/modal" element={<ModalPage />} />
-        <Route path="/components/progress-bar" element={<ProgressBarPage />} />
-        <Route path="/components/chip" element={<ChipPage />} />
-        <Route path="/components/breadcrumb" element={<BreadcrumbPage />} />
-        <Route path="/components/rating" element={<RatingPage />} />
-        <Route path="/components/stepper" element={<StepsPage />} />
-
-        {/* feedback */}
-        <Route path="/components/skeleton" element={<SkeletonPage />} />
-        <Route
-          path="/components/alert-message"
-          element={<AlertMessagePage />}
-        />
-        <Route path="/components/dialog-message" element={<DialogPage />} />
-        <Route path="/components/loader" element={<LoaderPage />} />
-        <Route path="/components/testimonials" element={<TestimonialFeedbackPage />} />
-        <Route path="/components/notification" element={<NotificationPage />} />
-
-        {/* surface */}
-        <Route path="/components/cards" element={<CardPage />} />
-        <Route
-          path="/components/image-gallery"
-          element={<ImageGalleryPage />}
-        />
-        <Route path="/components/according" element={<AccordingPage />} />
-        <Route path="/components/appbar" element={<AppbarPage />} />
-        <Route path="/components/resizable-card" element={<ResizableDivPage />} />
-
-        {/* data display */}
-        <Route path="/components/badge" element={<BadgePage />} />
-        <Route path="/components/tooltip" element={<TooltipPage />} />
-        <Route path="/components/timeline" element={<TimelinePage />} />
-
-        {/* randoms */}
-        <Route path="/components/code" element={<CodeSnippetPage />} />
-        <Route path="/components/snippet" element={<SnippetPage />} />
+            <img src='/rightClickMeme.gif' alt='meme' style={{
+                left: cursorPosition.x + 'px',
+                top: cursorPosition.y + 'px',
+                transform: 'translate(-50%, -50%)',
+                pointerEvents: 'none',
+            }}
+                 className={`${isMemeVisible ? 'scale-[1] opacity-100 z-[100000]' : 'scale-[0.3] opacity-0 z-[-2]'} absolute rounded-full boxShadow w-[150px] h-[150px] transition-all shadow-md object-cover`}/>
 
 
-      {/*  all blocks route  */}
-        <Route path="/blocks/all-blocks" element={<AllBlocksPage />} />
-        <Route path="/blocks/responsive-navbar" element={<ResponsiveNavbarPage />} />
-        <Route path="/blocks/hero-section" element={<HeroSectionPage />} />
-        <Route path="/blocks/contact-form" element={<ContactFormPage />} />
-        <Route path="/blocks/responsive-search-bar" element={<ResponsiveSearchbarPage />} />
-        <Route path="/blocks/responsive-footer" element={<ResponsiveFooterPage />} />
-        <Route path="/blocks/404-page" element={<WrongRoutePage />} />
-        <Route path="/blocks/pricing-section" element={<PricingSectionPage />} />
-        <Route path="/blocks/newsletter-form" element={<NewsletterSectionPage />} />
-        <Route path="/blocks/multi-step-form" element={<MultipageFormPage />} />
-        <Route path="/blocks/responsive-sidebar" element={<ResponsiveSidebarPage />} />
-        <Route path="/blocks/empty-page" element={<WrongUrlErrorPage />} />
+            {/* all routes */}
+            <Routes>
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/about-us" element={<AboutUsPage/>}/>
+                <Route path="/privacy-policy" element={<PrivacyPolicyPage/>}/>
+
+                {/* documentation */}
+                <Route path="/getting-started" element={<ComponentsPage/>}/>
+                <Route path="/getting-started/overview" element={<OverviewPage/>}/>
+                <Route path="/getting-started/faq" element={<FaqPage/>}/>
+                <Route path="/getting-started/templates" element={<TempletePage/>}/>
+
+                {/* components */}
+
+                <Route
+                    path="/components/all-components"
+                    element={<AllComponentsPage/>}
+                />
+
+                {/* inputs */}
+                <Route path="/components/input-text" element={<InputTextPage/>}/>
+                <Route
+                    path="/components/input-textarea"
+                    element={<InputTextareaPage/>}
+                />
+                <Route path="/components/input-switch" element={<InputSwitchPage/>}/>
+                <Route path="/components/otp-input" element={<OtpInputPage/>}/>
+                <Route path="/components/input-select" element={<InputSelectPage/>}/>
+                <Route path="/components/input-radio" element={<InputRadioPage/>}/>
+                <Route path="/components/input-file" element={<InputFilePage/>}/>
+                <Route path="/components/input-number" element={<NumberInputPage/>}/>
+                <Route path="/components/strong-password" element={<StrongPasswordPage/>}/>
+                <Route path="/components/input-checkbox" element={<CheckboxInputPage/>}/>
+                <Route path="/components/input-range" element={<InputSliderPage/>}/>
+
+                {/* buttons */}
+                <Route path="/components/normal-button" element={<NormalPage/>}/>
+                <Route path="/components/login-buttons" element={<AuthButtonPage/>}/>
+                <Route path="/components/dropdown-button" element={<DropdownButtonPage/>}/>
+                <Route
+                    path="/components/animated-button"
+                    element={<AnimatedButtonPage/>}
+                />
+
+                {/* navigation */}
+                <Route path="/components/pagination" element={<PaginationPage/>}/>
+                <Route path="/components/tabs" element={<TabsPage/>}/>
+                <Route path="/components/modal" element={<ModalPage/>}/>
+                <Route path="/components/progress-bar" element={<ProgressBarPage/>}/>
+                <Route path="/components/chip" element={<ChipPage/>}/>
+                <Route path="/components/breadcrumb" element={<BreadcrumbPage/>}/>
+                <Route path="/components/rating" element={<RatingPage/>}/>
+                <Route path="/components/stepper" element={<StepsPage/>}/>
+
+                {/* feedback */}
+                <Route path="/components/skeleton" element={<SkeletonPage/>}/>
+                <Route
+                    path="/components/alert-message"
+                    element={<AlertMessagePage/>}
+                />
+                <Route path="/components/dialog-message" element={<DialogPage/>}/>
+                <Route path="/components/loader" element={<LoaderPage/>}/>
+                <Route path="/components/testimonials" element={<TestimonialPage/>}/>
+                <Route path="/components/notification" element={<NotificationPage/>}/>
+
+                {/* surface */}
+                <Route path="/components/cards" element={<CardPage/>}/>
+                <Route
+                    path="/components/image-gallery"
+                    element={<ImageGalleryPage/>}
+                />
+                <Route path="/components/according" element={<AccordingPage/>}/>
+                <Route path="/components/appbar" element={<AppbarPage/>}/>
+                <Route path="/components/resizable-card" element={<ResizableDivPage/>}/>
+
+                {/* data display */}
+                <Route path="/components/badge" element={<BadgePage/>}/>
+                <Route path="/components/tooltip" element={<TooltipPage/>}/>
+                <Route path="/components/timeline" element={<TimelinePage/>}/>
+
+                {/* randoms */}
+                <Route path="/components/code" element={<CodeSnippetPage/>}/>
+                <Route path="/components/snippet" element={<SnippetPage/>}/>
 
 
-        {/*  icon route  */}
-        <Route path="/icons" element={<IconsPage />} />
+                {/*  all blocks route  */}
+                <Route path="/blocks/all-blocks" element={<AllBlocksPage/>}/>
+                <Route path="/blocks/responsive-navbar" element={<ResponsiveNavbarPage/>}/>
+                <Route path="/blocks/hero-section" element={<HeroSectionPage/>}/>
+                <Route path="/blocks/contact-form" element={<ContactFormPage/>}/>
+                <Route path="/blocks/responsive-search-bar" element={<ResponsiveSearchbarPage/>}/>
+                <Route path="/blocks/responsive-footer" element={<ResponsiveFooterPage/>}/>
+                <Route path="/blocks/404-page" element={<WrongUrlErrorPage/>}/>
+                <Route path="/blocks/pricing-section" element={<PricingSectionPage/>}/>
+                <Route path="/blocks/newsletter-form" element={<NewsletterSectionPage/>}/>
+                <Route path="/blocks/multi-step-form" element={<MultipageFormPage/>}/>
+                <Route path="/blocks/responsive-sidebar" element={<ResponsiveSidebarPage/>}/>
+                <Route path="/blocks/empty-page" element={<WrongRoutePage/>}/>
 
-        {/* opacity palette */}
-        <Route path='/opacity-palette' element={<OpacityPalettePage/>}/>
 
-        {/*  empty route  */}
-        <Route path="*" element={<EmptyPage />} />
+                {/*  icon route  */}
+                <Route path="/icons" element={<IconsPage/>}/>
 
-      </Routes>
+                {/* opacity palette */}
+                <Route path='/opacity-palette' element={<OpacityPalettePage/>}/>
 
-      <CookieModal isModalOpen={isCookie} setisModalOpen={setIsCookie}/>
-    </>
-  );
+                {/*  empty route  */}
+                <Route path="*" element={<EmptyPage/>}/>
+
+            </Routes>
+
+            <CookieModal isModalOpen={isCookie} setisModalOpen={setIsCookie}/>
+        </div>
+    );
 };
 
 export default App;

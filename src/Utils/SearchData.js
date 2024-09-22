@@ -1,9 +1,4 @@
-export const searchData = [
-    {
-        title: 'Templates',
-        subTitle: 'Get the React + Tailwind Css free templates.',
-        url: '/getting-started/templates'
-    },
+export const componentSearchData = [
     {
         title: 'Input',
         subTitle: 'Field where users can enter data or text.',
@@ -203,5 +198,63 @@ export const searchData = [
         title: 'Timeline',
         subTitle: 'Showcase events, milestones, or progress over time with a visually appealing timeline.',
         url: '/components/timeline'
+    },
+]
+
+export const blocksSearchData = [
+    {
+        title: 'Responsive navbar',
+        subTitle: 'Responsive navbar adapts to any screen size.',
+        url: '/blocks/responsive-navbar'
+    },
+    {
+        title: 'Hero section',
+        subTitle: 'A hero section is a large banner with a headline and button to capture attention.',
+        url: '/blocks/hero-section'
+    },
+    {
+        title: 'Pricing section',
+        subTitle: 'A pricing section displays the cost options for products or services, often with multiple plans and a call-to-action button.',
+        url: '/blocks/pricing-section'
+    },
+    {
+        title: 'Responsive footer',
+        subTitle: 'A responsive footer adjusts its layout to fit different screen sizes, usually containing links, contact info, and social media icons.',
+        url: '/blocks/responsive-footer'
+    },
+    {
+        title: 'Contact form',
+        subTitle: 'A contact form allows users to send messages or inquiries directly from a website, typically asking for name, email, and message details.',
+        url: '/blocks/contact-form'
+    },
+    {
+        title: 'multi step form',
+        subTitle: 'A multi-step form collects user info across multiple pages.',
+        url: '/blocks/multi-step-form'
+    },
+    {
+        title: 'newsletter form',
+        subTitle: 'A newsletter form collects user emails for updates.',
+        url: '/blocks/newsletter-form'
+    },
+    {
+        title: '404 page',
+        subTitle: 'A 404 page notifies users when a page is not found.',
+        url: '/blocks/404-page'
+    },
+    {
+        title: 'Empty page',
+        subTitle: 'An empty page has no content or data displayed.',
+        url: '/blocks/empty-page'
+    },
+    {
+        title: 'Responsive searchbar',
+        subTitle: 'A responsive search bar adjusts its size and layout for different screen sizes.',
+        url: '/blocks/responsive-search-bar'
+    },
+    {
+        title: 'Responsive sidebar',
+        subTitle: 'A responsive sidebar adjusts its width and layout for different screen sizes.',
+        url: '/blocks/responsive-sidebar'
     },
 ]
