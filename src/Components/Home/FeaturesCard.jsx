@@ -4,7 +4,7 @@ const FeaturesCard = () => {
     return (
         <>
             <div
-                className="grid grid-cols-1 425px:grid-cols-2 1024px:grid-cols-4 gap-5 px-8 425px:px-10 pt-[5rem] 425px:pt-[5rem] pb-10 425px:pb-20 relative">
+                className="grid grid-cols-1 425px:grid-cols-2 1024px:grid-cols-4 gap-5 px-8 425px:px-10 pt-[5rem] 425px:pt-[5rem] pb-10 425px:pb-20 relative max-w-[1700px] mx-auto">
 
                 <div className='absolute top-[60px] right-8 opacity-40 rotate-[-40deg] w-[550px]'>
                     <img src='https://i.ibb.co/VxXFnSz/abstract-wavy-line-removebg-preview.png' alt='vector' className='animation-bounce'/>

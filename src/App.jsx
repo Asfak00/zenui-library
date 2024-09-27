@@ -109,33 +109,33 @@ const App = () => {
         document.title = Title;
     })
 
-    // useEffect(() => {
-    //     const handleRightClick = (event) => {
-    //         event.preventDefault();
-    //         setIsMemeVisible(true)
-    //         const audio = new Audio('/rightclickmeme.mp3');
-    //         audio.play();
-    //         setTimeout(() => {
-    //             setIsMemeVisible(false)
-    //         }, 3500)
-    //     };
-    //
-    //     document.addEventListener('contextmenu', handleRightClick);
-    //
-    //     return () => {
-    //         document.removeEventListener('contextmenu', handleRightClick);
-    //     };
-    // }, []);
-    //
-    // document.addEventListener('mousemove', (event) => {
-    //     setCursorPosition({
-    //         x: event.clientX + 90,
-    //         y: event.clientY + window.scrollY
-    //     });
-    // });
+    useEffect(() => {
+        const handleRightClick = (event) => {
+            event.preventDefault();
+            setIsMemeVisible(true)
+            const audio = new Audio('/rightclickmeme.mp3');
+            audio.play();
+            setTimeout(() => {
+                setIsMemeVisible(false)
+            }, 3500)
+        };
+
+        document.addEventListener('contextmenu', handleRightClick);
+
+        return () => {
+            document.removeEventListener('contextmenu', handleRightClick);
+        };
+    }, []);
+
+    document.addEventListener('mousemove', (event) => {
+        setCursorPosition({
+            x: event.clientX + 90,
+            y: event.clientY + window.scrollY
+        });
+    });
 
     return (
-        <div className='w-full max-w-[1615px] mx-auto'>
+        <>
 
             <img src='/rightClickMeme.gif' alt='meme' style={{
                 left: cursorPosition.x + 'px',
@@ -258,7 +258,7 @@ const App = () => {
             </Routes>
 
             <CookieModal isModalOpen={isCookie} setisModalOpen={setIsCookie}/>
-        </div>
+        </>
     );
 };
 

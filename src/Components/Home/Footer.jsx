@@ -35,38 +35,43 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full border-t border-gray-100 px-8 425px:px-10 py-8 bg-secondary">
-      <div className="w-full flex 640px:flex-row flex-col flex-wrap 1024px:gap-0 gap-8 justify-between items-start">
-        <div className="w-full 640px:w-[40%] 1024px:w-[30%]">
-          <img src="/footer_logo.png" alt="logo" className="w-[150px] 640px:w-[180px] my-3"/>
+    <footer className="w-full border-t border-gray-100 py-8 bg-secondary ">
+      <div className='max-w-[1700px] mx-auto px-8 425px:px-10'>
+        <div className="w-full flex 640px:flex-row flex-col flex-wrap 1024px:gap-0 gap-8 justify-between items-start">
+          <div className="w-full 640px:w-[40%] 1024px:w-[30%]">
+            <img src="/footer_logo.png" alt="logo" className="w-[150px] 640px:w-[180px] my-3"/>
 
-          <p className="text-gray-500 text-[1rem]">
-            Elevate your project with free UI components, customizable icons, and a color palette. No dependencies required.
-          </p>
+            <p className="text-gray-500 text-[1rem]">
+              Elevate your project with free UI components, customizable icons, and a color palette. No dependencies
+              required.
+            </p>
 
-          <div className="flex items-center gap-4 mt-5">
-            {/*<a href="">*/}
-            {/*  <FaGithub className="text-[#9caebc] text-[1.5rem]" />*/}
-            {/*</a>*/}
+            <div className="flex items-center gap-4 mt-5">
+              {/*<a href="">*/}
+              {/*  <FaGithub className="text-[#9caebc] text-[1.5rem]" />*/}
+              {/*</a>*/}
 
-            <a href="https://web.facebook.com/zenuilibrary" target='_blank'>
-              <FaFacebook className="text-[#9caebc] text-[1.4rem] hover:text-[#0FABCA] transition-colors duration-300"/>
-            </a>
+              <a href="https://web.facebook.com/zenuilibrary" target='_blank'>
+                <FaFacebook
+                    className="text-[#9caebc] text-[1.4rem] hover:text-[#0FABCA] transition-colors duration-300"/>
+              </a>
 
-            <a href="https://www.linkedin.com/company/zenui/" target='_blank'>
-              <FaLinkedin className="text-[#9caebc] text-[1.4rem] hover:text-[#0FABCA] transition-colors duration-300"/>
-            </a>
+              <a href="https://www.linkedin.com/company/zenui/" target='_blank'>
+                <FaLinkedin
+                    className="text-[#9caebc] text-[1.4rem] hover:text-[#0FABCA] transition-colors duration-300"/>
+              </a>
 
-            <a href="https://x.com/zenuilibrary" target='_blank'>
-              <FaXTwitter className="text-[#9caebc] text-[1.4rem] hover:text-[#0FABCA] transition-colors duration-300"/>
-            </a>
+              <a href="https://x.com/zenuilibrary" target='_blank'>
+                <FaXTwitter
+                    className="text-[#9caebc] text-[1.4rem] hover:text-[#0FABCA] transition-colors duration-300"/>
+              </a>
 
-            <a href="mailto:zenuilibrary@gmail.com">
-              <SiGmail className="text-[#9caebc] text-[1.4rem] hover:text-[#0FABCA] transition-colors duration-300"/>
-            </a>
+              <a href="mailto:zenuilibrary@gmail.com">
+                <SiGmail className="text-[#9caebc] text-[1.4rem] hover:text-[#0FABCA] transition-colors duration-300"/>
+              </a>
+            </div>
+
           </div>
-
-        </div>
 
           <div className="flex gap-2 flex-col mt-4">
             <h3 className="font-[600] text-gray-600 text-[20px] capitalize">
@@ -145,8 +150,10 @@ const Footer = () => {
             </form>
             <p className='text-[14px] text-[#0FABCA]'>{result}</p>
 
-            <a href='https://web.facebook.com/share/g/D8DbMaprfWPksSGF/' target='_blank' className='p-3 cursor-pointer bg-gray-100 rounded-md mt-2 flex hover:bg-gray-200 items-center gap-[14px]'>
-              <img src='https://cdn.doplac.site/doplac-media/doplac/54/kkclZyRXclMgFEfFJfBd1716725266.png' alt='facebook' className='w-[30px]'/>
+            <a href='https://web.facebook.com/share/g/D8DbMaprfWPksSGF/' target='_blank'
+               className='p-3 cursor-pointer bg-gray-100 rounded-md mt-2 flex hover:bg-gray-200 items-center gap-[14px]'>
+              <img src='https://cdn.doplac.site/doplac-media/doplac/54/kkclZyRXclMgFEfFJfBd1716725266.png'
+                   alt='facebook' className='w-[30px]'/>
 
               <div>
                 <h4 className='text-[1rem] font-[600] text-gray-700'>Join Community</h4>
@@ -156,11 +163,12 @@ const Footer = () => {
           </div>
         </div>
 
-      <div
-          className="w-full border-t border-gray-100 flex items-center 425px:flex-row flex-col 425px:gap-0 gap-5 justify-center mt-12 pt-6">
-        <p className="text-gray-400 text-center text-[0.9rem]">
-          Copyright &copy; 2024 by ZenUI Library.
-        </p>
+        <div
+            className="w-full border-t border-gray-100 flex items-center 425px:flex-row flex-col 425px:gap-0 gap-5 justify-center mt-12 pt-6">
+          <p className="text-gray-400 text-center text-[0.9rem]">
+            Copyright &copy; 2024 by ZenUI Library.
+          </p>
+        </div>
       </div>
     </footer>
   );

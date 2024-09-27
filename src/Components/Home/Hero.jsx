@@ -39,7 +39,7 @@ const Hero = () => {
       <main className="w-full min-h-screen">
 
         {/* hero section */}
-        <div className="flex 1024px:flex-row flex-col items-center justify-between gap-12 px-8 640px:px-12 640px:pl-12 mt-[2rem] 425px:mt-[4rem] ">
+        <div className="flex 1024px:flex-row flex-col items-center justify-between gap-12 px-8 640px:px-12 640px:pl-12 mt-[2rem] 425px:mt-[4rem] max-w-[1700px] mx-auto">
           <motion.div className="1024px:w-[50%] w-full relative" initial="hidden"
                       animate="show"
                       viewport={{once: true}}

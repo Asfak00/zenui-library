@@ -81,7 +81,7 @@ const Faq = () => {
     }, []);
 
     return (
-        <>
+        <div className='max-w-[1700px] mx-auto'>
             <div data-aos="fade-zoom-in" className='flex items-center justify-center flex-col mt-6 mb-12'>
                 <h1 className='text-[1.4rem] 425px:text-[2.2rem] text-text font-[600] px-8'>Frequently Asked Questions</h1>
                 <p className='text-[0.9rem] 640px:text-[1.1rem] text-gray-500 px-8 w-full 640px:w-[35%] text-center mx-auto'>Find quick answers to common queries</p>
@@ -184,7 +184,7 @@ const Faq = () => {
                     }
                 </div>
             </section>
-        </>
+        </div>
     );
 };
 

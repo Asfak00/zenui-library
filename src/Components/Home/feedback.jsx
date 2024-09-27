@@ -19,7 +19,7 @@ const Feedback = () => {
     }, []);
 
     return (
-        <section className='relative mt-12'>
+        <section className='relative mt-12 max-w-[1700px] mx-auto'>
 
             <div className='absolute bottom-[-120px] left-[-120px] opacity-40 rotate-[-240deg] w-[550px]'>
                 <img src='https://i.ibb.co/VxXFnSz/abstract-wavy-line-removebg-preview.png' alt='vector'

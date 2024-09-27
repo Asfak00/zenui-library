@@ -16,8 +16,8 @@ const ComponentsSlider = () => {
     }, []);
 
     return (
-        <>
-            <div data-aos="fade-zoom-in" className='w-full items-center justify-center mt-6 1024px:mt-12 text-center mb-8 640px:mb-[3rem]'>
+        <div className='max-w-[1650px] mx-auto'>
+            <div data-aos="fade-zoom-in" className='w-full items-center justify-center mt-6 1024px:mt-12 text-center mb-8 640px:mb-[3rem] '>
 
                 <div className='gradient-border !rounded-md hover:rotate-0 transition-all duration-300 rotate-[10deg]'>
                     <div className='bg-white h-full !rounded-md'>
@@ -38,7 +38,7 @@ const ComponentsSlider = () => {
                         ul.insertAdjacentHTML('afterend', ul.outerHTML);
                         ul.nextSibling.setAttribute('aria-hidden', 'true');
                     })"
-                className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_300px,_black_calc(100%-300px),transparent_100%)] mb-5"
+                className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_300px,_black_calc(100%-300px),transparent_100%)] mb-5 "
             >
                 <ul x-ref="logos"
                     className="flex items-center gap-5 w-[50%] 1404px:w-[20%] mx-auto justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none allComponentSliderLeft">
@@ -74,7 +74,7 @@ const ComponentsSlider = () => {
 
                 </ul>
             </div>
-        </>
+        </div>
     );
 };
 
