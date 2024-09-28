@@ -143,7 +143,7 @@ const App = () => {
                 transform: 'translate(-50%, -50%)',
                 pointerEvents: 'none',
             }}
-                 className={`${isMemeVisible ? 'scale-[1] opacity-100 z-[100000]' : 'scale-[0.3] opacity-0 z-[-2]'} absolute rounded-full boxShadow w-[150px] h-[150px] transition-all shadow-md object-cover`}/>
+                 className={`${isMemeVisible ? 'block' : 'hidden'} z-[3000] absolute rounded-full boxShadow w-[150px] h-[150px] transition-all shadow-md object-cover`}/>
 
 
             {/* all routes */}
