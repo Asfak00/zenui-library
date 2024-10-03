@@ -145,8 +145,8 @@ const Navbar = () => {
                                         className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
                                 </div>
                                 <p className={getTheRouteName() === '/opacity-palette' && '!text-[#0FABCA]'}><a
-                                    href='/opacity-palette'>Opacity Palette</a></p>
-                                <span><a href='/opacity-palette'>Opacity Palette</a></span>
+                                    href='/color-palette'>Color Palette</a></p>
+                                <span><a href='/color-palette'>Color Palette</a></span>
                             </li>
                         </ul>
                     </div>
