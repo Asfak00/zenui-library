@@ -109,23 +109,38 @@ const App = () => {
         document.title = Title;
     })
 
-    useEffect(() => {
-        const handleRightClick = (event) => {
-            event.preventDefault();
-            setIsMemeVisible(true)
-            const audio = new Audio('/rightclickmeme.mp3');
-            audio.play();
-            setTimeout(() => {
-                setIsMemeVisible(false)
-            }, 3500)
-        };
-
-        document.addEventListener('contextmenu', handleRightClick);
-
-        return () => {
-            document.removeEventListener('contextmenu', handleRightClick);
-        };
-    }, []);
+    // useEffect(() => {
+    //     const handleRightClick = (event) => {
+    //         event.preventDefault();
+    //         setIsMemeVisible(true);
+    //         const audio = new Audio('/rightclickmeme.mp3');
+    //         audio.play();
+    //         setTimeout(() => {
+    //             setIsMemeVisible(false);
+    //         }, 3500);
+    //     };
+    //
+    //     const handleKeyCombination = (event) => {
+    //         if (
+    //             (event.ctrlKey && event.shiftKey && event.key === 'I') ||
+    //             (event.ctrlKey && event.shiftKey && event.key === 'J') ||
+    //             (event.key === 'F12') ||
+    //             (event.ctrlKey && event.key === 'U')
+    //         ) {
+    //             event.preventDefault();
+    //             const audio = new Audio('/rightclickmeme.mp3');
+    //             audio.play();
+    //         }
+    //     };
+    //
+    //     document.addEventListener('contextmenu', handleRightClick);
+    //     document.addEventListener('keydown', handleKeyCombination);
+    //
+    //     return () => {
+    //         document.removeEventListener('contextmenu', handleRightClick);
+    //         document.removeEventListener('keydown', handleKeyCombination);
+    //     };
+    // }, []);
 
     document.addEventListener('mousemove', (event) => {
         setCursorPosition({
@@ -250,7 +265,7 @@ const App = () => {
                 <Route path="/icons" element={<IconsPage/>}/>
 
                 {/* opacity palette */}
-                <Route path='/opacity-palette' element={<OpacityPalettePage/>}/>
+                <Route path='/color-palette' element={<OpacityPalettePage/>}/>
 
                 {/*  empty route  */}
                 <Route path="*" element={<EmptyPage/>}/>

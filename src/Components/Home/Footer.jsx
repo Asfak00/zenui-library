@@ -87,8 +87,8 @@ const Footer = () => {
                 <span><a href='/components/all-components'>Components</a></span>
               </li>
               <li>
-                <p><a href='/opacity-palette'>Colors Palette</a></p>
-                <span><a href='/opacity-palette'>Colors Palette</a></span>
+                <p><a href='/color-palette'>Colors Palette</a></p>
+                <span><a href='/color-palette'>Colors Palette</a></span>
               </li>
               <li>
                 <p><a href='/blocks/all-blocks'>Blocks</a></p>
@@ -157,7 +157,7 @@ const Footer = () => {
 
               <div>
                 <h4 className='text-[1rem] font-[600] text-gray-700'>Join Community</h4>
-                <p className='text-[0.9rem] font-[300] text-gray-700'>75+ Members</p>
+                <p className='text-[0.9rem] font-[300] text-gray-700'>85+ Members</p>
               </div>
             </a>
           </div>

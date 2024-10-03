@@ -38,7 +38,7 @@ const Hero = () => {
                 <div data-aos="fade-left" className='1024px:w-[70%] w-full'>
                     <h1 className='font-bold text-gray-800 text-[2.3rem] 1024px:text-[3rem] leading-[40px]'>Asfak
                         Ahmed</h1>
-                    <h4 className='text-[1rem] text-[#0FABCA] mt-2'>Founder & CEO</h4>
+                    <h4 className='text-[1rem] text-[#0FABCA] mt-2'>Founder & Creator</h4>
 
                     <p className='mt-5'>
                         <p className=' text-[1rem] text-gray-500'>

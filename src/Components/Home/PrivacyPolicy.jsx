@@ -92,7 +92,7 @@ const PrivacyPolicy = () => {
                     contact us at:
                 </p>
                 <p className="mb-4 !text-gray-500">
-                    Email: <a href='mailto:zenuilibrary@gmail.com' className='!text-primary'>zenuilibrary@zenui.com</a>
+                    Email: <a href='mailto:zenuilibrary@gmail.com' className='!text-primary'>zenuilibrary@gmail.com</a>
                 </p>
 
                 <p>By using Zenui Library, you agree to the terms outlined in this Privacy Policy. Thank you for
