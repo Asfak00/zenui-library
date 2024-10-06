@@ -44,14 +44,14 @@ const Feedback = () => {
                 </div>
                 <div className='flex flex-col gap-[20px]'>
                     {
-                        feedbackData?.slice(6,10)?.map((feedback, index) => (
+                        feedbackData?.slice(6,11)?.map((feedback, index) => (
                             <FeedbackCard key={index} feedback={feedback} />
                         ))
                     }
                 </div>
 
                 <div className='flex flex-col gap-[20px]'>
-                    {feedbackData?.slice(11, 15)?.map((feedback, index) => (
+                    {feedbackData?.slice(11, 16)?.map((feedback, index) => (
                         <FeedbackCard key={index} feedback={feedback} />
                     ))}
                 </div>

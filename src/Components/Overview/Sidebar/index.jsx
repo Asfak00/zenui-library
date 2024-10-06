@@ -63,7 +63,6 @@ const index = ({ startContent, setStartContent }) => {
               {/*  HOT*/}
               {/*</span>*/}
 
-              <UpdateBadge/>
             </Link>
             {/*<Link*/}
             {/*  to="/getting-started/faq"*/}
@@ -131,7 +130,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Input
 
-              <UpdateBadge/>
             </Link>
             <Link
               to={"/components/input-textarea"}
@@ -153,7 +151,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Number
 
-              <NewBadge/>
             </Link>
             <Link
               to={"/components/input-checkbox"}
@@ -165,7 +162,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Checkbox
 
-              <NewBadge/>
             </Link>
             <Link
               to={"/components/input-switch"}
@@ -176,7 +172,7 @@ const index = ({ startContent, setStartContent }) => {
               onClick={() => setStartContent(7)}
             >
               Switch
-              <UpdateBadge/>
+
             </Link>
             <Link
               to={"/components/strong-password"}
@@ -188,7 +184,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Strong Password
 
-              <NewBadge/>
             </Link>
             <Link
               to={"/components/input-select"}
@@ -200,7 +195,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Select
 
-              <UpdateBadge/>
             </Link>
             <Link
               to={"/components/input-radio"}
@@ -222,7 +216,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Range
 
-              <NewBadge/>
             </Link>
             {/*<Link*/}
             {/*  to={"/components/input-radio-group"}*/}
@@ -256,7 +249,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               OTP Input
 
-              <NewBadge/>
             </Link>
 
             {/* buttons */}
@@ -276,7 +268,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               normal button
 
-              <UpdateBadge/>
             </Link>
             <Link
               to={"/components/login-buttons"}
@@ -288,7 +279,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               login Button
 
-              <NewBadge/>
             </Link>
             <Link
                 to={"/components/dropdown-button"}
@@ -300,7 +290,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Dropdown Button
 
-              <NewBadge/>
             </Link>
             <Link
                 to={"/components/animated-button"}
@@ -312,7 +301,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               animated button
 
-              <UpdateBadge/>
             </Link>
 
             {/* SURFACES */}
@@ -332,7 +320,18 @@ const index = ({ startContent, setStartContent }) => {
             >
               Cards
 
-              <UpdateBadge/>
+            </Link>
+            <Link
+              to={"/components/animated-cards"}
+              className={`${
+                startContent === 53 &&
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
+              onClick={() => setStartContent(53)}
+            >
+              Animated Cards
+
+              <NewBadge/>
             </Link>
             <Link
               to={"/components/according"}
@@ -404,7 +403,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Progress Bar
 
-              <NewBadge/>
             </Link>
             <Link
               to={"/components/chip"}
@@ -416,7 +414,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Chip
 
-              <UpdateBadge/>
             </Link>
             <Link
               to={"/components/breadcrumb"}
@@ -428,7 +425,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Breadcrumb
 
-              <NewBadge/>
             </Link>
             <Link
                 to={"/components/rating"}
@@ -440,7 +436,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Rating
 
-              <NewBadge/>
             </Link>
             <Link
                 to={"/components/stepper"}
@@ -452,7 +447,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Stepper
 
-              <NewBadge/>
             </Link>
             <Link
               to={"/components/modal"}
@@ -464,7 +458,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               modal
 
-              <UpdateBadge/>
             </Link>
             <Link
               to={"/components/tabs"}
@@ -494,7 +487,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               skeleton
 
-              <UpdateBadge/>
             </Link>
             <Link
               to={"/components/alert-message"}
@@ -546,7 +538,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Notification
 
-              <UpdateBadge/>
             </Link>
 
             {/* data display */}
@@ -566,7 +557,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               Badge
 
-              <UpdateBadge/>
             </Link>
             <Link
               to={"/components/tooltip"}
@@ -578,7 +568,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               tooltip
 
-              <UpdateBadge/>
             </Link>
             {/*<Link*/}
             {/*  to={"/components/chart"}*/}
@@ -602,7 +591,6 @@ const index = ({ startContent, setStartContent }) => {
             >
               timeline
 
-              <NewBadge/>
             </Link>
 
             {/* Randoms */}

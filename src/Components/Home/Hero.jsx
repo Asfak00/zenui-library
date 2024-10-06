@@ -55,7 +55,7 @@ const Hero = () => {
                                 },
                             }}>
 
-                    <a href="https://github.com/Asfak00/zenui-library" target="_blank" className='flex items-center gap-[8px] bg-[#9A04F59E] hover:bg-[#9A04F5D2] transition-all duration-200 w-max py-[5px] px-[12px] text-white rounded-[6px] absolute top-[-10px] left-0 text-[1rem] cursor-pointer z-[999]'>
+                    <a href="https://github.com/Asfak00/zenui-library" target="_blank" className='flex items-center gap-[8px] bg-[#9A04F59E] hover:bg-[#9A04F5D2] transition-all duration-200 w-max py-[5px] px-[12px] text-white rounded-[6px] absolute top-[-10px] z-30 left-0 text-[1rem] cursor-pointer'>
                       <FaGithub/>
                        Star us on Github
                       <FaArrowRightLong/>
@@ -150,13 +150,13 @@ const Hero = () => {
                     </motion.div>
                 </motion.div>
 
-                <div data-aos="fade-left" className='w-full 1024px:w-[53.5%] 1360px:w-[50%] h-[200px] 640px:h-[500px] shadow-md z-30'>
-                    <iframe className='w-full 1024px:w-[780px]' height="100%"
-                            src="https://www.youtube.com/embed/wPopdyqpxHQ"
-                            title="How to make a website under 5 minutes using ZenUI Library ? A complete guide tuitorial"
+                <div data-aos="fade-left" className='w-full 1024px:w-[53.5%] 1360px:w-[50%] h-[200px] 640px:h-[500px] z-30'>
+                    <iframe className="w-full 1024px:w-[770px] h-full"
+                            src="https://www.youtube.com/embed/wPopdyqpxHQ?autoplay=1&mute=1&showinfo=0&modestbranding=1&rel=0"
                             frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                            allow="autoplay; encrypted-media"
+                            allowFullScreen>
+                    </iframe>
                 </div>
             </div>
             <FeaturesCard/>

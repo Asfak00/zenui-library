@@ -3,7 +3,7 @@ import React, {useState} from "react";
 // icons
 import {CiMenuFries} from "react-icons/ci";
 import {IoIosSearch} from "react-icons/io";
-import {RxDiscordLogo} from "react-icons/rx";
+import {RxCross2, RxDiscordLogo} from "react-icons/rx";
 import {FiGithub} from "react-icons/fi";
 
 // react router dom
@@ -76,8 +76,11 @@ const MobileNavbar = () => {
 
             {/*  sidebar  */}
             <aside
-                className={`${sidebarOpen ? 'translate-x-0 opacity-100 z-50' : 'translate-x-[200px] opacity-0 z-[-1]'} fixed top-[69px] mobileSidebar right-0 py-5 px-[2.3rem] w-[80%] block 1024px:hidden 425px:w-[50%] h-screen transition-all duration-500 bg-white toastshadow`}>
-                <div className="zenuiSearchInput relative w-full" onClick={handleSearchClick}>
+                className={`${sidebarOpen ? 'translate-x-0 opacity-100 z-[999]' : 'translate-x-[200px] opacity-0 z-[-1]'} fixed top-0 mobileSidebar right-0 py-5 px-[1.3rem] w-[80%] block 1024px:hidden 425px:w-[50%] h-screen transition-all duration-500 bg-white toastshadow`}>
+
+                <RxCross2 className='text-[1.3rem] text-gray-700 mb-[20px] absolute left-[15px]' onClick={()=> setSidebarOpen(false)}/>
+
+                <div className="zenuiSearchInput mt-[45px] relative w-full" onClick={handleSearchClick}>
                     <IoIosSearch
                         className={`text-gray-400 absolute left-3 top-[0.6rem] text-[1.5rem]`}/>
                     <input
