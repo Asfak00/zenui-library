@@ -37,7 +37,7 @@ const Feedback = () => {
 
                 <div className='flex flex-col gap-[20px]'>
                     {
-                        feedbackData?.slice(0,5)?.map((feedback, index) => (
+                        feedbackData?.slice(0,6)?.map((feedback, index) => (
                             <FeedbackCard key={index} feedback={feedback} />
                         ))
                     }

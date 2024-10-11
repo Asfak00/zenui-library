@@ -75,7 +75,7 @@ const Navbar = () => {
     return (
         <>
             <nav
-                className={`border-b border-gray-100 1024px:flex w-full px-10 backdrop-blur-md sticky top-0 left-0 z-[999] hidden py-3`}>
+                className={`border-b border-gray-100 1024px:flex w-full px-10 backdrop-blur-lg sticky top-0 left-0 z-[999] hidden py-3`}>
                 <div className='max-w-[1615px] mx-auto w-full flex items-center justify-between'>
                     <div className="flex items-center gap-8">
                         {
@@ -111,43 +111,36 @@ const Navbar = () => {
                                         href='/getting-started/templates'>Templates</a></p>
                                 <span><a href='/getting-started/templates'>Templates</a></span>
                             </li>
-                            <li className='relative pr-[45px]'>
-                                <div
-                                    className='bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
-                                    NEW
-                                    <div
-                                        className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
-                                </div>
+                            <li className='relative'>
                                 <p className={getTheRouteName() === '/blocks/all-blocks' && '!text-[#0FABCA]'}><a
                                     href='/blocks/all-blocks'>Blocks</a></p>
                                 <span><a href='/blocks/all-blocks'>Blocks</a></span>
                             </li>
 
-                            <li className='relative pr-[45px]'>
-                                <div
-                                    className='bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
-                                    NEW
-
-                                    <div
-                                        className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
-                                </div>
+                            <li className='relative'>
                                 <p className={getTheRouteName() === '/icons' && '!text-[#0FABCA]'}><a
                                     href='/icons'>Icons</a></p>
                                 <span><a href='/icons'>Icons</a></span>
                             </li>
 
-                            <li className='relative pr-[45px]'>
-                                <div
-                                    className='bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
-                                    NEW
-
-                                    <div
-                                        className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
-                                </div>
+                            <li className='relative'>
                                 <p className={getTheRouteName() === '/opacity-palette' && '!text-[#0FABCA]'}><a
                                     href='/color-palette'>Color Palette</a></p>
                                 <span><a href='/color-palette'>Color Palette</a></span>
                             </li>
+
+                            {/*<li className='relative pr-[45px]'>*/}
+                            {/*    <div*/}
+                            {/*        className='bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>*/}
+                            {/*        NEW*/}
+
+                            {/*        <div*/}
+                            {/*            className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>*/}
+                            {/*    </div>*/}
+                            {/*    <p className={getTheRouteName() === '/layout-playground' && '!text-[#0FABCA]'}><a*/}
+                            {/*        href='/layout-playground'>Layout Playground</a></p>*/}
+                            {/*    <span><a href='/layout-playground'>Layout Playground</a></span>*/}
+                            {/*</li>*/}
                         </ul>
                     </div>
 

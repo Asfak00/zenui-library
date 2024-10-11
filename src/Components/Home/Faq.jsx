@@ -64,7 +64,7 @@ const Faq = () => {
         },
 
         {
-            title: `HHow can I stay updated on ZenUI Library releases?`,
+            title: `How can I stay updated on ZenUI Library releases?`,
             description:
                 `You can stay updated by following ZenUI Library on social media, subscribing to the newsletter, or checking the official website regularly. Updates and new releases are announced through these channels.`,
         },

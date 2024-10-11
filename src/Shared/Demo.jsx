@@ -1,51 +1,80 @@
-import React, {useRef, useState} from "react";
+import React, {useState} from "react";
 
-const AnimatedHoverCard = () => {
-    
-    const [isHovering, setIsHovering] = useState(false);
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const cardRef = useRef(null);
+const ClickedTooltip = () => {
 
-    // handle mouse move
-    const handleMouseMove = (e) => {
-        if (cardRef.current) {
-            const rect = cardRef.current.getBoundingClientRect();
-            setMousePosition({
-                x: e.clientX - rect.left,
-                y: e.clientY - rect.top,
-            });
-        }
-    };
+    const [leftClicked, setLeftClicked] = useState(false);
+    const [rightClicked, setRightClicked] = useState(false);
+    const [topClicked, setTopClicked] = useState(false);
+    const [bottomClicked, setBottomClicked] = useState(false);
 
     return (
-        <div onMouseMove={handleMouseMove}
-             onMouseEnter={() => setIsHovering(true)}
-             onMouseLeave={() => setIsHovering(false)}
-             ref={cardRef}
-             className="w-full border relative overflow-hidden border-gray-200 rounded-lg p-[25px] cursor-pointer">
+        <div className="flex items-center gap-[10px] justify-center flex-wrap">
 
-            {/*  contents  */}
-            <h2 className="text-[1.5rem] font-bold text-[#DB06F9]">Web Developer</h2>
-            <p className="text-gray-600 text-[1rem] mt-2">A web developer builds and maintains websites, ensuring they
-                are functional, user-friendly, and visually appealing. They use coding languages like HTML, CSS, and
-                JavaScript to bring designs to life and create seamless online experiences.</p>
+            {/*  left  */}
+            <div className="relative">
+                <button onClick={() => setLeftClicked(true)}
+                        className="left_button py-2 px-6 border rounded-md border-gray-800 text-[1rem] font-[500] text-gray-800">Left
+                </button>
 
-            {/*  image  */}
-            <img src="https://i.ibb.co.com/Gx5pzCs/Programmer-working-remotely-with-cat-by-his-side.png"
-                 alt="animated_card" className="w-[140px] mt-3 float-right"/>
+                {/* tooltip */}
+                <p className={`${leftClicked ? "opacity-100 z-[100] translate-x-0" : "opacity-0 z-[-1] translate-x-[20px]"} absolute top-[50%] transform translate-y-[-50%] left-[-130px] w-fit py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}>
+                    Left Tooltip
 
-            {/*  hovered color shadow  */}
-            {isHovering && (
-                <div
-                    className="absolute inset-0 pointer-events-none blur-[50px]"
-                    style={{
-                        background: `radial-gradient(circle 50px at ${mousePosition.x}px ${mousePosition.y}px, #DB06F9, transparent)`,
-                    }}
-                />
-            )}
+                    {/* arrow */}
+                    <span
+                        className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute top-[50%] transform translate-y-[-50%] right-[-3%]"></span>
+                </p>
+            </div>
 
+            {/*  top  */}
+            <div className="relative">
+                <button onClick={() => setTopClicked(true)}
+                        className="top_button py-2 px-6 border rounded-md border-gray-800 text-[1rem] font-[500] text-gray-800">Top
+                </button>
+
+                {/* tooltip */}
+                <p className={`${topClicked ? "opacity-100 z-[100] translate-y-0" : "opacity-0 z-[-1] translate-y-[20px]"} absolute top-[-50px] transform translate-x-[-50%] left-[50%] w-max py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}>
+                    Top Tooltip
+
+                    {/* arrow */}
+                    <span
+                        className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute left-[50%] transform translate-x-[-50%] bottom-[-10%]"></span>
+                </p>
+            </div>
+
+            {/*  bottom  */}
+            <div className="relative">
+                <button onClick={() => setBottomClicked(true)}
+                        className="bottom_button py-2 px-6 border rounded-md border-gray-800 text-[1rem] font-[500] text-gray-800">Bottom
+                </button>
+
+                {/* tooltip */}
+                <p className={`${bottomClicked ? "opacity-100 z-[100] translate-y-0" : "opacity-0 z-[-1] translate-y-[-20px]"} absolute left-[50%] transform translate-x-[-50%] bottom-[-50px] w-max py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}>
+                    Bottom Tooltip
+
+                    {/* arrow */}
+                    <span
+                        className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute left-[50%] transform translate-x-[-50%] top-[-13%]"></span>
+                </p>
+            </div>
+
+            {/*  right  */}
+            <div className="relative">
+                <button onClick={() => setRightClicked(true)}
+                        className="right_button py-2 px-6 border rounded-md border-gray-800 text-[1rem] font-[500] text-gray-800">Right
+                </button>
+
+                {/* tooltip */}
+                <p className={`${rightClicked ? "opacity-100 z-[100] translate-x-0" : "opacity-0 z-[-1] translate-x-[-20px]"} absolute top-[50%] transform translate-y-[-50%] right-[-140px] w-fit py-[7px] px-[20px] rounded-md bg-gray-800 text-[0.9rem] text-white font-[400] transition-all duration-200`}>
+                    Right Tooltip
+
+                    {/* arrow */}
+                    <span
+                        className="w-[8px] h-[8px] bg-gray-800 rotate-[45deg] absolute top-[50%] transform translate-y-[-50%] left-[-3%]"></span>
+                </p>
+            </div>
         </div>
     );
 };
 
-export default AnimatedHoverCard;
+export default ClickedTooltip;

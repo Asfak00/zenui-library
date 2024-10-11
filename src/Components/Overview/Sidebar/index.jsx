@@ -344,14 +344,14 @@ const index = ({ startContent, setStartContent }) => {
               Accordion
             </Link>
             {/*<Link*/}
-            {/*    to={"/components/resizable-card"}*/}
+            {/*    to={"/components/resizable-layout"}*/}
             {/*    className={`${*/}
             {/*        startContent === 20 &&*/}
             {/*        "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"*/}
             {/*    }   border-l border-[#9caebc] flex items-center gap-[10px]`}*/}
             {/*    onClick={() => setStartContent(20)}*/}
             {/*>*/}
-            {/*  Resizable Card*/}
+            {/*  Resizable Layout*/}
 
             {/*  <NewBadge/>*/}
             {/*</Link>*/}
@@ -568,6 +568,7 @@ const index = ({ startContent, setStartContent }) => {
             >
               tooltip
 
+              <UpdateBadge/>
             </Link>
             {/*<Link*/}
             {/*  to={"/components/chart"}*/}

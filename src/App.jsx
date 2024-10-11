@@ -61,7 +61,7 @@ import AboutUsPage from "./Pages/AboutUsPage.jsx";
 import PrivacyPolicyPage from "./Pages/PrivacyPolicyPage.jsx";
 import CookieModal from "./Shared/CookieModal.jsx";
 import DropdownButtonPage from "./Pages/Components/Buttons/DropdownButtonPage.jsx";
-import ResizableDivPage from "./Pages/Components/Surfaces/ResizableDivPage.jsx";
+import ResizableLayoutPage from "./Pages/Components/Surfaces/ResizableLayoutPage.jsx";
 import OtpInputPage from "./Pages/Components/Inputs/OtpInputPage.jsx";
 
 // blocks
@@ -94,6 +94,9 @@ import MultipageFormPage from "./Pages/Blocks/Forms/MultipageFormPage.jsx";
 import ResponsiveSidebarPage from "./Pages/Blocks/Randoms/ResponsiveSidebarPage.jsx";
 import InputSliderPage from "./Pages/Components/Inputs/InputSliderPage.jsx";
 
+// layout playground page
+import LayoutPlaygroundPage from "./Pages/LayoutPlaygroundPage.jsx";
+
 
 const App = () => {
     const [isCookie, setIsCookie] = useState(false)
@@ -109,38 +112,38 @@ const App = () => {
         document.title = Title;
     })
 
-    useEffect(() => {
-        const handleRightClick = (event) => {
-            event.preventDefault();
-            setIsMemeVisible(true);
-            const audio = new Audio('/rightclickmeme.mp3');
-            audio.play();
-            setTimeout(() => {
-                setIsMemeVisible(false);
-            }, 3500);
-        };
-
-        const handleKeyCombination = (event) => {
-            if (
-                (event.ctrlKey && event.shiftKey && event.key === 'I') ||
-                (event.ctrlKey && event.shiftKey && event.key === 'J') ||
-                (event.key === 'F12') ||
-                (event.ctrlKey && event.key === 'U')
-            ) {
-                event.preventDefault();
-                const audio = new Audio('/rightclickmeme.mp3');
-                audio.play();
-            }
-        };
-
-        document.addEventListener('contextmenu', handleRightClick);
-        document.addEventListener('keydown', handleKeyCombination);
-
-        return () => {
-            document.removeEventListener('contextmenu', handleRightClick);
-            document.removeEventListener('keydown', handleKeyCombination);
-        };
-    }, []);
+    // useEffect(() => {
+    //     const handleRightClick = (event) => {
+    //         event.preventDefault();
+    //         setIsMemeVisible(true);
+    //         const audio = new Audio('/rightclickmeme.mp3');
+    //         audio.play();
+    //         setTimeout(() => {
+    //             setIsMemeVisible(false);
+    //         }, 3500);
+    //     };
+    //
+    //     const handleKeyCombination = (event) => {
+    //         if (
+    //             (event.ctrlKey && event.shiftKey && event.key === 'I') ||
+    //             (event.ctrlKey && event.shiftKey && event.key === 'J') ||
+    //             (event.key === 'F12') ||
+    //             (event.ctrlKey && event.key === 'U')
+    //         ) {
+    //             event.preventDefault();
+    //             const audio = new Audio('/rightclickmeme.mp3');
+    //             audio.play();
+    //         }
+    //     };
+    //
+    //     document.addEventListener('contextmenu', handleRightClick);
+    //     document.addEventListener('keydown', handleKeyCombination);
+    //
+    //     return () => {
+    //         document.removeEventListener('contextmenu', handleRightClick);
+    //         document.removeEventListener('keydown', handleKeyCombination);
+    //     };
+    // }, []);
 
     document.addEventListener('mousemove', (event) => {
         setCursorPosition({
@@ -235,7 +238,7 @@ const App = () => {
                 />
                 <Route path="/components/according" element={<AccordingPage/>}/>
                 <Route path="/components/appbar" element={<AppbarPage/>}/>
-                <Route path="/components/resizable-card" element={<ResizableDivPage/>}/>
+                <Route path="/components/resizable-layout" element={<ResizableLayoutPage/>}/>
 
                 {/* data display */}
                 <Route path="/components/badge" element={<BadgePage/>}/>
@@ -262,11 +265,14 @@ const App = () => {
                 <Route path="/blocks/empty-page" element={<WrongRoutePage/>}/>
 
 
-                {/*  icon route  */}
+                {/*  icons  */}
                 <Route path="/icons" element={<IconsPage/>}/>
 
                 {/* opacity palette */}
                 <Route path='/color-palette' element={<OpacityPalettePage/>}/>
+
+                {/* layout playground */}
+                <Route path='/layout-playground' element={<LayoutPlaygroundPage/>}/>
 
                 {/*  empty route  */}
                 <Route path="*" element={<EmptyPage/>}/>
