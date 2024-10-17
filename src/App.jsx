@@ -96,6 +96,9 @@ import InputSliderPage from "./Pages/Components/Inputs/InputSliderPage.jsx";
 
 // layout playground page
 import LayoutPlaygroundPage from "./Pages/LayoutPlaygroundPage.jsx";
+import TreeDropdownPage from "./Pages/Components/Feedback/TreeDropdownPage.jsx";
+import InstallationPage from "./Pages/InstallationPage.jsx";
+import DragAndDropPage from "./Pages/Components/Surfaces/DragAndDropPage.jsx";
 
 
 const App = () => {
@@ -105,45 +108,45 @@ const App = () => {
 
     let Title = document.title;
     window.addEventListener('blur', () => {
-        document.title = 'Get your components 😍';
+        document.title = 'Get more components 😍';
     })
 
     window.addEventListener('focus', () => {
         document.title = Title;
     })
 
-    // useEffect(() => {
-    //     const handleRightClick = (event) => {
-    //         event.preventDefault();
-    //         setIsMemeVisible(true);
-    //         const audio = new Audio('/rightclickmeme.mp3');
-    //         audio.play();
-    //         setTimeout(() => {
-    //             setIsMemeVisible(false);
-    //         }, 3500);
-    //     };
-    //
-    //     const handleKeyCombination = (event) => {
-    //         if (
-    //             (event.ctrlKey && event.shiftKey && event.key === 'I') ||
-    //             (event.ctrlKey && event.shiftKey && event.key === 'J') ||
-    //             (event.key === 'F12') ||
-    //             (event.ctrlKey && event.key === 'U')
-    //         ) {
-    //             event.preventDefault();
-    //             const audio = new Audio('/rightclickmeme.mp3');
-    //             audio.play();
-    //         }
-    //     };
-    //
-    //     document.addEventListener('contextmenu', handleRightClick);
-    //     document.addEventListener('keydown', handleKeyCombination);
-    //
-    //     return () => {
-    //         document.removeEventListener('contextmenu', handleRightClick);
-    //         document.removeEventListener('keydown', handleKeyCombination);
-    //     };
-    // }, []);
+    useEffect(() => {
+        const handleRightClick = (event) => {
+            event.preventDefault();
+            setIsMemeVisible(true);
+            const audio = new Audio('/rightclickmeme.mp3');
+            audio.play();
+            setTimeout(() => {
+                setIsMemeVisible(false);
+            }, 3500);
+        };
+
+        const handleKeyCombination = (event) => {
+            if (
+                (event.ctrlKey && event.shiftKey && event.key === 'I') ||
+                (event.ctrlKey && event.shiftKey && event.key === 'J') ||
+                (event.key === 'F12') ||
+                (event.ctrlKey && event.key === 'U')
+            ) {
+                event.preventDefault();
+                const audio = new Audio('/rightclickmeme.mp3');
+                audio.play();
+            }
+        };
+
+        document.addEventListener('contextmenu', handleRightClick);
+        document.addEventListener('keydown', handleKeyCombination);
+
+        return () => {
+            document.removeEventListener('contextmenu', handleRightClick);
+            document.removeEventListener('keydown', handleKeyCombination);
+        };
+    }, []);
 
     document.addEventListener('mousemove', (event) => {
         setCursorPosition({
@@ -173,7 +176,7 @@ const App = () => {
                 {/* documentation */}
                 <Route path="/getting-started" element={<ComponentsPage/>}/>
                 <Route path="/getting-started/overview" element={<OverviewPage/>}/>
-                <Route path="/getting-started/faq" element={<FaqPage/>}/>
+                <Route path="/getting-started/installation" element={<InstallationPage/>}/>
                 <Route path="/getting-started/templates" element={<TempletePage/>}/>
 
                 {/* components */}
@@ -225,12 +228,14 @@ const App = () => {
                     element={<AlertMessagePage/>}
                 />
                 <Route path="/components/dialog-message" element={<DialogPage/>}/>
+                <Route path="/components/tree-dropdown" element={<TreeDropdownPage/>}/>
                 <Route path="/components/loader" element={<LoaderPage/>}/>
                 <Route path="/components/testimonials" element={<TestimonialPage/>}/>
                 <Route path="/components/notification" element={<NotificationPage/>}/>
 
                 {/* surface */}
                 <Route path="/components/cards" element={<CardPage/>}/>
+                <Route path="/components/drag-and-drop" element={<DragAndDropPage/>}/>
                 <Route path="/components/animated-cards" element={<AnimatedCardsPage/>}/>
                 <Route
                     path="/components/image-gallery"

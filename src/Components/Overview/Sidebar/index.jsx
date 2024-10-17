@@ -49,6 +49,16 @@ const index = ({ startContent, setStartContent }) => {
               Overview
             </Link>
             <Link
+              to="/getting-started/installation"
+              className={`${
+                startContent === 70 &&
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] !text-secondary font-[500]"
+              }  text-text border-l border-[#9caebc]`}
+              onClick={() => setStartContent(70)}
+            >
+              Installation
+            </Link>
+            <Link
               to="/getting-started/templates"
               className={`${
                 startContent === 1 &&
@@ -57,23 +67,7 @@ const index = ({ startContent, setStartContent }) => {
               onClick={() => setStartContent(1)}
             >
               templates
-              {/*<span*/}
-              {/*    className="py-1 px-3 rounded-[20px] text-[12px] flex items-center gap-2 font-[600] text-red-800 bg-red-50">*/}
-              {/*  <img src="/hotIcon.png" alt="hot Icon" className="w-[10px]"/>*/}
-              {/*  HOT*/}
-              {/*</span>*/}
-
             </Link>
-            {/*<Link*/}
-            {/*  to="/getting-started/faq"*/}
-            {/*  className={`${*/}
-            {/*    startContent === 2 &&*/}
-            {/*    "border-l border-primary bg-[#f3f6f9] font-[500]"*/}
-            {/*  } rounded  border-l border-border`}*/}
-            {/*  onClick={() => setStartContent(2)}*/}
-            {/*>*/}
-            {/*  faq*/}
-            {/*</Link>*/}
           </ul>
         </div>
       </div>
@@ -311,6 +305,18 @@ const index = ({ startContent, setStartContent }) => {
               SURFACES
             </Link>
             <Link
+              to={"/components/drag-and-drop"}
+              className={`${
+                startContent === 80 &&
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
+              onClick={() => setStartContent(80)}
+            >
+              Drag & Drop
+
+              <NewBadge/>
+            </Link>
+            <Link
               to={"/components/cards"}
               className={`${
                 startContent === 18 &&
@@ -487,6 +493,17 @@ const index = ({ startContent, setStartContent }) => {
             >
               skeleton
 
+            </Link>
+            <Link
+              to={"/components/tree-dropdown"}
+              className={`${
+                startContent === 60 &&
+                "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+              }   border-l border-[#9caebc] flex items-center gap-[10px]`}
+              onClick={() => setStartContent(60)}
+            >
+              Tree Dropdown
+              <NewBadge/>
             </Link>
             <Link
               to={"/components/alert-message"}

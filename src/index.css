@@ -346,6 +346,34 @@ input[type="number"] {
   }
 }
 
+/* bouncing animation*/
+.animation-bounce1 {
+  animation: bounce1 2s infinite ease-in-out;
+}
+
+@keyframes bounce1 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* bouncing animation*/
+.animation-bounce2 {
+  animation: bounce2 2.3s infinite ease-in-out;
+}
+
+@keyframes bounce2 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
 #bmc-wbtn {
   background-color: #2a8bff !important;
   width: 58px !important;

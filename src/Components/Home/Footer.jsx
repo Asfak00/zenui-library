@@ -151,13 +151,13 @@ const Footer = () => {
             <p className='text-[14px] text-[#0FABCA]'>{result}</p>
 
             <a href='https://web.facebook.com/share/g/D8DbMaprfWPksSGF/' target='_blank'
-               className='p-3 cursor-pointer bg-gray-100 rounded-md mt-2 flex hover:bg-gray-200 items-center gap-[14px]'>
+               className='p-3 cursor-pointer bg-gray-100 rounded-md flex hover:bg-gray-200 items-center gap-[14px]'>
               <img src='https://cdn.doplac.site/doplac-media/doplac/54/kkclZyRXclMgFEfFJfBd1716725266.png'
                    alt='facebook' className='w-[30px]'/>
 
               <div>
                 <h4 className='text-[1rem] font-[600] text-gray-700'>Join Community</h4>
-                <p className='text-[0.9rem] font-[300] text-gray-700'>85+ Members</p>
+                <p className='text-[0.9rem] font-[300] text-gray-700'>90+ Members</p>
               </div>
             </a>
           </div>

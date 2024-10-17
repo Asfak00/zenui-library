@@ -20,6 +20,18 @@ import {motion} from "framer-motion";
 import {LuLayoutTemplate} from "react-icons/lu";
 import CountUp from "react-countup";
 import {FaArrowRightLong} from "react-icons/fa6";
+import AnimatedCard from "../HomePageComponents/AnimatedCard.jsx";
+import SwitchCard from "../HomePageComponents/Switch.jsx";
+import TabCard from "../HomePageComponents/Tab.jsx";
+import SelectCard from "../HomePageComponents/Select.jsx";
+import RatingCard from "../HomePageComponents/Rating.jsx";
+import RadioCard from "../HomePageComponents/Radio.jsx";
+import TooltipCard from "../HomePageComponents/Tooltip.jsx";
+import LoaderCard from "../HomePageComponents/Loader.jsx";
+import BadgeCard from "../HomePageComponents/Badge.jsx";
+import AnimatedButtonCard from "../HomePageComponents/AnimatedButton.jsx";
+import ChipCard from "../HomePageComponents/Chip.jsx";
+import StrongPasswordCard from "../HomePageComponents/StrongPasswordCard.jsx";
 
 const Hero = () => {
 
@@ -132,31 +144,67 @@ const Hero = () => {
                         <div title='Components'
                              className='flex items-center gap-[1px] text-[2.4rem] 640px:text-[2.5rem] font-[600] bg-gradient-to-r from-[#0FABCA] to-[#DB06F9] bg-clip-text text-transparent'>
                             <LuLayoutTemplate className='text-[2rem] 640px:text-[2.2rem] text-[#0FABCA] mr-1.5'/>
-                            <CountUp start={0} end={600} duration={5} delay={1}></CountUp>
+                            <CountUp start={0} end={600} duration={5} ></CountUp>
                             <p className='mb-1'>+</p>
                         </div>
                         <div title='Icons'
                              className='flex items-center gap-[1px] text-[2.4rem] 640px:text-[2.5rem] font-[600] bg-gradient-to-r from-[#0FABCA] to-[#DB06F9] bg-clip-text text-transparent'>
                             <TbIcons className='text-[2rem] 640px:text-[2.2rem] text-[#0FABCA] mr-1.5'/>
-                            <CountUp start={0} end={500} duration={5} delay={1}></CountUp>
+                            <CountUp start={0} end={500} duration={5} ></CountUp>
                             <p className='mb-1'>+</p>
                         </div>
                         <div title='Templates'
                              className='flex items-center gap-[1px] text-[2.4rem] 640px:text-[2.5rem] font-[600] bg-gradient-to-r from-[#0FABCA] to-[#DB06F9] bg-clip-text text-transparent'>
                             <CgTemplate className='text-[2rem] 640px:text-[2.4rem] text-[#0FABCA] mr-1.5'/>
-                            <CountUp start={0} end={20} duration={5} delay={1}></CountUp>
+                            <CountUp start={0} end={20} duration={5} ></CountUp>
                             <p className='mb-1'>+</p>
                         </div>
                     </motion.div>
                 </motion.div>
 
-                <div data-aos="fade-left" className='w-full 1024px:w-[53.5%] 1360px:w-[50%] h-[200px] 640px:h-[500px] z-30'>
-                    <iframe className="w-full 1024px:w-[770px] h-full"
-                            src="https://www.youtube.com/embed/wPopdyqpxHQ?autoplay=1&mute=1&showinfo=0&modestbranding=1&rel=0"
-                            frameBorder="0"
-                            allow="autoplay; encrypted-media"
-                            allowFullScreen>
-                    </iframe>
+                <div data-aos="fade-left"
+                     className='w-full relative hidden 1024px:block 1024px:w-[53.5%] 1360px:w-[50%] h-[200px] 640px:h-[500px] z-30'>
+                    <div className='animation-bounce1 absolute top-[-10px] left-[10px]'>
+                        <SwitchCard/>
+                    </div>
+                    <div className='animation-bounce2 absolute top-[85px] left-[30px]' >
+                        <RadioCard/>
+                    </div>
+                    <div className='animation-bounce1 absolute top-[35%] transform translate-y-[-50%] left-[-20px]'>
+                        <TooltipCard/>
+                    </div>
+                    <div
+                        className='animation-bounce2 absolute top-[55%] transform translate-y-[-50%] left-[0px] 1260px:left-[30px]'>
+                        <AnimatedButtonCard/>
+                    </div>
+                    <div className='animation-bounce1 absolute top-[70%] transform translate-y-[-50%] left-[-120px]'>
+                        <StrongPasswordCard/>
+                    </div>
+                    <div
+                        className='animation-bounce2 absolute top-[-20px] left-[17%] 1260px:left-[25%] transform translate-x-[-50%]'>
+                        <TabCard/>
+                    </div>
+                    <div className='animation-bounce2 absolute top-[-30px] right-[-20px] 1404px:right-5'>
+                        <BadgeCard/>
+                    </div>
+                    <div className='animation-bounce2 absolute top-[80px] left-[35%] transform translate-x-[-50%]'>
+                        <SelectCard/>
+                    </div>
+                    <div
+                        className='animation-bounce1 absolute top-[35%] left-[33%] transform translate-y-[-50%] translate-x-[-50%]'>
+                        <AnimatedCard/>
+                    </div>
+                    <div
+                        className='animation-bounce2 absolute top-[28%] right-[-20px] 1260px:right-12 transform translate-y-[-50%] translate-x-[-50%]'>
+                        <LoaderCard/>
+                    </div>
+                    <div
+                        className='animation-bounce absolute top-[65%] right-[-50px] 1260px:right-[-20px] 1404px:right-[10px] transform translate-y-[-50%] translate-x-[-50%]'>
+                        <ChipCard/>
+                    </div>
+                    <div className='animation-bounce1 absolute top-[70px] right-0'>
+                        <RatingCard/>
+                    </div>
                 </div>
             </div>
             <FeaturesCard/>
