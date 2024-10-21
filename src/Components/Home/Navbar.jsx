@@ -129,18 +129,18 @@ const Navbar = () => {
                                 <span><a href='/color-palette'>Color Palette</a></span>
                             </li>
 
-                            {/*<li className='relative pr-[45px]'>*/}
-                            {/*    <div*/}
-                            {/*        className='bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>*/}
-                            {/*        NEW*/}
+                            <li className='relative pr-[45px]'>
+                                <div
+                                    className='bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
+                                    NEW
 
-                            {/*        <div*/}
-                            {/*            className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>*/}
-                            {/*    </div>*/}
-                            {/*    <p className={getTheRouteName() === '/layout-playground' && '!text-[#0FABCA]'}><a*/}
-                            {/*        href='/layout-playground'>Layout Playground</a></p>*/}
-                            {/*    <span><a href='/layout-playground'>Layout Playground</a></span>*/}
-                            {/*</li>*/}
+                                    <div
+                                        className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
+                                </div>
+                                <p className={getTheRouteName() === '/getting-started/resources' && '!text-[#0FABCA]'}><a
+                                    href='/getting-started/resources'>Resources</a></p>
+                                <span><a href='/getting-started/resources'>Resources</a></span>
+                            </li>
                         </ul>
                     </div>
 

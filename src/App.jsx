@@ -99,6 +99,7 @@ import LayoutPlaygroundPage from "./Pages/LayoutPlaygroundPage.jsx";
 import TreeDropdownPage from "./Pages/Components/Feedback/TreeDropdownPage.jsx";
 import InstallationPage from "./Pages/InstallationPage.jsx";
 import DragAndDropPage from "./Pages/Components/Surfaces/DragAndDropPage.jsx";
+import ResourcesPage from "./Pages/ResourcesPage.jsx";
 
 
 const App = () => {
@@ -114,39 +115,39 @@ const App = () => {
     window.addEventListener('focus', () => {
         document.title = Title;
     })
-
-    useEffect(() => {
-        const handleRightClick = (event) => {
-            event.preventDefault();
-            setIsMemeVisible(true);
-            const audio = new Audio('/rightclickmeme.mp3');
-            audio.play();
-            setTimeout(() => {
-                setIsMemeVisible(false);
-            }, 3500);
-        };
-
-        const handleKeyCombination = (event) => {
-            if (
-                (event.ctrlKey && event.shiftKey && event.key === 'I') ||
-                (event.ctrlKey && event.shiftKey && event.key === 'J') ||
-                (event.key === 'F12') ||
-                (event.ctrlKey && event.key === 'U')
-            ) {
-                event.preventDefault();
-                const audio = new Audio('/rightclickmeme.mp3');
-                audio.play();
-            }
-        };
-
-        document.addEventListener('contextmenu', handleRightClick);
-        document.addEventListener('keydown', handleKeyCombination);
-
-        return () => {
-            document.removeEventListener('contextmenu', handleRightClick);
-            document.removeEventListener('keydown', handleKeyCombination);
-        };
-    }, []);
+    //
+    // useEffect(() => {
+    //     const handleRightClick = (event) => {
+    //         event.preventDefault();
+    //         setIsMemeVisible(true);
+    //         const audio = new Audio('/rightclickmeme.mp3');
+    //         audio.play();
+    //         setTimeout(() => {
+    //             setIsMemeVisible(false);
+    //         }, 3500);
+    //     };
+    //
+    //     const handleKeyCombination = (event) => {
+    //         if (
+    //             (event.ctrlKey && event.shiftKey && event.key === 'I') ||
+    //             (event.ctrlKey && event.shiftKey && event.key === 'J') ||
+    //             (event.key === 'F12') ||
+    //             (event.ctrlKey && event.key === 'U')
+    //         ) {
+    //             event.preventDefault();
+    //             const audio = new Audio('/rightclickmeme.mp3');
+    //             audio.play();
+    //         }
+    //     };
+    //
+    //     document.addEventListener('contextmenu', handleRightClick);
+    //     document.addEventListener('keydown', handleKeyCombination);
+    //
+    //     return () => {
+    //         document.removeEventListener('contextmenu', handleRightClick);
+    //         document.removeEventListener('keydown', handleKeyCombination);
+    //     };
+    // }, []);
 
     document.addEventListener('mousemove', (event) => {
         setCursorPosition({
@@ -176,6 +177,7 @@ const App = () => {
                 {/* documentation */}
                 <Route path="/getting-started" element={<ComponentsPage/>}/>
                 <Route path="/getting-started/overview" element={<OverviewPage/>}/>
+                <Route path="/getting-started/resources" element={<ResourcesPage/>}/>
                 <Route path="/getting-started/installation" element={<InstallationPage/>}/>
                 <Route path="/getting-started/templates" element={<TempletePage/>}/>
 

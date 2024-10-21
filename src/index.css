@@ -191,7 +191,7 @@
 }
 
 /* sidebar hover effect */
-aside ul a {
+aside ul a:not(.getStarted a) {
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-weight: 400;
@@ -200,7 +200,7 @@ aside ul a {
   text-transform: capitalize;
 }
 
-aside ul a:hover {
+aside ul a:not(.getStarted a):hover {
   background-color: #e5eaf2;
   font-weight: 500;
   border-left: 1px solid #9caebc;
@@ -208,6 +208,7 @@ aside ul a:hover {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+
 
 /* sidebar component section header  */
 .sectionHeader {

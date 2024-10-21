@@ -37,7 +37,7 @@ const MobileNavbar = () => {
     return (
         <>
             <nav
-                className="flex 1024px:hidden items-center justify-between w-full px-5 425px:px-10 backdrop-blur-md  py-3 shadow-sm sticky shadow-shadowColor top-0 left-0 z-50">
+                className="flex 1024px:hidden items-center justify-between w-full px-5 640px:px-10 backdrop-blur-md  py-3 shadow-sm sticky shadow-shadowColor top-0 left-0 z-50">
                 <div className="flex items-center gap-8 relative">
                     <div
                         className='w-[100px] h-[300px] bg-[#9A04F5] absolute top-[-150px] opacity-30 left-0 blur-[70px] rotate-[-50deg]'></div>
@@ -76,7 +76,7 @@ const MobileNavbar = () => {
 
             {/*  sidebar  */}
             <aside
-                className={`${sidebarOpen ? 'translate-x-0 opacity-100 z-[999]' : 'translate-x-[200px] opacity-0 z-[-1]'} fixed top-0 mobileSidebar right-0 py-5 px-[1.3rem] w-[80%] block 1024px:hidden 425px:w-[50%] h-screen transition-all duration-500 bg-white toastshadow`}>
+                className={`${sidebarOpen ? 'translate-x-0 opacity-100 z-[999]' : 'translate-x-[200px] opacity-0 z-[-1]'} fixed top-0 mobileSidebar right-0 py-5 px-[1.3rem] w-[80%] block 1024px:hidden 640px:w-[50%] h-screen transition-all duration-500 bg-white toastshadow`}>
 
                 <RxCross2 className='text-[1.3rem] text-gray-700 mb-[20px] absolute left-[15px]' onClick={()=> setSidebarOpen(false)}/>
 
@@ -108,30 +108,22 @@ const MobileNavbar = () => {
                             href='/getting-started/templates'>Templates</a></p>
                         <span><a href='/getting-started/templates'>Templates</a></span>
                     </li>
-                    <li className='relative pr-[45px]'>
-                        <div
-                            className='bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
-                            NEW
-
-                            <div
-                                className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
-                        </div>
+                    <li className='relative'>
                         <p className={getTheRouteName() === '/components/all-blocks' && '!text-[#0FABCA]'}><a
                             href='/blocks/all-blocks'>Blocks</a></p>
                         <span><a href='/blocks/all-blocks'>Blocks</a></span>
                     </li>
 
-                    <li className='relative pr-[45px]'>
-                        <div
-                            className='bg-[#0FABCA] rounded-[2px] text-white animate-pulse text-[0.5rem] px-2 py-0.5 w-max absolute top-[6px] z-50 right-0'>
-                            NEW
-
-                            <div
-                                className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
-                        </div>
+                    <li className='relative'>
                         <p className={getTheRouteName() === '/icons' && '!text-[#0FABCA]'}><a
                             href='/icons'>Icons</a></p>
                         <span><a href='/icons'>Icons</a></span>
+                    </li>
+
+                    <li className='relative'>
+                        <p className={getTheRouteName() === '/opacity-palette' && '!text-[#0FABCA]'}><a
+                            href='/color-palette'>Color Palette</a></p>
+                        <span><a href='/color-palette'>Color Palette</a></span>
                     </li>
 
                     <li className='relative pr-[45px]'>
@@ -142,9 +134,9 @@ const MobileNavbar = () => {
                             <div
                                 className='w-[8px] h-[8px] bg-[#0FABCA] rotate-[45deg] absolute left-[-4px] top-[0.229rem]'></div>
                         </div>
-                        <p className={getTheRouteName() === '/opacity-palette' && '!text-[#0FABCA]'}><a
-                            href='/color-palette'>Color Palette</a></p>
-                        <span><a href='/color-palette'>Color Palette</a></span>
+                        <p className={getTheRouteName() === '/getting-started/resources' && '!text-[#0FABCA]'}><a
+                            href='/getting-started/resources'>Resources</a></p>
+                        <span><a href='/getting-started/resources'>Resources</a></span>
                     </li>
                 </ul>
             </aside>
