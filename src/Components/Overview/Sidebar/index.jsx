@@ -97,7 +97,7 @@ const index = ({ startContent, setStartContent }) => {
                   to={""}
                   className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
               >
-                Inputs
+                FORM
               </Link>
 
               <Link
@@ -236,7 +236,7 @@ const index = ({ startContent, setStartContent }) => {
                   to={""}
                   className={`sectionHeader tracking-widest  font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
               >
-                Buttons
+                BUTTONS
               </Link>
               <Link
                   to={"/components/normal-button"}
@@ -373,7 +373,7 @@ const index = ({ startContent, setStartContent }) => {
                   to={""}
                   className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase border-l border-border !text-[0.750rem] `}
               >
-                navigation
+                NAVIGATION
               </Link>
               <Link
                   to={"/components/pagination"}
@@ -467,8 +467,20 @@ const index = ({ startContent, setStartContent }) => {
                   to={""}
                   className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase border-l border-border !text-[0.750rem] `}
               >
-                feedback
+                FEEDBACK
               </Link>
+                <Link
+                    to={"/components/context-menu"}
+                    className={`${
+                        startContent === 90 &&
+                        "border-l  rounded-tr rounded-br border-primary bg-[#3B9DF8] text-secondary font-[500]"
+                    }   border-l border-[#9caebc] flex items-center gap-[10px]`}
+                    onClick={() => setStartContent(90)}
+                >
+                    Context Menu
+
+                    <NewBadge/>
+                </Link>
               <Link
                   to={"/components/skeleton"}
                   className={`${
@@ -548,7 +560,7 @@ const index = ({ startContent, setStartContent }) => {
                   to={""}
                   className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
               >
-                data display
+                DATA DISPLAY
               </Link>
               <Link
                   to={"/components/badge"}
@@ -602,7 +614,7 @@ const index = ({ startContent, setStartContent }) => {
                   to={""}
                   className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
               >
-                Randoms
+                RANDOMS
               </Link>
 
               <Link
@@ -671,7 +683,7 @@ const index = ({ startContent, setStartContent }) => {
                   to={""}
                   className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
               >
-                Sections
+                SECTIONS
               </Link>
 
               <Link
@@ -730,7 +742,7 @@ const index = ({ startContent, setStartContent }) => {
                   to={""}
                   className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
               >
-                Forms
+                FORM
               </Link>
 
               <Link
@@ -779,7 +791,7 @@ const index = ({ startContent, setStartContent }) => {
                   to={""}
                   className={`sectionHeader tracking-widest font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
               >
-                Empty Pages
+                EMPTY PAGES
               </Link>
 
               <Link
@@ -808,7 +820,7 @@ const index = ({ startContent, setStartContent }) => {
                   to={""}
                   className={`sectionHeader tracking-widest  font-[500] hover:font-[500] relative mt-4 uppercase  border-l border-border !text-[0.750rem] `}
               >
-                random
+                RANDOM
               </Link>
               <Link
                   to={"/blocks/responsive-search-bar"}
