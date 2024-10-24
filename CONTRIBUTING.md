@@ -39,9 +39,16 @@ git push origin feature/new-feature
 
 - Create a pull request on the original repo.
 
-## Coding Guidelines
+# Coding Guidelines
 
-- Use clear and descriptive commit messages.
+- Detailed Commit Messages
+When committing changes, provide a detailed commit message explaining what you worked on and what issue was solved.
+Follow this format:
+```bash
+git commit -m "Fix issue #123: Add a new feature for XYZ component following the standard code structure. Refactored ABC for better readability and resolved bugs related to..."
+```
+This ensures clarity and traceability of changes for reviewers and contributors.
+
 - Ensure that your code is well-documented and follows best practices.
 
 ## Code of Conduct
