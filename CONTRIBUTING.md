@@ -46,4 +46,4 @@ git push origin feature/new-feature
 
 ## Code of Conduct
 
-Please adhere to the [Code of Conduct]() to ensure a welcoming and respectful environment for all contributors.
+Please adhere to the [Code of Conduct](https://github.com/Asfak00/zenui-library/blob/production/CODE_OF_CONDUCT.md) to ensure a welcoming and respectful environment for all contributors.
