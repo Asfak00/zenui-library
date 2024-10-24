@@ -49,7 +49,7 @@ Visit the [ZenUI Documentation](https://zenui.net/getting-started/installation) 
 
 ## Contribution
 
-We welcome contributions from the community! Please refer to the CONTRIBUTING.md file for more details on how to contribute.
+We welcome contributions from the community! Please refer to the [CONTRIBUTING.md](https://github.com/Asfak00/zenui-library/blob/production/CONTRIBUTING.md) file for more details on how to contribute.
 
 <br/>
 
