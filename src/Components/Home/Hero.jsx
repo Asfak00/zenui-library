@@ -20,6 +20,8 @@ import {motion} from "framer-motion";
 import {LuLayoutTemplate} from "react-icons/lu";
 import CountUp from "react-countup";
 import {FaArrowRightLong} from "react-icons/fa6";
+
+// components
 import AnimatedCard from "../HomePageComponents/AnimatedCard.jsx";
 import SwitchCard from "../HomePageComponents/Switch.jsx";
 import TabCard from "../HomePageComponents/Tab.jsx";
@@ -92,7 +94,7 @@ const Hero = () => {
                     <motion.h1
                         variants={FADE_DOWN_ANIMATION_VARIANTS}
                         className="text-[2.4rem] font-[600] 425px:text-[3rem] 640px:text-[2.8rem] leading-[3rem] 425px:leading-[4.5rem] mt-8 640px:leading-[1.25] text-text">
-                        <span className='heroText text-[#0FABCA] font-[500]'>ZenUI</span> Free UI Components & Templates
+                        <span className='heroText text-[#0FABCA] font-[500]'>ZenUI</span> Open-Source Free UI Components & Templates
                         Library
                     </motion.h1>
 

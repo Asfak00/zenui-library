@@ -42,7 +42,7 @@ const Hero = () => {
 
                     <p className='mt-5'>
                         <p className=' text-[1rem] text-gray-500'>
-                            Welcome to ZenUI, a premier React and Tailwind CSS UI components library dedicated to
+                            Welcome to ZenUI, A Open-Source React and Tailwind CSS UI components library dedicated to
                             providing developers with the tools they need to create stunning, responsive websites
                             effortlessly. Founded by Asfak Ahmed, ZenUI aims to simplify the development process by
                             offering a comprehensive collection of pre-built UI components, website templates, and more.
