@@ -1,13 +1,15 @@
 
 # ZENUI LIBRARY
-ZenUI is a React and Tailwind CSS UI components library offering pre-built website templates, Icons, Color Palatte & Website Blocks. Simplify your development process and create beautiful, responsive websites effortlessly with ZenUI.
+Elevate your projects with ZenUI, a free, lightweight, customizable UI component library built with React and Tailwind CSS. ZenUI provides various components, icons, website templates, and color palette options to accelerate development.
 
-[![Take a tour - How to make a website under 5 minutes](https://i.ibb.co.com/tcn1mzf/youtube-thumbnail.png)](https://www.youtube.com/watch?v=wPopdyqpxHQ&autoplay=1)
+![Facebook cover - 2](https://github.com/user-attachments/assets/ffdb04e0-677d-4759-b3ce-e2e439c04b96)
+
 ## Features
 
 - Customizable 500+ Icons
-- 600 + Components
+- 600+ Components
 - color Opacity Palette
+- 100+ Programming Resources
 - Extract Color From Uploaded Image (Color Picker)
 - Website Templates
 - Website Blocks
@@ -15,40 +17,45 @@ ZenUI is a React and Tailwind CSS UI components library offering pre-built websi
 
 <br/>
 
-## FAQ
+## Installation
 
-#### Can I contribute to ZenUI Library?
+Clone the repository:
+```bash
+git clone https://github.com/Asfak00/zenui-library.git
+```
 
-Yes, contributions are welcome! If you’re a designer or developer who wants to contribute to the ZenUI Library, you can submit your components or templates. Your contributions will be credited on the website's 'About Us' section.
+Go to the project directory:
+```bash
+cd zenui-library
+```
 
-#### What is the difference between ZenUI and other UI libraries?
+Install the all dependencies:
+```bash
+npm install
+```
 
-ZenUI Library stands out for its focus on simplicity and ease of use. It’s designed to be lightweight, customizable, and accessible, making it ideal for developers who need quick, high-quality solutions without the bloat of larger libraries. Additionally, unlike many other UI libraries, you don't need to install ZenUI Library in your project—just copy the code and use it without any dependencies. This makes integration fast and hassle-free.
-
-#### Is there any documentation available for ZenUI Library?
-
-Yes, ZenUI Library provides detailed documentation for each component and template. The documentation includes usage instructions, code examples, and customization tips to help you get started quickly.
-
-#### Can I customize the components in ZenUI Library?
-
-Absolutely! All components in the ZenUI Library are fully customizable. You can modify them to fit your project's design requirements using your preferred CSS framework or custom styles.
-
-#### Do I need to attribute ZenUI Library when using it in my projects?
-
-Attribution is appreciated but not required. You're free to use ZenUI Library in your projects without needing to give credit, although a mention would help support the project.
-
-#### How often is ZenUI Library updated?
-
-ZenUI Library is regularly updated with new components, templates, and features. The team behind ZenUI is committed to keeping the library fresh and relevant to current design trends.
-
-#### Is ZenUI Library free to use?
-
-Yes, ZenUI Library is completely free to use. It provides high-quality UI components and templates at no cost, making it accessible to everyone.
+Run the project:
+```bash
+npm run dev
+```
 
 <br/>
 
-## Upvote ZenUI In Product Hunt
-<a href="https://www.producthunt.com/posts/zenui-library-2?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-zenui&#0045;library&#0045;2" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=490875&theme=light" alt="ZENUI&#0032;LIBRARY - Free&#0032;Templates&#0044;&#0032;Components&#0032;&#0038;&#0032;Icons&#0032;for&#0032;Developers | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
+## Documentation
+
+Visit the [ZenUI Documentation](https://zenui.net/getting-started/installation) for detailed guides on components, templates, and how to customize them.
+
+<br/>
+
+## Contribution
+
+We welcome contributions from the community! Please refer to the CONTRIBUTING.md file for more details on how to contribute.
+
+<br/>
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Asfak00/zenui-library/blob/production/LICENSE.md) file for details.
 
 <br/>
 
