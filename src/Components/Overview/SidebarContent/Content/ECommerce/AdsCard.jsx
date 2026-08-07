@@ -74,11 +74,14 @@ const AdsCard = () => {
                                         <span
                                             className='py-1.5 px-3 bg-white rounded-md font-semibold text-gray-900 text-[0.9rem]'>$299 USD</span>
                                     </div>
-                                    <button
+                                    <a
+                                        href={'https://menlabclothing.com/offers'}
+                                        target={'_blank'}
+                                        rel="noreferrer"
                                         className='group flex items-center gap-[10px] w-full bg-[#FA8232] text-white py-2.5 rounded-md hover:bg-[#DE732D] transition-all duration-300 px-4 justify-center'>
                                         Shop now
                                         <BsArrowRight className='group-hover:ml-1 transition-all duration-300'/>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         )}
@@ -141,11 +144,14 @@ export default AdsCard;
                                             Apple Homepod Mini</h3>
                                         <p className='text-[0.9rem] dark:text-[#abc2d3] text-gray-700 mb-4'>Jam-packed
                                             with innovation, HomePod mini delivers unexpectedly.</p>
-                                        <button
+                                        <a
+                                            href={'https://menlabclothing.com/offers'}
+                                            target={'_blank'}
+                                            rel="noreferrer"
                                             className='group w-max flex items-center gap-[10px] bg-[#FA8232] text-white py-2.5 rounded-md hover:bg-[#DE732D] transition-all duration-300 px-8 justify-center'>
                                             Shop now
                                             <BsArrowRight className='group-hover:ml-1 transition-all duration-300'/>
-                                        </button>
+                                        </a>
                                     </div>
                                     <div className='w-[90%] mx-auto 640px:w-[40%]'>
                                         <img alt='product/image' src='https://i.ibb.co.com/jyffZqg/image-6.png'
@@ -220,10 +226,13 @@ export default AdsCard;
                                          className='rounded-xl'/>
 
                                     {/* action button */}
-                                    <button
+                                    <a
+                                        href={'https://menlabclothing.com/offers'}
+                                        target={'_blank'}
+                                        rel="noreferrer"
                                         className='absolute bottom-3 right-3 py-[8px] px-5 text-white bg-[#0BAF9A] rounded-full font-medium'>View
                                         Offer
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         )}
@@ -281,10 +290,13 @@ export default AdsCard;
                                         Organic</h4>
                                     <p className='text-[1rem] text-center text-[#FFFFFF]'>farmer's market</p>
 
-                                    <button
+                                    <a
+                                        href={'https://menlabclothing.com/offers'}
+                                        target={'_blank'}
+                                        rel="noreferrer"
                                         className='py-2 px-6 rounded-md bg-white text-[#0BAF9A] font-[400] text-[1rem] mx-auto mb-5 mt-4'>Shop
                                         Now
-                                    </button>
+                                    </a>
 
                                     <img alt='product/image' src='https://i.ibb.co.com/xfp5R3W/basket-png.png'
                                          className='w-[400px] mx-auto'/>
@@ -347,12 +359,15 @@ export default AdsCard;
                                         <h4 className='text-[1.3rem] mt-2 font-semibold text-gray-900'>Fruits Juice
                                             Series</h4>
 
-                                        <button
+                                        <a
+                                            href={'https://menlabclothing.com/offers'}
+                                            target={'_blank'}
+                                            rel="noreferrer"
                                             className='py-2 text-[#239698] font-semibold mt-2 group hover:underline text-[1rem] flex items-center gap-[10px]'>
                                             Shop Now
                                             <MdKeyboardArrowRight
                                                 className='text-[1.3rem] group-hover:ml-1 transition-all duration-300'/>
-                                        </button>
+                                        </a>
                                     </div>
 
                                 </div>
@@ -423,12 +438,15 @@ export default AdsCard;
                                         <h4 className='text-[1.5rem] mt-2 font-medium text-white'>New Google Pixel 6
                                             Pro</h4>
 
-                                        <button
+                                        <a
+                                            href={'https://menlabclothing.com/offers'}
+                                            target={'_blank'}
+                                            rel="noreferrer"
                                             className='py-2 px-5 text-white font-medium mt-5 group hover:bg-[#ed6104] transition-all duration-300 text-[1rem] flex items-center gap-[10px] bg-[#FA8232] rounded-md'>
                                             Shop Now
                                             <HiArrowRight
                                                 className='text-[1.3rem] group-hover:ml-1 transition-all duration-300'/>
-                                        </button>
+                                        </a>
                                     </div>
 
                                     {/* product image */}

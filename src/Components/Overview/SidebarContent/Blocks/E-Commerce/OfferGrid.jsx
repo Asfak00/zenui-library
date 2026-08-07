@@ -5,7 +5,7 @@ import ContentHeader from "@shared/ContentHeader";
 import {Helmet} from "react-helmet";
 import BlocksShowCode from "@shared/Block/BlocksShowCode.jsx";
 
-// icons 
+// icons
 import BlocksFooter from "@shared/Block/BlocksFooter.jsx";
 
 import {HiArrowRight} from "react-icons/hi";
@@ -84,11 +84,14 @@ const OfferGrid = () => {
                                     <div className='px-8'>
                                         <h4 className='text-[1.5rem] dark:text-[#abc2d3] font-medium text-gray-900'>Living
                                             Room</h4>
-                                        <button
+                                        <a
+                                            href={'https://menlabclothing.com/shop'}
+                                            target={'_blank'}
+                                            rel="noreferrer"
                                             className='flex w-max items-center hover:text-[#0FABCA] hover:border-[#0FABCA] dark:text-[#abc2d3] transition-all duration-300 gap-[10px] border-gray-900 text-[0.9rem] mt-2 group border-b'>
                                             Shop Now
                                             <HiArrowRight className='group-hover:ml-1 transition-all duration-200'/>
-                                        </button>
+                                        </a>
                                     </div>
 
                                     <img alt='product/image'
@@ -101,11 +104,14 @@ const OfferGrid = () => {
 
                                     <div className='px-6 mt-auto pb-9'>
                                         <h4 className='text-[1.5rem] dark:text-[#abc2d3] font-medium text-gray-900'>Bedroom</h4>
-                                        <button
+                                        <a
+                                            href={'https://menlabclothing.com/shop'}
+                                            target={'_blank'}
+                                            rel="noreferrer"
                                             className='flex w-max items-center hover:text-[#0FABCA] hover:border-[#0FABCA] dark:text-[#abc2d3] transition-all duration-300 gap-[10px] border-gray-900 text-[0.9rem] mt-2 group border-b'>
                                             Shop Now
                                             <HiArrowRight className='group-hover:ml-1 transition-all duration-200'/>
-                                        </button>
+                                        </a>
                                     </div>
 
                                     <img alt='product/image'
@@ -119,11 +125,14 @@ const OfferGrid = () => {
 
                                     <div className='px-6 mt-auto pb-9'>
                                         <h4 className='text-[1.5rem] dark:text-[#abc2d3] font-medium text-gray-900'>Kitchen</h4>
-                                        <button
+                                        <a
+                                            href={'https://menlabclothing.com/shop'}
+                                            target={'_blank'}
+                                            rel="noreferrer"
                                             className='flex w-max items-center hover:text-[#0FABCA] hover:border-[#0FABCA] dark:text-[#abc2d3] transition-all duration-300 gap-[10px] border-gray-900 text-[0.9rem] mt-2 group border-b'>
                                             Shop Now
                                             <HiArrowRight className='group-hover:ml-1 transition-all duration-200'/>
-                                        </button>
+                                        </a>
                                     </div>
 
                                     <img alt='product/image'
@@ -232,10 +241,13 @@ export default OfferGrid;
                                         <h4 className='text-[1.1rem] font-medium text-white'>PlayStation 5</h4>
                                         <p className='text-[0.8rem] mt-3 text-[#FAFAFA] font-[300]'>Black and White
                                             version of the PS5 coming out on sale.</p>
-                                        <button
+                                        <a
+                                            href={'https://menlabclothing.com/shop'}
+                                            target={'_blank'}
+                                            rel="noreferrer"
                                             className='w-max text-[#FAFAFA] font-[300] hover:text-[#0FABCA] hover:border-[#0FABCA] mt-3 transition-all duration-300 border-[#FAFAFA] text-[0.8rem] group border-b'>
                                             Shop Now
-                                        </button>
+                                        </a>
                                     </div>
 
                                     <img alt='product/image'
@@ -250,10 +262,13 @@ export default OfferGrid;
                                         <h4 className='text-[1.1rem] font-medium text-white'>Women’s Collections</h4>
                                         <p className='text-[0.8rem] mt-3 text-[#FAFAFA] font-[300]'>Featured woman
                                             collections that give you another vibe.</p>
-                                        <button
+                                        <a
+                                            href={'https://menlabclothing.com/shop'}
+                                            target={'_blank'}
+                                            rel="noreferrer"
                                             className='w-max text-[#FAFAFA] font-[300] hover:text-[#0FABCA] hover:border-[#0FABCA] mt-3 transition-all duration-300 border-[#FAFAFA] text-[0.8rem] group border-b'>
                                             Shop Now
-                                        </button>
+                                        </a>
                                     </div>
 
                                     <img alt='product/image'
@@ -269,10 +284,13 @@ export default OfferGrid;
                                         <h4 className='text-[1.1rem] font-medium text-white'>Speakers</h4>
                                         <p className='text-[0.8rem] mt-0.5 text-[#FAFAFA] font-[300]'>Amazon wireless
                                             speakers</p>
-                                        <button
+                                        <a
+                                            href={'https://menlabclothing.com/shop'}
+                                            target={'_blank'}
+                                            rel="noreferrer"
                                             className='w-max text-[#FAFAFA] font-[300] hover:text-[#0FABCA] hover:border-[#0FABCA] mt-2 transition-all duration-300 border-[#FAFAFA] text-[0.8rem] group border-b'>
                                             Shop Now
-                                        </button>
+                                        </a>
                                     </div>
 
                                     <img alt='product/image'
@@ -288,10 +306,13 @@ export default OfferGrid;
                                         <h4 className='text-[1.1rem] font-medium text-white'>Perfume</h4>
                                         <p className='text-[0.8rem] mt-0.5 text-[#FAFAFA] font-[300]'>GUCCI INTENSE OUD
                                             EDP</p>
-                                        <button
+                                        <a
+                                            href={'https://menlabclothing.com/shop'}
+                                            target={'_blank'}
+                                            rel="noreferrer"
                                             className='w-max text-[#FAFAFA] font-[300] hover:text-[#0FABCA] hover:border-[#0FABCA] mt-2 transition-all duration-300 border-[#FAFAFA] text-[0.8rem] group border-b'>
                                             Shop Now
-                                        </button>
+                                        </a>
                                     </div>
 
                                     <img alt='product/image'
@@ -436,10 +457,13 @@ export default OfferGrid;
                                         <p className='text-[0.8rem] dark:text-slate-400 mt-1 text-[#909090] font-[300]'>The
                                             new 15‑inch MacBook Air makes room for more of what you love with a spacious
                                             Liquid Retina display.</p>
-                                        <button
+                                        <a
+                                            href={'https://menlabclothing.com/shop'}
+                                            target={'_blank'}
+                                            rel="noreferrer"
                                             className='w-max py-2 px-6 rounded-md border border-gray-900 text-gray-900 text-[0.9rem] hover:bg-gray-900 dark:text-[#abc2d3] dark:border-slate-700 transition-all duration-300 hover:text-white mt-5'>
                                             Shop Now
-                                        </button>
+                                        </a>
                                     </div>
 
                                     <img alt='product/image'
@@ -619,9 +643,13 @@ export default OfferGrid;
                                         </div>
                                     </div>
 
-                                    <button className='py-2 px-6 rounded-md bg-black text-white mt-5 text-[1rem]'>Shop
+                                    <a
+                                        href={'https://menlabclothing.com/shop'}
+                                        target={'_blank'}
+                                        rel="noreferrer"
+                                        className='py-2 px-6 rounded-md bg-black text-white mt-5 text-[1rem]'>Shop
                                         Now
-                                    </button>
+                                    </a>
                                 </div>
 
                             </div>
